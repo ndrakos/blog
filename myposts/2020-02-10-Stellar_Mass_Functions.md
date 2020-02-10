@@ -1,6 +1,7 @@
 ----
 layout: post
 title:  "Stellar Mass Functions"
+categories: myposts
 ---
 
 
