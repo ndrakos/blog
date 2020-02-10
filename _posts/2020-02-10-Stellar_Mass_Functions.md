@@ -9,8 +9,8 @@ Abundance matching requires a stellar mass function (SMF) or luminosity function
 <a href="https://ui.adsabs.harvard.edu/abs/2009MNRAS.398.2177L">Li & White 2009</a>
 .. parameterization for SMF at redshift zero.
 
+<img src="{{ site.url }}MF_Li2009.pdf">
 
- <img src="SMF_Li2009.pdf" >
 
 Eventually, this will need to be extended to larger redshifts. For example, in Williams...
 
