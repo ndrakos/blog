@@ -1,11 +1,11 @@
 
 
 # Site settings
-#title: My Research Blog
-#email: nicoledrakos@gmail.com
-#url: "https://ndrakos.github.io/blog/" # the base hostname & protocol for your site
+title: Research
+email: nicoledrakos@gmail.com
+url: "https://ndrakos.github.io/blog/" # the base hostname & protocol for your site
 #twitter_username:
-#github_username:  ndrakos
+github_username:  ndrakos
 
 
 theme: jekyll-theme-dinky
