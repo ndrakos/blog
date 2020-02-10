@@ -2,8 +2,7 @@
 layout: post
 title:  "Stellar Mass Functions"
 date:   2020-02-10
-categories: myposts
----
+----
 
 
 Abundance matching requires a stellar mass function (SMF) or luminosity function. For now, I am using the parameterization from>
