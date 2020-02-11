@@ -9,7 +9,7 @@ Abundance matching requires a stellar mass function (SMF) or luminosity function
 
 <img src="{{ site.baseurl }}/assets/plots/SMF_Li2009.png">
 
-Eventually, this will need to be extended to larger redshifts. For example, in <a href="https://ui.adsabs.harvard.edu/abs/2018ApJS..236...33W/abstract"> Williams et al. 2018</a> have continuously evolving Schechter functions for both star-forming and quiescent galaxies for galaxies between redshifts $0 \ge z \le 10$. Constraints from $0 \ge z \le 10$ are from <a href="https://ui.adsabs.harvard.edu/abs/2014ApJ...783...85T"> Tomczak et al. 2014</a>. At higher redshifts, the SMF is no longer well constrained, and is instead inferred from UV luminosity functions.
+Eventually, this will need to be extended to larger redshifts. For example, in <a href="https://ui.adsabs.harvard.edu/abs/2018ApJS..236...33W/abstract"> Williams et al. 2018</a> have continuously evolving Schechter functions for both star-forming and quiescent galaxies for galaxies between redshifts $$0 \ge z \le 10$$. Constraints from $0 \ge z \le 10$ are from <a href="https://ui.adsabs.harvard.edu/abs/2014ApJ...783...85T"> Tomczak et al. 2014</a>. At higher redshifts, the SMF is no longer well constrained, and is instead inferred from UV luminosity functions.
 
 
 Things to sort out:
