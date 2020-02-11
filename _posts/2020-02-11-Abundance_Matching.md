@@ -21,7 +21,7 @@ While there are different mass proxies, $$x$$, used in the literature, we will a
 
 (4) From the simulation, calculate $$N_{\rm halos}(< v_{\rm peak})$$
 
-(5) From a chosen stellar mass function, calculate $$N_{\rm galaxies}(< M_*)= V \int_{M_*}^\infty \phi (M_*') {\rm d}M_*’$$, where $$V$$ is the simulation volume
+(5) From a chosen stellar mass function, calculate $$N_{\rm galaxies}(< M_*)= V \int_{M_*}^\infty \phi (M_*') {\rm d}M_*’$$, where $$V$$ is the simulation volume (note that this assumes that $$\phi (M_{\rm max}) \approx 0$$, where  $$(M_{\rm max})$$ is the maximum stellar mass in the parameterization)
 
 (6) Do the abundance matching. Each halo with a given $$v_{\rm peak}$$ can be assigned a stellar mass by setting $$N_{\rm halos}(< v_{\rm peak})= N_{\rm galaxies}(< M_*)$$
 
