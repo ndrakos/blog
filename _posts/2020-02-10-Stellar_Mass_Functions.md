@@ -5,7 +5,7 @@ date:   2020-02-10
 ---
 
 
-Abundance matching requires a stellar mass function (SMF) or luminosity function. For now, I am using the parameterization from <a href="https://ui.adsabs.harvard.edu/abs/2009MNRAS.398.2177L">Li & White 2009</a> which is parameterization for the SMF made of three piece-wise Schechter functions to describe SDSS data at low redshift, shown in the figure below.
+Abundance matching requires a stellar mass function (SMF) or luminosity function. For now, I am using the parameterization from <a href="https://ui.adsabs.harvard.edu/abs/2009MNRAS.398.2177L">Li & White 2009</a> which is a parameterization for the SMF made of three piece-wise Schechter functions to describe SDSS data at low redshift, shown in the figure below.
 
 <img src="{{ site.baseurl }}/assets/plots/SMF_Li2009.png">
 
@@ -15,7 +15,7 @@ Eventually, this will need to be extended to larger redshifts. For example, in <
 
 ## Things to sort out:
 
-(1) Method for extending this to high redshifts (z=10) using UV luminosity functions
+(1) Method for extending this to high redshifts ($$z=10$$) using UV luminosity functions
 
 (2) How to include uncertainty in the SMF parameterization in abundance matching algorithm
 
