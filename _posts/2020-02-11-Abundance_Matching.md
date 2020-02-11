@@ -15,13 +15,15 @@ While there are different mass proxies, $$x$$, used in the literature, we will a
 
 (1) Get/run a simulation
 
-(2) Run a halo finder and merger tree generator on the simulation (we use AHF)
+(2) Run a halo finder and merger tree generator on the simulation (we used AHF)
 
 (3) Measure $$v_{\rm peak}$$ for every halo
 
-(4) From the simulation, calculate $$N_{\rm halos}(< v_{\rm peak})$$ and from a chosen stellar mass function, calculate $$N_{\rm galaxies}(< M_*)= V \int_{M_*}^\infty \phi (M_*') {\rm d}M_*’$$, where $$V$$ is the simulation volume
+(4) From the simulation, calculate $$N_{\rm halos}(< v_{\rm peak})$$
 
-(5) Do the abundance matching. Each halo with a given $$v_{\rm peak}$$ can be assigned a stellar mass by setting $$N_{\rm halos}(< v_{\rm peak})= N_{\rm galaxies}(< M_*)$$
+(5) From a chosen stellar mass function, calculate $$N_{\rm galaxies}(< M_*)= V \int_{M_*}^\infty \phi (M_*') {\rm d}M_*’$$, where $$V$$ is the simulation volume
+
+(6) Do the abundance matching. Each halo with a given $$v_{\rm peak}$$ can be assigned a stellar mass by setting $$N_{\rm halos}(< v_{\rm peak})= N_{\rm galaxies}(< M_*)$$
 
 
 ## Test Results
