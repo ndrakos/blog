@@ -17,9 +17,24 @@ While there are different mass proxies, $$x$$, used in the literature, we will a
 
 (2) Run a halo finder and merger tree generator on the simulation (we use AHF)
 
-(3) Measure $$v_{\rm peak}$$ for every halo (and also construct the halo mass function, $$n(v_{\rm peak})$$)
+(3) Measure $$v_{\rm peak}$$ for every halo
+
+(4) From the simulation, calculate $$N_{halos}(< v_{\rm peak})$$ and from a chosen stellar mass function, calculate $$N_{galaxies}(< M_*)= V \int_{M_*}^\infty \phi (M_*') {\rm d}M_*’$$, where $V$ is the simulation volume
+
+(5) Do the abundance matching. Each halo with a given $$v_{\rm peak}$$ can be assigned a stellar mass by setting $$N_{halos}(< v_{\rm peak})= N_{galaxies}(< M_*)$$
 
 
+## Test Results
+
+I have tested this with a sample simulation provided by Brant (spergel_2LPT_256). It has $$256^3$$ particles and a box size of 60 Mpc/$$h^3$$. The SMF was parameterized using <a href="https://ui.adsabs.harvard.edu/abs/2009MNRAS.398.2177L">Li & White 2009</a>.
+
+Plots showing the calculated number of $$N_{halos}(< v_{\rm peak})$$ and $$N_{galaxies}(< M_*)$$:
+
+<img src="{{ site.baseurl }}/assets/plots/Matching.png">
+
+After abundance matching, to recover the SMF, the output galaxy masses were binned, and then divided by the bin width.
+
+<img src="{{ site.baseurl }}/assets/plots/SMF.png">
 
 
 ## What's Next
