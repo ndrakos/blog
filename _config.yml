@@ -4,10 +4,11 @@
 title: Nicole Drakos
 email: nicoledrakos@gmail.com
 url: "https://ndrakos.github.io/blog/" # the base hostname & protocol for your site
-#twitter_username:
+twitter_username: nicoledrakos
 github_username:  ndrakos
 
 
+markdown: kramdown
 theme: jekyll-theme-dinky
 
 # Build settings
@@ -16,18 +17,18 @@ defaults:
     -
         scope:
             path: "" # empty string for all files
-            type: pages
+            type: "pages"
         values:
-            layout: default
+            layout: "default"
     -
         scope:
             path: "" # empty string for all files
-            type: posts
+            type: "posts"
         values:
-            layout: post
+            layout: "post"
     -
         scope:
             path: ""
-            type: drafts
+            type: "draft"
         values:
-            layout: post
+            layout: "post"
