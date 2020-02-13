@@ -56,11 +56,11 @@ Recently, <a href="https://ui.adsabs.harvard.edu/abs/2019arXiv191003605C/abstrac
 
 ## Results
 
-**TROUBLE SHOOTING --- TO BE POSTED***
+**TROUBLE SHOOTING --- TO BE POSTED**
 
-
-[/ <img src="{{ site.baseurl }}/assets/plots/SMF_scatter.png"> /]
-
+<!---
+<img src="{{ site.baseurl }}/assets/plots/SMF_scatter.png"> /]
+-->
 
 ## Things to think about
 
