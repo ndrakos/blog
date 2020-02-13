@@ -6,14 +6,14 @@ tags: [mocks]
 ---
 
 
-While basic subhalo abundance matching (SHAM) has no free parameters, it is common to introduce scatter in the stellar mass--halo mass (SM--HM) relation. For now I am setting a constant scatter of $$\sigma(M_* \mid M) \approx  0.2$$ dex, which is common in in the literature. While there is some evidence that this scatter does not depend on halo mass (e.g. <a href="https://ui.adsabs.harvard.edu/abs/2009ApJ...693..830Y/abstract">Yang et al 2009</a> + more recent references), it is not well constrained observationally for low mass halos. New constraints on the scatter at low masses can be found in <a href="https://ui.adsabs.harvard.edu/abs/2019arXiv191003605C/abstract">Campbell et al. 2019</a>, and their summary plot on SM--HM scatter is is shown below:
+While basic subhalo abundance matching (SHAM) has no free parameters, it is common to introduce scatter in the stellar mass--halo mass (SM--HM) relation. For now I am setting a constant scatter of $$\sigma(M_* \mid v_{\rm peak}) \approx  0.2$$ dex, which is common in in the literature. While there is some evidence that this scatter does not depend on halo mass (e.g. <a href="https://ui.adsabs.harvard.edu/abs/2009ApJ...693..830Y/abstract">Yang et al 2009</a> + more recent references), it is not well constrained observationally for low mass halos. New constraints on the scatter at low masses can be found in <a href="https://ui.adsabs.harvard.edu/abs/2019arXiv191003605C/abstract">Campbell et al. 2019</a>, and their summary plot on SM--HM scatter is is shown below:
 
 <img src="{{ site.baseurl }}/assets/plots/Cao2019.png">
 
 
 ## Method 1: Deconvolution
 
-If including scatter, the stellar mass function (SMF) used in SHAM should be the \emph{intrinsic} SMF, $$\phi_{\rm int}$$, not the observed SMF, $$\phi_{\rm obs}$$.
+If including scatter, the stellar mass function (SMF) used in SHAM should be the *intrinsic* SMF, $$\phi_{\rm int}$$, not the observed SMF, $$\phi_{\rm obs}$$.
 
 It is common to use the deconvolution method based on <a href="https://ui.adsabs.harvard.edu/abs/2010ApJ...717..379B/abstract">Behroozi et al. 2010</a> to determine the intrinsic SMF. As described in <a href="https://ui.adsabs.harvard.edu/abs/2013ApJ...771...30R">Reddick et al. 2013</a>, this method can be described as follows:
 
@@ -21,7 +21,7 @@ It is common to use the deconvolution method based on <a href="https://ui.adsabs
 
 (2) Perform SHAM, as described <a href="https://ndrakos.github.io/blog/2020/02/11/Abundance_Matching.html">here</a>, using $$\phi = \phi_{\rm int}$$
 
-(3) Add the scatter; we assume there is log normal scatter (e.g. draw a random number from a gaussian distribution with standard deviation of $\sigma$, and add this to $$\log M_*$$)
+(3) Add the scatter; we assume there is log normal scatter (e.g. draw a random number from a gaussian distribution with standard deviation of $$\sigma$$, and add this to $$\log M_*$$)
 
 (4)	Calculate the new SMF, $$\phi_{\rm scat}$$; if we have the right intrinsic SMF, this should be equivalent to the observed SMF
 
@@ -29,7 +29,7 @@ It is common to use the deconvolution method based on <a href="https://ui.adsabs
 
 (6) Repeat steps 2-5 until $$\phi_{\rm int}$$ converges
 
-There are some difficulties in implementing this method; first of all it is not clear what is the best method to re-estimate $$\phi_{\rm int}$$ in step (5). Also, the deconvolution is sensitive to the end points of the $$\phi_{\rm obs}$$ and $$\phi_{\rm scat}$$ (this typically requires extrapolation beyond these points). There is code available <a href="https://bitbucket.org/yymao/abundancematching/src/master/">here</a> to perform SHAM using this method of adding scatter. However, I am going to use the method detailed below.
+There are some difficulties in implementing this method; first of all it is not clear what is the best method to re-estimate $$\phi_{\rm int}$$ in step (5), especially for bins with few halos. Also, the deconvolution is sensitive to the end points of the $$\phi_{\rm obs}$$ and $$\phi_{\rm scat}$$ (this typically requires extrapolation beyond these points). There is code available <a href="https://bitbucket.org/yymao/abundancematching/src/master/">here</a> to perform SHAM using this method of adding scatter. However, I am going to use the method detailed below.
 
 
 ## Method 2: Add Scatter to Halo Property
@@ -42,9 +42,9 @@ Recently, <a href="https://ui.adsabs.harvard.edu/abs/2019arXiv191003605C/abstrac
 
 (2) For each $$\sigma(\log v_{\rm peak})$$, add scatter to $$v_{\rm peaks}$$ (drawing from log-normal distribution)
 
-(3) <a href="https://ndrakos.github.io/blog/2020/02/11/Abundance_Matching.html"> Perform SHAM </a>)
+(3) <a href="https://ndrakos.github.io/blog/2020/02/11/Abundance_Matching.html"> Perform SHAM </a>
 
-(4) From the output stellar masses, measure $$\sigma[\log M_*\mid \log v_{\rm peak}]$$ as a function of (the un-scattered) $v_{\rm peak}$
+(4) From the output stellar masses, measure $$\sigma[\log M_*\mid \log v_{\rm peak}]$$ as a function of (the un-scattered) $$v_{\rm peak}$$
 
 **Abundance Matching with Scatter**
 
@@ -57,7 +57,9 @@ Recently, <a href="https://ui.adsabs.harvard.edu/abs/2019arXiv191003605C/abstrac
 ## Results
 
 **TROUBLE SHOOTING --- TO BE POSTED***
-< <img src="{{ site.baseurl }}/assets/plots/SMF_scatter.png"> >
+
+
+[/ <img src="{{ site.baseurl }}/assets/plots/SMF_scatter.png"> /]
 
 
 ## Things to think about
