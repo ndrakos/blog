@@ -83,4 +83,4 @@ There is some concern that the halo mass function I am using (1) does not extend
 
 Therefore, to fix these problems, I should use a parametric form for the halo mass function, rather than that measured directly from the simulation. However, the relationship between $$M_*$$ and $$v_{\rm peak}$$ does look reasonable. For comparison, see the following plot from <a href="https://ui.adsabs.harvard.edu/abs/2019arXiv191003605C/abstract">Cao et al. 2019</a>:
 
-<img src="{{ site.baseurl }}/assets/plots/Cao2019_M_vs_v.png">
+<img src="{{ site.baseurl }}/assets/plots/Cao2019_Mvsv.png">
