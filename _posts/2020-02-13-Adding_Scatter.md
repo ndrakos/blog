@@ -52,7 +52,7 @@ Recently, <a href="https://ui.adsabs.harvard.edu/abs/2019arXiv191003605C/abstrac
 
 (6) Perform steps (2)-(3) with the appropriate $$\sigma(\log v_{\rm peak})$$
 
-## Things to think about
+## Things to Think About
 
 Does this method for scatter create any biases/have any assumptions?
 
@@ -89,4 +89,6 @@ Next, I checked whether the relationship between $$M_*$$ and $$v_{\rm peak}$$ lo
 
 The values look very similar between $$\log v_{\rm peak}=2$$ to $$2.4$$. After that, mine isn't as flat. This could be part of the reason my plot for how the scatter maps does not match.
 
-**Next step:** Use a parameterized halo mass function, see if this helps.
+## What's Next
+
+Use a parameterized halo mass function, see if this helps.
