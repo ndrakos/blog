@@ -81,6 +81,12 @@ There is some concern that the halo mass function I am using (1) does not extend
 
 <img src="{{ site.baseurl }}/assets/plots/Matching_log.png">
 
-Therefore, to fix these problems, I should use a parametric form for the halo mass function, rather than that measured directly from the simulation. However, the relationship between $$M_*$$ and $$v_{\rm peak}$$ does look reasonable. For comparison, see the following plot from <a href="https://ui.adsabs.harvard.edu/abs/2019arXiv191003605C/abstract">Cao et al. 2019</a>:
+Therefore, to fix these problems, I should use a parametric form for the halo mass function, rather than that measured directly from the simulation.
+
+Next, I checked that the relationship between $$M_*$$ and $$v_{\rm peak}$$ does look reasonable. For comparison, see the following plot from <a href="https://ui.adsabs.harvard.edu/abs/2019arXiv191003605C/abstract">Cao et al. 2019</a>:
 
 <img src="{{ site.baseurl }}/assets/plots/Cao2019_MvsV.png">
+
+The values look very similar between $$\log v_{\rm peak}=2$$ to $$2.4$$. After that, mine isn't as flat. This could be part of the reason my plot for how the scatter maps does not match.
+
+**Next step"** Use a parameterized halo mass function, see if this helps.
