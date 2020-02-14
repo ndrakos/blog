@@ -71,16 +71,16 @@ However my plot looks like this:
 
 <img src="{{ site.baseurl }}/assets/plots/scatter_mapping.png">
 
-I have tried to look in more detail at the individual data points (for $$\sigma(v_{\rm peak})=0.1 dex $$):
+I have tried to look in more detail at the individual data points (for $$\sigma(v_{\rm peak})=0.1$$ dex):
 
 <img src="{{ site.baseurl }}/assets/plots/Mgal_vs_vpeak.png">
 
 This plot shows the original data points in blue, and then the scatter that is added for the abundance matching is shown in black. This mostly looks reasonable, and the scatter in $$M_*$$ agrees with the scatter I am measuring.
 
-There is some concern that the halo mass function I am using (1) does not extend to lower $$v_{\rm peak}$$ than that measured in the simulation and (2) has some problems at high $$v_{peak}$$ that comes from discreteness issues. This can seen by looking closer at the abundance matching (log-log plot versus the linear plot shown in the previous plot):
+There is some concern that the halo mass function I am using (1) does not extend to lower $$v_{\rm peak}$$ than that measured in the simulation and (2) has some problems at high $$v_{\rm peak}$$ that comes from discreteness issues. This can seen by looking closer at the abundance matching (log-log plot versus the linear plot shown in the previous plot):
 
 <img src="{{ site.baseurl }}/assets/plots/Matching_log.png">
 
 Therefore, to fix these problems, I should use a parametric form for the halo mass function, rather than that measured directly from the simulation. However, the relationship between $$M_*$$ and $$v_{\rm peak}$$ does look reasonable. For comparison, see the following plot from <a href="https://ui.adsabs.harvard.edu/abs/2019arXiv191003605C/abstract">Cao et al. 2019</a>:
 
-<img src="{{ site.baseurl }}/assets/plots/Cao2019_Mvsv.png">
+<img src="{{ site.baseurl }}/assets/plots/Cao2019_MvsV.png">
