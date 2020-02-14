@@ -77,7 +77,7 @@ I have tried to look in more detail at the individual data points:
 
 This plot shows the original data points in blue, and then the scatter that is added for the abundance matching is shown in black. This mostly looks reasonable, and the scatter in $$M_*$$ agrees with the scatter I am measuring.
 
-There is some concern that the halo mass function I am using (1) does not extend to lower $$v_{peak}$$ than that measured in the simulation and (2) has some problems at high $$v_{peak}$ that comes from discreteness issues. This can seen by looking closer at the abundance matching (log-log plot versus the linear plot shown in the previous plot):
+There is some concern that the halo mass function I am using (1) does not extend to lower $$v_{peak}$$ than that measured in the simulation and (2) has some problems at high $$v_{peak}$$ that comes from discreteness issues. This can seen by looking closer at the abundance matching (log-log plot versus the linear plot shown in the previous plot):
 
 <img src="{{ site.baseurl }}/assets/plots/Matching_log.png">
 
