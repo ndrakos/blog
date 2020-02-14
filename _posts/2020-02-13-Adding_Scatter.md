@@ -64,7 +64,7 @@ Does adding log-normal scatter in $$v_{\rm peak}$$ result in log-normal scatter 
 I am trying to reproduce the following plot from <a href="https://ui.adsabs.harvard.edu/abs/2019arXiv191003605C/abstract">Cao et al. 2019</a>
 
 
-<img src="{{ site.baseurl }}/assets/plots/Cao2019scatter.png">
+<img src="{{ site.baseurl }}/assets/plots/Cao2019mapping.png">
 
 
 However my plot looks like this...
@@ -79,8 +79,8 @@ This plot shows the original data points in blue, and then the scatter that is a
 
 There is some concern that the halo mass function I am using (1) does not extend to lower $$v_{peak}$$ than that measured in the simulation and (2) has some problems at high $$v_{peak}$ that comes from discreteness issues. This can seen by looking closer at the abundance matching (log-log plot versus the linear plot shown in the previous plot):
 
-<img src="{{ site.baseurl }}/assets/plots/Matching_log">
+<img src="{{ site.baseurl }}/assets/plots/Matching_log.png">
 
 Therefore, to fix these problems, I should use a parametric form for the halo mass function, rather than that measured directly from the simulation. However, the relationship between $$M_*$$ and $$v_{peak}$$ does look reasonable. For comparison, see the following plot from <a href="https://ui.adsabs.harvard.edu/abs/2019arXiv191003605C/abstract">Cao et al. 2019</a>:
 
-<img src="{{ site.baseurl }}/assets/plots/Cao2019_M_vs_v">
+<img src="{{ site.baseurl }}/assets/plots/Cao2019_M_vs_v.png">
