@@ -6,14 +6,13 @@ email: nicoledrakos@gmail.com
 url: "https://ndrakos.github.io/blog/" # the base hostname & protocol for your site
 twitter_username: nicoledrakos
 github_username:  ndrakos
-
+permalink:   /:categories/:title/
 
 markdown: kramdown
 theme: jekyll-theme-dinky
 
 # Build settings
 mathjax: true
-defaults:
     -
         scope:
             path: "" # empty string for all files
@@ -32,3 +31,10 @@ defaults:
             type: "draft"
         values:
             layout: "post"
+    -
+    scope:
+      path: ""
+      type: category
+    values:
+      layout: "default"
+        -
