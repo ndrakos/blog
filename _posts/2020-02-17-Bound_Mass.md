@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Calculating Bound Mass"
-date:   2020-02-13
+date:   2020-02-17
 
 categories: tidal_stripping
 ---
@@ -10,16 +10,16 @@ categories: tidal_stripping
 
 In a paper that is currently under revision, I determined the self-bound particles in a subhalo by iteratively removing any particles with a negative energy. This requires calculating the potential of all the particles in the subhalo. I had been assuming the remnant was spherically symmetric (which halo finders such as AHF assume as well), as this greatly reduces the computation time, but the reviewer raised concerns over how this might affect the results. These are some of my tests to see how the spherical approximation compares to calculating the full potential.
 
-##Potential Calculations}
+## Potential Calculations
 
-#Spherical Approximation
+# Spherical Approximation
 
- For a spherically symmetric system, you can treat the mass of each particle $i$ as being distributed over a shell of radius $r_i$, and the potential becomes (see <a href="https://ui.adsabs.harvard.edu/abs/2019MNRAS.487..993D/abstract">Drakos et al. 2019</a>):
+ For a spherically symmetric system, you can treat the mass of each particle $i$ as being distributed over a shell of radius $$r_i$$, and the potential becomes (see <a href="https://ui.adsabs.harvard.edu/abs/2019MNRAS.487..993D/abstract">Drakos et al. 2019</a>):
 
  $$P \approx -\dfrac{Gm^2}{2}\sum_{i=1}^N\left( \dfrac{N(<r_i)}{r_i} + \sum_{j=1,\\ r_j>r_i}^N \dfrac{1}{r_j} \right)$$
 
 
-#Full Potential
+# Full Potential
 
 It is not feasible to calculate the full potential directly. As pointed out by the reviewer, in <a href=" https://ui.adsabs.harvard.edu/abs/2018MNRAS.474.3043V/abstract">van den Bosch et al. 2018</a>), they used the Barnes & Hut algorithm. However, I am going to calculate the potential energy as described in <a href=" https://ui.adsabs.harvard.edu/abs/2010MNRAS.404.1137B/abstract">Bett et al. 2010</a>):
 
@@ -39,7 +39,7 @@ $$
 
 As in (see <a href="https://ui.adsabs.harvard.edu/abs/2019MNRAS.487..993D/abstract">Drakos et al. 2019</a>),  I will use $$N_{\rm sel}= 5000$$ particles.
 
-##Results
+## Results
 
 I tested a few of the results for the Fast and Slow Simulations (described in the paper):
 
@@ -59,6 +59,6 @@ Shape calculation:
 
 
 
-\subsection{Conclusions}
+## Conclusions
 
 Even though there is quite a bit of noise associated with the method I used to calculate the full potential (this could be improved by repeating the method with another randomly selected subset of particles, and averaging the results), the two methods agree very well.
