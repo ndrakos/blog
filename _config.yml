@@ -33,9 +33,9 @@ defaults:
         values:
             layout: "post"
     -
-    scope:
-      path: ""
-      type: category
-    values:
-      layout: "default"
+        scope:
+            path: ""
+            type: category
+        values:
+            layout: "default"
         -
