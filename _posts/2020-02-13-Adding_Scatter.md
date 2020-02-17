@@ -20,7 +20,7 @@ It is common to use the deconvolution method based on <a href="https://ui.adsabs
 
 (1) Estimate that $$\phi_{\rm int} = \phi_{\rm obs}$$
 
-(2) Perform SHAM, as described <a href="https://ndrakos.github.io/blog/mocks/2020/02/11/Abundance_Matching.html">here</a>, using $$\phi = \phi_{\rm int}$$
+(2) Perform SHAM, as described <a href="https://ndrakos.github.io/blog/mocks/Abundance_Matching.html">here</a>, using $$\phi = \phi_{\rm int}$$
 
 
 (3) Add the scatter; we assume there is log normal scatter (e.g. draw a random number from a gaussian distribution with standard deviation of $$\sigma$$, and add this to $$\log M_*$$)
@@ -44,7 +44,7 @@ Recently, <a href="https://ui.adsabs.harvard.edu/abs/2019arXiv191003605C/abstrac
 
 (2) For each $$\sigma(\log v_{\rm peak})$$, add scatter to $$v_{\rm peaks}$$ (drawing from log-normal distribution)
 
-(3) <a href="https://ndrakos.github.io/blog/mocks/2020/02/11/Abundance_Matching.html"> Perform SHAM </a>
+(3) <a href="https://ndrakos.github.io/blog/mocks/Abundance_Matching.html"> Perform SHAM </a>
 
 (4) From the output stellar masses, measure $$\sigma[\log M_*\mid \log v_{\rm peak}]$$ as a function of (the un-scattered) $$v_{\rm peak}$$
 
