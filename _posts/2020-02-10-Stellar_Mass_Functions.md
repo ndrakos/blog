@@ -2,7 +2,7 @@
 layout: post
 title:  "Stellar Mass Functions"
 date:   2020-02-10
-tags: [mocks]
+categories: mocks
 ---
 
 

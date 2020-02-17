@@ -2,7 +2,7 @@
 layout: post
 title:  "Abundance Matching"
 date:   2020-02-11
-tags: [mocks]
+categories: mocks
 ---
 
 
