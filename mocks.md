@@ -6,6 +6,7 @@ title:  "Mock Galaxy Catalogues"
 
 
 
+
 <h2 class="page-heading">Related Posts</h2>
 
 <ul class="post-list">
