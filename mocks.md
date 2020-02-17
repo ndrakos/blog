@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: mocks
+permalink: /mocks/
 ---
 
 <h1>Mock Galaxy Catalogues</h1>
