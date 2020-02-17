@@ -13,6 +13,7 @@ theme: jekyll-theme-dinky
 
 # Build settings
 mathjax: true
+defaults:
     -
         scope:
             path: "" # empty string for all files
