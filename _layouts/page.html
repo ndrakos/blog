@@ -3,17 +3,16 @@ layout: default
 ---
 
 
-<h1 class="post-title">{{ page.title }}</h1>
+<h1 class="page-heading">{{ page.title }}</h1>
 
 
 {{ content }}
 
 
-<h2>Related Posts</h2>
-
+<h2 class="page-heading">Latest Posts</h2>
 
 <ul class="post-list">
-  {% for post in site.categories.mocks}
+  {% for post in site.posts limit:10%}
 
   <li>
     <span>{{ post.date | date: "%b %-d, %Y" }}</span> &nbsp; <a href="{{ post.url | prepend: site.baseurl }}">{{post.title }}</a>
