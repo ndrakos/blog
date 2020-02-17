@@ -3,7 +3,7 @@ layout: page
 permalink: /tidal_stripping/
 ---
 
-<h1>Tidal Stripping</h1>
+<h1>Tidally-Stripped Halos</h1>
 
 
 
