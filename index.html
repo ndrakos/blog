@@ -12,7 +12,7 @@ layout: default
 
 <a href="{{ site.url }}mocks/">Mock Galaxy Catalogues</a>
 <br>
-<a href="{{ site.url }}tidal_stripping/">Tidal Stripping</a>
+<a href="{{ site.url }}tidal_stripping/">Tidally-Stripped Halos</a>
 
 </strong>
 </font>
@@ -25,7 +25,7 @@ layout: default
   <ul class="post-list">
     {% for post in site.posts limit:10%}
 
-    <li><span>{{ post.date | date: "%b %-d, %Y" }}</span> &nbsp; <a href="{{ post.url }}">{{ post.title }}</a></li>
+    <li><span>{{ post.date | date: "%b %-d, %Y" }}</span> &nbsp; <a href="{{ post.url }}">{{ post.categories.title }}</a></li>
 
     {% endfor %}
  </ul>
