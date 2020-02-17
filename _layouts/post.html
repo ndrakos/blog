@@ -9,10 +9,13 @@ layout: default
 {{ content }}
 
 <div class="PageNavigation">
+  <p style="text-align:center">
   {% if page.previous %}
     <a class="prev" href="{{ site.url }}{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
   {% endif %}
+  &nbsp;&nbsp;&nbsp;&nbsp;
   {% if page.next %}
     <a class="next" href="{{ site.url }}{{page.next.url}}">{{page.next.title}} &raquo;</a>
   {% endif %}
+  <\p>
 </div>
