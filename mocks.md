@@ -6,7 +6,7 @@ title:  "Mock Galaxy Catalogues"
 
 
 
-<h2 class="page-heading">Latest Posts</h2>
+<h2 class="page-heading">Related Posts</h2>
 
 <ul class="post-list">
   {% for post in site.categories.mocks %}
