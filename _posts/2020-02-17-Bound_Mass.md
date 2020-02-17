@@ -12,16 +12,16 @@ In a paper that is currently under revision, I determined the self-bound particl
 
 ## Potential Calculations
 
-# Spherical Approximation
+### Spherical Approximation
 
- For a spherically symmetric system, you can treat the mass of each particle $i$ as being distributed over a shell of radius $$r_i$$, and the potential becomes (see <a href="https://ui.adsabs.harvard.edu/abs/2019MNRAS.487..993D/abstract">Drakos et al. 2019</a>):
+ For a spherically symmetric system, you can treat the mass of each particle $$i$$ as being distributed over a shell of radius $$r_i$$, and the potential becomes (see <a href="https://ui.adsabs.harvard.edu/abs/2019MNRAS.487..993D/abstract">Drakos et al. 2019</a>):
 
  $$P \approx -\dfrac{Gm^2}{2}\sum_{i=1}^N\left( \dfrac{N(<r_i)}{r_i} + \sum_{j=1,\\ r_j>r_i}^N \dfrac{1}{r_j} \right)$$
 
 
-# Full Potential
+### Full Potential
 
-It is not feasible to calculate the full potential directly. As pointed out by the reviewer, in <a href=" https://ui.adsabs.harvard.edu/abs/2018MNRAS.474.3043V/abstract">van den Bosch et al. 2018</a>), they used the Barnes & Hut algorithm. However, I am going to calculate the potential energy as described in <a href=" https://ui.adsabs.harvard.edu/abs/2010MNRAS.404.1137B/abstract">Bett et al. 2010</a>):
+It is not feasible to calculate the full potential directly. As pointed out by the reviewer, in <a href=" https://ui.adsabs.harvard.edu/abs/2018MNRAS.474.3043V/abstract">van den Bosch et al. 2018</a>, they used the Barnes & Hut algorithm. However, I am going to calculate the potential energy as described in <a href=" https://ui.adsabs.harvard.edu/abs/2010MNRAS.404.1137B/abstract">Bett et al. 2010</a>:
 
 $$P = \left(\dfrac{N^2-N}{N_{\rm sel}^2-N_{\rm sel}}\right) \left(\dfrac{-Gm^2}{\epsilon}\right) \sum_{i=1}^{N_{\rm sel} -1} \sum_{j=i+1}^{N_{\rm sel}} -W(r_{ij}/\epsilon)$$
 
@@ -37,7 +37,7 @@ $$
  \end{cases}
 $$
 
-As in (see <a href="https://ui.adsabs.harvard.edu/abs/2019MNRAS.487..993D/abstract">Drakos et al. 2019</a>),  I will use $$N_{\rm sel}= 5000$$ particles.
+As in <a href="https://ui.adsabs.harvard.edu/abs/2019MNRAS.487..993D/abstract">Drakos et al. 2019</a>,  I will use $$N_{\rm sel}= 5000$$ particles.
 
 ## Results
 
