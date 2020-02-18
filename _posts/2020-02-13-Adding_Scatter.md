@@ -89,7 +89,7 @@ Next, I checked whether the relationship between $$M_*$$ and $$v_{\rm peak}$$ lo
 
 <img src="{{ site.baseurl }}/assets/plots/Cao2019_MvsV.png">
 
-The values look very similar between $$\log v_{\rm peak}=2$$ to $$2.4$$. After that, mine isn't as flat. This could be part of the reason my plot for how the scatter maps does not match.
+The values look similar around $$\log v_{\rm peak}=2.4$$. After that, mine isn't as flat, and before that mine isn't as steep. This could be the reason my plot for how the scatter maps does not match.
 
 ## What's Next
 
