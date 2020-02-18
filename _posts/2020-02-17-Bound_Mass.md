@@ -14,7 +14,7 @@ In a paper that is currently under revision, I determined the self-bound particl
 
 ### Spherical Approximation
 
- For a spherically symmetric system, you can treat the mass of each particle $$i$$ as being distributed over a shell of radius $$r_i$$, and the potential at particle $i$ becomes (see <a href="https://ui.adsabs.harvard.edu/abs/2019MNRAS.487..993D/abstract">Drakos et al. 2019</a>):
+ For a spherically symmetric system, you can treat the mass of each particle $$i$$ as being distributed over a shell of radius $$r_i$$, and the potential at particle $$i$$ becomes (see <a href="https://ui.adsabs.harvard.edu/abs/2019MNRAS.487..993D/abstract">Drakos et al. 2019</a>):
 
  $$P_i \approx -Gm \left( \dfrac{N(<r_i)}{r_i} + \sum_{j=1,\\ r_j>r_i}^N \dfrac{1}{r_j} \right)$$
 
@@ -27,7 +27,7 @@ It is not feasible to calculate the full potential directly. As pointed out by t
 
 $$P_i = \left(\dfrac{N-1}{N_{\rm sel}-1}\right) \left(\dfrac{-Gm}{\epsilon}\right) \sum_{j=1,\\ j \neq i}^{N_{\rm sel}} -W(r_{ij}/\epsilon)$$
 
-Here, $$N_{\rm sel}$$ is the number of randomly selected particles used to approximate the entire distribution, and $$W$$ is the smoothing kernel used for force calculations in GADGET-2:
+Here, $$N_{\rm sel}$$ is the number of randomly selected particles used to approximate the entire distribution (each of these particles can be considered to have a mass $$m N/N_{\rm sel}$$). $$W$$ is the smoothing kernel used for force calculations in GADGET-2:
 
 $$
  W(x) =
