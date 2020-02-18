@@ -23,7 +23,7 @@ In a paper that is currently under revision, I determined the self-bound particl
 
 It is not feasible to calculate the full potential directly. As pointed out by the reviewer, in <a href=" https://ui.adsabs.harvard.edu/abs/2018MNRAS.474.3043V/abstract">van den Bosch et al. 2018</a>, they used the Barnes & Hut algorithm. However, I am going to calculate the potential energy as described in <a href=" https://ui.adsabs.harvard.edu/abs/2010MNRAS.404.1137B/abstract">Bett et al. 2010</a>:
 
-$$P_i = \left(\dfrac{N-1}{N_{\rm sel}-1}\right) \left(\dfrac{-Gm}{\epsilon}\right) \sum_{j=1, j \neq i}^{N_{\rm sel}} -W(r_{ij}/\epsilon)$$
+$$P_i = \left(\dfrac{N-1}{N_{\rm sel}-1}\right) \left(\dfrac{-Gm}{\epsilon}\right) \sum_{j=1,\\ j \neq i}^{N_{\rm sel}} -W(r_{ij}/\epsilon)$$
 
 Here, $$N_{\rm sel}$$ is the number of randomly selected particles used to approximate the entire distribution, and $$W$$ is the smoothing kernel used for force calculations in GADGET-2.
 
