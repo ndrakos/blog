@@ -28,7 +28,7 @@ First, I will check that the halo mass function measured from the simulation agr
 
 $$\dfrac{dn}{d \ln M} =f (\sigma) \dfrac{\rho_c}{M} \dfrac{d \ln \sigma^{-1}}{d \ln M}$$
 
-where $$dn/d\ln M$$ is the comoving number density of halos and $$\rho_c = 3 H^2/8 \pi G$$,  is the critical density. Note that to convert this to $$\log$$ space, $$\dfrac{dn}{d \log M} =\ln(10) \dfrac{dn}{d \ln M}$$
+where $$dn/d\ln M$$ is the comoving number density of halos and $$\rho_c = 3 H^2/8 \pi G$$,  is the critical density. Note that to convert this to $$\log$$ space, $${dn}/{d \log M} =\ln(10) {dn}/{d \ln M}$$
 
 
 
@@ -60,7 +60,7 @@ The fluctuations are given by:
 
 $$\sigma^2(M,z) = \int_0^\infty P(k) W^2(kR(M)) k^2 dk$$
 
-The background density, $$\rho_b = M/(4 \pi R^3/3)$$ gives the relation between mass and radius. $$W$$ is the smoothing filter. For a top-hat filter, it is given by:
+The relationship between mass and radius is given by $$200 \rho_c = M/(4 \pi R^3/3)$$. $$W$$ is the smoothing filter. For a top-hat filter, it is given by:
 
 $$ W (kR) = 3 \left[ \dfrac{\sin kR}{(kR)^3} - \dfrac{ \cos kR}{(kR)^2} \right] $$
 
