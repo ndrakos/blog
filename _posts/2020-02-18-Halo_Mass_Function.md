@@ -91,4 +91,4 @@ Here is the comparison between the simulation and the theoretical halo mass func
 
 <img src="{{ site.baseurl }}/assets/plots/HaloMassFunction.png">
 
-These agree pretty well above $$\log M = 12$$, but I'm still not convinced I don't have an error in my halo mass function. Either way, the steep part of the stellar to halo mass relation corresponds to masses less than that (from the $$\sigma[M|v_{\rm peak}]$$ plot in the previous plot, $$\log M=12$$ corresponds roughly to $$\log v_{\rm peak} = 2.6$$). Therefore, I am pretty sure this is a resolution issue.
+These agree pretty well above $$\log M = 12$$, but I'm still not convinced I don't have an error in my halo mass function. Either way, the steep part of the stellar to halo mass relation corresponds to masses less than that (from the $$\sigma[M \mid v_{\rm peak}]$$ plot in the previous plot, $$\log M=12$$ corresponds roughly to $$\log v_{\rm peak} = 2.6$$). Therefore, I am pretty sure this is a resolution issue.
