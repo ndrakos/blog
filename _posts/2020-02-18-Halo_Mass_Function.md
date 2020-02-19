@@ -36,7 +36,7 @@ where $$dn/d\ln M$$ is the comoving number density of halos and $$\rho_c = 3 H^2
 
 There are many of parameterizations of the mass function, $$f(\sigma)$$, in the literature: I will be using the parameterization from <a href="https://ui.adsabs.harvard.edu/abs/2016MNRAS.456.2486D/abstract">Despali et al. 2016 </a>, which is based off of the functional form from  Sheth & Tormen 1999:
 
-$$\nu f(\nu) = A \left(1 + \dfrac{1}{(a\nu)^p}\right) \left( \dfrac{a \nu}{2 \pi} \right)^{1/2} e^{-a\nu/2}$$
+$$ f(\sigma) = A \left(1 + \dfrac{1}{(a\nu(\sigma))^p}\right) \left( \dfrac{2 a \nu(\sigma)}{\pi} \right)^{1/2} e^{-a\nu(\sigma)/2}$$
 
 
 
@@ -72,7 +72,7 @@ where $$n$$ is the slope of the initial perturbation spectrum, and $$A$$ is an a
 
 $$T(k) = \dfrac{\ln (1+2.34 q)}{2.34 q}\left[1 + 3.89q + (16.1q)^2 + (5.46q)^3  + (6.71q)^4\right]^{-1/4}$$
 
-where $$q=k/\Omega_M h$$ (assuming no baryon content). I will use the following parameters: $$\Omega_M=0.3$$, $$n=1$$, $$\sigma^2(R = 8 h^{-1} Mpc) = 0.8^2$$ and $$h=0.7$$.
+where $$q=k/\Omega_M h$$ (assuming no baryon content). Note that for all these equations, $$k$$ is in units of $$1/(h^{-1}Mpc)$$ . I will use the following parameters: $$\Omega_M=0.3$$, $$n=1$$, $$\sigma^2(R = 8 h^{-1} Mpc) = 0.8^2$$ and $$h=0.7$$.
 
 <!---
 The comoving background density, $$\rho_b = \rho_c \Omega_M$$ and $$\rho_c = 3 H^2/8 \pi G$$
@@ -86,4 +86,4 @@ Here is the comparison between the simulation and the theoretical halo mass func
 
 <img src="{{ site.baseurl }}/assets/plots/HaloMassFunction.png">
 
-These don't agree very well. Some of this might be due to resolution issues in the simulation, but I need to check (1) if I am calculating the theoretical from correctly and (2) if I am measuring the halo mass function from simulations correctly.
+These agree pretty well below $$\log M = 12$$, but I'm still not convinced I don't have an error in my halo mass function.
