@@ -26,7 +26,7 @@ It could be that my halo mass function is not correct (either in my calculation,
 
 First, I will check that the halo mass function measured from the simulation agrees with theory. The halo mass function can be calculated as:
 
-$$\dfrac{dn}{d \ln M} =f (\sigma) \dfrac{\rho_b}\dfrac{M} \dfrac{d \ln \sigma^{-1}}{d \ln M}$$
+$$\dfrac{dn}{d \ln M} =f (\sigma) \dfrac{\rho_b}{M} \dfrac{d \ln \sigma^{-1}}{d \ln M}$$
 
 where $$dn/d\ln M$$ is the comoving number density of halos and $$\rho_b$$ is the background density. Note that to convert this to $$\log$$ space, $$\dfrac{dn}{d \log M} =\ln(10) \dfrac{dn}{d \ln M}$$
 
@@ -34,7 +34,7 @@ where $$dn/d\ln M$$ is the comoving number density of halos and $$\rho_b$$ is th
 
 ### Dimensionless Mass Function
 
-There are many of parameterizations of the mass function, $$f(\sigma)$$ in the literature: I will be using the parameterization from <a href="https://ui.adsabs.harvard.edu/abs/2016MNRAS.456.2486D/abstract">Despali et al. 2016 </a>, which is based off of the functional form from  Sheth & Tormen 1999:
+There are many of parameterizations of the mass function, $$f(\sigma)$$, in the literature: I will be using the parameterization from <a href="https://ui.adsabs.harvard.edu/abs/2016MNRAS.456.2486D/abstract">Despali et al. 2016 </a>, which is based off of the functional form from  Sheth & Tormen 1999:
 
 $$\nu f(\nu) = A \left(1 + \dfrac{1}{(a\nu)^p}\right) \left( \dfrac{a \nu}{2 \pi} \right)^{1/2} e^{-a\nu/2}$$
 
@@ -48,7 +48,7 @@ The peak height is defined as $$\nu \equiv \delta_c^2(z)/\sigma^2(M)$$. The crit
 
 $$ \delta_c(z) \approx \dfrac{3}{20} (12 \pi)^{2/3} [1 + 0.0123 \log \Omega_M (z)]$$
 
-This model has three free parameters, $$(a, p, A_0)$$. I am using a spherical overdensity criteria of $$200\rho_c$$ (these are options in AHF); for redshift zero, this corresponds to $$(a,p,A_0)=(0.903,0.322,0.287)$$
+This model has three free parameters, $$(a, p, A_0)$$. I am using a spherical overdensity criteria of $$200\rho_c$$ (these are options in AHF); for redshift zero, this corresponds to $$(a,p,A_0)=(0.903,0.322,0.287)$$.
 
 Finally, I need to calculate the fluctations, $$\sigma$$:
 
@@ -78,7 +78,7 @@ With this, I calculate  $$\dfrac{d \ln \sigma^{-1}}{d \ln M}$$ numerically.
 
 ## Results
 
-Here is the comparison between the simulation and the theoretical mass function:
+Here is the comparison between the simulation and the theoretical halo mass functions:
 
 <img src="{{ site.baseurl }}/assets/plots/HaloMassFunction.png">
 
