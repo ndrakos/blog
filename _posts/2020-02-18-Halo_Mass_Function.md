@@ -28,6 +28,11 @@ First, I will check that the halo mass function measured from the simulation agr
 
 $$\dfrac{dn}{d \ln M} =f (\sigma) \dfrac{\rho_c}{M} \dfrac{d \ln \sigma^{-1}}{d \ln M}$$
 
+<!---
+f(nu)dnu = 2 nu f(nu) d ln sigma^{-1}
+-->
+
+
 where $$dn/d\ln M$$ is the comoving number density of halos and $$\rho_c = 3 H^2/8 \pi G$$,  is the critical density. Note that to convert this to $$\log$$ space, $${dn}/{d \log M} =\ln(10) {dn}/{d \ln M}$$
 
 
@@ -36,7 +41,7 @@ where $$dn/d\ln M$$ is the comoving number density of halos and $$\rho_c = 3 H^2
 
 There are many of parameterizations of the mass function, $$f(\sigma)$$, in the literature: I will be using the parameterization from <a href="https://ui.adsabs.harvard.edu/abs/2016MNRAS.456.2486D/abstract">Despali et al. 2016 </a>, which is based off of the functional form from  Sheth & Tormen 1999:
 
-$$ f(\sigma) = A \left(1 + \dfrac{1}{(a\nu(\sigma))^p}\right) \left( \dfrac{2 a \nu(\sigma)}{\pi} \right)^{1/2} e^{-a\nu(\sigma)/2}$$
+$$ 2 \nu f(\n) = A \left(1 + \dfrac{1}{(a\nu))^p}\right) \left( \dfrac{2 a \nu}{\pi} \right)^{1/2} e^{-a\nu/2}$$
 
 
 
@@ -44,7 +49,7 @@ $$ f(\sigma) = A \left(1 + \dfrac{1}{(a\nu(\sigma))^p}\right) \left( \dfrac{2 a 
 $$A=0.333$$ $$a=0.794$$ $$p=0.247$$
 -->
 
-The peak height is defined as $$\nu \equiv \delta_c^2(z)/\sigma^2(M)$$. The critical overdensity, $$\delta_c(z)$$ is well approximated by (Kitayama & Suto 1996):
+(Here we note that $$f(nu)dnu = 2 nu f(nu) d ln sigma^{-1}$$). The peak height is defined as $$\nu \equiv \delta_c^2(z)/\sigma^2(M)$$. The critical overdensity, $$\delta_c(z)$$ is well approximated by (Kitayama & Suto 1996):
 
 $$ \delta_c(z) \approx \dfrac{3}{20} (12 \pi)^{2/3} [1 + 0.0123 \log \Omega_M (z)]$$
 
