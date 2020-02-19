@@ -26,7 +26,7 @@ It could be that my halo mass function is not correct (either in my calculation,
 
 First, I will check that the halo mass function measured from the simulation agrees with theory. The halo mass function can be calculated as:
 
-$$ \dfrac{dn}{d \ln M} =f (\sigma) \dfrac{\rho_b}\dfrac{M} \dfrac{d \ln \sigma^{-1}}{d \ln M}$$
+$$\dfrac{dn}{d \ln M} =f (\sigma) \dfrac{\rho_b}\dfrac{M} \dfrac{d \ln \sigma^{-1}}{d \ln M}$$
 
 where $$dn/d\ln M$$ is the comoving number density of halos and $$\rho_b$$ is the background density. Note that to convert this to $$\log$$ space, $$\dfrac{dn}{d \log M} =\ln(10) \dfrac{dn}{d \ln M}$$
 
@@ -36,7 +36,7 @@ where $$dn/d\ln M$$ is the comoving number density of halos and $$\rho_b$$ is th
 
 There are many of parameterizations of the mass function, $$f(\sigma)$$ in the literature: I will be using the parameterization from <a href="https://ui.adsabs.harvard.edu/abs/2016MNRAS.456.2486D/abstract">Despali et al. 2016 </a>, which is based off of the functional form from  Sheth & Tormen 1999:
 
-$$\nu f(\nu) = A \left(1 + \dfrac{1}{(a\nu)^p}\right) \left( \dfrac{a \nu}{2 \pi} \right)^{1/2} \e^{-a\nu/2}$$
+$$\nu f(\nu) = A \left(1 + \dfrac{1}{(a\nu)^p}\right) \left( \dfrac{a \nu}{2 \pi} \right)^{1/2} e^{-a\nu/2}$$
 
 
 
@@ -52,9 +52,9 @@ This model has three free parameters, $$(a, p, A_0)$$. I am using a spherical ov
 
 Finally, I need to calculate the fluctations, $$\sigma$$:
 
-### $$\sigma$$
+### Calculating $$\sigma (M)$$
 
-I will make some approximations in calculating $$\sigma$$: this could be calculated more carefully, using the actual realization of the power spectrum, $$P(k)$$, measured from the simulations (see <a href="https://ui.adsabs.harvard.edu/abs/2016MNRAS.456.2486D/abstract">Despali et al. 2016 </a>), however, for the purposes of this test, I don't need it to be that accurate.
+I will make some approximations in calculating the amplitude of fluctuations, $$\sigma(M)$$: this could be calculated more carefully, using the actual realization of the power spectrum, $$P(k)$$, measured from the simulations (see <a href="https://ui.adsabs.harvard.edu/abs/2016MNRAS.456.2486D/abstract">Despali et al. 2016 </a>), however, for the purposes of this test, I don't need it to be that accurate.
 
 The fluctuations are given by:
 
@@ -66,9 +66,9 @@ $$ W (kR) = 3 \left[ \dfrac{\sin kR}{(kR)^3} - \dfrac{ \cos kR}{(kR)^2} \right] 
 
 For the power spectrum, I will use:
 
-$$P(k) = C k^n T^2(k)$$
+$$P(k) = A k^n T^2(k)$$
 
-where $$n$$ is the slope of the initial perturbation spectrum, and $$C$$ is an amplitude that can be determined by setting the value of the cosmological parameter $$\sigma_8$$. For the transfer function, $$T$$, I will use the formula from BBKS:
+where $$n$$ is the slope of the initial perturbation spectrum, and $$A$$ is an amplitude that can be determined by setting the value of the cosmological parameter $$\sigma_8$$. For the transfer function, $$T$$, I will use the formula from BBKS:
 
 $$T(k) = \dfrac{\ln (1+2.34 q)}{2.34 q}\left[1 + 3.89q + (16.1q)^2 + (5.46q)^3  + (6.71q)^4\right]^{-1/4}$$
 
@@ -78,7 +78,7 @@ With this, I calculate  $$\dfrac{d \ln \sigma^{-1}}{d \ln M}$$ numerically.
 
 ## Results
 
-Here is the comparison between the
+Here is the comparison between the simulation and the theoretical mass function:
 
 <img src="{{ site.baseurl }}/assets/plots/HaloMassFunction.png">
 
