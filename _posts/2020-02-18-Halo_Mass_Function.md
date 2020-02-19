@@ -41,7 +41,7 @@ where $$dn/d\ln M$$ is the comoving number density of halos and $$\rho_c = 3 H^2
 
 There are many of parameterizations of the mass function, $$f(\sigma)$$, in the literature: I will be using the parameterization from <a href="https://ui.adsabs.harvard.edu/abs/2016MNRAS.456.2486D/abstract">Despali et al. 2016 </a>, which is based off of the functional form from  Sheth & Tormen 1999:
 
-$$ 2 \nu f(\n) = A \left(1 + \dfrac{1}{(a\nu))^p}\right) \left( \dfrac{2 a \nu}{\pi} \right)^{1/2} e^{-a\nu/2}$$
+$$ 2 \nu f(\nu) = A \left(1 + \dfrac{1}{(a\nu)^p}\right) \left( \dfrac{2 a \nu}{\pi} \right)^{1/2} e^{-a\nu/2}$$
 
 
 
@@ -49,7 +49,7 @@ $$ 2 \nu f(\n) = A \left(1 + \dfrac{1}{(a\nu))^p}\right) \left( \dfrac{2 a \nu}{
 $$A=0.333$$ $$a=0.794$$ $$p=0.247$$
 -->
 
-The peak height is defined as $$\nu \equiv \delta_c^2(z)/\sigma^2(M)$$. Note that $$f(nu)dnu = 2 nu f(nu) d ln sigma^{-1}$$. The critical overdensity, $$\delta_c(z)$$ is well approximated by (Kitayama & Suto 1996):
+The peak height is defined as $$\nu \equiv \delta_c^2(z)/\sigma^2(M)$$. Note that $$f(\nu)d\nu = 2 \nu f(\nu) d \ln \sigma^{-1}$$. The critical overdensity, $$\delta_c(z)$$ is well approximated by (Kitayama & Suto 1996):
 
 $$ \delta_c(z) \approx \dfrac{3}{20} (12 \pi)^{2/3} [1 + 0.0123 \log \Omega_M (z)]$$
 
