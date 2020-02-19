@@ -49,7 +49,7 @@ $$ 2 \nu f(\n) = A \left(1 + \dfrac{1}{(a\nu))^p}\right) \left( \dfrac{2 a \nu}{
 $$A=0.333$$ $$a=0.794$$ $$p=0.247$$
 -->
 
-(Here we note that $$f(nu)dnu = 2 nu f(nu) d ln sigma^{-1}$$). The peak height is defined as $$\nu \equiv \delta_c^2(z)/\sigma^2(M)$$. The critical overdensity, $$\delta_c(z)$$ is well approximated by (Kitayama & Suto 1996):
+The peak height is defined as $$\nu \equiv \delta_c^2(z)/\sigma^2(M)$$. Note that $$f(nu)dnu = 2 nu f(nu) d ln sigma^{-1}$$. The critical overdensity, $$\delta_c(z)$$ is well approximated by (Kitayama & Suto 1996):
 
 $$ \delta_c(z) \approx \dfrac{3}{20} (12 \pi)^{2/3} [1 + 0.0123 \log \Omega_M (z)]$$
 
