@@ -26,9 +26,9 @@ It could be that my halo mass function is not correct (either in my calculation,
 
 First, I will check that the halo mass function measured from the simulation agrees with theory. The halo mass function can be calculated as:
 
-$$\dfrac{dn}{d \ln M} =f (\sigma) \dfrac{\rho_b}{M} \dfrac{d \ln \sigma^{-1}}{d \ln M}$$
+$$\dfrac{dn}{d \ln M} =f (\sigma) \dfrac{\rho_c}{M} \dfrac{d \ln \sigma^{-1}}{d \ln M}$$
 
-where $$dn/d\ln M$$ is the comoving number density of halos and $$\rho_b$$ is the background density. Note that to convert this to $$\log$$ space, $$\dfrac{dn}{d \log M} =\ln(10) \dfrac{dn}{d \ln M}$$
+where $$dn/d\ln M$$ is the comoving number density of halos and $$\rho_c = 3 H^2/8 \pi G$$,  is the critical density. Note that to convert this to $$\log$$ space, $$\dfrac{dn}{d \log M} =\ln(10) \dfrac{dn}{d \ln M}$$
 
 
 
@@ -50,7 +50,7 @@ $$ \delta_c(z) \approx \dfrac{3}{20} (12 \pi)^{2/3} [1 + 0.0123 \log \Omega_M (z
 
 This model has three free parameters, $$(a, p, A_0)$$. I am using a spherical overdensity criteria of $$200\rho_c$$ (these are options in AHF); for redshift zero, this corresponds to $$(a,p,A_0)=(0.903,0.322,0.287)$$.
 
-Finally, I need to calculate the fluctations, $$\sigma$$:
+Finally, I need to calculate the fluctations, $$\sigma$$.
 
 ### Calculating $$\sigma (M)$$
 
@@ -72,7 +72,11 @@ where $$n$$ is the slope of the initial perturbation spectrum, and $$A$$ is an a
 
 $$T(k) = \dfrac{\ln (1+2.34 q)}{2.34 q}\left[1 + 3.89q + (16.1q)^2 + (5.46q)^3  + (6.71q)^4\right]^{-1/4}$$
 
-where $$q=k/\Omega_M h$$ (assuming no baryon content). I will use the following parameters: $$\Omega_M=0.3$$, $$n=1$$, $$\sigma^2(R = 8 h^{-1} Mpc) = 0.8^2$$ and $$h=0.7$$. The comoving background density, $$\rho_b = \rho_c \Omega_M$$ and $$\rho_c = 3 H^2/8 \pi G$$
+where $$q=k/\Omega_M h$$ (assuming no baryon content). I will use the following parameters: $$\Omega_M=0.3$$, $$n=1$$, $$\sigma^2(R = 8 h^{-1} Mpc) = 0.8^2$$ and $$h=0.7$$.
+
+<!---
+The comoving background density, $$\rho_b = \rho_c \Omega_M$$ and $$\rho_c = 3 H^2/8 \pi G$$
+-->
 
 With this, I calculate  $$\dfrac{d \ln \sigma^{-1}}{d \ln M}$$ numerically.
 
