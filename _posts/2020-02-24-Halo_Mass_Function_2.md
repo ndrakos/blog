@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Halo Mass Function 2"
+title:  "Halo Mass Function Continued"
 date:   2020-02-24
 
 categories: mocks
