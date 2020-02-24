@@ -65,7 +65,7 @@ The fluctuations are given by:
 
 $$\sigma^2(M,z) = \int_0^\infty P(k) W^2(kR(M)) k^2 dk$$
 
-The relationship between mass and radius is given by <del>$$200 \rho_c = M/(4 \pi R^3/3)$$<\del> <span style="color:red"> $$\rho_c = M/(4 \pi R^3/3)$$ </span>. $$W$$ is the smoothing filter. For a top-hat filter, it is given by:
+The relationship between mass and radius is given by <del>$$200 \rho_c = M/(4 \pi R^3/3)$$</del> <span style="color:red"> $$\rho_c = M/(4 \pi R^3/3)$$ </span>. $$W$$ is the smoothing filter. For a top-hat filter, it is given by:
 
 $$ W (kR) = 3 \left[ \dfrac{\sin kR}{(kR)^3} - \dfrac{ \cos kR}{(kR)^2} \right] $$
 
