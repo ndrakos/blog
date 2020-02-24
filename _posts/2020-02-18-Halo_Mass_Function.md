@@ -26,14 +26,14 @@ It could be that my halo mass function is not correct (either in my calculation,
 
 First, I will check that the halo mass function measured from the simulation agrees with theory. The halo mass function can be calculated as:
 
-$$\dfrac{dn}{d \ln M} =f (\sigma) \dfrac{\rho_c}{M} \dfrac{d \ln \sigma^{-1}}{d \ln M}$$
+$$\dfrac{dn}{d \ln M} =f (\sigma) \dfrac{\rho_b}{M} \dfrac{d \ln \sigma^{-1}}{d \ln M}$$
 
 <!---
 f(nu)dnu = 2 nu f(nu) d ln sigma^{-1}
 -->
 
 
-where $$dn/d\ln M$$ is the comoving number density of halos and $$\rho_c = 3 H^2/8 \pi G$$,  is the critical density. Note that to convert this to $$\log$$ space, $${dn}/{d \log M} =\ln(10) {dn}/{d \ln M}$$
+where $$dn/d\ln M$$ is the comoving number density of halos and <span style="color:red"> $$\rho_b=\Omega_M \rho_c$$ is the comoving background density</span> ($$\rho_c = 3 H^2/8 \pi G$$),  is the critical density. Note that to convert this to $$\log$$ space, $${dn}/{d \log M} =\ln(10) {dn}/{d \ln M}$$
 
 
 
@@ -65,7 +65,7 @@ The fluctuations are given by:
 
 $$\sigma^2(M,z) = \int_0^\infty P(k) W^2(kR(M)) k^2 dk$$
 
-The relationship between mass and radius is given by $$200 \rho_c = M/(4 \pi R^3/3)$$. $$W$$ is the smoothing filter. For a top-hat filter, it is given by:
+The relationship between mass and radius is given by ~~$$200 \rho_c = M/(4 \pi R^3/3)$$~~ <span style="color:red"> $$\rho_c = M/(4 \pi R^3/3)$$ </span>. $$W$$ is the smoothing filter. For a top-hat filter, it is given by:
 
 $$ W (kR) = 3 \left[ \dfrac{\sin kR}{(kR)^3} - \dfrac{ \cos kR}{(kR)^2} \right] $$
 
@@ -92,3 +92,5 @@ Here is the comparison between the simulation and the theoretical halo mass func
 <img src="{{ site.baseurl }}/assets/plots/HaloMassFunction.png">
 
 These agree pretty well above $$\log M = 12$$, but I'm still not convinced I don't have an error in my halo mass function. Either way, the steep part of the stellar to halo mass relation corresponds to masses less than that (from the $$\sigma[M \mid v_{\rm peak}]$$ plot in the previous post, $$\log M=12$$ corresponds roughly to $$\log v_{\rm peak} = 2.6$$). Therefore, I am pretty sure this is a resolution issue.
+
+<span style="color:red"> Update: I fixed a couple bugs in the calculation, and the halo mass function looks right now (see next post), and the conclusion it isn't resolved seems to hold up. </span>
