@@ -33,7 +33,7 @@ f(nu)dnu = 2 nu f(nu) d ln sigma^{-1}
 -->
 
 
-where $$dn/d\ln M$$ is the comoving number density of halos and <span style="color:red"> $$\rho_b=\Omega_M \rho_c$$ is the comoving background density</span> ($$\rho_c = 3 H^2/8 \pi G$$),  is the critical density. Note that to convert this to $$\log$$ space, $${dn}/{d \log M} =\ln(10) {dn}/{d \ln M}$$
+where $$dn/d\ln M$$ is the comoving number density of halos and <span style="color:red"> $$\rho_b=\Omega_M \rho_c$$ is the comoving background density</span> (with $$\rho_c = 3 H^2/8 \pi G$$),  is the critical density. Note that to convert this to $$\log$$ space, $${dn}/{d \log M} =\ln(10) {dn}/{d \ln M}$$
 
 
 
@@ -65,7 +65,7 @@ The fluctuations are given by:
 
 $$\sigma^2(M,z) = \int_0^\infty P(k) W^2(kR(M)) k^2 dk$$
 
-The relationship between mass and radius is given by ~~$$200 \rho_c = M/(4 \pi R^3/3)$$~~ <span style="color:red"> $$\rho_c = M/(4 \pi R^3/3)$$ </span>. $$W$$ is the smoothing filter. For a top-hat filter, it is given by:
+The relationship between mass and radius is given by <del>$$200 \rho_c = M/(4 \pi R^3/3)$$<\del> <span style="color:red"> $$\rho_c = M/(4 \pi R^3/3)$$ </span>. $$W$$ is the smoothing filter. For a top-hat filter, it is given by:
 
 $$ W (kR) = 3 \left[ \dfrac{\sin kR}{(kR)^3} - \dfrac{ \cos kR}{(kR)^2} \right] $$
 
