@@ -24,7 +24,7 @@ I am using the fit for $$dn/d\ln v_{\rm peak}$$ from  Appendix A of <a href="htt
 
 The parameterization is (I fixed some typos in their equation):
 
-$$\dfrac{dn}{d \ln v_{\rm peak}} = \dfrac{H(z)^3}{v_{\rm peak}^3} 10^A \left(1 + \dfrac{v_{\rm peak}}{10^{V_{\rm cut}}} \right)^{-\beta} \exp\left[ \left(\dfrac{v_{\rm peak}}{10^{V_{\rm cut}}} \right)^{-\alpha}\right]$$
+$$\dfrac{dn}{d \ln v_{\rm peak}} = \dfrac{H(z)^3}{v_{\rm peak}^3} 10^A \left(1 + \dfrac{v_{\rm peak}}{10^{V_{\rm cut}}} \right)^{-\beta} \exp\left[ \left( - \dfrac{v_{\rm peak}}{10^{V_{\rm cut}}} \right)^{\alpha}\right]$$
 
 where $$A,\beta,\alpha$$ and $$V_{\rm cut}$$ are the fitted parameters. I used $$H(0)=70 km /s/Mpc$$.
 
