@@ -9,10 +9,10 @@ categories: mocks
 This is a summary for where we are in the abundance matching procedure:
 
 <ul>
-  <li> *Halo mass proxy*: $$v_{\rm peak}$$ </li>
-  <li> *Stellar mass function*: I have a parameterized form from <a href="https://ui.adsabs.harvard.edu/abs/2009MNRAS.398.2177L">Li & White 2009</a>, but we will need to update this to a more recent model that extends to higher redshifts, as in <a href="https://ui.adsabs.harvard.edu/abs/2018ApJS..236...33W/abstract"> Williams et al. 2018</a> </li>
-  <li> *Halo $$v_{\rm peak}$$ function*: before I had been measuring this from the simulation, but once adding scatter this becomes problematic outside of the range of the data. Also it becomes a problem below the resolution limit of the simulation. In this document I will check a parameterized form.
-  <li> *Scatter model*: I am using the method from  <a href="https://ui.adsabs.harvard.edu/abs/2019arXiv191003605C/abstract">Cao et al. 2019</a></li>; I had run into problems before because I couldn't reproduce their $$M_*$$ versus $$v_{\rm peak}$$ plot. In this post I will try this again with the parameterized $$v_{\rm peak}$$ function.
+  <li> Halo mass proxy: $$v_{\rm peak}$$ </li>
+  <li> Stellar mass function: I have a parameterized form from <a href="https://ui.adsabs.harvard.edu/abs/2009MNRAS.398.2177L">Li & White 2009</a>, but we will need to update this to a more recent model that extends to higher redshifts, as in <a href="https://ui.adsabs.harvard.edu/abs/2018ApJS..236...33W/abstract"> Williams et al. 2018</a> </li>
+  <li> Halo $$v_{\rm peak}$$ function: before I had been measuring this from the simulation, but once adding scatter this becomes problematic outside of the range of the data. Also it becomes a problem below the resolution limit of the simulation. In this document I will check a parameterized form.
+  <li> Scatter model: I am using the method from  <a href="https://ui.adsabs.harvard.edu/abs/2019arXiv191003605C/abstract">Cao et al. 2019</a></li>; I had run into problems before because I couldn't reproduce their $$M_*$$ versus $$v_{\rm peak}$$ plot. In this post I will try this again with the parameterized $$v_{\rm peak}$$ function.
 </ul>
 
 
