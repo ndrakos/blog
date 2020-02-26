@@ -14,7 +14,7 @@ This is a summary for where we are in the abundance matching procedure:
 
 (3) Halo $$v_{\rm peak}$$ function: before I had been measuring this from the simulation, but once adding scatter this becomes problematic outside of the range of the data. Also it becomes a problem below the resolution limit of the simulation. In this document I will check a parameterized form.
 
-(4) Scatter model: I am using the method from  <a href="https://ui.adsabs.harvard.edu/abs/2019arXiv191003605C/abstract">Cao et al. 2019</a></li>; I had run into problems before because I couldn't reproduce their $$M_*$$ versus $$v_{\rm peak}$$ plot. In this post I will try this again with the parameterized $$v_{\rm peak}$$ function.
+(4) Scatter model: I am using the method from  <a href="https://ui.adsabs.harvard.edu/abs/2019arXiv191003605C/abstract">Cao et al. 2019</a>; I had run into problems before because I couldn't reproduce their $$M_*$$ versus $$v_{\rm peak}$$ plot. In this post I will try this again with the parameterized $$v_{\rm peak}$$ function.
 
 
 
@@ -40,7 +40,7 @@ as expected, there are resolution problems below $$v_{\rm peak} \approx 2.6$$.
 
 I can now recover the expected relation between $$M_*$$ and $$V_{\rm peak}$$.
 
-From <a href="https://ui.adsabs.harvard.edu/abs/2019arXiv191003605C/abstract">Cao et al. 2019</a></li>:
+From <a href="https://ui.adsabs.harvard.edu/abs/2019arXiv191003605C/abstract">Cao et al. 2019</a>:
 
 <img src="{{ site.baseurl }}/assets/plots/Cao2019_MvsV.png">
 
@@ -57,9 +57,9 @@ It looks much better! (I also realized I had been missing a factor of $$h^3$$ in
 
 And the scatter mapping:
 
-From <a href="https://ui.adsabs.harvard.edu/abs/2019arXiv191003605C/abstract">Cao et al. 2019</a></li>:
+From <a href="https://ui.adsabs.harvard.edu/abs/2019arXiv191003605C/abstract">Cao et al. 2019</a>:
 
-<img src="{{ site.baseurl }}/assets/plots/HaloVelocityFunction.png">
+<img src="{{ site.baseurl }}/assets/plots/Cao2019mapping.png">
 
 For mine I calculated this by doing the abundance matching for 1000 $$v_{\rm peak}$$ values, binning it into 100 bins, and calculating the standard deviation in each. Then I repeated this 1000 times and averaged it to get a smoother relation.
 
