@@ -92,4 +92,4 @@ This I will leave to the default values...
 
 ## Next Steps
 
-Okay, so as far as I can tell, I have MUSIC working on my machine. Next I'll run a really small simulation with them and check everything looks right. I should also get all of this working on Pleiades.
+As far as I can tell, I have MUSIC working on my machine. Next I'll run a small simulation and check everything looks right. I should also get all of this working on Pleiades.
