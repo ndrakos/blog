@@ -63,17 +63,18 @@ There are numerous parameters that you can set in the config file. Here I'll try
 
 For the given simulation, you need to specify: <code>boxlength</code>, <code>zstart</code> (and <code>baryons</code> if including those)
 
-<code>use_2LPT</code>: I will set this to yes since second-order lagrangian perturbation theory is more accurate (<a href="https://ui.adsabs.harvard.edu/abs/2010MNRAS.403.1859J/abstract"> Jenkins 2010 </a>)
+<code>use_2LPT</code>: I will set this to yes since second-order lagrangian perturbation theory is more accurate (<a href="https://ui.adsabs.harvard.edu/abs/2010MNRAS.403.1859J/abstract">Jenkins 2010</a>).
 
 
 For unigrid simulations, set <code>levelmin</code> = <code>levelmax</code>. This value should be $$\log_2 N^3$$, where $$N^3$$ is the number of particles.
 
-In principle, <code>levelmin_TF</code>could be set higher than <code>levelmin</code>, but I will just keep it equal.
+In principle, <code>levelmin_TF</code> could be set higher than <code>levelmin</code>, but I will just keep it equal.
 
 
 ### Cosmology
 
-Cosmological parameters: <code>Omega_m</code>, <code>Omega_L</code>, <code>Omega_b</code>, <code>H0</code>, <code>sigma_8</code> and <code>nspec</code>
+Specify cosmological parameters <code>Omega_m</code>, <code>Omega_L</code>, <code>Omega_b</code>, <code>H0</code>, <code>sigma_8</code> and <code>nspec</code>
+
 Transfer function: I'll use the <code>eisenstein</code> option
 
 ### Random
@@ -87,7 +88,7 @@ Specify <code>format</code> and <code>filename</code>
 
 ### Poisson
 
-This I will leave to default...
+This I will leave to the default values...
 
 ## Next Steps
 
