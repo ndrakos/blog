@@ -45,7 +45,7 @@ When installing  <span style="font-variant:small-caps;">AHF</span> I ran into si
 
 ## Running the Code
 
-The code comes with an example <ics_example.conf>. I un-commented the lines corresponding to <span style="font-variant:small-caps;">gadget-2</span> output and ran:
+The code comes with an example <code>ics_example.conf</code>. I un-commented the lines corresponding to <span style="font-variant:small-caps;">gadget-2</span> output and ran:
 
 ```
 ./MUSIC ics_example.conf
@@ -61,20 +61,20 @@ There are numerous parameters that you can set in the config file. Here I'll try
 
 ### Setup
 
-For the given simulation, you need to specify: <boxlength>, <zstart> (and <baryons> if including those)
+For the given simulation, you need to specify: <code>boxlength</code>, <code>zstart</code> (and <code>baryons</code> if including those)
 
 <code>use_2LPT</code>: I will set this to yes since second-order lagrangian perturbation theory is more accurate (<a href="https://ui.adsabs.harvard.edu/abs/2010MNRAS.403.1859J/abstract"> Jenkins 2010 </a>)
 
 
-For unigrid simulations, set <levelmin> = <levelmax>. This value should be $$\log_2 N^3$$, where $$N^3$$ is the number of particles.
+For unigrid simulations, set <code>levelmin</code> = <code>levelmax</code>. This value should be $$\log_2 N^3$$, where $$N^3$$ is the number of particles.
 
-In principle, <levelmin_TF> could be set higher than <levelmin>, but I will just keep it equal.
+In principle, <code>levelmin_TF</code>could be set higher than <code>levelmin</code>, but I will just keep it equal.
 
 
 ### Cosmology
 
 Cosmological parameters: <code>Omega_m</code>, <code>Omega_L</code>, <code>Omega_b</code>, <code>H0</code>, <code>sigma_8</code> and <code>nspec</code>
-Transfer function: I'll use the <eisenstein> option
+Transfer function: I'll use the <code>eisenstein</code> option
 
 ### Random
 
