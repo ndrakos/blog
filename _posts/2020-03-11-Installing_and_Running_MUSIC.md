@@ -3,7 +3,7 @@ layout: post
 title:  "Installing and Running MUSIC"
 date:   2020-03-11
 
-categories: cosmosims
+categories: cosmo_sims
 ---
 
 
@@ -91,4 +91,4 @@ This I will leave to default...
 
 ## Next Steps
 
-Okay, so as far as I can tell, I have MUSIC working on my machine. Next I'll run a really small simulation with them and check everything looks right.
+Okay, so as far as I can tell, I have MUSIC working on my machine. Next I'll run a really small simulation with them and check everything looks right. I should also get all of this working on Pleiades.
