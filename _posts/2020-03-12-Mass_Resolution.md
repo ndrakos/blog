@@ -31,7 +31,7 @@ $$M = m - 5 \log_{10}({D_L/10 {\rm pc}})$$
 
 Where $$D_L$$ is the luminosity distance, and is a function of redshift. I previously calculated the angular diameter distance, $$D_A$$ , as a function of redshift <a href="https://ndrakos.github.io/blog/mocks/Box_Size/">here</a>. The luminosity distance is then related to the angular diameter distance by $$D_L = (1+z)^2 D_A$$.
 
-Here is $$M$$ corresponding to $$m = 30$$ as a function of redshift:
+Here is $$M_AB$$ corresponding to $$m_{AB} = 30$$ as a function of redshift:
 
 <img src="{{ site.baseurl }}/assets/plots/MagnitudeVsRedshift.png">
 
