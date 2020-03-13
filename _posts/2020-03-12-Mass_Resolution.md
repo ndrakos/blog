@@ -27,7 +27,7 @@ Recall $$1\, {\rm Jy} = 10^{-26}\, {\rm W} \,{\rm Hz}^{-1}\, {\rm m}^2$$.
 
 The absolute magnitude is:
 
-$$M = m - 5 \log_{10}{D_L/10 {\rm pc}}$$
+$$M = m - 5 \log_{10}({D_L/10 {\rm pc}})$$
 
 Where $$D_L$$ is the luminosity distance, and is a function of redshift. I previously calculated the angular diameter distance, $$D_A$$ , as a function of redshift <a href="https://ndrakos.github.io/blog/mocks/Box_Size/">here</a>. The luminosity distance is then related to the angular diameter distance by $$D_L = (1+z)^2 D_A$$.
 
