@@ -13,7 +13,7 @@ Ideally, we would like to relate this halo mass to the galaxy luminosity to conf
 
 ## Magnitudes
 
-*WFIRST* will image to magnitudes $$m_{\rm AB} \sim 30$$.
+The *WFIRST* will reach magnitudes $$m_{\rm AB} \sim 30$$.
 
 ### AB magnitude system
 
