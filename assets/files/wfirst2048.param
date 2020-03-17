@@ -1,7 +1,7 @@
 %  Relevant files
 
-InitCondFile  	   Gadget2/ICs/test_ICs_256
-OutputDir          /nobackup/bvillase/galaxies/test_256/
+InitCondFile
+OutputDir
 
 EnergyFile         energy.txt
 InfoFile           info.txt
@@ -11,11 +11,11 @@ CpuFile            cpu.txt
 RestartFile        restart
 SnapshotFileBase   snapshot
 
-OutputListFilename Gadget2/parameterfiles/outputs_test.txt
+OutputListFilename parameterfiles/output_list.txt
 
 % CPU time -limit
 
-TimeLimitCPU      100000  % = 30 hours
+TimeLimitCPU      10000000
 ResubmitOn        0
 ResubmitCommand   my-scriptfile
 
@@ -32,8 +32,8 @@ PeriodicBoundariesOn     1
 
 %  Caracteristics of run
 
-TimeBegin           0.00990099  % z=100, Begin of the simulation
-TimeMax	            1.0
+TimeBegin           0.00990099  % a(z=100)
+TimeMax	            1.0 % a(z=0)
 
 Omega0	              0.3089
 OmegaLambda           0.6911
