@@ -55,7 +55,7 @@ If I understand the parameter TimeBetSnapshot in the Gadget parameter file (whic
 
 Criteria for choosing numerical parameters is commonly found in <a href="https://ui.adsabs.harvard.edu/abs/2003MNRAS.338...14P/abstract">Power et al. 2003</a>, but there is also an updated paper by <a href="https://ui.adsabs.harvard.edu/abs/2019MNRAS.487.1227Z/abstract">Zhang et al. 2019 </a> that suggest a smaller softening length than the former.
 
-I am going to use a softening length of $$1/50$$ the mean particle separation (this seems reasonable given discussion in Zhang et al. 2019). Then, noting that the mean particle separation of particles is $$(V/N)^{1/3} = {\rm box size}/N^{1/3}$$, this gives a softening length of $$\epsilon = 1.12\, h^{-1} {\rm kpc}$$ for $$2048^3$$ particles. This is pretty similar to the softening that Bruno had decided on for hist simulation <a href="https://bvillasen.github.io/blog/astro/cosmology/wfirst/2017/07/11/sim_parameters.html">here</a>.
+I am going to use a softening length of $$1/50$$ the mean particle separation (this seems reasonable given discussion in Zhang et al. 2019). Then, noting that the mean particle separation of particles is $$(V/N)^{1/3} = {\rm box size}/N^{1/3}$$, this gives a softening length of $$\epsilon = 1.12\, h^{-1} {\rm kpc}$$ for $$2048^3$$ particles. This is pretty similar to the softening that Bruno had decided on for his simulation <a href="https://bvillasen.github.io/blog/astro/cosmology/wfirst/2017/07/11/sim_parameters.html">here</a>.
 
 ### Parameter File
 
