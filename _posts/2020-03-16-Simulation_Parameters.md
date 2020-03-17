@@ -35,7 +35,7 @@ I will start at redshift $$z=100$$ (I don't actually have a good reason for choo
 
 ### Parameter File
 
-<object width="300" height="300" type="text/plain" data="{{site.baseurl}}/assets/files/wfirst2048_ics.conf" border="0" >
+<object width="500" height="300" type="text/plain" data="{{site.baseurl}}/assets/files/wfirst2048_ics.conf" border="0" >
 </object>
 
 ## Gadget
@@ -45,9 +45,11 @@ With the specified cosmology, the mass resolution for $$2048^3$$ particles is $$
 [6.26145950e+10 7.82682437e+09 9.78353047e+08 1.22294131e+08 1.52867664e+07
 -->
 
-I think 500 time outputs seems reasonable to get good time resolution, but I am not sure if there is a more careful way to calculate this.
+### Number of Snapshots
 
-Also, I have started the ICs at $$z=100$$, but I can specify TimeOfFirstSnapshot and not store snapshots until closer to $$z=10$$. This would make sense for the mock catalogue, but not necessarily for all the other applications we might decide to pursue.
+I think 500 time outputs seems reasonable to get good time resolution, but I am not sure if there is a more careful way to calculate this (I should also check how much storage this will take).
+
+If I understand the parameter TimeBetSnapshot in the Gadget parameter file (which I am not sure I do), then I want to set this to $${\rm exp}(1/N_{\rm snap} \ln(a_f/a_i)) -1 $$, where $$N_{\rm snap}$$ is the number of snapshots and $$a_i$$ and $$a_f$$ are the initial and final scale factor, $$a=1/(1+z)$$.
 
 ### Softening
 
@@ -59,7 +61,7 @@ I am going to use a softening length of $$1/50$$ the mean particle separation (t
 
 (I have left the input/output directories blank because I need to set this up on Pleiades)
 
-<object width="300" height="300" type="text/plain" data="{{site.baseurl}}/assets/files/wfirst2048.param" border="0" >
+<object width="500" height="300" type="text/plain" data="{{site.baseurl}}/assets/files/wfirst2048_gadget.conf" border="0" >
 </object>
 
 ## To-Do
