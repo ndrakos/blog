@@ -31,7 +31,7 @@ As discussed in previous posts, we will use a box size of $$115\, h^{-1} {\rm Mp
 
 ## MUSIC
 
-I will start at redshift $$z=100$$ (I don't actually have a good reason for choosing this?)
+I will start at redshift $$z=100$$---I don't actually have a good reason for choosing this.
 
 ### Parameter File
 
@@ -69,7 +69,7 @@ I am going to use a softening length of $$1/50$$ the mean particle separation (t
 
 1) Try a sample run with $$256^3$$ particles and check everything looks good
 
-2) Make sure I can run the sample run on Pleiades
+2) Get the sample run working on Pleiades
 
 3) Check how many nodes I can request at once on Pleiades (without being queued too long), and if I will run into problems with storing snapshots
 
