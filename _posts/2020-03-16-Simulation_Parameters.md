@@ -14,7 +14,7 @@ We will be basing the simulations off of what we need for the *WFIRST* ultra dee
 
 I will use the results from <a href="https://ui.adsabs.harvard.edu/abs/arXiv:1807.06209"> Planck 2018</a> cosmology (last column of Table 2).
 
-$$\Omega_b = 0.02242 h^{-2} = 0.04893$$
+$$\Omega_b = 0.02242\, h^{-2} = 0.04893$$
 
 $$\Omega_0 = 0.3111$$
 
