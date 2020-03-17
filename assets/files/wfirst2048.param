@@ -35,10 +35,10 @@ PeriodicBoundariesOn     1
 TimeBegin           0.00990099  % a(z=100)
 TimeMax	            1.0 % a(z=0)
 
-Omega0	              0.3089
-OmegaLambda           0.6911
-OmegaBaryon           0.0486
-HubbleParam           0.6774
+Omega0	              0.3111
+OmegaLambda           0.6889
+OmegaBaryon           0.04893
+HubbleParam           0.6766
 BoxSize               115000.0
 
 % Output frequency
@@ -46,7 +46,7 @@ BoxSize               115000.0
 TimeBetSnapshot        0.5
 TimeOfFirstSnapshot    0
 
-CpuTimeBetRestartFile     36000.0    ; here in seconds
+CpuTimeBetRestartFile     36000.0
 TimeBetStatistics         0.05
 
 NumFilesPerSnapshot       1
@@ -107,14 +107,14 @@ GravityConstantInternal  0
 MinGasHsmlFractional 0.25
 
 SofteningGas       0
-SofteningHalo      9.704
+SofteningHalo      1.12
 SofteningDisk      0
 SofteningBulge     0
 SofteningStars     0
 SofteningBndry     0
 
 SofteningGasMaxPhys       0
-SofteningHaloMaxPhys      9.704
+SofteningHaloMaxPhys      1.12
 SofteningDiskMaxPhys      0
 SofteningBulgeMaxPhys     0
 SofteningStarsMaxPhys     0

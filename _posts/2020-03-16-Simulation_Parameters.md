@@ -20,7 +20,7 @@ $$\Omega_0 = 0.3111$$
 
 $$\Omega_\Lambda = 0.6889$$
 
-$$H_0 = 67.66$$ km/s/Mpc
+$$H_0 = 67.66\,{\rm km/s/Mpc}$$
 
 $$\sigma_8= 0.8102$$
 
@@ -61,7 +61,6 @@ I am going to use a softening length of $$1/50$$ the mean particle separation (t
 
 <object width="300" height="300" type="text/plain" data="{{site.baseurl}}/assets/files/wfirst2048.param" border="0" >
 </object>
-
 
 ## To-Do
 
