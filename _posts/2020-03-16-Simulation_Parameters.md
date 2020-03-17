@@ -14,7 +14,7 @@ We will be basing the simulations off of what we need for the *WFIRST* ultra dee
 
 I will use the results from <a href="https://ui.adsabs.harvard.edu/abs/arXiv:1807.06209"> Planck 2018</a> cosmology (last column of Table 2).
 
-$$\Omega_b h^2 = 0.02242 = 0.04893$$
+$$\Omega_b = 0.02242 h^{-2} = 0.04893$$
 
 $$\Omega_0 = 0.3111$$
 
@@ -40,7 +40,7 @@ I will start at redshift $$z=100$$---I don't actually have a good reason for cho
 
 ## Gadget
 
-With the specified cosmology, the mass resolution for $$2048^3$$ particles is $$1.53 \times 10^7 M_*/h$$.
+With the specified cosmology, the mass resolution for $$2048^3$$ particles is $$1.53 \times 10^7 M_{\rm sun}/h$$.
 <!---
 [6.26145950e+10 7.82682437e+09 9.78353047e+08 1.22294131e+08 1.52867664e+07
 -->
