@@ -49,7 +49,7 @@ With the specified cosmology, the mass resolution for $$2048^3$$ particles is $$
 
 I think 500 time outputs seems reasonable to get good time resolution, but I am not sure if there is a more careful way to calculate this (I should also check how much storage this will take).
 
-If I understand the parameter TimeBetSnapshot in the Gadget parameter file (which I am not sure I do), then I want to set this to $${\rm exp}(1/N_{\rm snap} \ln(a_f/a_i)) -1 $$, where $$N_{\rm snap}$$ is the number of snapshots and $$a_i$$ and $$a_f$$ are the initial and final scale factor, $$a=1/(1+z)$$.
+If I understand the parameter TimeBetSnapshot in the Gadget parameter file (which I am not sure I do), then I want to set this to $${\rm exp}(1/N_{\rm snap} \ln(a_f/a_i))$$, where $$N_{\rm snap}$$ is the number of snapshots and $$a_i$$ and $$a_f$$ are the initial and final scale factor, $$a=1/(1+z)$$.
 
 ### Softening
 
