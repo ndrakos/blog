@@ -28,8 +28,8 @@ I did end up with 50 snapshots, so I think I did interpret the parameter TimeBet
 
 Here is a rough animation of the simulation:
 
-<video width="320" height="240" controls>
- <source src="movie.mp4" type="{{site.baseurl}}/assets/files/wfirst2048.mp4">
+<video width="500" height="500" controls>
+ <source src="movie.mp4" type="{{site.baseurl}}/assets/files/wfirst2048_2.mp4">
 </video>
 
 And then if I run AHF and plot the halo mass function at redshift zero:
@@ -43,4 +43,4 @@ This looks decent, but I am wondering why (1) the simulation is slightly above t
 
 ## Conclusions
 
-This all looks pretty good. I want to get this running on Pleiades, then do a $$1024^3$$ run. Once I'm happy, I'll submit the $$2048^3$$ job.
+Overall this looks pretty good. I want to get this running on Pleiades, then do a $$1024^3$$ run. Once I'm happy, I'll submit the $$2048^3$$ job.
