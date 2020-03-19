@@ -39,7 +39,7 @@ And then if I run AHF and plot the halo mass function at redshift zero:
 
 <img src="{{ site.baseurl }}/assets/plots/HMF_wfirst128.png">
 
-This looks decent, but I am wondering why (1) the simulation is slightly above the expected line and (2) why it doesn't look incomplete at low masses (see, e.g., <a href="https://ndrakos.github.io/blog/mocks/Halo_Mass_Function_Continued/">this post</a> for comparison)
+This looks decent, but I am wondering why (1) the simulation is slightly above the expected line and (2) why it doesn't look incomplete at low masses (see, e.g., <a href="https://ndrakos.github.io/blog/mocks/Halo_Mass_Function_Continued/">this post</a> for comparison).
 
 
 
