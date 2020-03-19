@@ -29,7 +29,7 @@ I did end up with 50 snapshots, so I think I did interpret the parameter TimeBet
 Here is a rough animation of the simulation:
 
 <video width="500" height="500" controls>
- <source src="movie.mp4" type="{{site.baseurl}}/assets/files/wfirst2048_2.mp4">
+ <source src="movie.mp4" type="{{site.baseurl}}/assets/files/wfirst2048_2.mp4"; codecs="avc1.4D401E, mp4a.40.2">
 </video>
 
 And then if I run AHF and plot the halo mass function at redshift zero:
