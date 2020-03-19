@@ -28,7 +28,7 @@ I did end up with 50 snapshots, so I think I did interpret the parameter TimeBet
 
 Here is a rough animation of the simulation:
 
-<video src="{{site.baseurl}}/assets/videos/wfirst2048.mp4" width="500" height="500" controls preload>
+<video src="{{site.baseurl}}/assets/videos/wfirst2048.mp4" width="500" height="500" controls>
 </video>
 
 
