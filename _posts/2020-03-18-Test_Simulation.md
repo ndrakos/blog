@@ -23,8 +23,7 @@ I am using the set-up discussed <a href="https://ndrakos.github.io/blog/cosmo_si
 
 ## Results
 
-I did end up with 50 snapshots, so I think I did interpret the parameter TimeBetSnapshot correctly (yay!). The files are each 58.7 Mb, so I assume $$2048^3$$ particles will have snapshots that are $$~.25$$ Tb each
-
+I did end up with 50 snapshots, so I think I did interpret the parameter TimeBetSnapshot correctly (yay!). The files are each $$58.7$$ Mb, so I assume $$2048^3$$ particles will result in snapshots that are $$\sim 0.25$$ Tb each.
 
 Here is a rough animation of the simulation:
 
