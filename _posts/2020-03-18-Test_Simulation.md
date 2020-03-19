@@ -28,7 +28,7 @@ I did end up with 50 snapshots, so I think I did interpret the parameter TimeBet
 
 Here is a rough animation of the simulation (Note to self: I used the command "ffmpeg -f image2 -r 10 -i snapshot_%03d.png -vcodec mpeg4 -y wfirst128.mp4"):
 
-<video src="{{site.baseurl}}/assets/videos/wfirst128.mp4" width="500" height="500" controls>
+<video src="{{site.baseurl}}/assets/videos/wfirst128_2.mp4" width="500" height="500" controls>
 </video>
 
 
