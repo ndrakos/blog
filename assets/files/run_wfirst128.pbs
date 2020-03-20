@@ -1,0 +1,10 @@
+#PBS -l select=16:ncpus=8:mpiprocs=8:model=san
+#PBS -l walltime=2:00:00
+#PBS -q devel
+
+module load mpi-hpe/mpt.2.17r13
+module load comp-intel/2015.3.187
+
+cd /home6/ndrakos/Gadget2/
+
+mpiexec -np 128 ./Gadget2 ../wfirst128/wfirst128_gadget.param
