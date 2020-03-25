@@ -22,25 +22,25 @@ $$P(k,a) = A k^n T^2(k) D^2(z)$$
 
 where $$k$$ is the wavenumber, $$T$$ is the transfer function, and $$D$$ is the growth factor and $$A$$ is the amplitude.
 
-I calculated $$A$$ from calculating $$\sigma(8 h^{-1}\, {\rm Mpc})$$ as in <a href="https://ndrakos.github.io/blog/mocks/Halo_Mass_Function/">this post</a> (note that there is a factor of $$1/2 \pi^2$$ that I absorbed into the constant $$A$$ in the previous post.)
+I calculated $$A$$ from calculating $$\sigma(8 h^{-1}\, {\rm Mpc})$$ as in <a href="https://ndrakos.github.io/blog/mocks/Halo_Mass_Function/">this post</a> (note that there is a factor of $$1/(2 \pi^2)$$ that I absorbed into the constant $$A$$ in the previous post),
 
 $$T$$ was calculated from Equation 29 of <a href="https://ui.adsabs.harvard.edu/abs/1998ApJ...496..605E/abstract">Eisenstein & Hu 1998</a>.
 
 $$D(z)$$ is equal to:
 
-$$D(z)= a E(z) \int_{z}^{\infty} \dfrac{(1+z')}{E^{3}(z')} d z'$$
+$$D(z)= A_0 E(z) \int_{z}^{\infty} \dfrac{(1+z')}{E^{3}(z')} d z'$$
 
-Assuming a flat universe, $$E(z)=\sqrt{\Omega_{\Lambda}+\Omega_{M}(1+z)^{3}}$$, and setting $$D(0)=1$$, $$a=\left(E(z) \int_{0}^{\infty} \frac{(1+z')}{E^{3}(z')} d z' \right)^{-1}$$
+Assuming a flat universe, $$E(z)=\sqrt{\Omega_{\Lambda}+\Omega_{M}(1+z)^{3}}$$, and setting $$D(0)=1$$, $$A_0=\left(E(z) \int_{0}^{\infty} \frac{(1+z')}{E^{3}(z')} d z' \right)^{-1}$$
 
-## Power Spectrum From $N$-Body Simulation
+## Power Spectrum From $$N$$-Body Simulation
 
 The power spectrum can be calculated from the overdensities:
 
-$$\delta(x) = \dfrac{\rho(x)-\bar{rho}}{\bar{rho}} $$
+$$\delta(x) = \dfrac{\rho(x)-\bar{\rho}}{\bar{\rho}} $$
 
 I binned the particles in 3D to calculate the density---this corresponds to nearest grid point (NGP) method.
 
-The power spectrum is $$P(k) = \langle \left| \delta_k\right|^2 \rangle$$. However, this is for continuous functions. You need to correct for (1) the shot noise and (2) the window function.
+The power spectrum is $$P(k) = \langle \abs{ \delta_k}^2 \rangle$$. However, this is for continuous functions. You need to correct for (1) the shot noise and (2) the window function.
 
 
 The steps I followed are:
@@ -49,9 +49,9 @@ The steps I followed are:
 
 (2) calculate the density contrast at every position $\mathbf{r}_g$
 
-(3) take the FFT, and calculate $$\legt|\delta_k\right|^2$$ in each cell
+(3) take the FFT, and calculate $$\abs{\delta_k}^2$$ in each cell
 
-(4) bin $$\left|\delta_k\right|^2$$ in $$k$$
+(4) bin $$\abs{\delta_k\right}^2$$ in $$k$$
 
 (5) find the average in each bin
 
