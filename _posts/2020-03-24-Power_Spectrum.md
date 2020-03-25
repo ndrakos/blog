@@ -28,7 +28,7 @@ $$T$$ was calculated from Equation 29 of <a href="https://ui.adsabs.harvard.edu/
 
 $$D(z)$$ is equal to:
 
-$$D(z)= a E(z) \int_{z}^{\infty} \frac{\left(1+z^'\right)}{E^{3}(z')} d z'$$
+$$D(z)= a E(z) \int_{z}^{\infty} \dfrac{(1+z')}{E^{3}(z')} d z'$$
 
 Assuming a flat universe, $$E(z)=\sqrt{\Omega_{\Lambda}+\Omega_{M}(1+z)^{3}}$$, and setting $$D(0)=1$$, $$a=\left(E(z) \int_{0}^{\infty} \frac{(1+z')}{E^{3}(z')} d z' \right)^{-1}$$
 
@@ -40,7 +40,7 @@ $$\delta(x) = \dfrac{\rho(x)-\bar{rho}}{\bar{rho}} $$
 
 I binned the particles in 3D to calculate the density---this corresponds to nearest grid point (NGP) method.
 
-The power spectrum is $$P(k) = \langle |\delta_k|^2 \rangle$$. However, this is for continuous functions. You need to correct for (1) the shot noise and (2) the window function.
+The power spectrum is $$P(k) = \langle \left| \delta_k\right|^2 \rangle$$. However, this is for continuous functions. You need to correct for (1) the shot noise and (2) the window function.
 
 
 The steps I followed are:
@@ -49,9 +49,9 @@ The steps I followed are:
 
 (2) calculate the density contrast at every position $\mathbf{r}_g$
 
-(3) take the FFT, and calculate $$|\delta_k|^2$$ in each cell
+(3) take the FFT, and calculate $$\legt|\delta_k\right|^2$$ in each cell
 
-(4) bin $$|\delta_k|^2$$ in $$k$$
+(4) bin $$\left|\delta_k\right|^2$$ in $$k$$
 
 (5) find the average in each bin
 
