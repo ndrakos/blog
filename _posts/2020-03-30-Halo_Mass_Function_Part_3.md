@@ -42,6 +42,6 @@ And it seems that there is an issue with my HMF calculation, and that the simula
 
 ## Conclusions
 
-The simulation looks okay; my theoretical calculation was off. I am going to get my halo finder working on Pleiades, and start running a $$512^3$$ version, to check everything scales okay, and that I am managing file storage okay (I'll also do a lot of time outputs for these, and start looking into some science questions). Hopefully that all goes smoothly, and I can request more space on Pleiades. Then I can hopefully move to the $$2048^3$$ simulations!
+The simulation looks okay; my theoretical calculation was off. I am going to get my halo finder working on Pleiades, and start running a $$512^3$$ version, to check everything scales okay, and that I am managing file storage okay (I'll also do a lot of time outputs for these, and start looking into some science questions). Hopefully that all goes smoothly, and I can request more space on Pleiades. Then I can move on to the $$2048^3$$ simulations!
 
-However, at some point I should figure out what is wrong with my calculations of both the HMF and power spectrum *sigh*.
+However, at some point I should figure out what is wrong with my calculations of both the HMF and power spectrum. *Sigh*.
