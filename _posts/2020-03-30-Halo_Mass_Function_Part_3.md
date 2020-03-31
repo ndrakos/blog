@@ -26,7 +26,7 @@ I also checked how using different transfer functions affected the halo mass fun
 
 One possibility for the discrepancy is that I am including all of the halos from the simulation data. However, when I remove these, it makes little difference at this resolution:
 
-<img src="{{ site.baseurl }}/assets/plots/HMF_wfirst128_sub">
+<img src="{{ site.baseurl }}/assets/plots/HMF_wfirst128_sub.png">
 
 
 ## Check Theoretical Prediction
@@ -34,9 +34,9 @@ One possibility for the discrepancy is that I am including all of the halos from
 
 I used the python package <a href="https://bdiemer.bitbucket.io/colossus/lss_mass_function.html">Colossus</a> to double check my HMF calculation:
 
-<img src="{{ site.baseurl }}/assets/plots/HMF_wfirst128_col">
+<img src="{{ site.baseurl }}/assets/plots/HMF_wfirst128_col.png">
 
-And it seems that there is an issue with my HMF, and that the simulation is okay!
+And it seems that there is an issue with my HMF calculation, and that the simulation is okay!
 
 
 
