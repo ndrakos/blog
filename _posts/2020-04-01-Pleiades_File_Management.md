@@ -25,7 +25,7 @@ lfs quota -h -u username /nobackup/username
 ## Transfering Files
 
 It is recommended that rather than <code>scp</code>, you use the <code>shiftc</code> command for transferring files. See
-<a href"https://www.nas.nasa.gov/hecc/support/kb/entry/300">this </a> link for more information, but it works pretty much the same as scp, e.g.:
+<a href="https://www.nas.nasa.gov/hecc/support/kb/entry/300">this </a> link for more information, but it works pretty much the same as scp, e.g.:
 
 <code>
 shiftc -r mydir lfe:/u/username/
@@ -35,7 +35,7 @@ shiftc -r mydir lfe:/u/username/
 ## Lou Data Analysis Nodes
 
 You can do post-processing on the <a href=
-"https://www.nas.nasa.gov/hecc/support/kb/lou-data-analysis-nodes_413.html">Lou data analysis nodes<a> (LDANs).
+"https://www.nas.nasa.gov/hecc/support/kb/lou-data-analysis-nodes_413.html">Lou data analysis nodes</a> (LDANs).
 
 To use the LDANs, submit your jobs to the <code>ldan</code> queue. Each job can use only one LDAN for up to three days, and each user can have a maximum of two jobs running simultaneously.
 
