@@ -79,6 +79,7 @@ cd .
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/nasa/pkgsrc/sles12/2016Q4/lib:/pleiades/u/ndrakos/install_to_here/gsl_in/lib
 
 mpiexec -np 10 ./runAHF_wfirst128.csh 0
+
 </code></pre>
 
 
@@ -86,9 +87,9 @@ mpiexec -np 10 ./runAHF_wfirst128.csh 0
 and the wrapper, <code>runAHF_wfirst128.csh</code>:
 
 <pre><code>
-File Edit Options Buffers Tools Sh-Script Help                                                                           
 #!/bin/csh -f                                                                                                            
 cd /pleiades/u/ndrakos/AHF/bin
 @ rank = $1 + $MPT_MPI_RANK
 ./AHF /u/ndrakos/wfirst128/AHF_wfirst128_snapshot__$( printf '%03d' ${rank}).input > /u/ndrakos/wfirst128/output_${rank}.out
+
 </code></pre>
