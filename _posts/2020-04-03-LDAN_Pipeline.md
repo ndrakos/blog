@@ -20,8 +20,7 @@ You can only request 1 LDAN at a time; I think the easiest approach will be to r
 
 I have a script on my computer for generating input files for AHF snapshots. These can then be copied over to Pleiades.
 
-<code>
-
+<pre><code>
 #!/bin/bash
 
 snappath=/u/ndrakos/wfirst128/ #where the snapshots will be located
@@ -51,7 +50,7 @@ do
 
 done
 
-</code>
+</code><pre>
 
 
 ## Submitting Multiple Serial Jobs
@@ -63,7 +62,7 @@ Here is my job script:
 
 
 
-<code>
+<pre><code>
 #PBS -S /bin/csh
 #PBS -j oe
 #PBS -l select=1:ncpus=10:mem=2GB
@@ -80,16 +79,16 @@ cd .
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/nasa/pkgsrc/sles12/2016Q4/lib:/pleiades/u/ndrakos/install_to_here/gsl_in/lib
 
 mpiexec -np 10 ./runAHF_wfirst128.csh 0
-</code>
+</code><pre>
 
 
 
 and the wrapper, <code>runAHF_wfirst128.csh</code>:
 
-<code>
+<pre><code>
 File Edit Options Buffers Tools Sh-Script Help                                                                           
 #!/bin/csh -f                                                                                                            
 cd /pleiades/u/ndrakos/AHF/bin
 @ rank = $1 + $MPT_MPI_RANK
 ./AHF /u/ndrakos/wfirst128/AHF_wfirst128_snapshot__$( printf '%03d' ${rank}).input > /u/ndrakos/wfirst128/output_${rank}.out
-</code>
+</code><pre>
