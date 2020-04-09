@@ -59,7 +59,7 @@ I am going to use the package <a href="https://ui.adsabs.harvard.edu/abs/2020MNR
 
 
 The projected 2PCF measured from
-SDSS DR7 can be found in Table 5 of <a href="https://ui.adsabs.harvard.edu/abs/2012ApJ...752...41Y/abstract">Yang et al. 2012</a>. Note that their masses are in units $$\log_(10)(1/M_{\rm sol} h^{-2})$$. Therefore, I add $$\log_{10}(h^{-1}0$$ to my AHF masses before calculating the clustering.
+SDSS DR7 can be found in Table 5 of <a href="https://ui.adsabs.harvard.edu/abs/2012ApJ...752...41Y/abstract">Yang et al. 2012</a>. Note that their masses are in units $$\log_(10)(1/M_{\rm sol} h^{-2})$$. Therefore, I add $$\log_{10}h$$ to my AHF masses before calculating the clustering.
 
 Here are my results in the mass bin 10 to 10.5:
 
