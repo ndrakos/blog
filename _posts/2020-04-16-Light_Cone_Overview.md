@@ -19,7 +19,7 @@ Here is the current plan for the mock catalogue generation (there are still many
 We will start the catalogue from dark matter only simulations, and then do abundance matching (alternatives include hydrodynamic simulations, HOD modeling and semi-analytic models; see the <a href="https://ui.adsabs.harvard.edu/abs/2018ARA%26A..56..435W/abstract">Wechsler and Tinker 2018</a> review). For software, we have created the ICs using MUSIC, and will run it in Gadget-2.
 
 We decided to run a simulation with a box size of $$115 {\rm Mpc}\, h^{-1}$$ with $$2048^3$$ particles (<a href=
-  "https://ndrakos.github.io/blog/mocks/Box_Size/">see this post</a>). This a mass resolution of $$1.5 \times 10^7$$ solar masses per particle. Note that the <a href"http://hipacc.ucsc.edu/Bolshoi/MergerTrees.html">Bolshoi-Planck<> simulations are somewhat similar (volume of $$250 {\rm Mpc}\, h^{-1}$$, with a mass resolution of $$10^{10}$$) and we could potentially use these for another realization, or for a comparison.
+  "https://ndrakos.github.io/blog/mocks/Box_Size/">see this post</a>). This a mass resolution of $$1.5 \times 10^7$$ solar masses per particle. Note that the <a href="http://hipacc.ucsc.edu/Bolshoi/MergerTrees.html">Bolshoi-Planck</a> simulations are somewhat similar (volume of $$250 {\rm Mpc}\, h^{-1}$$, with a mass resolution of $$10^{10}$$) and we could potentially use these for another realization, or for a comparison.
 
 
 
@@ -49,10 +49,12 @@ Once we have our galaxies, we need to assign galaxy properties (SEDs and galaxy 
 I will eventually look into making mock images, using <a href="https://ui.adsabs.harvard.edu/abs/2015A%26C....10..121R/abstract">GALSIM</a> (see also <a href="https://ui.adsabs.harvard.edu/abs/2019arXiv191209481T/abstract">Troxel et al. 2020</a>).
 
 
+
+
 ## Light Cone Generation
 
 
-I plan to follow a procedure similar to that for generating the CosmoDC2 sky catalog for LSST (<a href="https://ui.adsabs.harvard.edu/abs/2019ApJS..245...26K/abstract">Korytov et al. 2019</a>; these methods are outlined in more detail in the pedagogical notes by <a href="https://ui.adsabs.harvard.edu/abs/2019arXiv190608355H/abstract"> Hollowed 2019 </a>). Other key references for making light cones are: <a href"https://ui.adsabs.harvard.edu/abs/2002ApJ...573....7E/abstract"=>Evrard et al. 2002</a>, <a href="https://ui.adsabs.harvard.edu/abs/2005MNRAS.360..159B/abstract">Blaizot et al. 2005</a>, <a href="https://ui.adsabs.harvard.edu/abs/2007MNRAS.376....2K/abstract">Kitzbichler & White 2007</a>,  <a href="https://ui.adsabs.harvard.edu/abs/2013MNRAS.429..556M/abstract">Merson et al. 2013</a> and <a href="https://ui.adsabs.harvard.edu/abs/2017MNRAS.470.4646S/abstract">Smith et al. 2017</a>.
+I plan to follow a procedure similar to that for generating the CosmoDC2 sky catalog for LSST (<a href="https://ui.adsabs.harvard.edu/abs/2019ApJS..245...26K/abstract">Korytov et al. 2019</a>; these methods are outlined in more detail in the pedagogical notes by <a href="https://ui.adsabs.harvard.edu/abs/2019arXiv190608355H/abstract"> Hollowed 2019 </a>). Other key references for making light cones are: <a href="https://ui.adsabs.harvard.edu/abs/2002ApJ...573....7E/abstract"=>Evrard et al. 2002</a>, <a href="https://ui.adsabs.harvard.edu/abs/2005MNRAS.360..159B/abstract">Blaizot et al. 2005</a>, <a href="https://ui.adsabs.harvard.edu/abs/2007MNRAS.376....2K/abstract">Kitzbichler & White 2007</a>,  <a href="https://ui.adsabs.harvard.edu/abs/2013MNRAS.429..556M/abstract">Merson et al. 2013</a> and <a href="https://ui.adsabs.harvard.edu/abs/2017MNRAS.470.4646S/abstract">Smith et al. 2017</a>.
 
 
 The general idea is summarized nicely in this plot from <a href="https://ui.adsabs.harvard.edu/abs/2019ApJS..245...26K/abstract">Korytov et al. 2019</a>:
