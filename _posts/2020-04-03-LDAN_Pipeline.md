@@ -94,8 +94,10 @@ and the wrapper, <code>runAHF_wfirst128.zsh</code>:
 #!/bin/zsh -f  
 
 cd /pleiades/u/ndrakos/AHF/bin
-maxsnap=500
+
 minsnap=0
+maxsnap=500
+
 
 i=$MPT_MPI_RANK
 i=$((i+minsnap))
