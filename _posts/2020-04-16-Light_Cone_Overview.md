@@ -56,7 +56,7 @@ I will eventually look into making mock images, using <a href="https://ui.adsabs
 
 ### Literature
 
-I plan to follow a procedure similar to that for generating the CosmoDC2 sky catalog for LSST (<a href="https://ui.adsabs.harvard.edu/abs/2019ApJS..245...26K/abstract">Korytov et al. 2019</a>; these methods are outlined in more detail in the pedagogical notes by <a href="https://ui.adsabs.harvard.edu/abs/2019arXiv190608355H/abstract"> Hollowed 2019 </a>). The general idea is summarized nicely in this plot:
+I plan to follow a procedure similar to that for generating the CosmoDC2 sky catalog for LSST (<a href="https://ui.adsabs.harvard.edu/abs/2019ApJS..245...26K/abstract">Korytov et al. 2019</a>; these methods are  also outlined in the pedagogical notes by <a href="https://ui.adsabs.harvard.edu/abs/2019arXiv190608355H/abstract"> Hollowed 2019 </a>). The general idea is summarized nicely in this plot:
 
 <img src="{{ site.baseurl }}/assets/plots/Korytov_LightCone.png">
 
@@ -72,11 +72,11 @@ Here is the current plan:
 
 2) For each halo, trace back the most massive progenitor in each snapshot, and calculate $$ds^2$$ (Robertson-Walker metric).
 
-3) Find the snapshots at times $$t_{j+1}$$ and $$t_j$$ at which $$ds^2$$ changes from positive to negative: the halo crossed the light cone at time $$t_e$$, which is between these two times (if it didn't cross, this halo is not observable on the light cone).
+3) Find the snapshots at times $$t_{j+1}$$ and $$t_j$$ at which $${\rm d}s^2$$ changes from positive to negative: the halo crossed the light cone at time $$t_j<t_e<t_{j+1}$$ (if it didn't cross, this halo is not observable on the light cone, and can be disregarded).
 
 4) Solve for the cosmic time, $$t_e$$, and the comoving position at which the halo crossed (See equations 27-29 in <a href="https://ui.adsabs.harvard.edu/abs/2019ApJS..245...26K/abstract">Korytov et al. 2019</a>)
 
-5) This will give the redshift of the halo; it's angular position can be kept constant
+5) This can be used to determine the redshift and angular position of the halo
 
 6) Assign the halo properties (mass, substructure, ect) from snapshot $$j+1$$ to this time and position; there are other alternatives to decide whether to assign properties from time $$t_j$$ or $$t_{j+1}$$, but I am following this simpler approach from <a href="https://ui.adsabs.harvard.edu/abs/2019ApJS..245...26K/abstract">Korytov et al. 2019</a>.
 
