@@ -25,9 +25,8 @@ I have a script on my computer for generating input files for AHF snapshots. The
 
 snappath=/u/ndrakos/wfirst128/ #where the snapshots will be located
 snapmin=0
-snapmax=50
+snapmax=500
 AHFinput_stem=AHF.input #base AHF input file; missing ic_filename and outfile_prefix lines
-AHFoutput_stem=AHF_wfirst128 #beginning of .input filenames
 
 for (( i=$snapmin; i<=$snapmax; i++ ))
 do
@@ -36,12 +35,13 @@ do
     #current snapshot
     mysnap=snapshot_$( printf '%03d' $i)
 
+
     #define lines in input file
     ic_filename=$snappath$mysnap
-    outfile_prefix=$snappath$AHFoutput_stem
+    outfile_prefix=$snappath$mysnap
 
     #create input file
-    filename=$AHFoutput_stem\_$mysnap.input
+    filename=$mysnap.input
     cp $AHFinput_stem $filename
 
     #add lines to input file
@@ -49,6 +49,7 @@ do
     (echo 3a; echo outfile_prefix=$outfile_prefix; echo .; echo w) | ed - $filename
 
 done
+
 
 </code></pre>
 
@@ -65,8 +66,8 @@ Here is my job script:
 <pre><code>
 #PBS -S /bin/csh
 #PBS -j oe
-#PBS -l select=1:ncpus=10:mem=2GB
-#PBS -l walltime=0:30:00
+#PBS -l select=1:ncpus=16:mpiprocs=16:mem=1GB
+#PBS -l walltime=24:00:00
 #PBS -q ldan
 
 module load mpi-sgi/mpt
@@ -78,18 +79,31 @@ cd .
 
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/nasa/pkgsrc/sles12/2016Q4/lib:/pleiades/u/ndrakos/install_to_here/gsl_in/lib
 
-mpiexec -np 10 ./runAHF_wfirst128.csh 0
+mpiexec -np 16 ./runAHF_wfirst128.zsh
 
 </code></pre>
 
 
 
-and the wrapper, <code>runAHF_wfirst128.csh</code>:
+and the wrapper, <code>runAHF_wfirst128.zsh</code>:
+
+
 
 <pre><code>
-#!/bin/csh -f                                                                                                            
-cd /pleiades/u/ndrakos/AHF/bin
-@ rank = $1 + $MPT_MPI_RANK
-./AHF /u/ndrakos/wfirst128/AHF_wfirst128_snapshot__$( printf '%03d' ${rank}).input > /u/ndrakos/wfirst128/output_${rank}.out
 
+#!/bin/zsh -f  
+
+cd /pleiades/u/ndrakos/AHF/bin
+maxsnap=500
+minsnap=0
+
+i=$MPT_MPI_RANK
+i=$((i+minsnap))
+
+while ((i<=maxsnap))
+do
+mysnap=snapshot_$( printf '%03d' $i)
+./AHF /u/ndrakos/wfirst128/${mysnap}.input
+i=$((i+16))
+done
 </code></pre>
