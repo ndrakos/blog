@@ -80,4 +80,6 @@ Here is the current plan:
 
 6) Assign the halo properties (mass, substructure, ect) from snapshot $$j+1$$ to this time and position---there are other alternatives to decide whether to assign properties from time $$t_j$$ or $$t_{j+1}$$, but I am following this simpler approach from <a href="https://ui.adsabs.harvard.edu/abs/2019ApJS..245...26K/abstract">Korytov et al. 2019</a>.
 
-7) Remove all halos that are progenitors/descendants of this halo from further consideration
+7) Remove all halos that are progenitors/descendants of this halo (from snapshot j+1) from further consideration (it is unlikely these would have crossed the light cone anyway)
+
+8) Repeat this with all isolated halos in the next (earlier) snapshot that haven't been thrown away
