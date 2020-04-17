@@ -82,4 +82,4 @@ Here is the current plan:
 
 7) Remove all halos that are progenitors/descendants of this snapshot $$j+1$$ halo from further consideration (so they aren't double counted; though it is unlikely these would have crossed the light cone anyway)
 
-8) Repeat this with all isolated halos in the next (earlier) snapshot that haven't been thrown away; this will include halos that have either become disrupted by redshift zero, or halos that were not the main progenitor of the halos that were already considered
+8) Repeat this with all isolated halos in the next (earlier) snapshot that haven't been thrown away; this will include halos that have become disrupted, and halos that were not on the main progenitor branches.
