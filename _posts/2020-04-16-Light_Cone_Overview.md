@@ -11,13 +11,13 @@ This post outlines my plan for making the light cone for our mock galaxy catalog
 
 ## Overview of Mock Catalogues
 
-Here is the current plan for the mock catalogue generation (there are still many details that need to be sorted out); this is so I can decide where in the methods the light cone generation fits.
+Here is the current plan for the mock catalogue generation; this is so I can decide where in the methods the light cone generation fits.
 
-We will start the catalogue from dark matter only simulations, and then do abundance matching (alternatives include hydrodynamic simulations, HOD modeling and semi-analytic models; see the <a href="https://ui.adsabs.harvard.edu/abs/2018ARA%26A..56..435W/abstract">Wechsler and Tinker 2018</a> review).
+We will start the catalogue from a dark matter only simulation, and then do abundance matching (alternatives include hydrodynamic simulations, HOD modeling and semi-analytic models; see the <a href="https://ui.adsabs.harvard.edu/abs/2018ARA%26A..56..435W/abstract">Wechsler and Tinker 2018</a> review for an overview of different methods).
 
 ### 1) Simulation
 
-We decided to run a simulation with a box size of $$115 {\rm Mpc}\, h^{-1}$$ with $$2048^3$$ particles (see <a href="https://ndrakos.github.io/blog/mocks/Box_Size/">this post</a>). This a mass resolution of $$1.5 \times 10^7$$ solar masses per particle. For software, we have created the ICs using MUSIC, and will run it in Gadget-2.
+We decided to run a simulation with a box size of $$115 {\rm Mpc}\, h^{-1}$$ with $$2048^3$$ particles (see <a href="https://ndrakos.github.io/blog/mocks/Box_Size/">this post</a>). This a mass resolution of $$1.5 \times 10^7$$ solar masses per particle. We have created the ICs using MUSIC, and will run it in Gadget-2.
 
 
 Note that the <a href="http://hipacc.ucsc.edu/Bolshoi/MergerTrees.html">Bolshoi-Planck</a> simulations are somewhat similar (volume of $$250 {\rm Mpc}\, h^{-1}$$, with a mass resolution of $$10^{10}$$) and we could potentially use these for another realization, or for a comparison.
@@ -26,7 +26,7 @@ Note that the <a href="http://hipacc.ucsc.edu/Bolshoi/MergerTrees.html">Bolshoi-
 
 ### 2) Halo Catalogue and Merger Trees
 
-I have everything setup to create halo catalogue and merger trees using AHF. Rockstar and Consistent-Trees seem to be more popular though, so I maybe need to justify using AHF (or switch). I should review the <a href="https://ui.adsabs.harvard.edu/abs/2011MNRAS.415.2293K/abstract">Haloes gone MAD</a> papers.
+I have everything setup to create halo catalogue and merger trees using AHF. Rockstar and Consistent-Trees seem to be more popular though, so I maybe need to justify using AHF (or switch). I should review the <a href="https://ui.adsabs.harvard.edu/abs/2011MNRAS.415.2293K/abstract">Haloes Gone MAD</a> papers.
 
 
 ### 3) Light Cone Generator
@@ -38,7 +38,7 @@ I was debating whether to do the light cone generation or abundance matching fir
 
 ### 4) Abundance Matching
 
-There were various choices associated with SHAM (which stellar mass/luminosity function to use, what halo property I am using, which scatter model I am using). I have mostly sorted these things out in previous posts (though there were issues I blamed on resolution; need to check if things work with higher resolution simulations). I also need to extend my abundance matching codes to work for redshifts out to about $$z=10$$.
+There were various choices associated with SHAM (e.g. which stellar mass/luminosity function, halo property, and scatter model to use). I have mostly sorted these things out in previous posts (though there were issues I blamed on resolution, and I need to check if things work with the higher resolution simulations). I also need to extend my abundance matching codes to work for redshifts out to about $$z=10$$.
 
 
 ### 5) Galaxy Properties
@@ -70,7 +70,7 @@ Here is the current plan:
 
 1) Start with the most recent snapshot, and find all isolated halos (ignore subhalos; these will be kept with their hosts)
 
-2) For each halo, trace back the most massive progenitor in each snapshot, and calculate $$ds^2$$ (Robertson-Walker metric).
+2) For each halo, trace back the most massive progenitor in each snapshot, and calculate $${\rm d}s^2$$ (Robertson-Walker metric).
 
 3) Find the snapshots at times $$t_{j+1}$$ and $$t_j$$ at which $${\rm d}s^2$$ changes from positive to negative: the halo crossed the light cone at time $$t_j<t_e<t_{j+1}$$ (if it didn't cross, this halo is not observable on the light cone, and can be disregarded).
 
@@ -78,6 +78,6 @@ Here is the current plan:
 
 5) This can be used to determine the redshift and angular position of the halo
 
-6) Assign the halo properties (mass, substructure, ect) from snapshot $$j+1$$ to this time and position; there are other alternatives to decide whether to assign properties from time $$t_j$$ or $$t_{j+1}$$, but I am following this simpler approach from <a href="https://ui.adsabs.harvard.edu/abs/2019ApJS..245...26K/abstract">Korytov et al. 2019</a>.
+6) Assign the halo properties (mass, substructure, ect) from snapshot $$j+1$$ to this time and position---there are other alternatives to decide whether to assign properties from time $$t_j$$ or $$t_{j+1}$$, but I am following this simpler approach from <a href="https://ui.adsabs.harvard.edu/abs/2019ApJS..245...26K/abstract">Korytov et al. 2019</a>.
 
 7) Remove all halos that are progenitors/descendants of this halo from further consideration
