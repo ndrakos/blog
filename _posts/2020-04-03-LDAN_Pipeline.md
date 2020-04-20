@@ -59,6 +59,9 @@ done
 There is information <a href="https://www.nas.nasa.gov/hecc/support/kb/using-sgi-mpt-to-run-multiple-serial-jobs_184.html">here</a> on how to submit multiple serial jobs in one job script.
 
 
+
+### Halo Finder
+
 Here is my job script:
 
 
@@ -108,4 +111,59 @@ mysnap=snapshot_$( printf '%03d' $i)
 ./AHF /u/ndrakos/wfirst128/${mysnap}.input
 i=$((i+16))
 done
+</code></pre>
+
+### Merger Trees
+
+Similarly, for the merger trees, the job script:
+
+
+<pre><code>
+
+#PBS -S /bin/csh
+#PBS -j oe
+#PBS -l select=1:ncpus=16:mem=1GB
+#PBS -l walltime=2:00:00
+#PBS -q ldan
+module load mpi-sgi/mpt
+module load comp-intel/2018.3.222
+setenv MPI_SHEPHERD true
+cd .
+export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:/nasa/pkgsrc/sles12/2016Q4/lib:/pleia\
+des/u/ndrakos/install_to_here/gsl_in/lib
+mpiexec -np 16 ./runTree_wfirst128.zsh
+
+</code></pre>
+
+
+and the wrapper: 
+
+<pre><code>
+
+#!/bin/zsh -f                                                                   
+cd /pleiades/u/ndrakos/AHF/bin
+minsnap=0
+maxsnap=500
+i=$MPT_MPI_RANK
+i=$((i+minsnap))
+while ((i<maxsnap))
+do
+#Name of file 1                                                                 
+for FILENAME in /u/ndrakos/wfirst128/snapshot_$( printf '%03d' $((i+1)))*.AHF_p\
+articles; do
+  file1=${FILENAME}
+done
+#Name of file 2                                                                 
+for FILENAME in /u/ndrakos/wfirst128/snapshot_$( printf '%03d' $i)*.AHF_particl\
+es; do
+  file2=${FILENAME}
+done
+#Name out outputfile                                                            
+output=$(echo "${file1%.*}") #prefex before .AHF_particles                      
+#Run                                                                            
+(echo 2 && echo $file1 && echo $file2 && echo $output.AHF) | ./MergerTree
+i=$((i+16))
+done
+
+
 </code></pre>
