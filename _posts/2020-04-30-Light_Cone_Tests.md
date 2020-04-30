@@ -36,7 +36,7 @@ This means we will need to tile 57 boxes to go out to redshift 10, and 60 to go 
 
 5) Calculate the time the halo would cross the light cone, $$t_e$$ , from these positions (Equations 27-29  in <a href="https://ui.adsabs.harvard.edu/abs/2019ApJS..245...26K/abstract">Korytov et al. 2019</a>). If this time is inbetween the snapshot times $$t_{j+1}$$ and $$t_j$$, it crossed!
 
-6) If the halo crossed, use $$t_e$$ to get the redshift of the halo, and interpolate for the position and velocity of the halo (really I am using the velocity $$v_{\rm lin}= (r_{j+1}-r_j)/(t_{j+1}-t_j)$$ and calculateing the position as $$r = r_j + v_{\rm lin}(t_e-t_j)$$). I then save all other halo properties (mass, substructure, ect.) from the halo at snapshot $$j+1$$.
+6) If the halo crossed, use $$t_e$$ to get the redshift of the halo, and interpolate for the position and velocity of the hal---technically I am using the velocity $$v_{\rm lin}= (r_{j+1}-r_j)/(t_{j+1}-t_j)$$ and calculating the position as $$r = r_j + v_{\rm lin}(t_e-t_j)$$. I then save all other halo properties (mass, substructure, ect.) from the halo at snapshot $$j+1$$.
 
 
 
