@@ -8,7 +8,7 @@ categories: mocks
 
 In a <a href="https://ndrakos.github.io/blog/mocks/Adding_Scatter/">previous post</a>, I realized the relation between stellar mass, $$M_*$$ and $$v_{\rm peak}$$ did not look right in my abundance matching results. Ideally, I would like to reproduce the following plot from <a href="https://ui.adsabs.harvard.edu/abs/2019arXiv191003605C/abstract">Cao et al. 2019</a>:
 
-<img src="{{ site.baseurl }}/assets/plots/Cao2019_MvsV.png">
+<img src="{{ site.baseurl }}/assets/plots/20200213_Cao2019_MvsV.png">
 
 
 
@@ -16,7 +16,7 @@ In a <a href="https://ndrakos.github.io/blog/mocks/Adding_Scatter/">previous pos
 
 Right now, I am using the stellar mass function from <a href="https://ui.adsabs.harvard.edu/abs/2009MNRAS.398.2177L">Li & White 2009</a> and the distribution of $$v_{\rm peaks}$$ measured from my sample simulation. This results in the following relation:
 
-<img src="{{ site.baseurl }}/assets/plots/Mstar_vs_vpeak.png">
+<img src="{{ site.baseurl }}/assets/plots/20200218_Mstar_vs_vpeak.png">
 
 which clearly doesn't match the plot from <a href="https://ui.adsabs.harvard.edu/abs/2019arXiv191003605C/abstract">Cao et al. 2019</a>.
 
@@ -89,7 +89,7 @@ With this, I calculate  $$\dfrac{d \ln \sigma^{-1}}{d \ln M}$$ numerically.
 
 Here is the comparison between the simulation and the theoretical halo mass functions:
 
-<img src="{{ site.baseurl }}/assets/plots/HaloMassFunction.png">
+<img src="{{ site.baseurl }}/assets/plots/20200218_HaloMassFunction.png">
 
 These agree pretty well above $$\log M = 12$$, but I'm still not convinced I don't have an error in my halo mass function. Either way, the steep part of the stellar to halo mass relation corresponds to masses less than that (from the $$\sigma[M \mid v_{\rm peak}]$$ plot in the previous post, $$\log M=12$$ corresponds roughly to $$\log v_{\rm peak} = 2.6$$). Therefore, I am pretty sure this is a resolution issue.
 

@@ -33,11 +33,11 @@ I have tested this with a sample simulation provided by Brant (spergel_2LPT_256)
 
 Plots showing the calculated number of $$N_{\rm halos}(< v_{\rm peak})$$ and $$N_{\rm galaxies}(< M_*)$$:
 
-<img src="{{ site.baseurl }}/assets/plots/Matching.png">
+<img src="{{ site.baseurl }}/assets/plots/20200211_Matching.png">
 
 After abundance matching, to recover the SMF, the output galaxy masses were binned, and then divided by the bin width.
 
-<img src="{{ site.baseurl }}/assets/plots/SMF.png">
+<img src="{{ site.baseurl }}/assets/plots/20200211_SMF.png">
 
 
 ## What's Next

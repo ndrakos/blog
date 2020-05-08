@@ -33,7 +33,7 @@ Where $$D_L$$ is the luminosity distance, and is a function of redshift. I previ
 
 Here is $$M_{\rm AB}$$ corresponding to $$m_{\rm AB} = 30$$ as a function of redshift:
 
-<img src="{{ site.baseurl }}/assets/plots/MagnitudeVsRedshift.png">
+<img src="{{ site.baseurl }}/assets/plots/20200312_MagnitudeVsRedshift.png">
 
 <!---
 At redshift $$z=10$$, *WFIRST* will detect objects brighter than $$\sim -20$$ mag AB.
@@ -45,7 +45,7 @@ I plan to closely follow the methods from <a href="https://ui.adsabs.harvard.edu
 
 They conveniently provide this plot of the $$M_{UV}-M_*$$ relation:
 
-<img src="{{ site.baseurl }}/assets/plots/MUV_vs_Mstar_Williams.png">
+<img src="{{ site.baseurl }}/assets/plots/20200312_MUV_vs_Mstar_Williams.png">
 
 
 ## Questions

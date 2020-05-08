@@ -9,7 +9,7 @@ categories: mocks
 
 While basic subhalo abundance matching (SHAM) has no free parameters, it is common to introduce scatter in the stellar mass--halo mass (SM--HM) relation. For now I am setting a constant scatter of $$\sigma(M_* \mid v_{\rm peak}) \approx  0.2$$ dex, which is common in in the literature. While there is some evidence that this scatter does not depend on halo mass (e.g. <a href="https://ui.adsabs.harvard.edu/abs/2009ApJ...693..830Y/abstract">Yang et al 2009</a> + more recent references), it is not well constrained observationally for low mass halos. New constraints on the scatter at low masses can be found in <a href="https://ui.adsabs.harvard.edu/abs/2019arXiv191003605C/abstract">Cao et al. 2019</a>, and their summary plot on SM--HM scatter is is shown below:
 
-<img src="{{ site.baseurl }}/assets/plots/Cao2019.png">
+<img src="{{ site.baseurl }}/assets/plots/20200213_Cao2019.png">
 
 
 ## Method 1: Deconvolution
@@ -66,28 +66,28 @@ Does adding log-normal scatter in $$v_{\rm peak}$$ result in log-normal scatter 
 I am trying to reproduce the following plot from <a href="https://ui.adsabs.harvard.edu/abs/2019arXiv191003605C/abstract">Cao et al. 2019</a>
 
 
-<img src="{{ site.baseurl }}/assets/plots/Cao2019mapping.png">
+<img src="{{ site.baseurl }}/assets/plots/20200213_Cao2019mapping.png">
 
 
 However my plot looks like this:
 
-<img src="{{ site.baseurl }}/assets/plots/scatter_mapping.png">
+<img src="{{ site.baseurl }}/assets/plots/20200213_scatter_mapping.png">
 
 I have tried to look in more detail at the individual data points (for $$\sigma(v_{\rm peak})=0.1$$ dex):
 
-<img src="{{ site.baseurl }}/assets/plots/Mgal_vs_vpeak.png">
+<img src="{{ site.baseurl }}/assets/plots/20200213_Mgal_vs_vpeak.png">
 
 This plot shows the original data points in blue, and then the scatter that is added for the abundance matching is shown in black. This mostly looks reasonable, and the scatter in $$M_*$$ agrees with the scatter I am measuring.
 
 There is some concern that the halo mass function I am using (1) does not extend to lower $$v_{\rm peak}$$ than that measured in the simulation and (2) has some problems at high $$v_{\rm peak}$$ that comes from discreteness issues. This can seen by looking closer at the abundance matching (log-log plot versus the linear plot shown in the previous post):
 
-<img src="{{ site.baseurl }}/assets/plots/Matching_log.png">
+<img src="{{ site.baseurl }}/assets/plots/20200213_Matching_log.png">
 
 Therefore, to fix these problems, I should use a parametric form for the halo mass function, rather than that measured directly from the simulation.
 
 Next, I checked whether the relationship between $$M_*$$ and $$v_{\rm peak}$$ looks reasonable. For comparison, see the following plot from <a href="https://ui.adsabs.harvard.edu/abs/2019arXiv191003605C/abstract">Cao et al. 2019</a>:
 
-<img src="{{ site.baseurl }}/assets/plots/Cao2019_MvsV.png">
+<img src="{{ site.baseurl }}/assets/plots/20200213_Cao2019_MvsV.png">
 
 The values look similar around $$\log v_{\rm peak}=2.4$$. After that, mine isn't as flat, and before that mine isn't as steep. This could be the reason my plot for how the scatter maps does not match.
 

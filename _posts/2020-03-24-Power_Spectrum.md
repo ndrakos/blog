@@ -63,7 +63,7 @@ The steps I followed are:
 
 Here are my results:
 
-<img src="{{ site.baseurl }}/assets/plots/PowerSpectrum_wfirst128.png">
+<img src="{{ site.baseurl }}/assets/plots/20200324_PowerSpectrum_wfirst128.png">
 
 The simulation does look like it is above the theoretical power spectrum, but it is very possible I messed up the normalization on the theoretical and/or the measured power spectrum.
 

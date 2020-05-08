@@ -47,17 +47,17 @@ I tested a few of the results for the Fast and Slow Simulations (described in th
 
 Mass loss curves:
 
-<img src="{{ site.baseurl }}/assets/plots/Pot_MassLoss.png">
+<img src="{{ site.baseurl }}/assets/plots/20200217_Pot_MassLoss.png">
 
 
 Density profiles (taken at third apocentric passage):
 
-<img src="{{ site.baseurl }}/assets/plots/Pot_Dens.png">
+<img src="{{ site.baseurl }}/assets/plots/20200217_Pot_Dens.png">
 
 
 Shape calculation:
 
-<img src="{{ site.baseurl }}/assets/plots/Pot_Shape.png">
+<img src="{{ site.baseurl }}/assets/plots/20200217_Pot_Shape.png">
 
 
 

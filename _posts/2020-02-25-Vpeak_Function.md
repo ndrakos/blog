@@ -30,7 +30,7 @@ where $$A,\beta,\alpha$$ and $$V_{\rm cut}$$ are the fitted parameters. I used $
 
 Comparing this to the output from the simulation, I get:
 
-<img src="{{ site.baseurl }}/assets/plots/HaloVelocityFunction.png">
+<img src="{{ site.baseurl }}/assets/plots/20200225_HaloVelocityFunction.png">
 
 as expected, there are resolution problems below $$v_{\rm peak} \approx 2.6$$.
 
@@ -42,11 +42,11 @@ I can now recover the expected relation between $$M_*$$ and $$V_{\rm peak}$$.
 
 From <a href="https://ui.adsabs.harvard.edu/abs/2019arXiv191003605C/abstract">Cao et al. 2019</a>:
 
-<img src="{{ site.baseurl }}/assets/plots/Cao2019_MvsV.png">
+<img src="{{ site.baseurl }}/assets/plots/20200218_Cao2019_MvsV.png">
 
 Mine (I also realized I had been missing a factor of $$h^3$$ in the stellar mass function...):
 
-<img src="{{ site.baseurl }}/assets/plots/Mstar_vs_vpeak_updated.png">
+<img src="{{ site.baseurl }}/assets/plots/20200225_Mstar_vs_vpeak_updated.png">
 
 It looks much better! (good enough?)
 
@@ -58,11 +58,11 @@ And the scatter mapping:
 
 From <a href="https://ui.adsabs.harvard.edu/abs/2019arXiv191003605C/abstract">Cao et al. 2019</a>:
 
-<img src="{{ site.baseurl }}/assets/plots/Cao2019mapping.png">
+<img src="{{ site.baseurl }}/assets/plots/20200213_Cao2019mapping.png">
 
 For mine I calculated this by doing the abundance matching for 1000 $$v_{\rm peak}$$ values, binning it into 100 bins, and calculating the standard deviation in each. Then I repeated this 1000 times and averaged it to get a smoother relation.
 
-<img src="{{ site.baseurl }}/assets/plots/scatter_mapping_updated.png">
+<img src="{{ site.baseurl }}/assets/plots/20200225_scatter_mapping_updated.png">
 
 This is a lot better, but still doesn't match. I will look into this more another day, but for now it seems to be roughly working.
 
