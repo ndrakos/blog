@@ -42,7 +42,7 @@ I can now recover the expected relation between $$M_*$$ and $$V_{\rm peak}$$.
 
 From <a href="https://ui.adsabs.harvard.edu/abs/2019arXiv191003605C/abstract">Cao et al. 2019</a>:
 
-<img src="{{ site.baseurl }}/assets/plots/20200218_Cao2019_MvsV.png">
+<img src="{{ site.baseurl }}/assets/plots/20200213_Cao2019_MvsV.png">
 
 Mine (I also realized I had been missing a factor of $$h^3$$ in the stellar mass function...):
 
