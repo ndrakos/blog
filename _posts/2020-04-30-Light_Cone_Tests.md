@@ -16,7 +16,7 @@ Because the survey is deep but doesn't cover a lot of area, the plan is to tile 
 
 Here is a plot of comoving distance versus redshift, and the corresponding number of 115 Mpc/h boxes:
 
-<img src="{{ site.baseurl }}/assets/plots/ComovingDistance.png">
+<img src="{{ site.baseurl }}/assets/plots/20200430_ComovingDistance.png">
 
 
 This means we will need to tile 57 boxes to go out to redshift 10, and 60 to go out to redshift 12. For now, I am just tiling 20 boxes, which corresponds to a redshift of 1.
@@ -36,7 +36,7 @@ This means we will need to tile 57 boxes to go out to redshift 10, and 60 to go 
 
 5) Calculate the time the halo would cross the light cone, $$t_e$$ , from these positions (Equations 27-29  in <a href="https://ui.adsabs.harvard.edu/abs/2019ApJS..245...26K/abstract">Korytov et al. 2019</a>). If this time is inbetween the snapshot times $$t_{j+1}$$ and $$t_j$$, it crossed!
 
-6) If the halo crossed, use $$t_e$$ to get the redshift of the halo, and interpolate for the position and velocity of the hal---technically I am using the velocity $$v_{\rm lin}= (r_{j+1}-r_j)/(t_{j+1}-t_j)$$ and calculating the position as $$r = r_j + v_{\rm lin}(t_e-t_j)$$. I then save all other halo properties (mass, substructure, ect.) from the halo at snapshot $$j+1$$.
+6) If the halo crossed, use $$t_e$$ to get the redshift of the halo, and interpolate for the position and velocity of the halo---technically I am using the velocity $$v_{\rm lin}= (r_{j+1}-r_j)/(t_{j+1}-t_j)$$ and calculating the position as $$r = r_j + v_{\rm lin}(t_e-t_j)$$. I then save all other halo properties (mass, substructure, ect.) from the halo at snapshot $$j+1$$.
 
 
 
@@ -55,24 +55,24 @@ This means we will need to tile 57 boxes to go out to redshift 10, and 60 to go 
 6) Another issue is that my code is slow right now, and may take too long to run on the 2048 simulations. I can optimize a few things; e.g. I can pre-calculate what range of redshifts are possible for each tiled box, and only loop through those snapshots. Also, right now I am storing the merger histories for all the halos in one numpy array (step 1)---this isn't feasible with the larger halo catalogs. It might be trivial to parallelize my code as well; for example, each tiled box can run independently.
 
 
-# Some Sample Results
+## Some Sample Results
 
 I wanted to test this on the 512 simulations, but the code is still running to generate the lightcone catalog. So, I am going to test a couple things on the sample $$256^3$$ test simulation I have; it has a box size of 60 Mpc, and a WMAP-ish cosmology? (I can't figure out exactly what cosmology it is). I have tiled 5 boxes, which has a depth corresponding to a redshift of roughly 0.1.
 
 Here is the position of these (isolated) halos in real space, colored by their assigned redshifts:
 
 
-<img src="{{ site.baseurl }}/assets/plots/Lightcone_xyz.png">
+<img src="{{ site.baseurl }}/assets/plots/20200430_Lightcone_xyz.png">
 
 
 Next, I am checking that the halo mass functions look reasonable, by comparing my lightcone output to the final snapshot:
 
-<img src="{{ site.baseurl }}/assets/plots/sperglightcone_HaloMassFunction.png">
+<img src="{{ site.baseurl }}/assets/plots/20200430_sperglightcone_HaloMassFunction.png">
 
 
 So far this looks pretty good. There is a bit of difference at the low mass end... I'm not sure why this is. One possibility is that it is from potential problem (4).
 
-# Next Steps
+## Next Steps
 
 1) Run this for the 512 Simulations. Right now my code isn't very efficient, and is taking a long time to run. I might try and optimize this a bit over the next few days.
 
@@ -80,4 +80,4 @@ So far this looks pretty good. There is a bit of difference at the low mass end.
 
 3) Abundance matching. I have previously written code to do this at redshift zero. I need to double check that this works (there were a couple of potential issues in the scatter model), and extend it to larger redshifts. I will also need to write a little bit of code to read in the IDs of subhalos associated with each isolated halo
 
-4) Go through some of the potential problems in my light one method, as outlined above.
+4) Go through some of the potential problems in my light cone method, as outlined above.
