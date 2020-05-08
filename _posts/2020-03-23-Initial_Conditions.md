@@ -23,13 +23,13 @@ Here I am going to take a closer look at the initial conditions used to generate
 
 My plot of the simulation at snapshot_000 (redshift 20) looks like this:
 
-<img src="{{ site.baseurl }}/assets/plots/snapshot_000.png">
+<img src="{{ site.baseurl }}/assets/plots/20200323_snapshot_000.png">
 
 I want to see if this is because of the <a href=" https://github.com/astrofrog/mpl-scatter-density">plotting function</a> I am using, or if there is a problem in the ICs.
 
 To test this, I calculated the density myself (I binned up the particles, and calculated the density in x-y projection):
 
-<img src="{{ site.baseurl }}/assets/plots/snapshot_000_new.png">
+<img src="{{ site.baseurl }}/assets/plots/20200323_snapshot_000_new.png">
 
 This looks good, so the grid-like structure does seem to be an issue with the plotting function.
 
@@ -44,7 +44,7 @@ For the ICs, I am using the Eisenstein transfer function (Equation 29 of <a href
 
 The difference in the theoretical HMF is minimal:
 
-<img src="{{ site.baseurl }}/assets/plots/HMF_wfirst128_TFs.png">
+<img src="{{ site.baseurl }}/assets/plots/20200323_HMF_wfirst128_TFs.png">
 
 
 

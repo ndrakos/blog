@@ -10,7 +10,7 @@ categories: mocks
 In <a href="https://ndrakos.github.io/blog/mocks/Light_Cone_Tests/">this post</a>, I summarized the current method I have for generating light cones. However, my code was much to slow to run on the 500 snapshots I have for the $$512^3$$ simulation. Therefore, I have sped up the code significantly by (1) switching to using pandas data frames in python and (2) pre-calculating which snapshots have redshifts that overlap with the possible redshifts of the tiled simulation block, and only analyzing those.
 
 
-# Results
+## Results
 
 Here are the results with 20 tiled boxes ($$z<1$$).
 
@@ -25,7 +25,7 @@ The halo mass functions:
 
 
 
-# Next Steps
+## Next Steps
 
 1) Finalize the abundance matching code, using these $$512^3$$ simulations, and populate the lightcone with galaxies.
 

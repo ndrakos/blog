@@ -63,4 +63,4 @@ SDSS DR7 can be found in Table 5 of <a href="https://ui.adsabs.harvard.edu/abs/2
 
 Here are my results in the mass bin 10 to 10.5:
 
-<img src="{{ site.baseurl }}/assets/plots/CorrFunc.png">
+<img src="{{ site.baseurl }}/assets/plots/20200408_CorrFunc.png">

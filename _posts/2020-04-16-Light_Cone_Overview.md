@@ -58,7 +58,7 @@ I will eventually look into making mock images, using <a href="https://ui.adsabs
 
 I plan to follow a procedure similar to that for generating the CosmoDC2 sky catalog for LSST (<a href="https://ui.adsabs.harvard.edu/abs/2019ApJS..245...26K/abstract">Korytov et al. 2019</a>; these methods are  also outlined in the pedagogical notes by <a href="https://ui.adsabs.harvard.edu/abs/2019arXiv190608355H/abstract"> Hollowed 2019 </a>). The general idea is summarized nicely in this plot:
 
-<img src="{{ site.baseurl }}/assets/plots/Korytov_LightCone.png">
+<img src="{{ site.baseurl }}/assets/plots/20200416_Korytov_LightCone.png">
 
 
 Other key references for making light cones are: <a href="https://ui.adsabs.harvard.edu/abs/2002ApJ...573....7E/abstract">Evrard et al. 2002</a>, <a href="https://ui.adsabs.harvard.edu/abs/2005MNRAS.360..159B/abstract">Blaizot et al. 2005</a>, <a href="https://ui.adsabs.harvard.edu/abs/2007MNRAS.376....2K/abstract">Kitzbichler & White 2007</a>,  <a href="https://ui.adsabs.harvard.edu/abs/2013MNRAS.429..556M/abstract">Merson et al. 2013</a> and <a href="https://ui.adsabs.harvard.edu/abs/2017MNRAS.470.4646S/abstract">Smith et al. 2017</a>.

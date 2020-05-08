@@ -17,7 +17,7 @@ For more information on calculating HMFs, see the previous posts: <a href="https
 
 One possibility was that the random realization of initial conditions was by chance slightly too high. To test this, I generated another set of ICs, and looked at the power spectrum. While I still need to sort out the normalization of the power spectrum, it does seem that the two different realizations match each other, and therefore this is not likely the source of the discrepancy.
 
-<img src="{{ site.baseurl }}/assets/plots/IC_PowerSpectrum_wfirst128.png">
+<img src="{{ site.baseurl }}/assets/plots/20200330_IC_PowerSpectrum_wfirst128.png">
 
 
 I also checked how using different transfer functions affected the halo mass function in <a href="https://ndrakos.github.io/blog/cosmo_sims/Initial_Conditions/">this post</a> but found it didn't make much of a difference.
@@ -26,7 +26,7 @@ I also checked how using different transfer functions affected the halo mass fun
 
 One possibility for the discrepancy is that I am including all of the halos from the simulation data. However, when I remove these, it makes little difference at this resolution:
 
-<img src="{{ site.baseurl }}/assets/plots/HMF_wfirst128_sub.png">
+<img src="{{ site.baseurl }}/assets/plots/20200330_HMF_wfirst128_sub.png">
 
 
 ## Check Theoretical Prediction
@@ -34,7 +34,7 @@ One possibility for the discrepancy is that I am including all of the halos from
 
 I used the python package <a href="https://bdiemer.bitbucket.io/colossus/lss_mass_function.html">Colossus</a> to double check my HMF calculation:
 
-<img src="{{ site.baseurl }}/assets/plots/HMF_wfirst128_col.png">
+<img src="{{ site.baseurl }}/assets/plots/20200330_HMF_wfirst128_col.png">
 
 And it seems that there is an issue with my HMF calculation, and that the simulation is okay!
 
