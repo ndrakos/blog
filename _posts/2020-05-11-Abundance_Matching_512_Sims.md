@@ -13,7 +13,7 @@ Before, I was using the stellar mass function from <a href="https://ui.adsabs.ha
 
 ## Halo Vpeak Function
 
-In <a href="https://ndrakos.github.io/blog/mocks/Light_Cone_512_Sims/">the last post</a> post, I showed that the halo mass function (HMF) of the $$512^3$$ agrees with the expected curve. I also want to check the halo $$v_{\rm peak}$$ functions from the simulation look right.
+In <a href="https://ndrakos.github.io/blog/mocks/Light_Cone_512_Sims/">my last post</a>, I showed that the halo mass function (HMF) of the $$512^3$$ agrees with the expected curve. I also want to check the halo $$v_{\rm peak}$$ functions from the simulation look right.
 
 I am using the halo $$v_{\rm peak}$$ function (HVF) from <a href="https://ui.adsabs.harvard.edu/abs/2017MNRAS.469.4157C/abstract">Comparat et al. 2017</a>. When I compare their parameterization to the distribution from the simulation I get:
 
@@ -26,9 +26,9 @@ The two curves don't agree... It possible I am doing something wrong (I already 
 
 The basic method for abundance matching is to solve for the galaxy mass, $$M_*$$, of each halo, given their peak circular velocity $$v_{\rm peak}$$, using the equation:
 
-$$\int_{v_{\rm peak}} n(v_{\rm peak}') {\rm d}v_{\rm peak}' = \int_{M_*} \phi(M_*') {\rm d}M_*'$$
+$$\int_{v_{\rm peak}}^{\infty} n(v_{\rm peak}') {\rm d}v_{\rm peak}' = \int_{M_*}^{\infty} \phi(M_*') {\rm d}M_*'$$
 
-Note that the HVF and SMF are only defined out to some maximum mass/peak velocity. Therefore, I am integrating out to the maximum $$v_{\rm peak}$$ and $$M_*$$ values defined in the parameterizations. I am hoping that $$n$$ and $$\phi$$ are small enough outside these values that it won't influence the results much; however this could shift the vpeak Mgal relation. I need to check how sensitive the results are to this truncation in the integrals.
+Note that the HVF and SMF are only defined out to some maximum mass/peak velocity. Therefore, I am integrating out to the maximum $$v_{\rm peak}$$ and $$M_*$$ values defined in the parameterizations. I am hoping that $$n$$ and $$\phi$$ are small enough outside these values that it won't influence the results much; however this could shift the $$M_*$$--$$v_{\rm peak}$$ relation. I need to check how sensitive the results are to this truncation in the integrals.
 
 I am using the HVF, $$n(v_{\rm peak})$$, measured from the simulations. As before, I am using the SMF, $$\phi(M_*)$$, from <a href="https://ui.adsabs.harvard.edu/abs/2009MNRAS.398.2177L">Li & White 2009</a> (this will eventually have to be extended/updated for higher redshift, but will serve to test that the abundance matching procedure is working).
 
@@ -41,7 +41,7 @@ This looks good!
 
 ## $$M_*$$ versus $$v_{\rm peak}$$
 
-From the abundance matching procedure, we can obtain the relation between galaxy mass, $$M_*$$, and the halo mass proxy, $$v_{\rm peak}$$,:
+From the abundance matching procedure, we can obtain the relation between galaxy mass, $$M_*$$, and the halo mass proxy, $$v_{\rm peak}$$:
 
 <img src="{{ site.baseurl }}/assets/plots/20200511_Mstar_vs_vpeak.png">
 
@@ -56,10 +56,10 @@ I did plan on updating the SMF eventually; therefore I am going to focus on this
 
 ## Scatter in Abundance Matching
 
-I decided to do the procedure for introducing scatter presented in <a href="https://ui.adsabs.harvard.edu/abs/2019arXiv191003605C/abstract">Cao et al. 2019</a>, as outlined in an <a href="https://ndrakos.github.io/blog/mocks/Adding_Scatter/">earlier post</a>. Briefly, the scatter in galaxy masses appears to be roughly constant, but in the abundance matching procedure it is easier to add scatter to the $$v_{\rm peak}$$ values. Therefore, the method involves adding constant scatter to $$v_{\rm peak}$$, and mapping out the relation between $$v_{\rm peak}$$ and $$M_*$$ as a function of mass.
+I decided to do the procedure for introducing scatter presented in <a href="https://ui.adsabs.harvard.edu/abs/2019arXiv191003605C/abstract">Cao et al. 2019</a>, as outlined in an <a href="https://ndrakos.github.io/blog/mocks/Adding_Scatter/">earlier post</a>. Briefly, the scatter in galaxy masses appears to be roughly constant, but in the abundance matching procedure it is easier to add scatter to the $$v_{\rm peak}$$ values. Therefore, the method involves adding constant scatter to $$v_{\rm peak}$$, and mapping out the relation between $$v_{\rm peak}$$ scatter and $$M_*$$ scatter as a function of mass; then for a given halo, you can choose the amount of scatter to add to $$v_{\rm peak}$$ to give the desired scatter in $$M_*$$.
 
 
-Before, I couldn't tell if my procedure was working, since I couldn't reproduce the scatter relation from <a href="https://ui.adsabs.harvard.edu/abs/2019arXiv191003605C/abstract">Cao et al. 2019</a>. However, I think that this was because I had a different $$M_*$$--$$v_{\rm peak}$$ relation. I plan on sorting out that issue first, and then I will revisit the scatter model.
+In the <a href="https://ndrakos.github.io/blog/mocks/Adding_Scatter/">earlier post</a>, I couldn't tell if my procedure was working, since I couldn't reproduce the scatter relation from <a href="https://ui.adsabs.harvard.edu/abs/2019arXiv191003605C/abstract">Cao et al. 2019</a>. However, I think that this was because I had a different $$M_*$$--$$v_{\rm peak}$$ relation. Therefore, I plan on sorting out that issue first, and then I will revisit the scatter model.
 
 
 
@@ -70,6 +70,6 @@ Before, I couldn't tell if my procedure was working, since I couldn't reproduce 
 
 2. Check how sensitive the results are to the truncation in the integrals in the abundance matching procedure.
 
-3. Check scatter model working with updated $$M_*--v_{\rm peak}$$ relation
+3. Check if the scatter model works with the updated $$M_*$$--$$v_{\rm peak}$$ relation
 
 4. Decide whether I want to fit a parameterization to my HVF (since I may run into issues when the values are scattered outside of simulation range during the scatter step of the abundance matching procedure---though I might just be able to truncate at some mass that is within the range of the simualtion).
