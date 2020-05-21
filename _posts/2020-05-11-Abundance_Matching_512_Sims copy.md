@@ -28,7 +28,7 @@ The basic method for abundance matching is to solve for the galaxy mass, $$M_*$$
 
 $$\int_{v_{\rm peak}}^{\infty} n(v_{\rm peak}') {\rm d}v_{\rm peak}' = \int_{M_*}^{\infty} \phi(M_*') {\rm d}M_*'$$
 
-Note that the HVF and SMF are only defined out to some maximum mass/peak velocity. Therefore, I am integrating out to the maximum $$v_{\rm peak}$$ and $$M_*$$ values defined in the parameterizations. I am hoping that $$n$$ and $$\phi$$ are small enough outside these values that it won't influence the results much; however this could shift the $$M_*$$--$$v_{\rm peak}$$ relation. I need to check how sensitive the results are to this truncation in the integrals.
+Note that the HVF and SMF are only defined out to some maximum mass/peak velocity. Therefore, I am integrating out to the maximum $$v_{\rm peak}$$ and $$M_*$$ values defined in the parameterizations. I am hoping that $$n$$ and $$\phi$$ are small enough outside these values that it won't influence the results much; however this could alter the $$M_*$$--$$v_{\rm peak}$$ relation. I need to check how sensitive the results are to this truncation in the integrals.
 
 I am using the HVF, $$n(v_{\rm peak})$$, measured from the simulations. As before, I am using the SMF, $$\phi(M_*)$$, from <a href="https://ui.adsabs.harvard.edu/abs/2009MNRAS.398.2177L">Li & White 2009</a> (this will eventually have to be extended/updated for higher redshift, but will serve to test that the abundance matching procedure is working).
 
@@ -49,7 +49,7 @@ Note that this doesn't match the plot from <a href="https://ui.adsabs.harvard.ed
 
 <img src="{{ site.baseurl }}/assets/plots/20200511_Cao2019.png">
 
-This was something I looked into before, and now I think the reason it doesn't match is that my stellar mass function looks different than theirs. I am also not sure how many factors of $$h$$ are in there mass units of the plot from <a href="https://ui.adsabs.harvard.edu/abs/2019arXiv191003605C/abstract">Cao et al. 2019</a>, though this just shifts the curve vertically by a factor proportional to $$\log_{10}(h)$$. It is also possible that the discrepancy is because of how I am truncating the integrals in the abundance matching procedure.
+This was something I looked into before, and now I think the reason it doesn't match is that my stellar mass function looks different than theirs. I am also not sure how many factors of $$h$$ are in the mass units of the plot from <a href="https://ui.adsabs.harvard.edu/abs/2019arXiv191003605C/abstract">Cao et al. 2019</a>, though this just shifts the curve vertically by a factor proportional to $$\log_{10}(h)$$. It is also possible that the discrepancy is because of how I am truncating the integrals in the abundance matching procedure.
 
 I did plan on updating the SMF eventually; therefore I am going to focus on this next, and see if this fixes the discrepancy in the $$M_*$$--$$v_{\rm peak}$$ relation.
 
