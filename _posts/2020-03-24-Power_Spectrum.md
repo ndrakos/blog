@@ -3,7 +3,7 @@ layout: post
 title:  "Power Spectrum"
 date:   2020-03-24
 
-categories: cosmo_sims
+categories: mocks
 ---
 
 

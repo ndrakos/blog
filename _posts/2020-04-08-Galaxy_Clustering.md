@@ -3,7 +3,7 @@ layout: post
 title:  "Galaxy Clustering"
 date:   2020-04-08
 
-categories: cosmo_sims
+categories: mocks
 ---
 
 

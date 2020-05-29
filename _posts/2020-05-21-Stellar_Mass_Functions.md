@@ -28,7 +28,7 @@ One caveat to this SMF is that they are not modelling the dusty star-forming gal
 
 Their double-schechter parameters for the quiescent SMF is given in their Table 3.
 
-The SMFs for the quiescent galaxies are also based off the Tomczak data, and extrapolated to higher redshifts, though the extrapolation is in agreement with the few constraints for quiescent galaxies at $$z>3.5$$,.
+The SMFs for the quiescent galaxies are also based off the Tomczak data, and extrapolated to higher redshifts, though the extrapolation is in agreement with the few constraints for quiescent galaxies at $$z>3.5$$.
 
 
 ## Plots
