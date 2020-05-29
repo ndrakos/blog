@@ -15,9 +15,11 @@ I am using the halo $$v_{\rm peak}$$ function (HVF) from <a href="https://ui.ads
 
 As outlined in <a href="https://ndrakos.github.io/blog/mocks/Adding_Scatter/">this post</a>, we will add scatter to $$v_{\rm peak}$$ before the abundance matching step to get the required scatter in the galaxy masses $$M_{\rm gal}$$.
 
-Here is how the scatter in $$M_{\rm gal}$$ varies with the scatter in $$v_{\rm peak}$$ as a function of $$v_{\rm peak}$$.
+Here is how the scatter $$\sigma[M_{\rm gal}]$$ varies with the scatter in $$\sigma[v_{\rm peak}]$$ as a function of $$v_{\rm peak}$$:
 
 <img src="{{ site.baseurl }}/assets/plots/20200529_scatter_mapping.png">
+
+To generate each of these curves, I first sampled $$10^7$$ $$v_{\rm peak}$$ values from the HVF, added a fixed scatter, then performed abundance matching. I then binned the resulting galaxy masses, $$M_{\rm gal}$$, and measured the standard deviation in each bin.
 
 
 ## Abundance Matching
