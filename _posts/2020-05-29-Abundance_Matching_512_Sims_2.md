@@ -22,7 +22,7 @@ Here is how the scatter in $$M_{\rm gal}$$ varies with the scatter in $$v_{\rm p
 
 ## Abundance Matching
 
-Here are the results... The parameterized SMF and HVF are shown with dotted black lines. For this resolution, the simulations match the parameterizaiton at roughly $$v_{\rm peak} > 2.2$$ and $$M_{\rm gal}>9.5$$.
+Here are the results. The parameterized SMF and HVF are shown with dotted black lines. For this resolution, the simulations match the parameterizaiton at roughly $$v_{\rm peak} > 2.2$$ and $$M_{\rm gal}>9.5$$.
 
 <img src="{{ site.baseurl }}/assets/plots/20200529_AbundanceMatching.png">
 
