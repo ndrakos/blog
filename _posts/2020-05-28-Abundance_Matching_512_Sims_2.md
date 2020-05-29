@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Abundance Matching 512 Sims 2"
-date:   2020-05-29
+date:   2020-05-28
 
 categories: mocks
 ---
@@ -17,7 +17,7 @@ As outlined in <a href="https://ndrakos.github.io/blog/mocks/Adding_Scatter/">th
 
 Here is how the scatter $$\sigma[M_{\rm gal}]$$ varies with the scatter in $$\sigma[v_{\rm peak}]$$ as a function of $$v_{\rm peak}$$:
 
-<img src="{{ site.baseurl }}/assets/plots/20200529_scatter_mapping.png">
+<img src="{{ site.baseurl }}/assets/plots/20200528_scatter_mapping.png">
 
 To generate each of these curves, I first sampled $$10^7$$ $$v_{\rm peak}$$ values from the HVF, added a fixed scatter, then performed abundance matching. I then binned the resulting galaxy masses, $$M_{\rm gal}$$, and measured the standard deviation in each bin.
 
@@ -26,7 +26,7 @@ To generate each of these curves, I first sampled $$10^7$$ $$v_{\rm peak}$$ valu
 
 Here are the results. The parameterized SMF and HVF are shown with dotted black lines. For this resolution, the simulations match the parameterizaiton at roughly $$v_{\rm peak} > 2.2$$ and $$M_{\rm gal}>9.5$$.
 
-<img src="{{ site.baseurl }}/assets/plots/20200529_AbundanceMatching.png">
+<img src="{{ site.baseurl }}/assets/plots/20200528_AbundanceMatching.png">
 
 
 ## Next Steps
