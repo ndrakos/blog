@@ -6,7 +6,7 @@ date:   2020-05-30
 categories: cosmo_sims
 ---
 
-I ran into some running the $$2048^3$$ simulations, so here I am going to document my issues and how I solved them.
+I ran into some problems running the $$2048^3$$ simulations, so here I am going to document my issues and how I solved them.
 
 ## Initial Conditions
 
@@ -14,7 +14,7 @@ I ran into some running the $$2048^3$$ simulations, so here I am going to docume
 
 MUSIC requires about 500GB of memory to run the $$2048^3$$ simulations (which I figured out through trial and error), which is more than is available on the regular Pleiades nodes. There is documentation <a href="https://www.nas.nasa.gov/hecc/support/kb/how-to-get-more-memory-for-your-pbs-job_222.html">here</a> on how to run higher memory jobs.
 
-My jobscript is here:
+Here is the jobscript I ended up using:
 
 ```
 
@@ -49,8 +49,10 @@ MUSIC: src/plugins/output_gadget2.cc:128: void gadget2_output_plugin<T_store>::d
 ```
 
 
-I tried a few different things to try and debug this. Eventually, I found the <a href="https://groups.google.com/forum/#!forum/cosmo_music">user group</a> for the code, and after reading through some of the posts found the following: "for the Gadget-2 output plugin multiple output files are needed since any single standard Gadget-2 IC file can only hold up to 2**32 particles = (~ 1600**3)."
-
+I tried a few different things to try and debug this. Eventually, I found the <a href="https://groups.google.com/forum/#!forum/cosmo_music">user group</a> for the code, and after reading through some of the posts found the following:
+```
+for the Gadget-2 output plugin multiple output files are needed since any single standard Gadget-2 IC file can only hold up to 2**32 particles = (~ 1600**3).
+```
 I hadn't realized this, and had left the parameter <code>gadget_num_files = 1</code> in the MUSIC configuration file. After increasing this parameter, the code ran fine.
 
 
