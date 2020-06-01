@@ -116,6 +116,7 @@ mpiexec -np 1024 ./Gadget2 /nobackup/ndrakos/wfirst2048/wfirst2048_gadget.param\
  > /nobackup/ndrakos/wfirst2048/output
 ```
 
+<!---
 ### Other errors
 
 I got the above running fine on the devel queue (which you can only run for 2 hours). Then, when running it on the long queue, it died after a few hours, with the following errors:
@@ -132,3 +133,4 @@ MPT ERROR: MPI_COMM_WORLD rank 170 has terminated without calling MPI_Finalize()
         aborting job
 MPT: Received signal 11
 ```
+-->
