@@ -89,30 +89,15 @@ I then recompiled MUSIC and Gadget, making sure there were no warnings, and all 
 
 ### Memory Issues
 
-After that I ran into memory issues. After reading in the ICs, the job was cancelled and I got the following email
+After that I ran into memory issues. There are two different places this occurs: (1) internally, when Gadget throws an error, or (2) because there is not enough memory available on Pleiades.
 
-```
-Your Pleiades job 8919488.pbspl1.nas.nasa.gov terminated due to one or
-more nodes running out of memory. Node r627i5n1 ran out of memory and
-rebooted; others may have run out of memory as well.
-
-While this is typically caused by a user program using too much memory,
-it may also be caused by a system issue. If you need help determining
-the source of the problem, please email support@nas.nasa.gov and we
-will be happy to help.
-
-For information on how to check the memory usage or request more memory
-for your PBS jobs, see
-http://www.nas.nasa.gov/hecc/support/kb/memory-usage-overview_216.html
-```
-
-So I played around a bit with different numbers of nodes and cores. If I asked for too many mpiprocs, Gadget threw the following error:
+The former gives the following eror "No domain decomposition that stays within memory bounds is possible", and can be fixed by increasing TreeAllocFactor/PartAllocFactor or by running on more processors. Currently, I am using TreeAllocFactor=1.5 and PartAllocFactor=2.0 and 1024 mpiprocesses. That seems to be working so far; if the job dies at some point I might have to increase those parameters more. Note that if you ask for too many mpiprocs, Gadget throws the following error:
 
 ```
 We are out of Topnodes. Increasing the constant MAXTOPNODES might help.task 1287: endrun called with an error level of 13213
 ```
 
-Eventually I got it working with the following job script:
+To get enough memory on Pleiades, I ended up requesting less cores per node. Eventually I got the code working with the following job script:
 
 ```
 #PBS -l select=64:ncpus=16:model=bro
@@ -131,4 +116,21 @@ mpiexec -np 1024 ./Gadget2 /nobackup/ndrakos/wfirst2048/wfirst2048_gadget.param\
  > /nobackup/ndrakos/wfirst2048/output
 ```
 
-I also got the following eror "No domain decomposition that stays within memory bounds is possible"... This is a pretty typical Gadget error that can be fixed by increasing TreeAllocFactor/PartAllocFactor or by running on more processors. I ended up using TreeAllocFactor=1.5 and PartAllocFactor=2.0. That seems to be working so far; if the job dies at some point I might have to increase those parameters more.
+### Other errors
+
+I got the above running fine on the devel queue (which you can only run for 2 hours). Then, when running it on the long queue, it died after a few hours, with the following errors:
+
+```
+
+MPT: --------stack traceback-------
+MPT ERROR: Rank 874(g:874) received signal SIGSEGV(11).
+        Process ID: 93911, Host: r583i5n4, Program: /home6/ndrakos/Gadget2/Gadget2
+        MPT Version: HPE MPT 2.17  11/30/17 08:08:29
+
+MPT: --------stack traceback-------
+MPT ERROR: MPI_COMM_WORLD rank 170 has terminated without calling MPI_Finalize()
+        aborting job
+MPT: Received signal 11
+```
+
+I
