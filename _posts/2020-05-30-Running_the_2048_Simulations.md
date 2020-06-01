@@ -100,7 +100,7 @@ We are out of Topnodes. Increasing the constant MAXTOPNODES might help.task 1287
 To get enough memory on Pleiades, I ended up requesting less cores per node. Eventually I got the code working with the following job script:
 
 ```
-#PBS -l select=64:ncpus=16:model=bro
+#PBS -l select=32:ncpus=16:model=bro
 #PBS -l walltime=120:00:00
 #PBS -q long
 
@@ -112,7 +112,7 @@ cd /u/ndrakos/Gadget2/
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/nasa/pkgsrc/sles12/2016Q4/lib:/u/ndrak\
 os/install_to_here/gsl_in/lib
 
-mpiexec -np 1024 ./Gadget2 /nobackup/ndrakos/wfirst2048/wfirst2048_gadget.param\
+mpiexec -np 512 ./Gadget2 /nobackup/ndrakos/wfirst2048/wfirst2048_gadget.param\
  > /nobackup/ndrakos/wfirst2048/output
 ```
 
