@@ -15,7 +15,7 @@ Thinking about this more, this is because once scatter is added to the $$v_{\rm 
 
 Therefore, as an update to the method, rather than match the scattered $$v_{\rm peak}$$ values to the galaxy mass exactly (by solving $$\int_x^\infty n(x') dx' = \int_{M_*}^\infty \phi (M_*') dM_*’$$), I instead randomly generate $$M_{\rm gal}$$ values from the SMF, and then rank order the resulting masses---this ensures the SMF is preserved.
 
-This requires setting a minimum mass in the SMF: Therefore, I only consider $$v_{\rm peak}$$ values above $$2.1 \, \rm{dex}$$, since for the $$512^3$$ simulation the HVF looks incomplete below this limit. Then, solving $$\int_x^\infty n(x') dx' = \int_{M_*}^\infty \phi (M_*') dM_*’$$, this sets the minimum galaxy mass to be $$9.79$$.
+This requires setting a minimum mass in the SMF: Therefore, I only consider $$v_{\rm peak}$$ values above $$2.1 \, \rm{dex}$$ (this value was chosen, since for the $$512^3$$ simulation the HVF looks incomplete below this limit). Then, solving $$\int_x^\infty n(x') dx' = \int_{M_*}^\infty \phi (M_*') dM_*’$$, this sets the minimum galaxy mass to be $$9.79$$.
 
 ## Current Abundance Matching Implementation
 
@@ -26,15 +26,15 @@ This requires setting a minimum mass in the SMF: Therefore, I only consider $$v_
 
 2. Randomly generate $$N$$ $$M_{\rm gal}$$ values so that they match the SMF (where $$N$$ is the number of halos with $$v_{\rm peak}$$ above the minimum value)
 
-3. Rank-order the galaxy masses, and assign them to each halo (so that the halo with the largest $$v_{\rm peak} has the largest galaxy masses)
+3. Rank-order the galaxy masses, and assign them to each halo (so that the halo with the largest $$v_{\rm peak}$$ has the largest galaxy masses)
 
 **GENERATE A MAPPING IN THE SCATTER**
 
 1. Randomly generate $$10^7$$ $$v_{\rm peak}$$ values from the HVF function (I am using a minimum $$v_{\rm peak}$$ value of 1.5 dex for this step)
 
-2. Loop through different fixed scatter values in $$v_{peak}$$: I am using 100 values linearly spaced between 0 and 0.5.
+2. Loop through different fixed scatter values in $$v_{\rm peak}$$: I am using 100 values linearly spaced between 0 and 0.5.
 
-3. For a given scatter value, add guassian errors to the $$v_peak$$ values
+3. For a given scatter value, add guassian errors to the $$v_{\rm peak}$$ values
 
 4. Perform abundance matching (as outlined above) using these scattered values
 
@@ -52,4 +52,9 @@ This requires setting a minimum mass in the SMF: Therefore, I only consider $$v_
 
 ## Results
 
-<img src="{{ site.baseurl }}/assets/plots/20200528_AbundanceMatching.png">
+Here is the updated plot:
+
+<img src="{{ site.baseurl }}/assets/plots/20200601_AbundanceMatching.png">
+
+
+The SMF looks better, but the stellar mass --- $$M_{\rm peak}$$ relation looks worse... I think this is just resolution issues though, and I expect it will look better with the 1024 simulations.

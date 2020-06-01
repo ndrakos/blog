@@ -132,5 +132,3 @@ MPT ERROR: MPI_COMM_WORLD rank 170 has terminated without calling MPI_Finalize()
         aborting job
 MPT: Received signal 11
 ```
-
-I
