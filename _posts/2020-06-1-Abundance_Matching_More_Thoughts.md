@@ -57,4 +57,4 @@ Here is the updated plot:
 <img src="{{ site.baseurl }}/assets/plots/20200601_AbundanceMatching.png">
 
 
-The SMF looks better, but the stellar mass --- $$M_{\rm peak}$$ relation looks worse... I think this is just resolution issues though, and I expect it will look better with the 1024 simulations.
+The SMF looks better, but the stellar mass--$$M_{\rm peak}$$ relation looks worse... I think this is just a resolution issue though, and I expect it will look better with the 1024 simulations.

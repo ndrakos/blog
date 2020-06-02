@@ -91,13 +91,13 @@ I then recompiled MUSIC and Gadget, making sure there were no warnings, and all 
 
 After that I ran into memory issues. There are two different places this occurs: (1) internally, when Gadget throws an error, or (2) because there is not enough memory available on Pleiades.
 
-The former gives the following eror "No domain decomposition that stays within memory bounds is possible", and can be fixed by increasing TreeAllocFactor/PartAllocFactor or by running on more processors. Currently, I am using TreeAllocFactor=1.5 and PartAllocFactor=2.0 and 1024 mpiprocesses. That seems to be working so far; if the job dies at some point I might have to increase those parameters more. Note that if you ask for too many mpiprocs, Gadget throws the following error:
+The former gives the following eror "No domain decomposition that stays within memory bounds is possible", and can be fixed by increasing TreeAllocFactor/PartAllocFactor or by running on more processors. Currently, I am using TreeAllocFactor=1.5 and PartAllocFactor=2.0 and 512 mpiprocesses. That seems to be working so far; if the job dies at some point I might have to increase those parameters more. Note that if you ask for too many mpiprocs, Gadget throws the following error:
 
 ```
 We are out of Topnodes. Increasing the constant MAXTOPNODES might help.task 1287: endrun called with an error level of 13213
 ```
 
-To get enough memory on Pleiades, I ended up requesting less cores per node. Eventually I got the code working with the following job script:
+To get enough memory on Pleiades, I ended up requesting less cores per node. I also found that I got seg faults if I tried to run with too many processors. Eventually I got the code working with the following job script:
 
 ```
 #PBS -l select=32:ncpus=16:model=bro
