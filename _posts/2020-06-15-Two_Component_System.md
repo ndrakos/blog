@@ -13,7 +13,7 @@ Peter said he was interested in doing his Lamat project on tidally stripped halo
 
 I need to think more about what is a realistic model to use. I am most interested in dwarf galaxies that have a dark matter and stellar component. Potentially this could be extended later to include a disk as well (<a href="">Widrow et al. 2005</a> is probably one of the most useful references for this).
 
-For now I am going to simply use two Hernquist models, as these have nice analytic forms:
+For now I am going to simply use two Hernquist models, as these are a simpler model (nice expressions for their denisty, mass and potential, and they don't have a divergent mass profile):
 
 $$\rho = \dfrac{M_{\rm tot}a}{2\pi r (r+a)^3}$$
 
