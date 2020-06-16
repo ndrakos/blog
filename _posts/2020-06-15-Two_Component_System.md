@@ -36,14 +36,16 @@ Given the position for each particle (and therefore the potential),the energies 
 
 $$f_i(\mathcal{E})=\dfrac{1}{\sqrt{8}\pi^2}\left[ \int_{r_{\mathcal{E}}}^\infty \dfrac{1}{\sqrt{\mathcal{E}- \Psi}}\dfrac{d^2 \rho_i}{d \Psi^2} \dfrac{GM}{r^2} dr \right]$$
 
-here, the relative potential $$\Psi\equiv-\Phi$$ is from the total system, as are $$M$$ and $$\rho$$; it is only the one term $$\rho_i$$ that differs between the two profiles. The energies can be selected from the distribution function for each component. Then, the velocity is $$v=\sqrt{2(\mathcal{E}-\Psi)}$$.
+here, the relative potential $$\Psi\equiv-\Phi$$ is from the total system, as are $$M$$ and $$\rho$$; it is only the one term $$\rho_i$$ that differs between the two profiles. The energies can be selected from the distribution function for each component.
+
+Once the position and energy are known, the velocity is $$v=\sqrt{2(\mathcal{E}-\Psi)}$$.
 
 ## Run in Isolation
 
-I've generated the 2-component Hernquist system with $$10^5$$ particles, and evolved it in isolation for $$t=500$$ (simulation units). To get an idea of how long this is, I've drawn two vertical lines corresponding to the radius at which the time is equal to the relaxation timescale, and one corresponding to the radius at which the time is equal to the evaporation time scale:
+I've generated the 2-component Hernquist system with $$10^5$$ particles, and evolved it in isolation for $$t=500$$ (simulation units). To get an idea of how long this is, I've drawn two vertical lines corresponding to the radius at which the time is equal to the relaxation timescale (dashed black line), and one corresponding to the radius at which the time is equal to the evaporation timescale (dotted black line):
 
 <img src="{{ site.baseurl }}/assets/plots/20200615_IC_Stability.png">
 
-The system is stable outside the relaxation timescale, and I think it would be closer to the evaporation timescale if there were more particles (note that where the blue curve sharply drops in the second panel corresponds to the radius where the mass in component 2 is equal to the mass of one particle).
+The system is stable outside the relaxation lengthscale, and I think it would be closer to the evaporation line if there were more particles (note that where the blue curve sharply drops in the second panel corresponds to the radius where the mass in component 2 is equal to the mass of one particle).
 
 This seems to be working, so I will go ahead and assign this project.
