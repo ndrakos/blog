@@ -17,7 +17,7 @@ For now I am going to simply use two Hernquist models, as these have nice analyt
 
 $$\rho = \dfrac{M_{\rm tot}a}{2\pi r (r+a)^3}$$
 
-I've used the parameters $$a_1=1$$, $$a_2=200$$, $$M_{\rmtot}=1$$ and $$M_2=20 M_1$$; note that the simulation can be scaled, so these are in arbitrary units, with $G=1$. For the actual project, I'll give a bit more thought into the best models/parameters to use.
+I've used the parameters $$a_1=1$$, $$a_2=200$$, $$M_{\rm tot}=1$$ and $$M_2=20 \,M_1$$; note that the simulation can be scaled, so these are in arbitrary units, with $$G=1$$. For the actual project, I'll give a bit more thought into the best models/parameters to use.
 
 Here is how this two-component model looks:
 
@@ -28,11 +28,11 @@ Here is how this two-component model looks:
 
 I have pretty detailed notes on created isolated ICs <a href="https://github.com/ndrakos/ICICLE">here</a>.
 
-Given that there are $$N_1$$ particles in component 1, and $$N_2$$ particles component 2, I wish to assign positions and velocities to each particle so that they remain stable. The density profile, mass profile and potential are additive ($$\rho= \rho_1+ \rho_2$$, $$M = M_1+ M_2$$, $$\Phi = \Phi_1 + \Phi_2$$). However, the difficulty with the two-component system is that the potential of each component affects the other, so the density profiles intereact in complicated ways.
+Given that there are $$N_1$$ particles in component 1, and $$N_2$$ particles component 2, I wish to assign positions and velocities to each particle so that they remain stable. The density profile, mass profile and potential are additive ($$\rho= \rho_1+ \rho_2$$, $$M = M_1+ M_2$$, $$\Phi = \Phi_1 + \Phi_2$$). However, the difficulty with the two-component system is that the potential of each component affects the other, so the density profiles interact in complicated ways.
 
-First, the positions are selected from the mass profile. This step is unchanged, and I can select positions for each component individually.
+To generate the ICs, first, the positions are selected from the mass profile. This step is unchanged, and I can select positions for each component individually.
 
-Secondly, the energies are selected from the distribution function. If I break up the distribution function into two, each part is given by:
+Given the position for each particle (and therefore the potential),the energies are selected from the distribution function. If I break up the distribution function into two, each part is given by:
 
 $$f_i(\mathcal{E})=\dfrac{1}{\sqrt{8}\pi^2}\left[ \int_{r_{\mathcal{E}}}^\infty \dfrac{1}{\sqrt{\mathcal{E}- \Psi}}\dfrac{d^2 \rho_i}{d \Psi^2} \dfrac{GM}{r^2} dr \right$$
 
