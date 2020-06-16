@@ -34,7 +34,7 @@ To generate the ICs, first, the positions are selected from the mass profile. Th
 
 Given the position for each particle (and therefore the potential),the energies are selected from the distribution function. If I break up the distribution function into two, each part is given by:
 
-$$f_i(\mathcal{E})=\dfrac{1}{\sqrt{8}\pi^2}\left[ \int_{r_{\mathcal{E}}}^\infty \dfrac{1}{\sqrt{\mathcal{E}- \Psi}}\dfrac{d^2 \rho_i}{d \Psi^2} \dfrac{GM}{r^2} dr \right$$
+$$f_i(\mathcal{E})=\dfrac{1}{\sqrt{8}\pi^2}\left[ \int_{r_{\mathcal{E}}}^\infty \dfrac{1}{\sqrt{\mathcal{E}- \Psi}}\dfrac{d^2 \rho_i}{d \Psi^2} \dfrac{GM}{r^2} dr \right]$$
 
 here, the relative potential $$\Psi\equiv-\Phi$$ is from the total system, as are $$M$$ and $$\rho$$; it is only the one term $$\rho_i$$ that differs between the two profiles. The energies can be selected from the distribution function for each component. Then, the velocity is $$v=\sqrt{2(\mathcal{E}-\Psi)}$$.
 
