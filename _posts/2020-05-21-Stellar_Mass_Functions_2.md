@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Stellar Mass Functions"
+title:  "Stellar Mass Functions 2"
 date:   2020-05-21
 
 categories: mocks
