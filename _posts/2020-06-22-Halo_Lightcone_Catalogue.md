@@ -16,7 +16,7 @@ In this post, I outline my method for including subhalos, and also cutting out a
 
 To find the positions and velocities of each host halo as they cross the light cone, I interpolated their positions between snapshots. However, I did not do the same thing with the subhalos, because I was worried that interpolating positions and velocities for the subhalos might cause them to be off-set from their host halos in an unphysical way.
 
-I have added in the subhalos as follows: assuming that a host halo crossed the light cone between snapshots $$j$ and $$j+ 1$$, I found all the subhalos in that host halo at snapshot $$j+1$$. I then placed these subhalos in the host, and gave them same offset in position and velocity from their host that they have in snapshot $$j+1$$.
+I have added in the subhalos as follows: assuming that a host halo crossed the light cone between snapshots $$j$$ and $$j+ 1$$, I found all the subhalos in that host halo at snapshot $$j+1$$. I then placed these subhalos in the host, and gave them same offset in position and velocity from their host that they have in snapshot $$j+1$$.
 
 Note that currently we are taking the properties of the halo at snapshot $$j+1$$ (i.e. substructure, mass, maximum circular velocity, shape, spin, and whatever we may need). Later we might use some other criteria to decide whether to take properties from $$j$$ or $$j+1$$.
 
