@@ -13,11 +13,11 @@ In my <a href="https://ndrakos.github.io/blog/mocks/HMF_Lightcone/">last post</a
 
 To get the HMF between redshifts $$z_{i}$$ and $$z_{i+1}$$, I calculated
 
-$$HMF(M,z_i<z<z_{i+1}) = \dfrac{\int_{z_i}^{z_{i+1}} HMF(M,z'){\rm d}z'}{z_{i+1}-z_i}$$
+$${\rm HMF}(M,z_i<z<z_{i+1}) = \dfrac{\int_{z_i}^{z_{i+1}} {\rm HMF}(M,z'){\rm d}z'}{z_{i+1}-z_i}$$
 
 Which gives the following:
 
-<img src="{{ site.baseurl }}/assets/plots/20200625_HMF.png">
+<img src="{{ site.baseurl }}/assets/plots/20200625_HMF_lightcone.png">
 
 
 
