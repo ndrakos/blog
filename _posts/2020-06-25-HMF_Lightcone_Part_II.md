@@ -38,14 +38,14 @@ which looks great!
 ## Other Potential Problem: Periodic Boundary Conditions
 
 
-One thing I realized while adding in the extrapolation, is that I am not accounting for the periodic boundary conditions. Given a halo was at position $$r_j$$ in snapshot $$j$$ and position $$r_{j+1}$$ in snapshot $$j+1$$, I am assuming it travelled between these two positions, and not allowing for it to have arrived in the new position by travelling through the simulation box. This might not be too much of a problem, since I have so many snapshots.
+One thing I realized while adding in the extrapolation, is that I am not accounting for the periodic boundary conditions. Given a halo was at position $$r_j$$ in snapshot $$j$$ and position $$r_{j+1}$$ in snapshot $$j+1$$, I am assuming it travelled between these two positions, and not allowing for it to have arrived in the new position by travelling through the simulation box. This might not be too much of a problem, since I have so many snapshots, so halos probably rarely pass through the box
 
-I want to fix this, by first finding where the halo is through extrapolation (i.e. whether it passed through any of the sides of the simulation box), and then interpolating through the box if needed.
+I will fix this by:
 
-I can do this by:
+$$r_{j} \rightarrow r_{j} + {\rm boxsize}\dfrac{({\rm sign}(v_{j}) - {\rm sign}(x_j -x_{j+1}))}{2}$$
 
-$$r_{j} \rightarrow r_{j} + \rm{boxsize}\dfrac{({\rm sign}(v_{j}) - {\rm sign}(x_j -x_{j+1}))}{2}$$
+This will ensure that, e.g. if there is a positive $$x$$ velocity, the $$x$$ position will increase. The positions of the progenitor halos are now potentially outside the simulation box.
 
 Then, once I have found where the halo has crossed the lightcone, $$r_e$$, I can make sure the periodic boundary conditions are implemented by:
 
-$$r_e \rightarrow r_e\%{\rm boxsize}t$$
+$$r_e \rightarrow r_e \% {\rm boxsize}$$
