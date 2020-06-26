@@ -32,7 +32,7 @@ $${\rm RA} = \arctan(y/x)$$
 
 $${\rm Dec} = \arcsin(z/d)$$
 
-Since our survey volume is approximately 1 square degree, I only considered (sub)halos with $${\rm RA}<1$$ and $${\rm Dec}<1$$ degree. Further, I only took halos with $$d<60\times115$$; this is because the lightcone is not complete for distances larger than this (this doesn't actually make a difference, because there aren't halos out that far). Finally, I recentered the survey by rotating the $$(x,y,z)$$ coordinates by angles $$(\psi,\phi,\theta) = (-0.5,0,0.5)$$---now, the x-axis corresponds to the distance from the observer.
+Since our survey volume is approximately 1 square degree, I only considered (sub)halos with $${\rm RA}<1$$ and $${\rm Dec}<1$$ degree. Further, I only took halos with $$d<60\times115$$; this is because the lightcone is not complete for distances larger than this (this doesn't actually make a difference, because there aren't halos out that far). Finally, I recentered the survey by rotating the $$(x,y,z)$$ coordinates by angles $$(\psi,\phi,\theta) = (-0.5,0,0.5)$$. 
 
 Here is a resulting scatter plot of the halo catalogue in the (new) cartesian coordinates (for the $$512^3$$ simulation):
 
