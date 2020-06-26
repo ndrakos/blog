@@ -42,7 +42,7 @@ One thing I realized while adding in the extrapolation, is that I am not account
 
 I will correct the progenitor halo positions by:
 
-$$r_{j} \rightarrow r_{j} + {\rm boxsize}\dfrac{({\rm sign}(v_{j}) - {\rm sign}(x_{j+1} x_j))}{2}$$
+$$r_{j} \rightarrow r_{j} + {\rm boxsize}\dfrac{({\rm sign}(v_{j}) - {\rm sign}(x_{j+1} - x_j))}{2}$$
 
 This will ensure that, e.g. if there is a positive $$x$$ velocity, the $$x$$ position will increase. The positions of the progenitor halos are now potentially outside the simulation box.
 
