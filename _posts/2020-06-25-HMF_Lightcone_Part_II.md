@@ -42,9 +42,9 @@ One thing I realized while adding in the extrapolation, is that I am not account
 
 I will correct the progenitor halo positions by:
 
-$$r_{j} \rightarrow r_{j} + {\rm boxsize}\left( \dfrac{ {\rm sign}(v_{j}) - {\rm sign}(r_{j+1} - r_j) }{2} \right)$$
+$$r_{j} \rightarrow r_{j} - {\rm boxsize}\left( \dfrac{ {\rm sign}(v_{j}) - {\rm sign}(r_{j+1} - r_j) }{2} \right)$$
 
-This will ensure that, e.g. if there is a positive $$x$$ velocity, the $$x$$ position will increase. The positions of the progenitor halos are now potentially outside the simulation box.
+This will ensure that, e.g. if there is a positive $$x$$ velocity, the $$x$$ position will increase between snapshots $$j$$ and $$j+1$$. The positions of the progenitor halos are now potentially outside the simulation box.
 
 Then, once I have found where the halo has crossed the lightcone, $$r_e$$, I can make sure the periodic boundary conditions are implemented by:
 
