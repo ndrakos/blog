@@ -38,9 +38,9 @@ which looks great!
 ## Other Potential Problem: Periodic Boundary Conditions
 
 
-One thing I realized while adding in the extrapolation, is that I am not accounting for the periodic boundary conditions. Given a halo was at position $$r_j$$ in snapshot $$j$$ and position $$r_{j+1}$$ in snapshot $$j+1$$, I am assuming it travelled between these two positions, and not allowing for it to have arrived in the new position by travelling through the simulation box. This might not be too much of a problem, since I have so many snapshots, so halos probably rarely pass through the box
+One thing I realized while adding in the extrapolation, is that I am not accounting for the periodic boundary conditions. Given a halo was at position $$r_j$$ in snapshot $$j$$ and position $$r_{j+1}$$ in snapshot $$j+1$$, I am assuming it travelled between these two positions, and not allowing for it to have arrived in the new position by travelling through the simulation box. This might not be too much of a problem, since I have so many snapshots, so halos probably rarely pass through the box. However, I do want to fix it.
 
-I will fix this by:
+I will correct the progenitor halo positions by:
 
 $$r_{j} \rightarrow r_{j} + {\rm boxsize}\dfrac{({\rm sign}(v_{j}) - {\rm sign}(x_j -x_{j+1}))}{2}$$
 
@@ -48,4 +48,6 @@ This will ensure that, e.g. if there is a positive $$x$$ velocity, the $$x$$ pos
 
 Then, once I have found where the halo has crossed the lightcone, $$r_e$$, I can make sure the periodic boundary conditions are implemented by:
 
-$$r_e \rightarrow r_e \% {\rm boxsize}$$
+$$r_e \rightarrow r_e \% {\rm boxsize}$$.
+
+I am still assuming that a halo will never travel more than a distance of $$\rm boxsize$$ (i.e. it never traverses the box more than once between snapshots). I think this is a very reasonable assumption.
