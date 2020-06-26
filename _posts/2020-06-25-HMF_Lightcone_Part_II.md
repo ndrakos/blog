@@ -25,11 +25,11 @@ Which gives the following:
 
 I seem to be missing some of the low mass halos at all redshifts.
 
-In <a href="https://ndrakos.github.io/blog/mocks/Light_Cone_Tests/">this post</a> I had listed some assumptions/possible problems with the implementation I had the time.
+In <a href="https://ndrakos.github.io/blog/mocks/Light_Cone_Tests/">this post</a> I had listed some assumptions/possible problems with the implementation I had at the time.
 
-One thing that I still haven't looked into is how to count halos that don't have a progenitor; since I am interpolating positions between snapshots $$j$$ and $$j+1$$ to find when a halo crosses the backwards light cone, if a halo in $$j+1$$ doesn't have a progenitor in snapshot $$j$$, it can't cross the light cone, and won't be in the survey. I am guessing this will mostly affect low mass halos.
+Previously, I was not counting halos that don't have a progenitor; since I am interpolating positions between snapshots $$j$$ and $$j+1$$ to find when a halo crosses the backwards light cone, if a halo in $$j+1$$ doesn't have a progenitor in snapshot $$j$$, it can't cross the light cone, and won't be in the survey. I am guessing this will mostly affect low mass halos.
 
-I accounted for these halos by extrapolating for their positions at redshift $$j$$, and here is my recovered HMF:
+I have now accounted for these halos by extrapolating for their positions at redshift $$j$$, and here is my recovered HMF:
 
 <img src="{{ site.baseurl }}/assets/plots/20200625_HMF_lightcone_2.png">
 
