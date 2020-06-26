@@ -27,6 +27,17 @@ I seem to be missing some of the low mass halos at all redshifts.
 
 In <a href="https://ndrakos.github.io/blog/mocks/Light_Cone_Tests/">this post</a> I had listed some assumptions/possible problems with the implementation I had the time.
 
-One thing that I still haven't looked into is how to count halos that don't have a progenitor; since I am interpolating positions between snapshots $$j$$ and $$j+1$$ to find when a halo crosses the backwards light cone, if a halo in $$j+1$$ doesn't have a progenitor in snapshot $$j$$, it can't cross the light cone, and won't be in the survey. I am guessing this will mostly effect low mass halos.
+One thing that I still haven't looked into is how to count halos that don't have a progenitor; since I am interpolating positions between snapshots $$j$$ and $$j+1$$ to find when a halo crosses the backwards light cone, if a halo in $$j+1$$ doesn't have a progenitor in snapshot $$j$$, it can't cross the light cone, and won't be in the survey. I am guessing this will mostly affect low mass halos.
 
-I plan on trying to account for these halos by extrapolating for their positions at redshift $$j$$. I will see if this helps the recovered light cone HMFs.
+I accounted for these halos by extrapolating for their positions at redshift $$j$$, and here is my recovered HMF:
+
+<img src="{{ site.baseurl }}/assets/plots/20200625_HMF_lightcone_2.png">
+
+which looks great!
+
+## Other Potential Problem: Periodic Boundary Conditions
+
+
+One thing I realized while adding in the extrapolation, is that I am not accounting for the periodic boundary conditions. Given a halo was at position $$r_j$$ in snapshot $$j$$ and position $$r_{j+1}$$ in snapshot $$j+1$$, I am assuming it travelled between these two positions, and not allowing for it to have arrived in the new position by travelling through the simulation box. This might not be too much of a problem, since I have so many snapshots.
+
+I want to fix this, by first finding where the halo is through extrapolation (i.e. whether it passed through any of the sides of the simulation box), and then interpolating through the box if needed. I'm still working out the most efficent way to implement this.
