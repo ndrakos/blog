@@ -53,11 +53,7 @@ $$r_e \rightarrow r_e \% {\rm boxsize}$$.
 I am still assuming that a halo will never travel more than a distance of $$\rm boxsize$$ (i.e. it never traverses the box more than once between snapshots). I think this is a very reasonable assumption.
 
 
-<span style="color:red">
+<span style="color:red"> Update: this didn't work well, because sometimes the halo would change velocity directions between snapshots. Instead, to correct the progenitor positions, I used the difference between the extrapolated $$r_j$$ and actual $$r_j$$ position, $$\Delta r_j$$ as follows:
 
-Update: this didn't work well, because sometimes the halo would change velocity directions between snapshots. Instead, to correct the progenitor positions, I used the difference between the extrapolated $$r_j$$ and actual $$r_j$$ position, $$\Delta r_j$$ as follows:
-
-$$r_{j} \rightarrow r_{j}  + {\rm round}(\Delta_j/{\rm boxsize}) \times {\rm boxsize}$$
-
-
+$$r_{j} \rightarrow r_{j}  + {\rm int}(\Delta r_j/{\rm boxsize}) \times {\rm boxsize}$$
 </span>
