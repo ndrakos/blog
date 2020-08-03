@@ -5,15 +5,15 @@ date:   2020-08-03
 categories: mocks
 ---
 
-I have done abundance matching on the $$512^3$$ simulation light cone to assign galaxy masses to each halo. There are still some things to sort out, but these are my prelimnary results
+I have done abundance matching on the $$512^3$$ simulation light cone to assign galaxy masses to each halo. There are still some things to sort out, but these are my preliminary results.
 
 ## Results
 
-Here are the results from the light cone:
+The theoretical curves are given with dashed lines (when known) and the data with solid lines; the shaded area gives the  $$1\, \sigma$$ error bars:
+
 
 <img src="{{ site.baseurl }}/assets/plots/20200803_AbundanceMatching.png">
 
-The theoretical curves are given with dashed lines (when known) and the data with solid lines; the shaded area gives the  $$1\, \sigma$$ error bars.
 
 ### Stellar Mass Function
 
@@ -23,15 +23,15 @@ Another thing to think about is whether the shape of these SMFs is reasonable, p
 
 <img src="{{ site.baseurl }}/assets/plots/20200803_WilliamsSMF.png">
 
-There doesn't seem to be good evidence for the high redshift SMFs.
+There doesn't seem to be good evidence for the high redshift SMFs, so maybe I should alter this.
 
 ### Halo Vpeak Function
 
-The second panel shows the HVFs measured from the simulations compared to the fit I have for the HVFs. Here is the fit to the data for the HVFs:
+The second panel shows the HVFs measured from the simulations compared to the fit I have for the HVFs. Right now the high redshifts don't agree in the abundance matching procedure, but that's because I only fit the parameterization out to redshift $$7.4$$: see below:
 
 <img src="{{ site.baseurl }}/assets/plots/20200803_HVF.png">
 
-Right now the high redshifts don't agree in the abundance matching procedure, but that's because I only fit the parameterization out to redshift $$7.4$$. I need to update the fit.
+I need to update these fits, and extend them to higher redshifts.
 
 
 ### Stellar Mass--Vpeak Relation
@@ -44,19 +44,17 @@ Galaxy masses are a little higher than expected at low vpeaks... see for example
 
 This could be partially because we are using a different SMF, but it is probably mostly because we aren't resolving enough lower mass haloes; really shouldn't trust the shape below $$\log_{10}(V_{\rm peak}) = 2.2\,{\rm dex}$$. This will improve with the higher resolution simulations.
 
-I also need to find a better way to display this so that the curves aren't all on top of one another.
-
 
 
 ### Stellar Mass--Halo Mass Function
 
-Finally, the last panel shows the stellar mass--halo mass relation.I want to check if these relations look reasonable. To do this, I'm going to compare to this paper: <a href="https://ui.adsabs.harvard.edu/abs/2020A%26A...634A.135G/abstract">Girelli et al. 2020</a>:
+Finally, the last panel shows the stellar mass--halo mass relation.I want to check if these relations look reasonable. To do this, I'm going to compare to this paper: <a href="https://ui.adsabs.harvard.edu/abs/2020A%26A...634A.135G/abstract">Girelli et al. 2020</a>.
 
 
 
 ## Scatter
 
-To get the scatter in this relation, I roughly used the scatter mapping for redshift 0 (since I am having issues getting it to work for higher redshifts). I set it up so that it should give a scatter $$\sigma |M_{\rm gal}| V_{\rm peak}|=0.2\, \rm{dex}$$.
+To get the scatter in this relation, I roughly used the scatter mapping for redshift 0 (since I am having issues getting it to work for higher redshifts). I set it up so that it should give a scatter $$\sigma [M_{\rm gal}\rvert V_{\rm peak}]=0.2\, \rm{dex}$$.
 
 With the current plots, I have the following scatter:
 
@@ -86,7 +84,7 @@ Not only is my method for putting scatter on $$V_{\rm peak}$$ not completely wor
 
 **Scatter Mapping**
 
-(4) Decide what scatter I want... right now I am setting it to $$\sigma |M_{\rm gal}| V_{\rm peak}|=0.2\, \rm{dex}$$
+(4) Decide what scatter I want... right now I am setting it to $$\sigma [M_{\rm gal}\rvert V_{\rm peak}]=0.2\, \rm{dex}$$
 
 (5) Get my procedure for scatter working for all redshifts
 
