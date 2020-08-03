@@ -80,18 +80,18 @@ Not only is my method for putting scatter on $$V_{\rm peak}$$ not completely wor
 
 **HVF**
 
-(3) Update the HVF to agree for higher redshifts
+(3) Update the HVF to agree for higher redshifts.
 
 **Scatter Mapping**
 
-(4) Decide what scatter I want... right now I am setting it to $$\sigma [M_{\rm gal}\rvert V_{\rm peak}]=0.2\, \rm{dex}$$
+(4) Decide what scatter I want... right now I am setting it to $$\sigma [M_{\rm gal}\rvert V_{\rm peak}]=0.2\, \rm{dex}$$.
 
-(5) Get my procedure for scatter working for all redshifts
+(5) Get my procedure for scatter working for all redshifts.
 
 **SMHM Relation**
 
-(6) Compare these results to the literature, to check that this looks reasonable
+(6) Compare these results to the literature, to check that this looks reasonable.
 
 **Other**
 
-(7) Check that the clustering and/or bias look right
+(7) Check that the clustering and/or bias look right.
