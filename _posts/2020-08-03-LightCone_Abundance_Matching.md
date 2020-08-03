@@ -27,7 +27,7 @@ There doesn't seem to be good evidence for the high redshift SMFs, so maybe I sh
 
 ### Halo Vpeak Function
 
-The second panel shows the HVFs measured from the simulations compared to the fit I have for the HVFs. Right now the high redshifts don't agree in the abundance matching procedure, but that's because I only fit the parameterization out to redshift $$7.4$$: see below:
+The second panel shows the HVFs measured from the simulations compared to the fit I have for the HVFs. Right now the high redshifts don't agree in the abundance matching procedure, but that's because I only fit the parameterization out to redshift $$7.4$$:
 
 <img src="{{ site.baseurl }}/assets/plots/20200803_HVF.png">
 
