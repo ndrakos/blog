@@ -40,7 +40,7 @@ Next, they assigned spectra that are consistent with the integrated properties.
 ### Parent SED Catalog
 
 
-First, they created a parent mock catalog of SEDs to sample from; they used *HST* data where available, and otherwise created the parent sample from <a href="https://ui.adsabs.harvard.edu/abs/2018ApJS..236...33W/abstract">BEAGLE</href>. For now, I will just be using BEAGLE.
+First, they created a parent mock catalog of SEDs to sample from; they used *HST* data where available, and otherwise created the parent sample from <a href="https://ui.adsabs.harvard.edu/abs/2016MNRAS.462.1415C/abstract">BEAGLE</a>. For now, I will just be using BEAGLE.
 
 Details are in Section 3.4.3 for star-forming galaxies and 4.2 for quiescent galaxies.
 
