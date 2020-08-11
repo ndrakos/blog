@@ -11,7 +11,7 @@ In <a href="https://ndrakos.github.io/blog/mocks/Assigning_Galaxy_Properties/">t
 
 To determine which galaxies were star-forming, I used the SMFs (right now just using the Williams SMFs---I still need to update these) to get the probabilty of a galaxy being star-forming as a function of mass and redshift, and then randomly decided whether it was star-forming based on this probability.
 
-Here are the recovered SMFs of the two populations:
+Here are the recovered SMFs of the two populations (star-forming on top and quiescent on the bottom):
 
 <img src="{{ site.baseurl }}/assets/plots/20200812_SMF_Catalog.png">
 
@@ -27,3 +27,5 @@ I realized their Equation 11 is not correct. To my best reasoning, their paramet
 Here are the assigned properties:
 
 <img src="{{ site.baseurl }}/assets/plots/20200812_MUV.png">
+
+In Williams, they truncated the $$\beta$$ distribution at $$-2.6$$, which is a theoretical limit corresponding to the bluest $$\beta$$ value you can get in BEAGLE. Right now, I am not truncating the distribution there; this is something I should add in before matching to SEDs from BEAGLE.
