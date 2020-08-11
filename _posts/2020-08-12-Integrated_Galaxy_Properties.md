@@ -5,17 +5,17 @@ date:   2020-08-12
 categories: mocks
 ---
 
-In <a href="https://ndrakos.github.io/blog/mocks/Assigning_Galaxy_Properties/>this post</a>, I outlined the general method for assigning galaxy properties to the galaxy catalog. Here is the first step of the process: assigning integrated galaxy properties to the star-forming galaxies.
+In <a href="https://ndrakos.github.io/blog/mocks/Assigning_Galaxy_Properties/">this post</a>, I outlined the general method for assigning galaxy properties to the galaxy catalog. Here is the first step of the process: assigning integrated galaxy properties to the star-forming galaxies.
 
 ## Star-Forming Versus Quiescent
 
-get probility function... sample to decide...
+To determine which galaxies were star-forming, I used the SMFs (right now just using the Williams SMFs---I still need to update these) to get the probabilty of a galaxy being star-forming as a function of mass and redshift, and then randomly decided whether it was star-forming based on this probability.
 
-Recovered SMFs are given below:
+Here are the recovered SMFs of the two populations:
 
-<img src="{{ site.baseurl }}/assets/plots/20200803_SMF_Catalog.png">
+<img src="{{ site.baseurl }}/assets/plots/20200812_SMF_Catalog.png">
 
-I still need to update what the SMFs I am using. Also,
+I don't know if there are properties that correlate strongly with queiscence (e.g. halo properties or environment) that I should be including. I need to look into this.
 
 
 ## UV
@@ -26,4 +26,4 @@ I realized their Equation 11 is not correct. To my best reasoning, their paramet
 
 Here are the assigned properties:
 
-<img src="{{ site.baseurl }}/assets/plots/20200803_MUV.png">
+<img src="{{ site.baseurl }}/assets/plots/20200812_MUV.png">
