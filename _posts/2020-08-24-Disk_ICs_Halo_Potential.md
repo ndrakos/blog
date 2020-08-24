@@ -39,4 +39,4 @@ Here is how it evolved:
 
 <img src="{{ site.baseurl }}/assets/plots/20200824_Sim_xz.png">
 
-It's not perfectly stable, but OK... it might be that my softening length is too big, or I have an error somewhere. It might be stable enough for now though.
+It's not perfectly stable, but OK... it might be that my gravitational softening length is too big, or I have an error somewhere. It could also be that I didn't add in the softening of the radial dispersion, as suggested in Hernquist 1993.
