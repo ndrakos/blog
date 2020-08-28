@@ -35,7 +35,7 @@ We have currently used 78 percent of computational time on Pleaides, which expir
 I am using AHF as a halo finder. This step (and all of the following) have been done with the $$512^3$$ simulations.
 A while back, I had started to create halo catalogs for the $$1024^3$$ simulations, but it was going very slowly. AHF has an MPI option that I will need to use, but I first have to recompile the code for MPI and figure out what values to set in the parameter file for the MPI decomposition.
 
-I want to get this done before Sept 30 (since that's the project end date on Pleiades). I will focus on getthing this running next week.
+I want to get this done before Sept 30 (since that's the project end date on Pleiades). I will focus on getting this running next week.
 
 ## Halo lightcone
 
@@ -49,7 +49,7 @@ Other than that, I just need to run it on the higher resolution simulations, and
 
 ## Galaxy Masses
 
-I have code set up to assign galaxy masses using abundance matching. See <a href"https://ndrakos.github.io/blog/mocks/LightCone_Abundance_Matching/">this post</a> for the latest report on this.
+I have code set up to assign galaxy masses using abundance matching. See <a href="https://ndrakos.github.io/blog/mocks/LightCone_Abundance_Matching/">this post</a> for the latest report on this.
 
 The biggest problem is that the scatter model isn't working at high redshifts. I think I will need to change how I am doing this, but I have some ideas. I think I will assume a functional form for how the stellar-mass--halo-mass scatter depends on the scatter on $$v_{\rm peak}, and then fit the parameters in the functional form. If this doesn't work, I can do the more traditional de-convolution method.
 

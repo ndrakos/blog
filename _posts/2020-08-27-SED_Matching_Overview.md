@@ -33,7 +33,7 @@ $$M_*$$ stellar mass
 
 $$\tau$$: time scale of stellar mass formation
 
-$$\hat{tau}_V$$: $$V$$ band attenuation optical depth
+$$\hat{\tau}_V$$: $$V$$ band attenuation optical depth
 
 $$\log U_S$$: effective gas ionization parameter
 
@@ -44,7 +44,7 @@ $$t$$: age of oldest stars in the galaxy
 
 Section 3.4.3 outlines how they constrain these parameters, to make sure they have reasonable SEDs. From my understanding, they create a grid in mass and redshift; based on the mass--metallicity relationship, they assign a range of realistic metallicities. Then based on the mass--metallicity--star formation history relation, they assign realistic SFHs, ect.
 
-For quiescent galaxies (section 4.2), they do not need to assign all of these properties; they just assign $$t$$, $$\tau$$ and $$Z$$.
+For quiescent galaxies (section 4.2), they do not need to assign all of these properties; they only assign $$t$$, $$\tau$$ and $$Z$$.
 
 This creates a grid of SEDs.
 
