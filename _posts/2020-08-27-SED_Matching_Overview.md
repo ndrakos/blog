@@ -11,7 +11,7 @@ This is a summary of the method used in <a href="https://ui.adsabs.harvard.edu/a
 
 First, they assign galaxy masses and type (star-forming/quiescent). For the star-forming galaxies, they also assign absolute UV magnitude and UV continuum slope.
 
-By construction, the galaxies follow known $$M_{UV}--M_*$$ and $$\beta--M_{UV}$$ trends.
+By construction, the galaxies follow known $$M_{UV}$$--$$M_*$$ and $$\beta$$--$$M_{UV}$$ trends.
 
 The goal is to assign SEDs that are consistent with these galaxy properties.
 
