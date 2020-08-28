@@ -51,7 +51,7 @@ Other than that, I just need to run it on the higher resolution simulations, and
 
 I have code set up to assign galaxy masses using abundance matching. See <a href="https://ndrakos.github.io/blog/mocks/LightCone_Abundance_Matching/">this post</a> for the latest report on this.
 
-The biggest problem is that the scatter model isn't working at high redshifts. I think I will need to change how I am doing this, but I have some ideas. I think I will assume a functional form for how the stellar-mass--halo-mass scatter depends on the scatter on $$v_{\rm peak}, and then fit the parameters in the functional form. If this doesn't work, I can do the more traditional de-convolution method.
+The biggest problem is that the scatter model isn't working at high redshifts. I think I will need to change how I am doing this, but I have some ideas. I think I will assume a functional form for how the stellar-mass--halo-mass scatter depends on the scatter on $$v_{\rm peak}$$, and then fit the parameters in the functional form. If this doesn't work, I can do the more traditional de-convolution method.
 
 Additionally, the SMFs from Williams et al. are shaped a bit funny, so I should update the parameterization for these.
 
@@ -61,7 +61,7 @@ Finally, want to check the galaxy clustering (and maybe bias) of the galaxy cata
 
 After assigning galaxy masses, our next step is to assign integrated galaxy properties: namely, whether galaxies are star-forming or quiescent, as well as their UV magnitude and UV continuum slope.
 
-This step is done (unless we decide to improve upon it), and outlined in <a href"https://ndrakos.github.io/blog/mocks/Integrated_Galaxy_Properties/">this post</a>.
+This step is done (unless we decide to improve upon it), and outlined in <a href="https://ndrakos.github.io/blog/mocks/Integrated_Galaxy_Properties/">this post</a>.
 
 
 ## Galaxy SEDs
@@ -72,7 +72,7 @@ The plan for assigning SEDs to each galaxy is to first create a mock parent cata
 
 In  <a href="https://ndrakos.github.io/blog/mocks/SED_Matching_Overview/">this post</a> I outlined roughly how this is done in Williams et al. I'm not sure whether we need BEAGLE. It's a bit difficult for me to determine what exactly we need, without going through and actually trying things. I might muddle around with things a bit, and build up a deeper understanding of what actually goes into SED assignments.
 
-There are many softwares available for SED fitting, as summarized <a href="http://www.sedfitting.org/Fitting.html">here</a>. Brant--do you have experience/knowledge of any of these?
+There are many softwares available for SED fitting, as summarized <a href="http://www.sedfitting.org/Fitting.html">here</a>. Brant---do you have experience/knowledge of any of these?
 
 
 ## Galaxy Morphologies
