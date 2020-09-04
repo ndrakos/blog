@@ -11,11 +11,11 @@ This post is on assigning galaxy sizes to each mock galaxy. The galaxy sizes wil
 
 The parametrization for $$R_{\rm eff, maj}$$ is from <a href="https://ui.adsabs.harvard.edu/abs/2014ApJ...788...28V/abstract">van der Wel et al. 2014</a>, and is given by:
 
-$$R_{\rm eff, maj} = B_H(M_\*) \left( \dfrac{H(z)}{H_0}\right)^{\beta(M_\*)}$$
+$$R_{\rm eff, maj} = B_H(M_\odot) \left( \dfrac{H(z)}{H_0}\right)^{\beta(M_\odot)}$$
 
-The coefficents $$B_H(M_\*)$$ and $$\beta(M_\*)$$ for star-forming and quiescent galaxies are given in Equations 24 and 25, respectively.
+The coefficents $$B_H(M_\odot)$$ and $$\beta(M_\odot)$$ for star-forming and quiescent galaxies are given in Equations 24 and 25, respectively.
 
-Here is the plot from Williams et al:
+Here is the plot from Williams et al (their Fig 15):
 
 <img src="{{ site.baseurl }}/assets/plots/20200904_Reff_Williams.png">
 
@@ -34,33 +34,33 @@ Since there are no constraints at higher redshifts for quiescent galaxies, this 
 
 For starforming galaxies, above redshift 4, they are constrained by luminosity functions. The constraints are in terms of the circularized half-light radius
 
-$$R_{\rm eff, circ} = $$R_{\rm eff, maj} \sqrt{b/a}$$
+$$R_{\rm eff, circ} = R_{\rm eff, maj} \sqrt{b/a}$$
 
-This requires setting the galaxy shape, which I'll address in a later post. For now, $$R_{\rm eff, circ}$$ can be calculated from the relation
+This requires setting the galaxy shape, which I'll address in a later post.  $$R_{\rm eff, circ}$$ can be calculated from the relation
 
-$$R_{\rm eff, circ} = 6.9 (1+z)^{-1.2} \left(\dfrac{L_{\rm UV}}{L_O} \right)^0.27$$,
+$$R_{\rm eff, circ} = 6.9 (1+z)^{-1.2} \left(\dfrac{L_{\rm UV}}{L_0} \right)^{0.27}$$,
 
-where $$L_{\rm UV}$$ is the UV luminosity, and $$L_0$$ is a characteristic luminosity corresponding to a magnitude of $$M_{\rm UV}$$.
+where $$L_{\rm UV}$$ is the UV luminosity, and $$L_0$$ is a characteristic luminosity corresponding to a magnitude of $$M_{\rm UV}=-21$$.
 
-We have the UV magnitudes (though I am not sure that the UV band is defined the same in this equation; I should double check I don't have to correct for this). Magnitudes are related to luminosities according to:
+We have the UV magnitudes (though I am not sure that the UV band is defined the same in this equation; I should double check I don't have to correct for this). Then, magnitudes are related to luminosities according to:
 
-$$M_2 = M_1 = 2.5 \log_{10}(L_1/L_2)$$
+$$M_2 - M_1 = 2.5 \log_{10}(L_1/L_2)$$
 
 Therefore,
 
-$$R_{\rm eff, circ} = 6.9 (1+z)^{-1.2} 10^{0.27(M_{\rm UV} +21)/2.5}$$,
+$$R_{\rm eff, circ} = 6.9 (1+z)^{-1.2} 10^{0.27(M_{\rm UV} +21)/2.5}$$.
 
 
 ## To-Do
 
-1) Find out why the parameterization is wrong
+1) Find out why I am not reproducing Fig 15 from Williams et al.
 
-2) Double check that I am using the right UV magnitude in the star-forming galaxies above redshift 4
+2) Double check that I am using the right UV magnitude in the equation for star-forming galaxies above redshift 4.
 
-3) Assign sizes to galaxies, with appropriate scatter
+3) Assign sizes to galaxies, with appropriate scatter ($$R_{\rm eff, maj}$$ for low redshift galaxies, and $$R_{\rm eff, circ}$$ for high redshift galaxies).
 
-4) Assign galaxy shapes so that I can recover $$R_{\rm eff, maj}$$ for the high redshift galaxies
+4) Assign galaxy shapes and use these to calculate $$R_{\rm eff, maj}$$ for the high redshift galaxies.
 
-5) Check galaxy shape distributions/scatter agree
+5) Check the distribution/scatter of galaxy sizes in our mock catalog look right .
 
-6) Check that trends in galaxy size--halo size seem reasonable
+6) Check that trends in galaxy size--halo size seem reasonable.
