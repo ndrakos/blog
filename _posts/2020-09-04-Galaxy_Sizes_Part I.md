@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Galaxy Sizes Part I"
-date:   2020-09-4
+date:   2020-09-04
 categories: mocks
 ---
 
