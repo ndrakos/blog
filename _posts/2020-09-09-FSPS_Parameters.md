@@ -12,7 +12,7 @@ This post is on choosing the parameters in FSPS.
 
 There are a large number of possible parameters that can be changed. Most will be left to their default values:
 
-<object width="500" height="1000" type="text/plain" data="{{site.baseurl}}/assets/files/FSPS_params.txt" border="0" >
+<object width="500" height="500" type="text/plain" data="{{site.baseurl}}/assets/files/FSPS_params.txt" border="0" >
 </object>
 
 
@@ -23,8 +23,7 @@ The redshift of each galaxy, <code>zred</code> is known.
 
 The age of the galaxy (in Gyr), <code>tage</code> can be varied. I think this is the age since the start of star formation. This is something I will treat as a free parameter.
 
-add_stellar_remnants?
-igm_factor? (igm_absorption)
+I have turned on <code>add_stellar_remnants</code>, which includes stellar remnants in the mass composition, and turned off <code>add_igm_absorption</code> which includes IGM absorption via Madau (1995).
 
 
 
@@ -73,24 +72,24 @@ The nebular emission is controleld by the gas ionization parameter <code>gas_log
 
 ## Free Parameters
 
-From this post, the parameters that will vary between each galaxy are...
+From this post, the parameters that will vary between each galaxy are:
 
-<code>zred</code>
+<code>zred</code> -- redshift of galaxy. This can be set
 
-<code>tage</code>
+<code>tage</code> -- age of galaxy in Gyr. I think this is probably the age since star formation begins.
 
-<code>logzsol</code>
+<code>logzsol</code> -- metallicity
 
-<code>tau</code>
+<code>tau</code> -- e-folding time in Gyr for star formation
 
-<code>sf_start</code>
+<code>sf_start</code> -- start time of SFH, in Gyr
 
-<code>sf_trunc</code>
+<code>sf_trunc</code>  -- start time of SFH, in Gyr
 
-<code>dust2</code>
+<code>dust2</code> -- dust attenuation
 
-<code>gas_logu</code>
+<code>gas_logu</code> -- gas ionization parameter
 
-<code>gas_logz</code>
+<code>gas_logz</code> -- gas metallicity
 
 Next, I will look into how these effect the properties I want to match (e.g. mass, UV magnitude, UV continuum slope)
