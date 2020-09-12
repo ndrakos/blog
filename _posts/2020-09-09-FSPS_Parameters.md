@@ -10,10 +10,11 @@ This post is on choosing the parameters in FSPS.
 
 ## Parameters
 
-There are a large number of possible parameters that can be changed. Most will be left to their default values:
+There are a large number of possible parameters that can be changed. Here is the description for the python-FSPS parameters:
 
 <object width="500" height="500" type="text/plain" data="{{site.baseurl}}/assets/files/FSPS_params.txt" border="0" >
 </object>
+
 
 
 
