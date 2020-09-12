@@ -15,7 +15,7 @@ I found <a href="https://faculty.virginia.edu/rwoclass/astr511/lec14-f03.pdf
 ">this link</a> useful in describing magnitude systems.
 
 
-The AB magnitude limit of a potential UDF is $$m_{AB} \simto 30$$, which corresponds to $$f_{\nu} = 3.631 \times 10^{-9} \rm{Jy}$$. Therefore, the limiting magnitude of each
+The AB magnitude limit of a potential UDF is $$m_{AB} \sim 30$$, which corresponds to $$f_{\nu} = 3.631 \times 10^{-9} \rm{Jy}$$. Therefore, the limiting magnitude of each
 
 $$m_{i} = -2.5 \log_{10} \dfrac{3.631 \times 10^{-9} \rm{Jy}}{Q_i} $$,
 
@@ -26,20 +26,20 @@ where $$Q_i$$ is the zero point of each filter.
 ">This site</a> has a summary of WFIRST filters and their zero points.
 
 
-Therefore, here is the limiting magnitude in each of these bands, assuming the AB magnitude limit is $$m_{AB} \simto 30$$.
+Therefore, here is the limiting magnitude in each of these bands, assuming the AB magnitude limit is $$m_{AB} \sim 30$$.
 
 
-|Filter|ZP_{\nu} (Jy)|Limiting Magnitude|
-|------|-------------|-------|
-| R062 | 3022.34     | 29.80|
-| Z087 | 2298.31     | 29.50|
-| Y106 | 1962.64     | 29.33|
-| J129 | 1479.84     | 29.03|
-| Prism| 1388.79     | 28.96|
-| Grism| 1207.17     | 28.80|
-| W146 | 1174.09     | 28.77|
-| H158 | 1090.69	   | 28.69|
-| F184 | 863.33      | 28.44|
+|Filter|$$ZP_{\nu}$$ (Jy)|Limiting Magnitude|
+|------|------|------|
+| R062 | 3022.34| 29.80|
+| Z087 | 2298.31| 29.50|
+| Y106 | 1962.64| 29.33|
+| J129 | 1479.84| 29.03|
+| Prism| 1388.79| 28.96|
+| Grism| 1207.17| 28.80|
+| W146 | 1174.09| 28.77|
+| H158 | 1090.69| 28.69|
+| F184 | 863.33 | 28.44|
 
 
 
