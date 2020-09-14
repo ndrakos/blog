@@ -35,3 +35,5 @@ Here are the results:
 
 
 I should double check all the input parameters, and also figure out how to put error bars on these. I also want to check the lowredshift results against SDSS measurements.
+
+Also, I think the trend is opposite to what it should be in redshift... 
