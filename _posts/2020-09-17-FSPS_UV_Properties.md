@@ -31,8 +31,8 @@ However, the following parameters will be explored:
 
 <code>sf_start</code> -- start time of SFH, in Gyr. A reasonable range for this is between 30 Myr and <code>tage</code>.
 
-<code>tau</code> -- this is the e-folding time in Gyr for star formation; the delayed tau model defined the star formation history as $$\psi(t) \propto t \exp (-t/\tau)$$
-FSPS allows values for  <code>tau</code> to be in the range [0.1,1e2]. Williams et al. assurts that the maximum allowed should be  $$\log_{10} \tau_{\rm max} = 10^{1.11 \log(sf_start)-2.02}$$ (in units of years), so ensure reasonable sSFRs.
+<code>tau</code> -- this is the e-folding time in Gyr for star formation; the delayed tau model defined the star formation history as $$\psi(t) \propto t \exp (-t/\tau)$$.
+FSPS allows values for  <code>tau</code> to be in the range [0.1,1e2]. Williams et al. assurts that the maximum allowed should be  $$\log_{10} \tau_{\rm max} = 10^{1.11 \log(sf_{start})-2.02}$$ (in units of years), to ensure reasonable sSFRs.
 
 
 <code>dust2</code> -- dust attenuation, in units of $$\log_{10} (yrs)$$. Williams uses a range range of [0,4] for $$\hat{\tau}_V$$; I am going to use this for now, but I need to check whether these dust parameters are defined the same.
@@ -45,7 +45,7 @@ FSPS allows values for  <code>tau</code> to be in the range [0.1,1e2]. Williams 
 
 I'm going to consider a galaxy of mass $$10^8 M_\odot$$ at redshift zero. The age of the universe should be about 13.8 Gyr, which sets <code>tage</code>=13.8
 
-For the potential free parameters, I assign them baseline values of <code>logzsol</code>=0, <code>sf_start</code>=10, <code>tau</code> = 1 ,<code>dust2</code>=0, <code>gas_logz</code>=-2
+For the potential free parameters, I assign them baseline values of <code>logzsol</code>=0, <code>sf_start</code>=10, <code>tau</code> = 1, <code>dust2</code>=0, <code>gas_logz</code>=-2
 
 
 Here is the code for creating an sps object with my current parameters
@@ -102,25 +102,26 @@ Here is the SED for this example:
 
 ### UV Magnitude
 
-I used the definition of $$M_{UV}$$ from <a href="https://ui.adsabs.harvard.edu/abs/2013ApJ...768...71R/abstract">Robertson et al 2013</a>:  this is the average magnitude at rest-frame wavelength in a flat filter, in range $$1450-1550 \AA$$.
+I used the definition of $$M_{UV}$$ from <a href="https://ui.adsabs.harvard.edu/abs/2013ApJ...768...71R/abstract">Robertson et al 2013</a>:  this is the average magnitude at rest-frame wavelength in a flat filter, in range $$1450-1550$$ Angstroms.
 
 I calculated the average flux density between the corresponding frequencies ($$\nu_1$$ and $$\nu_2$$) as:
 
-$$\langle f_\nu \rangle =  \dfac{\int_{\nu_1}^{\nu_2}} f_{\nu}d\nu}{\nu_2-\nu_1} $$
+$$\langle f_\nu \rangle =  \dfrac{\int_{\nu_1}^{\nu_2} f_{\nu}d\nu}{\nu_2-\nu_1} $$
 
-Then, the AB magnitude can be calculated from this. With the parameters above, I get a magnitude of $$M_{\rm UV}=-14.09$$
+Then, the AB magnitude can be calculated from this.
 
 
 ### UV Continuum Slope
 
-The UV continuum slope can be measured from the spectrum $$f_\lambda \propto \lambda^{\beta}$$. Using eq 2 from<a href="https://ui.adsabs.harvard.edu/abs/2012MNRAS.420..901D/abstract">Dunlop et al 2012</a>, you can measure $$\beta$$ as:
+The UV continuum slope can be measured from the spectrum $$f_\lambda \propto \lambda^{\beta}$$. Using eq 2 from <a href="https://ui.adsabs.harvard.edu/abs/2012MNRAS.420..901D/abstract">Dunlop et al 2012</a>, you can measure $$\beta$$ as:
 
 $$\beta = 3.91(Y098-J125)-2$$
 
 I calculated the magnitudes in these filters using the builtin magnitude function in FSPS; I used the included 'wfc3_ir_f098m' and 'wfc3_ir_f125w' filters.
 
-With the parameters above, I get $$\beta=-1.91$$.
 
 ## Conclusions
+
+With the parameters above, I get a magnitude of $$M_{\rm UV}=-14.09$ and $$\beta=-1.91$$.
 
 These numbers seem reasonable. The next step is to vary the free parameters and see how they influence the target parameters. This will guide how I decide to do the spectrum fitting.
