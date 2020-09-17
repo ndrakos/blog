@@ -77,7 +77,7 @@ From this post, the parameters that will vary between each galaxy are:
 
 <code>zred</code> -- redshift of galaxy. This can be set
 
-<code>tage</code> -- age of galaxy in Gyr. I think this is probably the age since star formation begins.
+<code>tage</code> -- age of galaxy in Gyr. I think this is probably the age since star formation begins. (Edit: this is actually the age of the universe... )
 
 <code>logzsol</code> -- metallicity
 
@@ -85,7 +85,7 @@ From this post, the parameters that will vary between each galaxy are:
 
 <code>sf_start</code> -- start time of SFH, in Gyr
 
-<code>sf_trunc</code>  -- start time of SFH, in Gyr
+<code>sf_trunc</code>  -- end time of SFH, in Gyr
 
 <code>dust2</code> -- dust attenuation
 
