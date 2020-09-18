@@ -21,8 +21,10 @@ For the potential free parameters, I assign them baseline values of <code>logzso
 
 ## Results
 
+I have changed the free parameters within reasonable ranges around this baseline. Note that this is not very rigourous... there is no gaurentee the same results will hold in another region of parameter space (i.e. if I started at another baseline).
+
 <img src="{{ site.baseurl }}/assets/plots/20200918_SED_freeparams.png">
 
-The results don't seem to be sensitive to <code>gas_logu</code> (the gas ionization parameter), so I think I'll just set this to -2.
+The UV properties don't seem to be sensitive to <code>gas_logu</code> (the gas ionization parameter), so I think I'll just set this to -2. (Or use linear fit in metallicity? See eq 18 in Williams et al. 2018).
 
 I am surprised about how insensitive the results are to <code>tau</code>, which is the efolding time for star formation. Here, we have varied it from 0.1 to 100 Gyr, which is the range allowed in FSPS. These timescales are fairly long, so that is probably why... My default parameters have star formation beginning at 10 Gyr, leaving the total time for star formation to be less than 4 Gyr.
