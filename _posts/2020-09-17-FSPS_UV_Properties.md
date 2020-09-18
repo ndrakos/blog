@@ -67,7 +67,7 @@ mytage = 13.8 #age of galaxy in Gyr
 
 sps.params['imf_type']=1
 sps.params['sfh']=4
-sps.params['dust_type']=1
+sps.params['dust_type']=2
 sps.params['add_neb_emission']=True
 sps.params['dust1']=0
 
@@ -122,6 +122,6 @@ I calculated the magnitudes in these filters using the builtin magnitude functio
 
 ## Conclusions
 
-With the parameters above, I get a magnitude of $$M_{\rm UV}=-14.09$$ and $$\beta=-1.91$$.
+With the parameters above, I get a magnitude of $$M_{\rm UV}=-14.09$$ and $$\beta=-1.9$$.
 
 These numbers seem reasonable. The next step is to vary the free parameters and see how they influence the target parameters. This will guide how I decide to do the spectrum fitting.
