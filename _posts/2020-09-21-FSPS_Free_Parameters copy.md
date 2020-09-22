@@ -16,7 +16,7 @@ In this post, I will outline a quick way of assigning SEDs based on mean relatio
 
 The gas ionization parameter, $$U_S$$ (<code>gas_logu</code>), does not seem to affect the UV properties much. We can use the relation from <a href="https://ui.adsabs.harvard.edu/abs/2017MNRAS.468.2140C/abstract">Carton et al. 2017</a> to relate the metallicity, $$Z$$ and $$U_S$$. (This relation is for low redshift only, but we will neglect that for now).
 
-$$\log U_S (Z) = -0.8 log(Z/Z_{\odot})-3.58$$
+$$\log_{10} U_S = -0.8 \log_{10}(Z/Z_{\odot})-3.58$$
 
 
 
@@ -26,7 +26,7 @@ $$\log U_S (Z) = -0.8 log(Z/Z_{\odot})-3.58$$
 Before, we identified <code>logzol</code>,<code>tau</code>,<code>sf_start</code>,<code>dust2</code> and <code>gas_logu</code> to be the parameters we wanted to control.
 
 
-The parameters <code>tau</code> and <code>sf_start</code> control the SFH. It is probabliy more natural to talk in terms of the star formation history, $$\psi$$ and the age of the galaxy, $$a=<code>t_age</code> -code>sf_start</code>$$ rather than <code>tau</code>,<code>sf_start</code>...
+The parameters <code>tau</code> and <code>sf_start</code> control the SFH. It is probabliy more natural to talk in terms of the star formation history, $$\psi$$ and the age of the galaxy, $$a=$$<code>t_age</code> - <code>sf_start</code>.
 
 We have chosen to describe the SFR by a delayed tau model:
 
@@ -38,7 +38,7 @@ The normalization constant can be calculated as $$C = M_{\rm gal}/$$<code>stella
 
 $$\psi = C a e^{-a/\tau}$$
 
-To describe the SFR, we will use the fundamental metallicity relation $$M_*$$--$$Z$$--$$\psi$$ (Eq 15 in Williams, but see also <a href="https://ui.adsabs.harvard.edu/abs/2016MNRAS.463.2020H/abstract">Hunt et al. 2016</a>:
+To describe the SFR, we will use the fundamental metallicity relation $$M_*$$--$$Z$$--$$\psi$$ (Eq 15 in Williams, but see also <a href="https://ui.adsabs.harvard.edu/abs/2016MNRAS.463.2020H/abstract">Hunt et al. 2016</a>):
 
 
 $$\log{Z_{\rm ISM}/Z_\odot} + 8.7 \approx -0.14 \log(\psi/M_{\odot}{\rm yr}^{-1}) + 0.37 \log(M/M_{\rm odot})+4.82$$
@@ -50,7 +50,7 @@ Therefore, you can express $$\psi$$ in terms of the metallicity and galaxy mass.
 
 ## Dust
 
-The dust attenuation can be calculated from the $$\psi$$--$$Z$$--$$\hat{\tau}_{V})$$. To do this, Williams et al. follows <a href="https://ui.adsabs.harvard.edu/abs/1999A%26A...350..381D/abstract">Devriendt et al 1999</a>.
+The dust attenuation can be calculated from the $$\psi$$--$$Z$$--$$\hat{\tau}_{V}$$. To do this, Williams et al. follows <a href="https://ui.adsabs.harvard.edu/abs/1999A%26A...350..381D/abstract">Devriendt et al 1999</a>.
 
 First, you can calculate  the $$V$$ band, face-on attenuation optical depth:
 
