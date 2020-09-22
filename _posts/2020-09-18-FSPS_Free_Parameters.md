@@ -16,7 +16,7 @@ In this post, I will vary the free parameters to get a sense of how they affect 
 
 As in the previous post , I will consider a galaxy of mass $$10^8 M_\odot$$ at redshift zero. The age of the universe should be about 13.8 Gyr, which sets <code>tage</code>=13.8
 
-For the potential free parameters, I assign them baseline values of <code>logzsol</code>=0, <code>sf_start</code>=10, <code>tau</code> = 1, <code>dust2</code>=0, <code>gas_logz</code>=-2.
+For the potential free parameters, I assign them baseline values of <code>logzsol</code>=0, <code>sf_start</code>=10, <code>tau</code> = 1, <code>dust2</code>=0, <code>gas_logu</code>=-2.
 
 
 ## Results
