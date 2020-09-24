@@ -29,7 +29,7 @@ There should be 5$$\sigma$$ detection around magnitude of $$m_{\rm AB} \approx 3
 Note the different exposure times; in <a href="https://ndrakos.github.io/blog/mocks/Limiting_Magnitudes/">this post</a> I calculated the relative filter depths at the same exposure time.
 
 
-For each of these filters, we can determine the redshift at which the observed wavelength corresponds to 1500$$\AA$$ (using $$z=(\lambda_{obs}-\lambda_{rest})/\lambda_{rest}$$)
+For each of these filters, we can determine the redshift at which the observed wavelength corresponds to 1500A (using $$z=(\lambda_{obs}-\lambda_{rest})/\lambda_{rest}$$)
 
 
 |Filter|Center|Redshift|
