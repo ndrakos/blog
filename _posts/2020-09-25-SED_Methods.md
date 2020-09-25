@@ -21,7 +21,7 @@ To begin, each galaxy has a mass, $$M$$ and a redshift $$z$$. Given the cosmolog
 
 First, we choose the age of the galaxy, $$a$$. I am closely following the age distribition suggested in W18. Unlike W18, I used this for both star-forming and quiescent galaxies
 
-The age, $$a$$ is sampled from from a truncated gaussian in $$\log_{\rm 10}(a/{\rm yr})$$ centered on 9.3 with a standard deviation of 0.7. It is truncated so that the minimum age is $$\log_{\rm 10}(a/{\rm yr})=7$$ (i.e. 10 Myr), and the maximum age is the minimum of $$\log_{\rm 10}(a/{\rm yr})=10.5$$ and $$log_{\rm 10}((t_{\rm age}-1e7)/{\rm yr}); this ensures star formation couldn't have started earlier than 10 Myr.
+The age, $$a$$ is sampled from from a truncated gaussian in $$\log_{\rm 10}(a/{\rm yr})$$ centered on 9.3 with a standard deviation of 0.7. It is truncated so that the minimum age is $$\log_{\rm 10}(a/{\rm yr})=7$$ (i.e. 10 Myr), and the maximum age is the minimum of $$\log_{\rm 10}(a/{\rm yr})=10.5$$ and $$log_{\rm 10}((t_{\rm age}-1e7)/{\rm yr})$$; this ensures star formation couldn't have started earlier than 10 Myr.
 
 Then FSPS parameter <code>sf_start</code> is then $$t_{\rm age}-a$$
 
@@ -85,7 +85,7 @@ The FSPS parameter is  <code>dust2</code> (with the dust model we are using, <co
 
 Finally, we get the e-folding time, $$\tau$$. Since this is dependent on the surviving stellar mass fraction, $$x$$ (<code>stellar_mass</code> in FSPS) this has to be calculated last.
 
-To get this, I iterativly solved for $$\tau$$ from $$\phi(\tau) = phi_N(\tau) \times\dfrac{M}{x}$$, updating $$x$$ on every iteration. In practice, it only takes a couple of iterations for $$\tau$$ to converge.
+To get this, I iterativly solved for $$\tau$$ from $$\psi(\tau) = \psi_N(\tau) \times\dfrac{M}{x}$$, updating $$x$$ on every iteration. In practice, it only takes a couple of iterations for $$\tau$$ to converge.
 
 
 ## Parameters to Save to Catalog
