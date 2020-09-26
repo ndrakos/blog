@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "SED Methods"
-date:   2020-09-28
+date:   2020-09-26
 categories: mocks
 ---
 
@@ -95,36 +95,17 @@ Additionally, I'll save the SFR $$\log_{10} \psi$$.
 
 I will also save $$M_{\rm UV}$$ and $$\beta$$, as calculated in <a href="https://ndrakos.github.io/blog/mocks/FSPS_UV_Properties/">this post</a>.
 
-Finally, I'll calculate the magnitude in each filter, as outlined in <a href="https://ndrakos.github.io/blog/mocks/Galaxy_Detection/">this post</a>
+Finally, I'll calculate the magnitude in each filter, as outlined in <a href="https://ndrakos.github.io/blog/mocks/Roman_Filters/">this post</a>
 
 
 ## Parallelizing the code
 
 It is looping through each galaxy to assign the properties. Each galaxy takes about 0.1-60 seconds; I'm not sure why some are longer (though it seems to be in the sps.stellar_mass calculation), the time did not correlate with the values of any of the free parameters. On average, it takes about 0.4 second per galaxy. For the $$512^3$$ simulations, I have about half a million galaxies. This means I expect it to take about 2-3 days to generate SEDs for every galaxy using the current implementation.
 
-Since it is this slow, I parallelized it using mpi4py. It can run on my laptop in about 5 hours. 
+Since it is this slow, I parallelized it using mpi4py. It can run on my laptop in about 5 hours.
 
-## Scaling Relations
-
-### Imposed
-
-plot distributions for each step above... check that they are what I implemented, and whether they agree with observations
-
-### Recovered
-
-check MUV, beta relations (fig 8,9 in W18)
-
-check SFRs (figures 17,18 in W18)
-
-check mass-metallicity relation (fig 20 in W18 )
-
-check quiescent classification in UVJ color-color diagram
 
 
 ## To-Do
 
-1. Include proper filters
-
-2. Check the imposed distributions against the observations. W18 a good starting place.. Are all of these models/assumptions consistent with available data? Should I update anything?
-
-3. Do the recovered distributions make sense with observations, or do I need to update my methods?
+I want to check the imposed and recovered distributions against observations. W18 a good starting place.. Are all of the models/assumptions consistent with available data? Should I update anything?
