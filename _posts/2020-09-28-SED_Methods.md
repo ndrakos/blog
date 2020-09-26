@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "SED Methods"
-date:   2020-09-25
+date:   2020-09-28
 categories: mocks
 ---
 
