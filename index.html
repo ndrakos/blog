@@ -13,13 +13,15 @@ layout: default
 <br>
 <a href="{{ site.url }}all/">All Posts</a>
 <br>
+<br>
 <a href="{{ site.url }}tidal_stripping/">Tidally Stripped Halos</a>
 <br>
 <a href="{{ site.url }}mocks/">Mock Galaxy Catalogues</a>
 <br>
 <a href="{{ site.url }}cosmo_sims/">Cosmological Simulations</a>
 <br>
-<a href="{{ site.url }}other/">Other</a>
+<a href="{{ site.url }}cholla/">Cholla</a>
+ <!--<a href="{{ site.url }}other/">Other</a>-->
 </b>
 </font>
 
@@ -29,7 +31,7 @@ layout: default
   <h2 class="page-heading">Latest Posts</h2>
 
   <ul class="post-list">
-    {% for post in site.posts limit:10%}
+    {% for post in site.posts limit:5%}
 
     <li>
       <span>{{ post.date | date: "%b %-d, %Y" }}</span> &nbsp; <a href="{{ post.url | prepend: site.baseurl }}"> {{post.title }}</a>

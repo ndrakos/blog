@@ -5,8 +5,6 @@ title:  "All Posts"
 ---
 
 
-<h2 class="page-heading">Posts</h2>
-
 <ul class="post-list">
   {% for post in site.posts %}
 

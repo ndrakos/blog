@@ -1,12 +1,14 @@
 ---
 layout: page
-permalink: /other/
-title:  "Other"
+permalink: /cholla/
+title:  "Cholla"
 ---
 
 
+<h2 class="page-heading">Related Posts</h2>
+
 <ul class="post-list">
-  {% for post in site.categories.other %}
+  {% for post in site.categories.cholla %}
 
   <li>
     <span>{{ post.date | date: "%b %-d, %Y" }}</span> &nbsp; <a href="{{ post.url | prepend: site.baseurl }}">{{post.title }}</a>
