@@ -102,7 +102,7 @@ Finally, I'll calculate the magnitude in each filter, as outlined in <a href="ht
 
 It is looping through each galaxy to assign the properties. Each galaxy takes about 0.1-60 seconds; I'm not sure why some are longer (though it seems to be in the sps.stellar_mass calculation), the time did not correlate with the values of any of the free parameters. On average, it takes about 0.4 second per galaxy. For the $$512^3$$ simulations, I have about half a million galaxies. This means I expect it to take about 2-3 days to generate SEDs for every galaxy using the current implementation.
 
-Since it is this slow, and does not require any communitcation between iterations, I am going to parallelize it.
+Since it is this slow, I parallelized it using mpi4py. It can run on my laptop in about 5 hours. 
 
 ## Scaling Relations
 
