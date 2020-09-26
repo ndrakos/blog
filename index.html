@@ -7,7 +7,8 @@ layout: default
 
 
   <h1 class="page-heading">Latest Posts</h1>
-  <br>
+ <a href="{{ site.url }}all/">See all posts</a>
+
   <ul class="post-list">
     {% for post in site.posts limit:5%}
 
@@ -17,24 +18,25 @@ layout: default
 
     {% endfor %}
  </ul>
-   <li><a href="{{ site.url }}all/">See all posts</a>  </li>
+
 
 
  <br>
 
 
- <h1 class="page-heading">Projects</h1>
+<h1 class="page-heading">Projects</h1>
 
 <font size="+1">
 <b>
 
-<a href="{{ site.url }}tidal_stripping/">Tidally Stripped Halos</a>
 <br>
-<a href="{{ site.url }}mocks/">Mock Galaxy Catalogues</a>
+<a href="{{ site.url }}tidal_stripping/"> Tidally Stripped Halos</a>
 <br>
-<a href="{{ site.url }}cosmo_sims/">Cosmological Simulations</a>
+<a href="{{ site.url }}mocks/"> Mock Galaxy Catalogues</a>
 <br>
-<a href="{{ site.url }}cholla/">Cholla</a>
+<a href="{{ site.url }}cosmo_sims/">  Cosmological Simulations</a>
+<br>
+<a href="{{ site.url }}cholla/">  Cholla</a>
 <!--<a href="{{ site.url }}other/">Other</a>-->
 </b>
 </font>
