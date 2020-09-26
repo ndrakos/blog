@@ -2,7 +2,7 @@
 layout: post
 title:  "Disk ICs with Halo Potential"
 date:   2020-08-24
-categories:
+categories: other
 ---
 
 In my <a href="https://ndrakos.github.io/blog/Disk_ICs/">last post</a> I outlined how to set up ICs for a isolated disk, following <a href="https://ui.adsabs.harvard.edu/abs/1993ApJS...86..389H/abstract"> Hernquist 1993</a>.

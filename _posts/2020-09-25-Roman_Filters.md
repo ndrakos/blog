@@ -27,7 +27,7 @@ I then reran "make" in the fsps src directory. Then need to reinstall python pac
 
 To determine whether an object is detected, we should use the band that is one redder than the band the lyman alpha line is detected in.
 
-For every filter, I assigned a non-overlapping wavelength range (the dividing point was taken to be halfway between the centers of two adjacent bands), and then found the corresponding redshift range in that band for the lyman alpha line (using $$\lamda =1216(1+z)$$). The redshift range for detection is then the redshift range of the band immediately bluer to that band.
+For every filter, I assigned a non-overlapping wavelength range (the dividing point was taken to be halfway between the centers of two adjacent bands), and then found the corresponding redshift range in that band for the lyman alpha line (using $$\lambda =1216(1+z)$$). The redshift range for detection is then the redshift range of the band immediately bluer to that band.
 
 Here is the redshift range for each band:
 
