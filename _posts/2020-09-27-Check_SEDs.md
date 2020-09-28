@@ -5,7 +5,7 @@ date:   2020-09-27
 categories: mocks
 ---
 
-I have assigned SEDs to all the galaxies, as outlined in my previous post <code>https://ndrakos.github.io/blog/mocks/SED_Methods/</code>.
+I have assigned SEDs to all the galaxies, as outlined in my <a href="https://ndrakos.github.io/blog/mocks/SED_Methods/">previous post</a>.
 
 In this post I am doing some checks to see if these SEDs are reasonable.
 
@@ -27,8 +27,6 @@ The SFRs were imposed from relations in <a href="https://ui.adsabs.harvard.edu/a
 
 These look like they were assigned correctly
 
-
-To compare to observations, I  also want to look at star formation density and sSFR (e.g. figs 18 and 19 in W18).
 
 
 
@@ -57,7 +55,7 @@ To compare to data, it is also helpful to look at the trends in redshift (e.g. F
 
 ## UV properties
 
-Unlike W18 I did NOT impose these relations. Therefore I compare the recovered $$M$$--$$M_{\rm UV}$$ and $$M_{\rm UV}$$--$$\beta$$ relations (as calculated <a href-"">here</a>) to those used in W18 (dotted lines). Note that this only includes SF galaxies.
+Unlike W18 I did NOT impose these relations. Therefore I compare the recovered $$M$$--$$M_{\rm UV}$$ and $$M_{\rm UV}$$--$$\beta$$ relations (as calculated <a href="https://ndrakos.github.io/blog/mocks/FSPS_UV_Properties/">here</a>) to those used in W18 (dotted lines). Note that this only includes SF galaxies.
 
 <img src="{{ site.baseurl }}/assets/plots/20200927_MUV.png">
 
@@ -89,6 +87,4 @@ I should actually get the restframe filters instead to check this.
 
 This mostly looks reasonable, the only worrisome thing is the $$M_{\rm UV}$$--$$\beta$$ relation. I need to try and make sense of this, and figure out how to make the results look more reasonable.
 
-I also want to check these against observational data.
-
-Other things I can check against data are the star formation rate density (e.g. Fig 18 in W18), and the sSFR (Fig 19 in W18). I can also calculate the UVJ diagram based on the SEDs and see if the SF/Q classifications are reasonable.
+I also want to plot observational data on top of these trends. Other things I can check against data are the star formation rate density (e.g. Fig 18 in W18), and the sSFR (Fig 19 in W18). 
