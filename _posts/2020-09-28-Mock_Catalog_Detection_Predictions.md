@@ -51,7 +51,7 @@ This doesn't look quite right... though the turn over could be because I am not 
 <img src="{{ site.baseurl }}/assets/plots/20200928_LF_W18.png">
 
 
-I also plotted $$dN/dM_{\rm UV} to compare from the JADES predictions (Fig, 25 in W18).
+I also plotted $$dN/dM_{\rm UV}$$ to compare from the JADES predictions (Fig, 25 in W18).
 
 <img src="{{ site.baseurl }}/assets/plots/20200928_dNdMUV.png">
 
