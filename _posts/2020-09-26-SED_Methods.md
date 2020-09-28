@@ -51,7 +51,7 @@ To get this, I am following <a href="https://ui.adsabs.harvard.edu/abs/2017A%26A
 As in W18, we set the stellar and ISM metallicity to be equal, $$Z$$
 
 
-We get $$Z$$ for SF galaxies from the fundamental metallicity relation (eq 15 in W18). I am also following their scatter model (eqs 16-17).
+We get $$Z$$ for SF galaxies from the fundamental metallicity relation (eq 15 in W18). I am also following their scatter model (eqs 16-17). I am using a truncated distribution though, with $$-2.2<Z<0.24$$.
 
 
 For Q galaxies, $$Z$$ is sampled uniformly from the range $$-2.2<Z<0.24$$.
@@ -61,7 +61,11 @@ The FSPS parameters are <code>logzsol</code> and <code>gas_logz</code>.
 
 ### Gas Ionization
 
-for SF galaxies, $$U_S$$ is selected from $$Z$$--$$U_S$$ relation  (eq 18 in W18), with a scatter of 0.3 dex sampled from a student's t-distribution. It is set to 0 for quiescent galaxies.
+$$U_S$$ is selected from $$Z$$--$$U_S$$ relation  (eq 18 in W18), with a scatter of 0.3 dex sampled from a student's t-distribution. I am truncating the distribution such that
+$$-4<\log_{10}{U_S}<-1$$.
+
+This should really only be for SF galaxies; this parameter shouldn't matter for Q galaxies, so for now I am calculating $$U_S$$ for Q galaxies the same way. I need to check that that is reasonable.
+
 
 The FSPS parameter is  <code>gas_logu</code>.
 
@@ -87,6 +91,7 @@ Finally, we get the e-folding time, $$\tau$$. Since this is dependent on the sur
 
 To get this, I iterativly solved for $$\tau$$ from $$\psi(\tau) = \psi_N(\tau) \times\dfrac{M}{x}$$, updating $$x$$ on every iteration. In practice, it only takes a couple of iterations for $$\tau$$ to converge.
 
+I impose a maximum $$\tau$$ of 100 Gyr... larger values than this have little effect on the SFR. This means that there will be many galaxies with  $$\tau=100$$, but I think that is okay.
 
 ## Parameters to Save to Catalog
 
@@ -102,8 +107,7 @@ Finally, I'll calculate the magnitude in each filter, as outlined in <a href="ht
 
 It is looping through each galaxy to assign the properties. Each galaxy takes about 0.1-60 seconds; I'm not sure why some are longer (though it seems to be in the sps.stellar_mass calculation), the time did not correlate with the values of any of the free parameters. On average, it takes about 0.4 second per galaxy. For the $$512^3$$ simulations, I have about half a million galaxies. This means I expect it to take about 2-3 days to generate SEDs for every galaxy using the current implementation.
 
-Since it is this slow, I parallelized it using mpi4py. It can run on my laptop in about 5 hours.
-
+Since it is this slow, I parallelized it using mpi4py. It can run on my laptop in about 6 hours. It is probably worth it to get this running on a supercomputer.
 
 
 ## To-Do
