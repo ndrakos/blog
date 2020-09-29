@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "SED Method Updates"
-date:   2020-09-28
+date:   2020-09-29
 categories: mocks
 ---
 
@@ -37,13 +37,11 @@ This is slightly improved, but the trend is still backwards. Next I will make 2D
 
 ## UVJ Diagram
 
-Before I was assigning galaxy ages from a gaussian, without any consideration to whether they were SF or not. I have updated my method of assigning ages. I also fixed it so that I am getting the rest-frame U, V and J magnitudes to check the SF/Q classifications x
+Before I was assigning galaxy ages from a gaussian, without any consideration to whether they were SF or not. I have updated my method of assigning ages. I also fixed it so that I am getting the rest-frame U, V and J magnitudes to check the SF/Q classifications.
 
-As before, I will assign ages based on a weak gaussian in $$\log_10{a/{\rm yr}}$$ with a standard deviation of 0.7. The gaussian will be truncated between 6 and $$\log_10{t_{\rm age}/{\rm yr}-10^6}$$ for both SF and Q galaxies
+As before, I will assign ages based on a weak gaussian in $$\log_{10}(a/{\rm yr})$$ with a standard deviation of 0.7. The gaussian will be truncated between 6 and $$\log_{10}(t_{\rm age}/{\rm yr}-10^6)$$ for both SF and Q galaxies
 
-For SF galaxies, as before, the Gaussian is centered at 9.3.
-
-Since Quiescent galaxies should be older, I will center the ages for this on 13.3 Gyr; this difference of 4 Gyr was motivated by <a href="https://ui.adsabs.harvard.edu/abs/2015Natur.521..192P/abstract">this paper</a>.
+For SF galaxies, as before, the Gaussian is centered at 9.3. Since Quiescent galaxies should be older, I will center the ages for this on 13.3 Gyr; this difference of 4 Gyr was motivated by <a href="https://ui.adsabs.harvard.edu/abs/2015Natur.521..192P/abstract">this paper</a>.
 
 I'm not entirely happy with this method, but it is an improvement from my previous method of assigning ages. I couldn't find any better models for what the age distributions of galaxies should look like (as a function of redshift and possibly mass).
 
