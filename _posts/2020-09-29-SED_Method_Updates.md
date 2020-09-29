@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "SED_Method_Updates"
+title:  "SED Method Updates"
 date:   2020-09-28
 categories: mocks
 ---
@@ -9,12 +9,12 @@ In <a href="https://ndrakos.github.io/blog/mocks/SED_Methods/">this post</a>, I 
 
 There were two main problems (1) the $$M_{\rm UV}$$--$$\beta$$ relationship was backwards and (2) there were some fairly blue quiescent galaxies in the UVJ diagram.
 
-I am fixing a couple of potential problems in the previous methods, to try and address these issues.
+I am fixing of things in my previous implementation to try and address these issues.
 
 
 ## UV Continuum slope
 
-Before I was using the restframe SED to calculate $$\beta$$.
+Before I was using the redshift 0 SED to calculate $$\beta$$.
 
 I am now using equation (1) from
 <a href="https://ui.adsabs.harvard.edu/abs/2012MNRAS.420..901D/abstract">Dunlop et al 2012</a> to calculate the UV continuum slope:
