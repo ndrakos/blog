@@ -16,7 +16,7 @@ I generated uniformly distributed points in this volume by
 
 (1) picking a comoving distance $$d = d_{\rm max} {\rm rand}^{1/3}$$, where $${\rm rand}$$ is a random number between 0 and 1.
 
-(2) picking $$y$$ and $$z$$ coordinates as $$y_rand = d \sin(\theta) ({\rm rand}-0.5)$$
+(2) picking $$y$$ and $$z$$ coordinates as $$y_{\rm rand} = d \sin(\theta) ({\rm rand}-0.5)$$
 
 (3) Convert these to RA, DEC and distance as in <a href="https://ndrakos.github.io/blog/mocks/Halo_Lightcone_Catalogue/">this post</a>
 
@@ -36,4 +36,4 @@ Here are the results:
 
 I should double check all the input parameters, and also figure out how to put error bars on these. I also want to check the lowredshift results against SDSS measurements.
 
-Also, I think the trend is opposite to what it should be in redshift... 
+Also, I think the trend is opposite to what it should be in redshift...
