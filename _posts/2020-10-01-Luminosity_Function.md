@@ -36,7 +36,7 @@ This looks a bit better, but it still doesn't match, so I don't think our $$M_{\
 
 The other possible problem is that the it is because the SMFs are not complete below $$\approx 10^9\,M_{\odot}$$ (e.g. see <a href="https://ndrakos.github.io/blog/mocks/LightCone_Abundance_Matching/">this post</a>).
 
-To test the effect of missing low mass galaxies, I again used $$M_{\rm UV}$$ values drawn from the W18 distribution, but I didn't include galaxies with masses below $$10^10\,M_{\odot}$$.
+To test the effect of missing low mass galaxies, I again used $$M_{\rm UV}$$ values drawn from the W18 distribution, but I didn't include galaxies with masses below $$10^{10}\,M_{\odot}$$.
 
 <img src="{{ site.baseurl }}/assets/plots/20201001_LF3.png">
 
