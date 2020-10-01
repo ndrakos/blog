@@ -16,7 +16,7 @@ The luminosity function (LF) didn't look quite right, and I'm exploring that a b
 ## Results
 
 
-Here I have plotted it again with the <a href-"https://ui.adsabs.harvard.edu/abs/2015ApJ...803...34B/abstract">Bouwens et al. 2015</a> luminosity functions:
+Here I have plotted it again with the <a href="https://ui.adsabs.harvard.edu/abs/2015ApJ...803...34B/abstract">Bouwens et al. 2015</a> luminosity functions:
 
 <img src="{{ site.baseurl }}/assets/plots/20201001_LF.png">
 
@@ -24,7 +24,7 @@ Here I have plotted it again with the <a href-"https://ui.adsabs.harvard.edu/abs
 
 First, I want to check if this is due to problems in the $$M_{\rm UV}$$--$$M$$ relation. Here are how our current mock catalog relations compare to the relations in W18:
 
-<img src="{{ site.baseurl }}/assets/plots/20201001_MUV.png">
+<img src="{{ site.baseurl }}/assets/plots/20200929_MUV.png">
 
 The $$M_{\rm UV}$$--$$M$$ relation isn't too different, but there are some discrepancies. If instead I draw $$M_{\rm UV}$$ properties from the W18 relations, rather than get from our SEDs, as in <a href="https://ndrakos.github.io/blog/mocks/Integrated_Galaxy_Properties/">this post</a>, I can plot the LF and get
 
@@ -40,7 +40,7 @@ To test the effect of missing low mass galaxies, I again used $$M_{\rm UV}$$ val
 
 <img src="{{ site.baseurl }}/assets/plots/20201001_LF3.png">
 
-This makes a very large difference on the SMF, which makes me thing this is the reason we can't reproduce the observational LFs. 
+This makes a very large difference on the SMF, which makes me thing this is the reason we can't reproduce the observational LFs.
 
 ## For the presentation
 
