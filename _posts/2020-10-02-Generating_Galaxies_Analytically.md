@@ -6,7 +6,7 @@ categories: mocks
 ---
 
 
-There is a problem reproducing observed LFs, as discussed in <a href="https://ndrakos.github.io/blog/mocks/Luminosity_Function/">this post</a>. I concluded that this discrepancy is likely because we have a low resolution in $$512^3 simulations which is incomplete below galaxy masses of $$\approx 10^9 M_{\dot}$$.
+There is a problem reproducing observed LFs, as discussed in <a href="https://ndrakos.github.io/blog/mocks/Luminosity_Function/">this post</a>. I concluded that this discrepancy is likely because we have a low resolution in $$512^3$$ simulations which is incomplete below galaxy masses of $$\approx 10^9 M_{\dot}$$.
 
 
 Since analyzing the simulations will take a while, I am going to check this from a mock catalog where galaxy redshifts are determined analytically by sampling from the redshift distribution. Since these results aren't based on a simulation, we don't have halo information or exact positions (which is needed to measure the 2PCF), but we can still obtain redshifts, galaxy masses and SEDs.
@@ -15,7 +15,7 @@ Since analyzing the simulations will take a while, I am going to check this from
 ## Methods
 
 
-1. Redshifts - To generate redshifts, I selected $$1^6$$ galaxies from the redshift distribution, as outlined in <a href="https://ndrakos.github.io/blog/mocks/2PCF_Mock_Galaxies/">this post</a> when creating the random catalog for the 2PCF calculation.
+1. Redshifts - To generate redshifts, I selected $$10^6$$ galaxies from the redshift distribution, as outlined in <a href="https://ndrakos.github.io/blog/mocks/2PCF_Mock_Galaxies/">this post</a> when creating the random catalog for the 2PCF calculation.
 
 2. Masses - The masses were drawn from the SMFs, as in abundance matching, but without the need to rank order. The minimum mass will be $$10^7$$.
 
@@ -25,7 +25,7 @@ Since analyzing the simulations will take a while, I am going to check this from
 
 ## Results
 
-To correct results, know that there should actually be $$\approx 3 \times 10^6$$ galaxies above $$10^7 M_{\odot}$$. Therefore, number counts should increase by a factor of 3, and the standard deviation in the galaxy counts should scale as $$1/\sqrt{3}$$.
+Note: there should actually be $$\approx 3 \times 10^6$$ galaxies above $$10^7 M_{\odot}$$. Therefore, number counts should increase by a factor of 3, and the standard deviation in the galaxy counts should scale as $$1/\sqrt{3}$$.
 
 ### Detections
 
@@ -58,4 +58,4 @@ As before, I am sampling the UV magnitude from the W18 relations, rather than us
 
 <img src="{{ site.baseurl }}/assets/plots/20201002_LF.png">
 
-This looks a lot better than before, but there are still some descrepancies with observations. They look complete above a magnitude of $$\approx -18$$ at this mass resolution (is this enough for our purposes, or will we have to add in low mass halos to the simulations?).
+This looks a lot better than before, but there are still some descrepancies with observations. They look complete above a magnitude of $$\approx -18$$ at this mass resolution (is this enough for our purposes, or will we have to add in low mass halos to the simulations? Note that less than 10 percent of the $$10^7$$ galaxies are detected in the high mass bin).
