@@ -20,6 +20,8 @@ Here I have plotted it again with the <a href="https://ui.adsabs.harvard.edu/abs
 
 <img src="{{ site.baseurl }}/assets/plots/20201001_LF.png">
 
+**Update 10/02: The Bouwens relations should have only been for z>4... see next post**
+
 ## $$M_{\rm UV}$$ assignment
 
 First, I want to check if this is due to problems in the $$M_{\rm UV}$$--$$M$$ relation. Here are how our current mock catalog relations compare to the relations in W18:
