@@ -12,7 +12,7 @@ In this post I am doing some checks to see if these SEDs are reasonable.
 
 ## Distribution of Free Parameters
 
-First, I simply plot the distribution of the different parameters used to calculate the SEDs. These parameters are age $$a$$, star-formation time $$\tau$$, the SFR $$\psi$$, metaellicity $$Z$$, dust attenuation $$\bar{\tau}_V$$ and gas ionization parameter $$U_S$$.
+First, I simply plot the distribution of the different parameters used to calculate the SEDs. These parameters are age $$a$$, star-formation time $$\tau$$, the SFR $$\psi$$, metallicity $$Z$$, dust attenuation $$\bar{\tau}_V$$ and gas ionization parameter $$U_S$$.
 
 <img src="{{ site.baseurl }}/assets/plots/20200927_SED_params.png">
 
@@ -87,4 +87,4 @@ I should actually get the restframe filters instead to check this.
 
 This mostly looks reasonable, the only worrisome thing is the $$M_{\rm UV}$$--$$\beta$$ relation. I need to try and make sense of this, and figure out how to make the results look more reasonable.
 
-I also want to plot observational data on top of these trends. Other things I can check against data are the star formation rate density (e.g. Fig 18 in W18), and the sSFR (Fig 19 in W18). 
+I also want to plot observational data on top of these trends. Other things I can check against data are the star formation rate density (e.g. Fig 18 in W18), and the sSFR (Fig 19 in W18).
