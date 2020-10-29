@@ -9,11 +9,11 @@ We want positions and magnitudes in two snapshots (redshifts 7 and 9) in the F20
 
 ## Generating magnitudes
 
-I will use snapshot_121 ($$z=9.05$$) and snapshot_159, ($$z=7.02$).
+I will use snapshot_121 ($$z=9.05$$) and snapshot_159, ($$z=7.02$$).
 
-I will use my code to read in a snapshot halo catalog, perform abundance matching, assign an SED and get the magnitude in F200W (using the FSPS built-in <code>jwst_f200W</code> band).
+I plan to read in a snapshot halo catalog, perform abundance matching, assign an SED and get the magnitude in F200W (using the FSPS built-in <code>jwst_f200W</code> band).
 
-Note there are a couple of things that need to be improved in the SED generation procedure (e.g. ages), but I think that it will probably be fine for now; if there is time I can work on this and incorporate it into the catalog for the proposal figure.
+There are a couple of things that need to be improved in the SED generation procedure (e.g. ages), but I think that it will probably be fine for now; if there is time I can work on this and incorporate it into the catalog for the proposal figure.
 
 
 
