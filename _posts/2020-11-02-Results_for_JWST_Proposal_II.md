@@ -12,4 +12,4 @@ I am using the 1024 simulations. I have AHF catalogs for snapshots 121 and 159, 
 Here is the dark matter density, with the detected galaxies on top (galaxies with AB magnitudes greater than 27.5 in the F200W filter). Right now I have a slice of 25 Mpc/h, which corresponds to a redshift slice of 0.1 in the z=7 snapshot, and 0.15 in the z=9 snapshot.
 
 
-<img src="{{ site.baseurl }}/assets/plots/20201102_SnapDensity.png">
+<img src="{{ site.baseurl }}/assets/plots/20201102_Snapshot.png">
