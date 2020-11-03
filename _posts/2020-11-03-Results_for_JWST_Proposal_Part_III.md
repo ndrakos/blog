@@ -15,7 +15,7 @@ Reference: <a href="https://ui.adsabs.harvard.edu/abs/2005MNRAS.363.1031F/abstra
 
 Bubbles have a characteristic size, that depends on the redshift as well as $$\zeta$$ (which is a constant that includes many things, including ionizing photon production, escape fraction of ionizing photons, star formation efficiency, ect.)
 
-As bubbles grow, their characteristic size, $$R_{\rm char}$$ approaches a maximum size $$R_{\rm max}}$$ (the point at which recombinations balance ionizations). FO05 suggests that this size is ~20 comoving Mpc.
+As bubbles grow, their characteristic size, $$R_{\rm char}$$ approaches a maximum size $$R_{\rm max}$$ (the point at which recombinations balance ionizations). FO05 suggests that this size is ~20 comoving Mpc.
 
 For now I will set the characteristic size to 20 Mpc for both redshift 7 and 9.
 
