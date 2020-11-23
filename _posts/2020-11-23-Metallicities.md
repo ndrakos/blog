@@ -18,7 +18,7 @@ In this post I am checking to see whether the mock galaxy metallicities agree wi
 
 The metallicities were assigned from the fundamental metallicity relation from W18 (eq 15):
 
-$$12 + \log_{10}({\rm O}/{\rm H}) \approx \log_10(Z_{\rm ISM}/Z_\odot) + 8.7 = -0.14 \log10( \psi /M_{\dot} {\rm yr}^{-1} ) + 0.37 \log10(M/M_\odot) + 4.82$$
+$$12 + \log_{10}({\rm O}/{\rm H}) \approx \log_10(Z_{\rm ISM}/Z_\odot) + 8.7 = -0.14 \log10( \psi /M_{\odot} {\rm yr}^{-1} ) + 0.37 \log10(M/M_\odot) + 4.82$$
 
 This depends on galaxy stellar masses and SFRs; the stellar masses were assigned from abundance matching, and the SFRs were assigned from <a href="https://ui.adsabs.harvard.edu/abs/2017A%26A...602A..96S/abstract">Shreiber et al. 2017</a>.
 
@@ -40,10 +40,10 @@ And from W18:
 <img src="{{ site.baseurl }}/assets/plots/20201123_W18Fig20.png">
 
 
-My metallicities seem a bit low... i.e. at masses of $$10^9$$ my median metallicities are ~8 versus ~8.5. Additionally, there should probably be more of a redshift dependance.
+My metallicities seem a bit low... i.e. at masses of $$10^9$$ my median metallicities are ~8 versus ~8.5 in the Manncci et al 2010 plot. This could be because I'm including higher redshift galaxies; I did not find much a redshift dependance, but I have very little low redshift galaxies because of the narrow size of the survey. My results do agree well with the mock galaxies at higher redshifts in the W18 plot.
 
 
-## A Closer Look at SFRs
+## Star Formation Rates
 
 I also took a closer look at the SFRs (assigned from Shreiber et al. 2017 equations 10 and 12 for star-forming (SF) and quiescent (Q) galaxies, respectively):
 
