@@ -61,7 +61,7 @@ The mean hydrogen column density can be determined from the cold gas fraction:
 
 $$N_H = 6.8 \times 10^{21} \dfrac{M_{\rm gas}}{M_* + M_{\rm gas}}$$
 
-To calculate $$M_{\rm gas}$$ you can use $$M_{\rm gas}=\Sigma_{\rm gas} \pi r^2$$, and then releate $$\Sigma_{\rm gas}$$ to $$\Sigma_{\rm \psi} = \psi/(\pi r^2)$$ using the Kennicutt-Shmidt relation.
+To calculate $$M_{\rm gas}$$ you can use $$M_{\rm gas}=\Sigma_{\rm gas} \pi r^2$$, and then relate $$\Sigma_{\rm gas}$$ to $$\Sigma_{\rm \psi} = \psi/(\pi r^2)$$ using the Kennicutt-Shmidt relation.
 I haven't assigned galaxy sizes yet, so for now I am just going to assume that $$M_{gas}=10^9 \psi$$. My reasoning is that about 10% of the gas should be converted to stars every $$10^8$$ years.
 
 
