@@ -18,7 +18,7 @@ In this post I am checking to see whether the mock galaxy metallicities agree wi
 
 The metallicities were assigned from the fundamental metallicity relation from W18 (eq 15):
 
-$$12 + \log_{10}({\rm O}/{\rm H}) \approx \log_10(Z_{\rm ISM}/Z_\odot) + 8.7 = -0.14 \log10( \psi /M_{\odot} {\rm yr}^{-1} ) + 0.37 \log10(M/M_\odot) + 4.82$$
+$$  \log_{10}(Z_{\rm ISM}/Z_\odot) \approx 12 + \log_{10}({\rm O}/{\rm H}) + 8.7 = -0.14 \log10( \psi /M_{\odot} {\rm yr}^{-1} ) + 0.37 \log10(M/M_\odot) + 4.82$$
 
 This depends on galaxy stellar masses and SFRs; the stellar masses were assigned from abundance matching, and the SFRs were assigned from <a href="https://ui.adsabs.harvard.edu/abs/2017A%26A...602A..96S/abstract">Shreiber et al. 2017</a>.
 
