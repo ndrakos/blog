@@ -18,7 +18,7 @@ where $$t$$ is the age of the galaxy, and $$\tau$$ is the e-folding time.
 
 If we want to consider the SFR of the galaxy at a time $$dt$$ earlier,
 
-$$\Psi_2 = \dfrac{t-dt}{t} \exp(dt/\tau) \Psi_1$$
+$$\Psi_2 = \dfrac{t-dt}{t} {\rm e}^{dt/\tau} \Psi_1$$
 
 I evolved things backwards by various  (only including galaxies where $$t>dt$$),
 
