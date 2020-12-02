@@ -22,7 +22,14 @@ $$\Psi_2 = \dfrac{t-dt}{t} {\rm e}^{dt/\tau} \Psi_1$$
 
 I evolved things backwards by various  (only including galaxies where $$t>dt$$),
 
+To correct for the change in mass, I did abundance matching between the SMFs at the current redshift, and the redshift at time $$t-dt$$ (just by directly solving for when $$n(z,<M)=n(z+dz,<M')$$).
+
 ## Results
+
+### dt = 0.0 Gyr
+
+<img src="{{ site.baseurl }}/assets/plots/20201130_SFR_vs_M_evolution_0.png">
+
 
 ### dt = 0.1 Gyr
 
@@ -38,9 +45,11 @@ I evolved things backwards by various  (only including galaxies where $$t>dt$$),
 
 <img src="{{ site.baseurl }}/assets/plots/20201130_SFR_vs_M_evolution_1.png">
 
+### dt = 5 Gyr
+
+<img src="{{ site.baseurl }}/assets/plots/20201130_SFR_vs_M_evolution_5.png">
+
 
 ## Conclusions
 
-Once I evolve these back further than 0.1 Gyr, they really don't match anymore (though the Quiescent galaxies might be okay, since they would not necessarily be classified as Quiescent at a time $$dt$$ earlier). This indicates that my age assignment has problems. I plan to go through some papers, and get a better idea of what observational constraints and/or models there are on galaxy age distributions.
-
-If I am unable to assign galaxy ages directly, I can either constrain age distributions by forcing the mass-SFR relation at earlier redshifts, or assigning UV properties and then using this to constrain ages.
+The star-forming galaxies look pretty good, though the Quiescent galaxies don't match very well (though the Quiescent galaxies might be okay, since they would not necessarily be classified as Quiescent at a time $$dt$$ earlier).
