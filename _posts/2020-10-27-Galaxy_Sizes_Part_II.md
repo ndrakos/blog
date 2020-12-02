@@ -5,7 +5,7 @@ date:   2020-10-27
 categories: mocks
 ---
 
-This is a continuation of <a href="https://ndrakos.github.io/blog/mocks/Galaxy_Sizes_Part-I/">this post</a>.
+This is a continuation of <a href="https://ndrakos.github.io/blog/mocks/Galaxy_Sizes_Part_I/">this post</a>.
 
 I had problems reproducing W18 trends. Additionally, they used Shibuya for redshifts greater than 4, which depends on UV luminosity. Unlike W18 I am not setting the UV luminosity specifically, and instead recover this information after I have calculated SEDs for each galaxy. Since the the dust attenuation parameter in the SED generation depends on size, I need to calculate size before I get the UV luminosities.
 
