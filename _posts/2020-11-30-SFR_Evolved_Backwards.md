@@ -52,4 +52,4 @@ To correct for the change in mass, I did abundance matching between the SMFs at 
 
 ## Conclusions
 
-The star-forming galaxies look pretty good, though the Quiescent galaxies don't match very well (though the Quiescent galaxies might be okay, since they would not necessarily be classified as Quiescent at a time $$dt$$ earlier).
+The star-forming galaxies look pretty good, but the Quiescent galaxies don't match very well (though the Quiescent galaxies might be okay, since they would not necessarily be classified as Quiescent at a time $$dt$$ earlier).
