@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "SED Methods Part II"
-date:   2020-11-19
+date:   2020-12-04
 categories: mocks
 ---
 
@@ -131,7 +131,11 @@ Here are these results with the updated SED catalog.
 
 ### UV Properties
 
+PLOT
+
 ### Colour Properties
+
+PLOT
 
 
 ## Things to check
