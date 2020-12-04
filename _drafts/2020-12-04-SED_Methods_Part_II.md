@@ -6,14 +6,13 @@ categories: mocks
 ---
 
 
-This is an up-to-date summary of the method I'm using to generate SEDs. The last summary was in <a href="https://ndrakos.github.io/blog/mocks/SED_Methods/">this post</a>, but there were some updates (e.g. <a href="https://ndrakos.github.io/blog/mocks/SED_Method_Updates/">here</a>).
-
+This is an up-to-date summary of the method I'm using to generate SEDs. The last summary was in <a href="https://ndrakos.github.io/blog/mocks/SED_Methods/">this post</a>, and also there were some updates (e.g. <a href="https://ndrakos.github.io/blog/mocks/SED_Method_Updates/">here</a>).
 
 
 ## Method
 
 
-To begin, each galaxy has a redshift $$z$$ (from the lightcone generation), a mass, $$M$$ (from abundance matching), and a morphology (from scaling relations). Additionally, each galaxy is either labelled as star-forming (SF) or quiescent (Q), as sampled from the SMF.
+To begin, each galaxy has a redshift $$z$$ (from the lightcone generation), a mass, $$M$$ (from abundance matching), and morphological properties (from scaling relations). Additionally, each galaxy is either labelled as star-forming (SF) or quiescent (Q), as sampled from the SMF.
 
 Given the cosmology, we can also calculate $$t_{\rm age}$$ which is the cosmological time at redshift $$z$$.
 
@@ -21,13 +20,16 @@ Given the cosmology, we can also calculate $$t_{\rm age}$$ which is the cosmolog
 
 ### Age
 
-First, we choose the age of the galaxy, $$a$$.
+First, we choose the age of the galaxy, $$a$$. Note that my method of assigning ages is probably the least well-motivated method out of all the parameters.
+
 
 The age, $$a$$ was sampled from a truncated gaussian in $$\log_{\rm 10}(a/{\rm yr})$$ with a standard deviation of 0.7 (motivated by W18).
 
 The gaussian was truncated between 6 and $$\log_{10}(t_{\rm age}/{\rm yr}-10^6)$$ for both SF and Q galaxies
 
 For SF galaxies, as in W18, the Gaussian was centered at $$\log_{\rm 10}(a/{\rm yr})=9.3$$. Since Quiescent galaxies should be older, I centered the ages for this on 9.8; this corresponds to a difference of 4 Gyr, and was motivated by <a href="https://ui.adsabs.harvard.edu/abs/2015Natur.521..192P/abstract">this paper</a>.
+
+In this implementation, there is no dependance of age on mass, and no direct dependence on redshift (though since the gaussian is truncated based on the age of the universe, lower redshift galaxies will be on average older).
 
 
 Then FSPS parameter <code>sf_start</code> is then $$t_{\rm age}-a$$
@@ -47,9 +49,9 @@ To scale this to the galaxy, we need to know (1) $$M$$ and (2) the fraction of t
 
 To calculate $$\psi$$, I am following <a href="https://ui.adsabs.harvard.edu/abs/2017A%26A...602A..96S/abstract">Shreiber et al. 2017</a> (equations 10 and 12 for star-forming (SF) and quiescent (Q) galaxies, respectively).
 
+$$\psi$$ not explicitly set in FSPS, but it is related to the age, e-folding time and mass of the galaxy
 
- $$\psi$$ not explicitly set in FSPS, but it is related to the age, e-folding time and mass of the galaxy
-
+As a consistency check, I also evolved the SFR--mass relation backwards to see if the relation still held <a href="https://ndrakos.github.io/blog/mocks/SFR_Evolved_Backwards/">here</a>, and it does seem reasonable.
 
 
 ### Metallicity
@@ -61,6 +63,8 @@ We get $$Z$$ for SF galaxies from the fundamental metallicity relation (eq 15 in
 
 
 For Q galaxies, $$Z$$ is sampled uniformly from the range $$-2.2<Z<0.24$$.
+
+<a href="https://ndrakos.github.io/blog/mocks/Metallicities/">Here</a> is a closer look at the metallicities; overall, this assignment seems reasonable (I also check some of the SFR properties in this post).
 
 The FSPS parameters are <code>logzsol</code> and <code>gas_logz</code>.
 
@@ -78,13 +82,13 @@ The FSPS parameter is  <code>gas_logu</code>.
 
 ### Dust Attenuation
 
+I have updated this to include the galaxy shapes.
 
 The dust attenuation can be calculated from the $$\psi$$--$$Z$$--$$\hat{\tau}_{V}$$. To do this, Williams et al. follows <a href="https://ui.adsabs.harvard.edu/abs/1999A%26A...350..381D/abstract">Devriendt et al 1999</a>.
 
 First, you can calculate  the $$V$$ band, face-on attenuation optical depth:
 
 $$\hat{\tau}_{V} =\left(\frac{Z_{\mathrm{ISM}}}{Z_{\odot}}\right)^{1.6}\left(\frac{N_{\mathrm{H}}}{2.1 \times 10^{21} \mathrm{cm}^{-2}}\right)$$
-
 
 The mean hydrogen column density can be determined from the cold gas fraction:
 
@@ -97,7 +101,6 @@ $$\dfrac{\Sigma_{SFR}}{M_\sol {\rm yr}^{-1} {\rm kpc}^{-2}} = 2.5e-4 \left(\dfra
 You can then convert this face-on attenuation to the average galaxy dust attenuation averaged over inclination angles (equation 21 in Williams). For now I am just using this averaged attenuation parameter.
 
 As in W18, I neglect dust for quiescent galaxies (i.e. set <code>dust2</code> to zero). I am not sure how justified this is.
-
 
 The FSPS parameter is  <code>dust2</code> (with the dust model we are using, <code>dust1</code> must be set to zero).
 
@@ -113,14 +116,30 @@ To get this, I iteratively solved for $$\tau$$ from $$\psi(\tau) = \psi_N(\tau) 
 I impose a maximum $$\tau$$ of 100 Gyr. Larger values than this have little effect on the SFR. This means that there will be many galaxies with  $$\tau=100$$, but I think that is okay.
 
 
+### Summary of free parameters
+
+The parameters for SFR, metallicity, gas ionization and star formation times all seem reasonable. I do want to look into age and dust attenuation more carefully.
+
 
 
 ## Checking How Realistic the SEDs are
 
+The two main things that I want to check make sense are (1) the UV properties and (2) the galaxy colours.
+
+Here are these results with the updated SED catalog.
+
 
 ### UV Properties
 
-### Color Properties
+### Colour Properties
 
 
-## What's next
+## Things to check
+
+1) Are there any constraints of galaxy ages in the literature that I can use to check if my ages are reasonable?
+
+2) How much do different ages affect the UV properties?
+
+3) Does the gas ionization parameter matter at all for Quiescent galaxies? Is it okay how I am setting it now?
+
+4) Do my dust attenuation values make sense? How can I check this?
