@@ -142,7 +142,7 @@ PLOT
 
 1) Are there any constraints of galaxy ages in the literature that I can use to check if my ages are reasonable?
 
-2) How much do different ages affect the UV properties?
+2) How much do different ages affect the UV properties? (Plan: generate 1000 mock galaxies at redshift 0 with the same mass; see the relation between age and UV properties).
 
 3) Does the gas ionization parameter matter at all for Quiescent galaxies? Is it okay how I am setting it now?
 
