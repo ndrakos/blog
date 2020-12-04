@@ -82,7 +82,7 @@ The FSPS parameter is  <code>gas_logu</code>.
 
 ### Dust Attenuation
 
-I have updated this to include the galaxy shapes.
+I have updated this to include the galaxy shapes (see previous implementation <a href="https://ndrakos.github.io/blog/mocks/SEDs_from_Mean_Relations/">here</a>).
 
 The dust attenuation can be calculated from the $$\psi$$--$$Z$$--$$\hat{\tau}_{V}$$. To do this, Williams et al. follows <a href="https://ui.adsabs.harvard.edu/abs/1999A%26A...350..381D/abstract">Devriendt et al 1999</a>.
 
@@ -96,7 +96,7 @@ $$N_H = 6.8 \times 10^{21} \dfrac{M_{\rm gas}}{M_* + M_{\rm gas}}$$
 
 To calculate $$M_{\rm gas}$$ you can use $$M_{\rm gas}=\Sigma_{\rm gas} \pi r^2$$, and then relate $$\Sigma_{\rm gas}$$ to $$\Sigma_{\rm \psi} = \psi/(\pi r^2)$$ using the Kennicutt-Shmidt relation:
 
-$$\dfrac{\Sigma_{SFR}}{M_\sol {\rm yr}^{-1} {\rm kpc}^{-2}} = 2.5e-4 \left(\dfrac{\Sigma_{gas}}{M_\sol  {\rm pc}^{-2}}\right)^{1.4}$$
+$$\dfrac{\Sigma_{SFR}}{M_\odot {\rm yr}^{-1} {\rm kpc}^{-2}} = 2.5e-4 \left(\dfrac{\Sigma_{gas}}{M_\odot  {\rm pc}^{-2}}\right)^{1.4}$$
 
 You can then convert this face-on attenuation to the average galaxy dust attenuation averaged over inclination angles (equation 21 in Williams). For now I am just using this averaged attenuation parameter.
 
