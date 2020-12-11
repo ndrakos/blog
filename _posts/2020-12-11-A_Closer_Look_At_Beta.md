@@ -10,9 +10,9 @@ In this post I take a closer look at the spectra to double check my  $$\beta$$ c
 
 ## Sample
 
-I am using catalog and beta calculation from <a href="https://ndrakos.github.io/blog/mocks/SED_Method_Updates/">here</a>.
+I am using the catalog and $$\beta$$ calculation from <a href="https://ndrakos.github.io/blog/mocks/SED_Method_Updates/">here</a>.
 
-I am taking all galaxies with redshifts $$z<0.05$$---this results in 16 galaxies.
+I am taking all galaxies with redshifts $$z<0.05$$. There are 16 galaxies in this redshift range for this catalog.
 
 ## Results
 
@@ -29,4 +29,4 @@ Here are the spectra, $$f_{\lambda}$$ (not normalized properly, but that doesn't
 
 I can't see any issues here... the $$\beta$$ values look like they agree with the spectra.
 
-One thing I should be careful of is the effect of mass completeness... There are no galaxies below masses of $$\sim 10^8$$ in this catalog. That means I am missing the fainter objects, which should have steeper slopes (lower $$\beta$$ values).s
+One thing I should be careful of is the effect of mass completeness. There are no galaxies below masses of $$\sim 10^8$$ in this catalog. That means I am missing the fainter objects, which should have steeper slopes (lower $$\beta$$ values).
