@@ -147,3 +147,5 @@ PLOT
 3) Does the gas ionization parameter matter at all for Quiescent galaxies? Is it okay how I am setting it now?
 
 4) Do my dust attenuation values make sense? How can I check this?
+
+5) Are my beta values calculated correctly? Check spectra.
