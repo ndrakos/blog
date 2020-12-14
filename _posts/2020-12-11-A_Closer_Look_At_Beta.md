@@ -10,9 +10,9 @@ In this post I take a closer look at the spectra to double check my  $$\beta$$ c
 
 ## Sample
 
-I am using the catalog and $$\beta$$ calculation from <a href="https://ndrakos.github.io/blog/mocks/SED_Method_Updates/">here</a>.
+I am using the catalog from <a href=https://ndrakos.github.io/blog/mocks/SED_Methods_Part_II/>here</a>and $$\beta$$ calculation from <a href="https://ndrakos.github.io/blog/mocks/SED_Method_Updates/">here</a>.
 
-I am taking all galaxies with redshifts $$z<0.05$$. There are 16 galaxies in this redshift range for this catalog.
+I am taking all galaxies with redshifts $$z<0.06$$. There are 25 galaxies in this redshift range for this catalog.
 
 ## Results
 
