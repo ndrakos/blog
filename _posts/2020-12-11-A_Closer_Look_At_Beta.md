@@ -27,6 +27,8 @@ Here are the spectra, $$f_{\lambda}$$ (not normalized properly, but that doesn't
 
 ## Conclusions
 
-I can't see any issues here... the $$\beta$$ values look like they agree with the spectra.
+I can't see any issues with the $$\beta$$ assignment... the values look like they agree with the spectra.
+
+I am going to look closer at the very bright orange point, as it seems unrealistic. Maybe the SFR is not assigned correctly? Or the scatter was too far off the relation, and I need to change the scatter relation?
 
 One thing I should be careful of is the effect of mass completeness. There are no galaxies below masses of $$\sim 10^8$$ in this catalog. That means I am missing the fainter objects, which should have steeper slopes (lower $$\beta$$ values).
