@@ -131,11 +131,15 @@ Here are these results with the updated SED catalog.
 
 ### UV Properties
 
-PLOT
+<img src="{{ site.baseurl }}/assets/plots/20201204_MUV.png">
+
+The turnover on the right end of the bottom plot might be partially because I am missing faint low mass galaxies (since this looks a bit better on the "analytic" catalog, in which I generated masses from the SMFs, without using the simulations). However, there is still clearly problems here.
 
 ### Colour Properties
 
-PLOT
+<img src="{{ site.baseurl }}/assets/plots/20201204_UVJ.png">
+
+This again doesn't look right again... As shown earlier, this is sensitive to the age assignments, so my Quiescent galaxies are probably too young.
 
 
 ## Things to check
