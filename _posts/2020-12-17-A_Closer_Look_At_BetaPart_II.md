@@ -21,13 +21,9 @@ From the previous post, it indicates that the star formation rate is too high; h
 The things I want to check are:
 
 1) Am I calculating $$M_{UV}$$ correctly?
-
 2) Am I normalizing the spectra correctly?
-
 3) Is my SFR--mass relationship correct?
-
 4) Am I implementing the correct SFR into the fsps code?
-
 
 
 ## 1) M_{UV}
