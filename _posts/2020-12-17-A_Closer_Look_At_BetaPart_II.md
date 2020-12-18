@@ -5,7 +5,7 @@ date:   2020-12-17
 categories: mocks
 ---
 
-This is a continuation of the previous post <a href=>https://ndrakos.github.io/blog/mocks/A_Closer_Look_At_Beta/</a>.
+This is a continuation of the <a href="https://ndrakos.github.io/blog/mocks/A_Closer_Look_At_Beta/">previous post</a>.
 
 
 ## Test Point
@@ -32,7 +32,7 @@ The things I want to check are:
 
 ## 1) M_{UV}
 
-I am calculating $$M_{UV}$$ by taking the average $$f_{\nu} in the range $$\lambda=1450-1500$$ Angstroms.
+I am calculating $$M_{UV}$$ by taking the average $$f_{\nu}$$ in the range $$\lambda=1450-1500$$ Angstroms.
 
 There are numerous places in that calculation I could have made an error with e.g. unit conversions. However, I realized fsps contains an idealized filter at 1500 (<code>i1500</code>) that should calculate basically the same thing. I tested this, to make sure I am calculating the magnitude correctly, and it gave the same answer as my code.
 
@@ -59,7 +59,7 @@ it seems that my relationship looks correct.
 
 ## 4) SFR assignment in FSPS
 
-The SFR not explicitly set in FSPS, but I use it (along with the age of the stellar population) to calculate the e-folding time, as described </a href="https://ndrakos.github.io/blog/mocks/SED_Methods_Part_II/">here</a>.
+The SFR not explicitly set in FSPS, but I use it (along with the age of the stellar population) to calculate the e-folding time, as described <a href="https://ndrakos.github.io/blog/mocks/SED_Methods_Part_II/">here</a>.
 
 I went through the calculation, and could not find any problems.
 
