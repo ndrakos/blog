@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "A Closer Look At Beta Part III"
-date:   2020-01-06
+date:   2021-01-06
 categories: mocks
 ---
 
