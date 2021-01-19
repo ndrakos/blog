@@ -16,7 +16,6 @@ Here is the HMF:
 
 <img src="{{ site.baseurl }}/assets/plots/20210119_HMF.png">
 
-
 For comparison, see the first plot in <a href="https://ndrakos.github.io/blog/mocks/HMF_Lightcone/">this post</a>, in which I plot the HMF from the 512 simulation... In the 1024 simulations, the HMFs look complete down to $$10^{9.5}$$ solar masses, where the 512 simulations were only complete to $$10^{10.5}$$ solar masses.
 
 ## Next Steps
