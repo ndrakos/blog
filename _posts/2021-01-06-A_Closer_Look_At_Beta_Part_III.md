@@ -17,7 +17,7 @@ $$\psi = \dfrac{M}{x} \dfrac{a}{\tau^2 - (\tau^2 + a \tau) e^{-a/\tau}} e^{-a/\t
 
 where $$M$$ is the mass of the galaxy, and $$x$$ is the surviving stellar mass fraction.
 
-This means the sample galaxy should have an e-folding time of $$0.004$$ Gyr. However, since I am imposing a minimum e-folding time of $$\tau_{\rm min} = 0.1$$ Gyr, this actually means I am implementing a SFR of $$\log10(\psi)=1.87$$, which explains why it has such a high magnitude.
+This means the sample galaxy should have an e-folding time of $$0.004$$ Gyr. However, since I am imposing a minimum e-folding time of $$\tau_{\rm min} = 0.1$$ Gyr, this actually means I am implementing a SFR of $$\log_{10}(\psi)=1.87$$, which explains why it has such a high magnitude.
 
 
 ## The Solution?
