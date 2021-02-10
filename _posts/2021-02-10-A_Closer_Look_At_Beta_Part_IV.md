@@ -10,9 +10,9 @@ This is a continuation of this <a href="https://ndrakos.github.io/blog/mocks/A_C
 
 ## Previous $$\beta-M_{\rm UV}$$
 
-We have been having issues reproducing the expected $$\beta--M_{\rm UV}$$ trends. I fixed a problem where some galaxies were accidentally being assigned really high SFRs, but it didn't change the  $$\beta--M_{\rm UV}$$ problem.
+We have been having issues reproducing the expected $$\beta$$--$$M_{\rm UV}$$ trends. I fixed a problem where some galaxies were accidentally being assigned really high SFRs, but it didn't change the  $$\beta-$$-$$M_{\rm UV}$$ problem.
 
-As a reminder, here is a plot shown the issue (note that this plot, and all the following in this post are only for star-forming galaxies):
+As a reminder, here is a plot that shows the issue (note that this plot, and all the following in this post are only for star-forming galaxies):
 
 <img src="{{ site.baseurl }}/assets/plots/20200929_MUV.png">
 
@@ -25,9 +25,9 @@ Since the age distributions I was using to assign galaxy ages weren't well motiv
 
 Galaxy ages were selected uniformly between $$10^6$$ years and the age of the universe.
 
-Once an SED was assigned, I chose two random numbers between 0 and 1, and then accepted/rejected the galaxy properties based on the PDF of (1) a gaussian centred at the expected mass-MUV and (2) a gaussian centred at the expected MUV-beta relation (with the standard deviations chosen to be consistent with the expected relations.) Ideally, this would reproduce the expected trends, but since the UV properties are non-linear and depend on a combination of many parameters, the UV properties are not uniformly distributed, and therefore we are not guaranteed to produce the target distributions.
+Once an SED was assigned, I chose two random numbers between 0 and 1, and then accepted/rejected the galaxy properties based on the PDF of (1) a gaussian centred at the expected mass-$$M_{\rm UV}$$ and (2) a gaussian centred at the expected $$M_{\rm UV}$$-$$\beta$$ relation (with the standard deviations chosen to be consistent with the expected relations.) Ideally, this would reproduce the expected trends, but since the UV properties are non-linear and depend on a combination of many parameters, the UV properties are not uniformly distributed, and therefore we are not guaranteed to produce the target distributions.
 
-The resulting relations are shown in this plot:
+The resulting relations from this method are shown in this plot:
 
 <img src="{{ site.baseurl }}/assets/plots/20210210_MUV.png">
 
@@ -47,10 +47,10 @@ It is also interesting to look at the resulting age distributions:
 
 ## Dust
 
-Overall, $$beta$$ should mainly depend on age, metallicity, and dust. Brighter, more massive galaxies are older, have higher metallicities and more dust and are therefore redder (shallower slopes).
+Overall, $$\beta$$ should mainly depend on age, metallicity, and dust. Brighter, more massive galaxies are older, have higher metallicities and more dust and are therefore redder (shallower slopes).
 
 To see the affect of dust, I set the dust parameter to zero, and otherwise kept the same method here is the resulting plot:
 
 <img src="{{ site.baseurl }}/assets/plots/20210210_MUV_nodust.png">
 
-Clearly this is a lot worse, with the galaxies being too bright with steeper UV slopes. Interestingly, the upturn in the relation is not as pronounced though, so maybe this is not solely a resolution issue. 
+Clearly this is a lot worse, with the galaxies being too bright with steeper UV slopes. I need to figure out how to compare my results to observations of dust properties in order to see if my dust parameters are reasonable. Interestingly, the upturn in the relation is not as pronounced though, so maybe this is not solely a resolution issue.
