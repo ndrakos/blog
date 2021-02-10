@@ -8,9 +8,9 @@ categories: mocks
 This is a continuation of this <a href="https://ndrakos.github.io/blog/mocks/A_Closer_Look_At_Beta_Part_III/">post</a>.
 
 
-## Previous $$\beta-M_{\rm UV}$$
+## Previous $$\beta-M_{\rm UV}$$ Relation
 
-We have been having issues reproducing the expected $$\beta$$--$$M_{\rm UV}$$ trends. I fixed a problem where some galaxies were accidentally being assigned really high SFRs, but it didn't change the  $$\beta-$$-$$M_{\rm UV}$$ problem.
+We have been having issues reproducing the expected $$\beta$$--$$M_{\rm UV}$$ trends. I fixed a problem where some galaxies were accidentally being assigned really high SFRs, but it didn't change the  $$\beta$$--$$M_{\rm UV}$$ problem.
 
 As a reminder, here is a plot that shows the issue (note that this plot, and all the following in this post are only for star-forming galaxies):
 
@@ -19,13 +19,13 @@ As a reminder, here is a plot that shows the issue (note that this plot, and all
 The dotted lines are the expected trends from W18, and the solid lines are my mock galaxies.
 
 
-## Reject/accept method
+## Reject/Accept Method
 
 Since the age distributions I was using to assign galaxy ages weren't well motivated, I changed the SED assignment as follows:
 
 Galaxy ages were selected uniformly between $$10^6$$ years and the age of the universe.
 
-Once an SED was assigned, I chose two random numbers between 0 and 1, and then accepted/rejected the galaxy properties based on the PDF of (1) a gaussian centred at the expected mass-$$M_{\rm UV}$$ and (2) a gaussian centred at the expected $$M_{\rm UV}$$-$$\beta$$ relation (with the standard deviations chosen to be consistent with the expected relations.) Ideally, this would reproduce the expected trends, but since the UV properties are non-linear and depend on a combination of many parameters, the UV properties are not uniformly distributed, and therefore we are not guaranteed to produce the target distributions.
+Once an SED was assigned, I chose two random numbers between 0 and 1, and then accepted/rejected the galaxy properties based on the PDF of (1) a gaussian centred at the expected mass--$$M_{\rm UV}$$ and (2) a gaussian centred at the expected $$M_{\rm UV}$$--$$\beta$$ relation (with the standard deviations chosen to be consistent with the expected relations.) Ideally, this would reproduce the expected trends, but since the UV properties are non-linear and depend on a combination of many parameters, the UV properties are not uniformly distributed, and therefore we are not guaranteed to produce the target distributions.
 
 The resulting relations from this method are shown in this plot:
 
@@ -45,7 +45,7 @@ It is also interesting to look at the resulting age distributions:
 
 
 
-## Dust
+## Effect of Dust
 
 Overall, $$\beta$$ should mainly depend on age, metallicity, and dust. Brighter, more massive galaxies are older, have higher metallicities and more dust and are therefore redder (shallower slopes).
 
