@@ -5,7 +5,7 @@ date:   2021-02-15
 categories: mocks
 ---
 
-As discussed previously, I decided to change from AHF to Rockstar (because it was going to take to long to get the merger trees for the 2048^3 simulations). Here I have updated the lightcone code to read in the outputs from consistent trees for the $$512^3$$ simulations.
+As discussed previously, I decided to change from AHF to Rockstar (because it was going to take to long to get the merger trees for the $$2048^3$$ simulations). Here I have updated the lightcone code to read in the outputs from consistent trees for the $$512^3$$ simulations.
 
 ## Rockstar and Consistent Trees
 
@@ -15,7 +15,7 @@ These result in a bunch of hlists files that contain all the halos as well as so
 
 I already checked that HMF of Rockstar looked right (for the 1024 simulations, <a href="https://ndrakos.github.io/blog/cosmo_sims/Rockstar_Part_II/">here</a>). I also want to look at the Halo Vpeak Function (HVF).
 
-Here is the HVF for the 512 simulations. The dotted lines were the fits I had to the AHF catalogs (<a href=""></a>). This is something I may update later, but if I'm leaving off the scatter model we don't actually need the HVF.
+Here is the HVF for the 512 simulations. The dotted lines were the fits I had to the AHF catalogs (e.g. <a href="https://ndrakos.github.io/blog/mocks/Fit_HVF/">this post</a>). This is something I may update later, but if I'm leaving off the scatter model we don't actually need the HVF.
 
 <img src="{{ site.baseurl }}/assets/plots/20210215_HVF.png">
 
@@ -33,7 +33,7 @@ I also still need to check if the HMF looks okay once I put it in lightcone:
 
 ## Galaxy Sizes
 
-I also want to double check that the galaxy sizes are still okay. The galaxy sizes are assigned as specified <a href="https://ndrakos.github.io/blog/mocks/Galaxy_Sizes_Part_II/>here</a>. As detailed in that post, I am now using a different virial radius definition, and need to correct for this when calculating $$R_{\rm eff}$$
+I also want to double check that the galaxy sizes are still okay. The galaxy sizes are assigned as specified <a href="https://ndrakos.github.io/blog/mocks/Galaxy_Sizes_Part_II/">here</a>. As detailed in that post, I am now using a different virial radius definition, and need to correct for this when calculating $$R_{\rm eff}$$
 
 <img src="{{ site.baseurl }}/assets/plots/20210215_Reff.png">
 
