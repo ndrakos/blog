@@ -5,6 +5,16 @@ date:   2021-02-03
 categories: mocks
 ---
 
+
+
+1. E(B-V)... balmer decrement
+2. look into reddy 2018...https://ui.adsabs.harvard.edu/abs/2018ApJ...853...56R/abstract
+3. don't include dust , see if big influence on beta-MUV
+
+
+
+
+
 One think I want to double check is whether the dust properties I have assigned to the mock galaxies are reasonable; this is especially important as this should influence the UV slope, $$\beta$$ (along with age and metallicity).
 
 Specifically, I am assigning the $$V$$ band optical depth, $$\tau_{V}$$
