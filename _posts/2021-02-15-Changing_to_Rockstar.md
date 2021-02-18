@@ -38,6 +38,10 @@ I also want to double check that the galaxy sizes are still okay. The galaxy siz
 <img src="{{ site.baseurl }}/assets/plots/20210215_Reff.png">
 
 
+The sizes here are actually lower than I had before (I accidently wasn't implementing the virial radius definition correction).
+
+I'm actually not sure whether or not this agrees with W18 though. I need to go through and be careful whether $$R_{\rm eff}$$ is the major axis, or circularized quantity, and whether it is projected or not. Then I need to make sure I am using the correct quantity when calculating the dust parameter. It is possible that my galaxies were too large, resulting in unrealistic dust parameters.
+
 ## Check for Double Counting
 
 Another thing I implemented when changing the code to read in these files is a check to make sure a halo doesn't cross the lightcone twice. I'm not sure this is actually possible; physically, it is not possible because it would require the halo travelled faster than the speed of light. However, since I am interpolating the halo positions between snapshots (and also extrapolating when a halo doesn't exist in the previous snapshot), it may be possible that it calculates that the halo crossed the lightcone when it didn't. Also, if the merger trees aren't perfect, it might incorrectly connect two halos.
