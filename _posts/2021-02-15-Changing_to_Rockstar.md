@@ -38,7 +38,7 @@ I also want to double check that the galaxy sizes are still okay. The galaxy siz
 <img src="{{ site.baseurl }}/assets/plots/20210215_Reff.png">
 
 
-The sizes here are actually lower than I had before (I accidently wasn't implementing the virial radius definition correction).
+The sizes here are actually lower than I had before (I accidentally wasn't implementing the virial radius definition correction).
 
 I'm actually not sure whether or not this agrees with W18 though. I need to go through and be careful whether $$R_{\rm eff}$$ is the major axis, or circularized quantity, and whether it is projected or not. Then I need to make sure I am using the correct quantity when calculating the dust parameter. It is possible that my galaxies were too large, resulting in unrealistic dust parameters.
 

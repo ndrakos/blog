@@ -5,7 +5,7 @@ date:   2021-02-17
 categories: mocks
 ---
 
-See this post for <a href=https://ndrakos.github.io/blog/mocks/A_Closer_Look_At_Beta/>Part I</a> and this post for <a href="https://ndrakos.github.io/blog/mocks/A_Closer_Look_At_Beta_Part_IV/">Part IV</a>.
+See this post for <a href="https://ndrakos.github.io/blog/mocks/A_Closer_Look_At_Beta/">Part I</a> and this post for <a href="https://ndrakos.github.io/blog/mocks/A_Closer_Look_At_Beta_Part_IV/">Part IV</a>.
 
 
 Here I am looking closer at the z=4 galaxies. To do this, I am taking all the galaxies between 3.99 and 4.01. This results in 1260 galaxies (1254 that are star-forming and 6 that are quiescent) for the 512 simulation.
