@@ -75,7 +75,12 @@ The galaxies are classify as star-forming or quiescent using UVJ criteria for ga
 
 The sizes are listed in Table 5 of Shibuya et. al. The rough redshifts are in the ID, and depend on colour criteria. The IDs correspond to <a href="https://ui.adsabs.harvard.edu/abs/2016ApJ...821..123H/abstract"> Harikane et al. 2016</a>.
 
-Masses from mass---$$M_{\rm UV}$$ relation in Equations 58-60 in Harikane et al. The $$M_{\rm UV}$$ values are also in Table 5 of Shibuya et al.
+Masses from the relation given in Equation 1 of Shibuya et al.
+
+$$\log_{10}{M} = -4.5 - 0.68 M_{\rm UV}$$
+
+
+The $$m_{\rm UV}$$ values are also in Table 5 of Shibuya et al. They convert to absolute magnitudes assuming typical redshifts of  3.8, 4.9, 5.9, 6.8, 7.9, and 10.4. I am just going to use the redshifts specified as 4,5,6,7,8,10.
 
 In Shibuya, they argue that you can assume these are all star-forming since the quiescent fraction should be low, so I will do the same.
 
