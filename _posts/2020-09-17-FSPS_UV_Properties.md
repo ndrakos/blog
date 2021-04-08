@@ -32,7 +32,7 @@ However, the following parameters will be explored:
 <code>sf_start</code> -- start time of SFH, in Gyr. A reasonable range for this is between 30 Myr and <code>tage</code>.
 
 <code>tau</code> -- this is the e-folding time in Gyr for star formation; the delayed tau model defined the star formation history as $$\psi(t) \propto t \exp (-t/\tau)$$.
-FSPS allows values for  <code>tau</code> to be in the range [0.1,1e2]. Williams et al. assurts that the maximum allowed should be  $$\log_{10} \tau_{\rm max} = 10^{1.11 \log(sf_{start})-2.02}$$ (in units of years), to ensure reasonable sSFRs.
+FSPS allows values for  <code>tau</code> to be in the range [0.1,1e2]. Williams et al. asserts that the maximum allowed should be  $$\log_{10} \tau_{\rm max} = 10^{1.11 \log(sf_{start})-2.02}$$ (in units of years), to ensure reasonable sSFRs.
 
 
 <code>dust2</code> -- dust attenuation, in units of $$\log_{10} (yrs)$$. Williams uses a range range of [0,4] for $$\hat{\tau}_V$$; I am going to use this for now, but I need to check whether these dust parameters are defined the same.
@@ -85,7 +85,7 @@ sps.params['gas_logz']=mygas_logz
 
 
 
-FSPS normalizes the star formation history by one stellar mass. The final galaxy mass is stored in the variable <code>sps.stellar_mass</code>. Therefore I scaled the SED luminosity by $$10^8/$$<code>sps.stellar_mass</code>. Note that I am currently including the mass from stellar remnants in  <code>sps.stellar_mass</code>. I can turn this off with a flag. I need to think about how the stellar mass functions I used for abundance matching are defined, and whether this should be included.
+FSPS normalizes the star formation history by one stellar mass. The final galaxy mass is stored in the variable <code>sps.stellar_mass</code>. Therefore I scaled the SED luminosity by $$M_{\rm gal}/$$<code>sps.stellar_mass</code>. Note that I am currently including the mass from stellar remnants in  <code>sps.stellar_mass</code>. I can turn this off with a flag. I need to think about how the stellar mass functions I used for abundance matching are defined, and whether this should be included.
 
 Additionally, the output of FSPS is in units of $$L_\odot/Hz$$. If we consider the object to be 10 parsecs away, we can divide this by $$4 \pi (10 {\rm pc})^2 $$ to get a flux density, corresponding to the absolute magnitude.
 
