@@ -20,7 +20,7 @@ Go to the folder with the config file (mine was rockstar_param.cfg). Make sure <
 
 Then, run
 
-<code>perl /path/to/rockstar/scripts/gen_merger_cfg.pl <rockstar.cfg> </code>
+<code>perl /path/to/rockstar/scripts/gen_merger_cfg.pl rockstar.cfg </code>
 
 and follow the instructions.
 
