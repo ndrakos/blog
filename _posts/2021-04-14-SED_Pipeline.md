@@ -13,7 +13,7 @@ Note that this post is only concerning star-forming galaxies (SFGs). I will revi
 
 As outlined in the previous post, this method involves creating a "base" catalog that samples parameter space, and has all 7 assigned parameters (mass ($$M$$), redshift ($$z$$), metallicity ($$Z$$), gas ionization ($$U_S$$), age ($$a$$), star-formation time $$\tau$$ and dust attenuation ($$\bar \tau_v $$ ), as well as the resulting parameters (SFR ($$\psi$$), $$M_{UV}$$ and $$\beta$$).
 
-For the galaxies in the galaxy catalog (each with a fixed mass and redshift) I propose 5 parameters from known scaling relations ($$Z$$, $$U_S$$, $$\psi$$, $$M_{UV}$$ and $$\beta$$), and find closest 10 points in parameter space in base catalog and use a weighted average to assign the 5 FSPS parameters ($$Z$, $$$U_S$$, $$a$$, $$\tau$$ and $$\bar \tau_v $$). Then, FSPS is used to calculate the spectra.
+For the galaxies in the galaxy catalog (each with a fixed mass and redshift) I propose 5 parameters from known scaling relations ($$Z$$, $$U_S$$, $$\psi$$, $$M_{UV}$$ and $$\beta$$), and find closest 10 points in parameter space in base catalog and use a weighted average to assign the 5 FSPS parameters ($$Z$$, $$U_S$$, $$a$$, $$\tau$$ and $$\bar \tau_v $$). Then, FSPS is used to calculate the spectra.
 
 Here is a rough schematic of the SED pipeline:
 
@@ -41,7 +41,7 @@ This matches the desired trends pretty well, except the UV properties at low red
 
 # Better Metric
 
-I re-ran the code with scaled parameters used to calculate the distances: $$z/12$$, $$\log_{10} (M/M_\odot)/12$$, $$\log_{10} (\psi/(M_\odot/ {\rm yr}))/4$$ $$\log_{10}(Z/Z_\odot)/2$$ $$\log_{10} U_S/4$$ $$M_{\rm UV}/30$$, $$\beta/3$$. Here are how the plots look now:
+I re-ran the code with scaled parameters used to calculate the distances: $$z/12$$, $$\log_{10} (M/M_\odot)/12$$, $$\log_{10} (\psi/(M_\odot/ {\rm yr}))/4$$, $$\log_{10}(Z/Z_\odot)/2$$, $$\log_{10} U_S/4$$, $$M_{\rm UV}/30$$, and $$\beta/3$$. Here are how the plots look now:
 
 
 <img src="{{ site.baseurl }}/assets/plots/20210414_MUV.png">
@@ -58,7 +58,7 @@ These look about the same as before, so this didn't really make a big difference
 
 # Timing Notes
 
-There should be about 100x more objects in 2048^3 catalog (see the previous post). There are 3 steps to take in to consideration when trying to determine how fast this will be on the larger simulation:
+There should be about 100x more objects in $$2048^3$$ catalog (see the previous post). There are 3 steps to take in to consideration when trying to determine how fast this will be on the larger simulation:
 
 1. Generating the base catalog
 
@@ -85,4 +85,4 @@ I need to find out if steps 2 and 3b are reasonable for a base catalog of size $
 
 Another thing to decide is how to sample parameter space. I want to make sure that the relevant parts of parameter space are sampled properly, but also don't want to sample regions of parameter space that will not be populated.
 
-My current plan is to sample uniformly in redshift and $$\log_{10} (M/\odot)$$ over the mass and redshift range of the simulations. I will then assign $$\psi$$, $$Z$$ and $$U_S$$ from scaling relations with scatter, to get reasonable values of metallicity and gas ionization. I will then sample age, tau and dust within reasonable ranges (see Williams et. al 2018 for reasonable distributions/ranges to use for these).
+My current plan is to sample uniformly in redshift and $$\log_{10} (M/M_\odot)$$ over the mass and redshift range of the simulations. I will then assign $$\psi$$, $$Z$$ and $$U_S$$ from scaling relations with scatter, to get reasonable values of metallicity and gas ionization. I will then sample age, tau and dust within reasonable ranges (see Williams et. al 2018 for reasonable distributions/ranges to use for these).
