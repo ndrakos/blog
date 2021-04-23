@@ -68,20 +68,21 @@ Therefore, each node has a copy of
 2. the tree object. This is created from 7 fields from parent catalog, and is roughly ~20GB (note that the data in here overlaps with that in the parent catalog)
 3. part of the galaxy catalog (except for rank 0 which stores the whole galaxy catalog). For the $$2048^3$$ simulation, this will be ~50 GB (if I load in all the fields, including e.g. halo properties and positions). For the $$512^3$$ simulations it is about ~0.5 GB. It is worth it to note that the core doesn't need all this information at once, unlike the tree data... I can load in a few galaxies at a time and then assign properties.
 
-With this work flow, I would not want more than 2 tasks per node to avoid memory issues... since i am limited to 16 notes, this means ~32 processes (which is a lot slower than the 400 i was planning on using).
+With this work flow, I would not want more than 2 tasks per node to avoid memory issues. Since i am limited to 16 nodes, this means ~32 processes (which is a lot slower than the 400 i was planning on using).
 
 ## Possible solutions
 
 I am going to look into two things.
 
-First, I am going to restructure the code so that it uses less memory.
+First, I am running with a smaller parent catalog ($$10^6$$) to test if I get an improvement in the SED assignments compared to the 16000 parent catalog I used before.
 
-Secondly, while I am doing that, I am running with a smaller parent catalog ($$10^6$$) to test if I get an improvement in the SED assignments compared to the 16000 parent catalog I used before.
+Secondly, I am going to restructure the code so that it uses less memory.
+
 
 
 # Results with smaller parent catalog
 
-Just took first $$10^6$$ items in parent catalog and tried on $$512^3$$ catalog... this does not have any memory issues, took about 2 hours to run with current code...
+I took the first $$10^6$$ items in parent catalog and tried reassigned SEDs on the $$512^3$$ catalog. With the $$10^6$$ catalog, I did not have any memory issues, and it took about 2 hours on 400 cores.
 
 <img src="{{ site.baseurl }}/assets/plots/20210422_MUV.png">
 
@@ -90,32 +91,30 @@ Just took first $$10^6$$ items in parent catalog and tried on $$512^3$$ catalog.
 <img src="{{ site.baseurl }}/assets/plots/20210422_SFR_vs_M.png">
 
 
-too faint, metallicity too high, SFR too high...
+This did not do any better than the 16000 parent catalog in the previous post. The galaxies are too faint, the metallicity too high, and the SFRs are too high.
 
-Doesn't actually look any better... could be because parent catalog isn't sampling paramter space right... need more points, or smarter sampling... am currently trying to run with 10^8 parent catalog to see if there is improvement, but also looked at distribution in parameter space...
+This could be because parent catalog isn't sampling parameter space right. I could need more points, or smarter sampling.
 
-Consider only low redshift ...
+To see the distribution of the different parameters, I made a triangle plot, only considering galaxies below redshift $0.3$ (in both the parent catalog and the galaxy catalog):
 
 <img src="{{ site.baseurl }}/assets/plots/20210422_triangle_plot.png">
 
 
-
-
 ## Ages
 
-Age distribution (age is in Gyr in the plot) looks strange... currently
+Age distribution (age is in Gyr in the plot) looks strange.
 
-Parent catalog: sampling uniformly in log(age/yr) between $$10^6$$ years and  $$T_{\rm univ} - 10^6$$ years, where  $$T_{\rm univ}$$ is the age of the universe at the specified redshift.
+As described above, the parent catalog is created from sampling uniformly in log(age/yr) between $$10^6$$ years and  $$T_{\rm univ} - 10^6$$ years, where  $$T_{\rm univ}$$ is the age of the universe at the specified redshift.
 
 Once the FSPS parameters are assigned from the nearest neighbour in the parent catalog, I ensure that the resulting age is still allowed, by forcing the age to be at the endpoint if it is outside the allowed range.
 
-Updates:
+Possible updates:
 1. sample uniformly from age in Gyr instead
 2. only consider nearest neighbours that have permitted ages.
 
 ## Masses
 
-One problem is that though I am finding the nearest neighbours, I am then fixing the mass to be... ... you can see from this plot that this is... pretty sure this is the reason that metallicities are so high...
+Another problem is that though I am finding the nearest neighbours, I am then fixing the mass to be the original mass. You can see from this plot that for the $$512^3$$ simulations, the minimum mass is much higher than the range in the parent catalog. I pretty sure this is the reason that metallicities are so high...
 
 # New workflow
 
