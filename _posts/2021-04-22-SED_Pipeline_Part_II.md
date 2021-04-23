@@ -59,36 +59,24 @@ I am running this on lux. Every node as 192 GB of memory and 40 cores.
 ## Current Code
 
 **rank 0:**
-
-1) loads the parent catalog
-
-2) sends a copy of the parent catalog to all the processors (this has to be split up since mpi4py has a maximum size it can send at once)
-
-3) reads in the galaxy catalog (e.g. masses, redshifts for each galaxy)
-
-4) splits the galaxy catalog among processors
+1. loads the parent catalog
+2. sends a copy of the parent catalog to all the processors (this has to be split up since mpi4py has a maximum size it can send at once)
+3. reads in the galaxy catalog (e.g. masses, redshifts for each galaxy)
+4. splits the galaxy catalog among processors
 
 **All processors:**
-
-1) make the k-d tree
-
-2) propose parameters for all galaxies assigned to it
-
-3) find nearest neighbours in tree
-
-4) uses weighted average in parent catalog to get FSPS params
-
-5) Calculate SED using FSPS parameters
+1. make the k-d tree
+2. propose parameters for all galaxies assigned to it
+3. find nearest neighbours in tree
+4. uses weighted average in parent catalog to get FSPS params
+5. Calculate SED using FSPS parameters
 
 
 
 Therefore, each node has a copy of
-
-1) the parent catalog $$10^8 \times 10$$) floats. ~20 GB
-
-2) the tree object. This is created from 7 fields from parent catalog, and is roughly ~20GB (note that the data in here overlaps with that in the parent catalog)
-
-3) part of the galaxy catalog (except for rank 0 which stores the whole galaxy catalog). For the $$2048^3$$ simulation, this will be ~50 GB (if I load in all the fields, including e.g. halo properties and positions). For the $$512^3$$ simulations it is about ~0.5 GB. It is worth it to note that the core doesn't need all this information at once, unlike the tree data... I can load in a few galaxies at a time and then assign properties.
+1.  the parent catalog $$10^8 \times 10$$) floats. ~20 GB
+2. the tree object. This is created from 7 fields from parent catalog, and is roughly ~20GB (note that the data in here overlaps with that in the parent catalog)
+3. part of the galaxy catalog (except for rank 0 which stores the whole galaxy catalog). For the $$2048^3$$ simulation, this will be ~50 GB (if I load in all the fields, including e.g. halo properties and positions). For the $$512^3$$ simulations it is about ~0.5 GB. It is worth it to note that the core doesn't need all this information at once, unlike the tree data... I can load in a few galaxies at a time and then assign properties.
 
 With this work flow, I would not want more than 2 tasks per node to avoid memory issues... since i am limited to 16 notes, this means ~32 processes (which is a lot slower than the 400 i was planning on using).
 
@@ -132,8 +120,8 @@ Parent catalog: sampling uniformly in log(age/yr) between $$10^6$$ years and  $$
 Once the FSPS parameters are assigned from the nearest neighbour in the parent catalog, I ensure that the resulting age is still allowed, by forcing the age to be at the endpoint if it is outside the allowed range.
 
 Updates:
-1) sample uniformly from age in Gyr instead
-2) only consider nearest neighbours that have permitted ages.
+1. sample uniformly from age in Gyr instead
+2. only consider nearest neighbours that have permitted ages.
 
 ## Masses
 
@@ -147,16 +135,12 @@ To save the amount of memory that is needed, I am going to restructure the code.
 ### Part 1: Make tree
 
 rank 0:
-
-1) Load parent catalog
-
-2) Sends copy to all processors
+1. Load parent catalog
+2. Sends copy to all processors
 
 All ranks:
-
-1) make tree
-
-2) delete parent catalog from local memory
+1. make tree
+2. delete parent catalog from local memory
 
 Memory: ~40 GB for 10^8 parent catalog
 
@@ -166,18 +150,13 @@ Timing: ~20 mins for 10^8 parent catalog
 ### Part 2: Find nearest neighbours
 
 **rank 0:**
-
-1) Read in galaxy catalog info (ONLY mass, redshift, SF)
-
-2) Divide among processors
+1. Read in galaxy catalog info (ONLY mass, redshift, SF)
+2. Divide among processors
 
 All ranks:
-
-1) Propose parameters
-
-2) Find 10 nearest neighbours + weights
-
-3) Delete tree from local memory
+1. Propose parameters
+2. Find 10 nearest neighbours + weights
+3. Delete tree from local memory
 
 Memory: ~40 GB for 10^8 parent catalog and 2048 sim
 
@@ -187,8 +166,8 @@ Timing: ~800 hrs/num_tasks for 2048 sim
 ### Part 3: Get FSPS parameters
 
 rank 0:
-1) Load parent catalog
-2) Sends copy to all processors
+1.  Load parent catalog
+2. Sends copy to all processors
 
 
 All ranks:
