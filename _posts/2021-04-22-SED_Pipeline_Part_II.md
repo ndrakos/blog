@@ -7,13 +7,13 @@ categories: mocks
 
 In <a href="https://ndrakos.github.io/blog/mocks/SED_Pipeline/">this post</a> I outlined the new method for assigning SEDs to the galaxies, and tested it using a small parent catalog (16000 points). I had issues with low redshift data, but it is likely because the parent catalog did not sample this part of parameter space very well. In this post I am outlining the new parent catalog.
 
-(Note, in the previous post I called the parent catalog the "parent catalog", but I decided "parent catalog" is clearer.)
+(Note, in the previous post I called the parent catalog the "base catalog", but I decided "parent catalog" is clearer.)
 
 # Updated Parent Catalog
 
-I made a parent catalog that has 10^8 points, sampled as follows:
+I made a parent catalog that has $$10^8$$ points, sampled as follows:
 
-1) Mass: sampled $$\log_{10}( M_{gal}/M_\odot )$$ uniformly between 5 and 12
+1) Mass: sampled $$\log_{10}( M_{\rm gal}/M_\odot )$$ uniformly between 5 and 12
 
 2) Redshift: sampled $$z$$ uniformly between 0 and 12
 
@@ -25,16 +25,16 @@ I made a parent catalog that has 10^8 points, sampled as follows:
 
 6) Dust: from a truncated normal distribution. Centred at 0 with standard deviation of 1, truncated between 0 and 4
 
-7) Age:  samples $$\log_{10}(age)$$ uniformly between $$10^6$$ years and the (age of universe-$$10^6$$) years
+7) Age:  samples $$\log_{10}({\rm age})$$ uniformly between $$10^6$$ years and the (age of universe-$$10^6$$) years
 
 8) Star-forming time: sampled $$\log_{10}(\tau/{\rm Gyr})$$ uniformly between -1 and 2 (range of allowed values in FSPS)
 
 
-Then given each of these, I calculated with FSPS
+Then given each of these, I calculated the following values with FSPS:
 
 9) SFR (note that this will NOT be consistent with the SFR above, used to give a reasonable range of metallicities)
 
-10) $$M_{\rm UV}
+10) $$M_{\rm UV}$$
 
 11) $$\beta$$
 
@@ -44,7 +44,7 @@ From the previous post, I was unsure how long it would take for (1) create tree 
 
 1) I found it took ~15 minutes to create a tree from the $$10^8$$ points in the parent catalog. This will not be a problem.
 
-2) Calculating the distance on the tree for each object in the galaxy catalog will scale with number of objects, but I was unsure exactly how long this would take for different sized parent catalogs. I did a little testing on my laptop with one core.
+2) Calculating the distance on the tree for each object in the galaxy catalog will scale with number of objects, but I was unsure exactly how long this would take for different sized parent catalogs. I did a little testing on my laptop with one core, using the 10 nearest neighbours.
 
 For the old parent catalog (with 16000 objects), I calculated it should be ~3 hours to find the nearest neighbours for the $$512^3$$ simulations, and ~300 hrs for $$2048^3$$ simulation. With the $$10^8$$ parent catalog, I found it should be roughly 8 hours for the $$512^3$$ simulation, and 800 hours for $$2048^3$$ simulation.
 
@@ -54,28 +54,40 @@ Therefore this shouldn't be limiting. If i can use 400 processors, it will take 
 
 One problem that arose with using this larger parent catalog is memory issues.
 
-I am running this on lux. Every node as 192 GB of memory and 40 cores. If i want to use all the cores, that means i can only store about 5 GB on each core.
+I am running this on lux. Every node as 192 GB of memory and 40 cores.
 
 ## Current Code
 
-rank 0:
+**rank 0:**
+
 1) loads the parent catalog
+
 2) sends a copy of the parent catalog to all the processors (this has to be split up since mpi4py has a maximum size it can send at once)
+
 3) reads in the galaxy catalog (e.g. masses, redshifts for each galaxy)
+
 4) splits the galaxy catalog among processors
 
-All processors:
+**All processors:**
+
 1) make the k-d tree
+
 2) propose parameters for all galaxies assigned to it
+
 3) find nearest neighbours in tree
+
 4) uses weighted average in parent catalog to get FSPS params
+
 5) Calculate SED using FSPS parameters
 
 
 
 Therefore, each node has a copy of
+
 1) the parent catalog $$10^8 \times 10$$) floats. ~20 GB
+
 2) the tree object. This is created from 7 fields from parent catalog, and is roughly ~20GB (note that the data in here overlaps with that in the parent catalog)
+
 3) part of the galaxy catalog (except for rank 0 which stores the whole galaxy catalog). For the $$2048^3$$ simulation, this will be ~50 GB (if I load in all the fields, including e.g. halo properties and positions). For the $$512^3$$ simulations it is about ~0.5 GB. It is worth it to note that the core doesn't need all this information at once, unlike the tree data... I can load in a few galaxies at a time and then assign properties.
 
 With this work flow, I would not want more than 2 tasks per node to avoid memory issues... since i am limited to 16 notes, this means ~32 processes (which is a lot slower than the 400 i was planning on using).
@@ -148,16 +160,22 @@ Timing: ~20 mins for 10^8 parent catalog
 
 ### Part 2: Find nearest neighbours
 
-rank 0:
+**rank 0:**
+
 1) Read in galaxy catalog info (ONLY mass, redshift, SF)
+
 2) Divide among processors
 
 All ranks:
+
 1) Propose parameters
+
 2) Find 10 nearest neighbours + weights
+
 3) Delete tree from local memory
 
 Memory: ~40 GB for 10^8 parent catalog and 2048 sim
+
 Timing: ~800 hrs/num_tasks for 2048 sim
 
 
@@ -219,7 +237,10 @@ Right now, every quiescent galaxy has a fixed mass and redshift.
 I need 5 more params to assign a spetra from FSPS: dust, gas, metallicity, age, tau.
 
 1) dust: right now I am neglecting dust as in Williams et al. 2018; i.e. I am setting it to zero
-2) gas: this can be neglected for quiescent galaxies. Right now, I am just setting it to a small value, since I don't think it should affect things much, but I should probably just turn off this module in FSPS.
+
+2) gas: this can be neglected for quiescent galaxies. Right now, I am just setting it to a small value, since I don't think it should affect things much, but I should probably
+just turn off this module in FSPS.
+
 3) SFR: Assign SFR from M-SFR relation (this is related to M, age and tau)
 
 I still need 2 parameters to constrain the spectra. Right now i am randomly sampling age and metallicity within a reasonable range, finding UV-VJ, and rejecting the age/metallicity if it is outside the UVJ box. I do this for a maximum of 10 iterations.
