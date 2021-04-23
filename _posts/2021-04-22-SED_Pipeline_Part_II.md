@@ -147,14 +147,19 @@ To save the amount of memory that is needed, I am going to restructure the code.
 ### Part 1: Make tree
 
 rank 0:
+
 1) Load parent catalog
+
 2) Sends copy to all processors
 
 All ranks:
+
 1) make tree
+
 2) delete parent catalog from local memory
 
 Memory: ~40 GB for 10^8 parent catalog
+
 Timing: ~20 mins for 10^8 parent catalog
 
 
@@ -192,26 +197,34 @@ All ranks:
 
 
 Memory: ~20 GB
+
 Timing: negligible
+
 Note: I think I will save the output here, so that Part 4 can be restarted from this point
 
 ### Part 4: Generate Spectra
 
 rank 0:
+
 1) Read in galaxy catalog info
+
 2) Assign new fields for magnitudes, SFR, spectra properties, ect.
+
 3) Divide among processors
 
 All ranks:
+
 1) Save FSPS parameters to galaxy catalog
+
 2) Calculate spectra for each galaxy
+
 3) Save catalog
 
 Memory: ~20 GB (but can split this into parts if needed)
+
 Timing: 10^4 hrs/num_tasks
+
 Note: Since this is the slowest part, and I only need to load in the data that I am calculating spectra for, it might be worth it to code this separately so I can run on 40 nodes per core.
-
-
 
 
 
