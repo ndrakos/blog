@@ -13,30 +13,20 @@ In <a href="https://ndrakos.github.io/blog/mocks/SED_Pipeline/">this post</a> I 
 
 I made a parent catalog that has $$10^8$$ points, sampled as follows:
 
-1) Mass: sampled $$\log_{10}( M_{\rm gal}/M_\odot )$$ uniformly between 5 and 12
-
-2) Redshift: sampled $$z$$ uniformly between 0 and 12
-
-3) SFR: from the mass-SFR relation
-
-4) Metallicity: from the fundamental-mass relation
-
-5) Gas Ionization: from the metallicity-$$U_S$$ relation
-
-6) Dust: from a truncated normal distribution. Centred at 0 with standard deviation of 1, truncated between 0 and 4
-
-7) Age:  samples $$\log_{10}({\rm age})$$ uniformly between $$10^6$$ years and the (age of universe-$$10^6$$) years
-
-8) Star-forming time: sampled $$\log_{10}(\tau/{\rm Gyr})$$ uniformly between -1 and 2 (range of allowed values in FSPS)
-
+1. Mass: sampled $$\log_{10}( M_{\rm gal}/M_\odot )$$ uniformly between 5 and 12
+2. Redshift: sampled $$z$$ uniformly between 0 and 12
+3. SFR: from the mass-SFR relation
+4. Metallicity: from the fundamental-mass relation
+5. Gas Ionization: from the metallicity-$$U_S$$ relation
+6. Dust: from a truncated normal distribution. Centred at 0 with standard deviation of 1, truncated between 0 and 4
+7. Age:  samples $$\log_{10}({\rm age})$$ uniformly between $$10^6$$ years and the (age of universe-$$10^6$$) years
+8. Star-forming time: sampled $$\log_{10}(\tau/{\rm Gyr})$$ uniformly between -1 and 2 (range of allowed values in FSPS)
 
 Then given each of these, I calculated the following values with FSPS:
 
-9) SFR (note that this will NOT be consistent with the SFR above, used to give a reasonable range of metallicities)
-
-10) $$M_{\rm UV}$$
-
-11) $$\beta$$
+9. SFR (note that this will NOT be consistent with the SFR above, used to give a reasonable range of metallicities)
+10. $$M_{\rm UV}$$
+11. $$\beta$$
 
 # Notes on Timing
 
