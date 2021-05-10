@@ -6,7 +6,7 @@ categories: mocks
 ---
 
 
-As described previously, I now have a working method to assign SEDs to the galaxies in the mock catalog that reproduces the $$\beta--M_{\rm UV}$$ relation, the $$M_{\rm UV}$$--mass relation, the $$SFR$$--mass relation, the fundamental metallicity relation and the metallicity--$$\log U_S$$ relation.
+As described previously, I now have a working method to assign SEDs to the galaxies in the mock catalog that reproduces the $$\beta$--$M_{\rm UV}$$ relation, the $$M_{\rm UV}$$--mass relation, the $$SFR$$--mass relation, the fundamental metallicity relation and the metallicity--$$\log U_S$$ relation.
 
 However, it is not working well for the quiescent galaxy assignment. Here is a summary of the current status.
 
@@ -18,7 +18,7 @@ Here is the SED assignment pipeline:
 
 The assigned SEDs are sensitive to the parent catalogs as well as the distance metrics. These tables summarize how the different parameters are selected:
 
-<img src="{{ site.baseurl }}/assets/plots/20210510_TableSFG.png">
+<img src="{{ site.baseurl }}/assets/plots/20210510_TableSFGs.png">
 
 <img src="{{ site.baseurl }}/assets/plots/20210510_TableQGs.png">
 
