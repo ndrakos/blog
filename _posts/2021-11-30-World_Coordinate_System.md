@@ -7,7 +7,7 @@ categories: mocks
 
 
 These notes are on the (<a href="https://fits.gsfc.nasa.gov/">FITS</a>) World Coordinate Systems standard. An overview of representing celestial coordinate systems is given <a href="
-https://www.atnf.csiro.au/people/mcalabre/WCS/Intro/"> here</a>
+https://www.atnf.csiro.au/people/mcalabre/WCS/Intro/"> here</a>.
 
 
 # Our Catalog
