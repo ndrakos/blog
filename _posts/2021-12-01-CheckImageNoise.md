@@ -76,7 +76,7 @@ The image sky background is from sky level + thermal background. Thermal backgro
 
 Looking at <a href="http://www.tapir.caltech.edu/~chirata/web/software/space-etc/Manual_v10.pdf">this</a> exposure time calculator manual for Roman, there are some example outputs of sky and thermal background flux values. It seems like on the order of 1 e-/pix/s is reasonable for the sky background and 0.1 e-/pix/s is reasonable for the thermal background. I will use these numbers for a sanity check.
 
-For ours, the sky background and thermal background are approximately 6200000 e-/arcsec^2 and  3000 e-/pixel, respectively. Dividing that  by the exposure time, and taking into account the pixel size I get 2 e-/pixel/s and 0.008 e-/pixel/s.
+For ours, the sky level and thermal background are approximately 6200000 e-/arcsec^2 and  3000 e-/pixel, respectively. Dividing that  by the exposure time, and taking into account the pixel size I get 2 e-/pixel/s and 0.008 e-/pixel/s.
 
 Overall, this is reassuring that the noise level is the right order of magnitude, though these aren't really direct comparisons (e.g. for the example values, I don't know where they are pointed on the sky, or which filters they are using).
 
