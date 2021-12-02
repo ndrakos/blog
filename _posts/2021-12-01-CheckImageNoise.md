@@ -111,7 +111,17 @@ conversion = nJy_conv * h_planck / collecting_area / exposure_time
 
 
 
-## Next step - Look into different image artefacts
+## Next steps
+
+1) Try and figure out where the factor of 5 is coming from
+
+Double check how galsim treats the zeropoints of the filters, and that we have defined those correctly. 
+
+
+Do a more careful calculation of the SNR, by subtracting off the (known) background, and calculating the rms in the background. Comparing this in all the filters to see if they all seem off by a factor of 5.
+
+
+2) Look into different image artefacts
 
 There are a few image artefacts that may or may not be problems. We should at least understand them as best as possible! The first is that the PSF spikes look very strong. This could be a feature of Roman, or just due to the nonlinear scaling of the images. The second issue is that some of the bright galaxies have rings around them, that look like diffraction patterns.
 
