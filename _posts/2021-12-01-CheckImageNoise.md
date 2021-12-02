@@ -93,7 +93,7 @@ The scatter plot below shows the noise added in a pixel as a function of N0. The
 
 ### 4) Additional sources of noise added correctly?
 
-I expect that this source of noise is subdominant, and so will not be looking into it in this post.
+I expect that this source of noise is subdominant, and so did not look into it in this post. It seems unlikely that this would account for a factor of 5 in the noise level.
 
 <!---CCD noise... check same as Poisson + Gaussian--->
 
