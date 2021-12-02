@@ -27,7 +27,7 @@ So from first glance, the noise does seem reasonable! In this post I will do a f
 
 ## How The Noise Is Added
 
-1) Start with galaxy image (in counts?)
+1) Start with galaxy image
 
 2) The sky background is added
 
@@ -100,13 +100,16 @@ conversion = nJy_conv * h_planck / collecting_area / exposure_time
 
 ## Next steps
 
-1) Look into different image artefacts
+
+1) Calculate the SNR of the images
+
+Ideally, we want to calculate the SNR in each image, to verify that the exposure times we are using give depth of roughly 30 magnitude. This is something Brant and I both looked into earlier, but had trouble settling on a method.
+
+
+2) Look into different image artefacts
 
 There are a few image artefacts that may or may not be problems. We should at least understand them as best as possible! The first is that the PSF spikes look very strong. This could be a feature of Roman, or just due to the nonlinear scaling of the images. The second issue is that some of the bright galaxies have rings around them, that look like diffraction patterns.
 
-2) Calculate the SNR of the images
-
-Ideally, we want to calculate the SNR in each image, to verify that the exposure times we are using give depth of roughly 30 magnitude. This is something Brant and I both looked into earlier, but had trouble settling on a method.
 
 ## Things to fix when regenerating images
 
