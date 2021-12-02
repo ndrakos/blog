@@ -25,7 +25,7 @@ So from first glance, the noise does seem reasonable! In this post I will do a f
 
 ## The SNR of the image
 
-If I consider an aperture, the fluctuations in the aperture should be $$\sqrt(N) \sigma$$, where $$\sigma$$ is the standard deviation in the pixels, and $$N=$$ is the number of pixels.
+If I consider an aperture, the fluctuations in the aperture should be $$\sqrt{N} \sigma$$, where $$\sigma$$ is the standard deviation in the background pixels, and $$N$$ is the number of pixels.
 
 For an aperture of 0.2 arcsec^2 (which I think is what they used in GOODS and CANDELS), this corresponds to $$N=16.5$$.
 
@@ -115,7 +115,7 @@ conversion = nJy_conv * h_planck / collecting_area / exposure_time
 
 1) Try and figure out where the factor of 5 is coming from
 
-Double check how galsim treats the zeropoints of the filters, and that we have defined those correctly. 
+Double check how galsim treats the zeropoints of the filters, and that we have defined those correctly.
 
 
 Do a more careful calculation of the SNR, by subtracting off the (known) background, and calculating the rms in the background. Comparing this in all the filters to see if they all seem off by a factor of 5.
