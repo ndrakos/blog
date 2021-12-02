@@ -23,6 +23,16 @@ To convert the value of 0.035 nJy to photon counts for a comparison, I first div
 
 So from first glance, the noise does seem reasonable! In this post I will do a few more sanity checks.
 
+## The SNR of the image
+
+If I consider an aperture, the fluctuations in the aperture should be $$\sqrt(N) \sigma$$, where $$\sigma$$ is the standard deviation in the pixels, and $$N=$$ is the number of pixels.
+
+For an aperture of 0.2 arcsec^2 (which I think is what they used in GOODS and CANDELS), this corresponds to $$N=16.5$$.
+
+For a background fluctuation of 0.035 nJy, as estimated above, this gives a $$5 \sigma$$ detection of 0.7 nJy = 31.8 mag.
+
+This is higher than the expected magnitude of 30. This corresponds to the noise being a factor of 5 lower than expected, which is consistent with what I found at the beginning of this post.
+
 
 
 ## How The Noise Is Added
@@ -98,15 +108,10 @@ conversion = nJy_conv * h_planck / collecting_area / exposure_time
 ```
 
 
-## Next steps
 
 
-1) Calculate the SNR of the images
 
-Ideally, we want to calculate the SNR in each image, to verify that the exposure times we are using give depth of roughly 30 magnitude. This is something Brant and I both looked into earlier, but had trouble settling on a method.
-
-
-2) Look into different image artefacts
+## Next step - Look into different image artefacts
 
 There are a few image artefacts that may or may not be problems. We should at least understand them as best as possible! The first is that the PSF spikes look very strong. This could be a feature of Roman, or just due to the nonlinear scaling of the images. The second issue is that some of the bright galaxies have rings around them, that look like diffraction patterns.
 
