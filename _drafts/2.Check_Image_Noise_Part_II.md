@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Check Image Noise"
+title:  "Check Image Noise Part II"
 date:   2021-12-03
 categories: mocks
 ---
@@ -17,7 +17,7 @@ My method of converting galaxy fluxes to photon density did not properly take in
 
 $$\int \frac{T(\nu)f_\nu}{h \nu } d\nu = \frac{f_\nu}{h} \int \frac{T(\nu)}{\nu } d\nu $$.
 
-Therefore I was missing a factor of $$\int \frac{T(\nu)}{\nu } d\nu$$ in the assigned galaxy fluxes. This is filter dependant, but corresponds to a factor of ~0.15. Assigning this correctly will increase the background when we convert back to nJy by a factor of 6 or so!
+Therefore I was missing a factor of $$\int \frac{T(\nu)}{\nu } d\nu$$ in the assigned galaxy fluxes. This is filter dependent, but corresponds to a factor of ~0.15. Assigning this correctly will increase the background when we convert back to nJy by a factor of 6 or so!
 
 In galsim, the conversion can be calculated as:
 
