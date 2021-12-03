@@ -31,7 +31,7 @@ For an aperture of 0.2 arcsec^2 (which I think is what they used in GOODS and CA
 
 For a background fluctuation of 0.035 nJy, as estimated above, this gives a $$5 \sigma$$ detection of 0.7 nJy = 31.8 mag.
 
-This is higher than the expected magnitude of 30. This corresponds to the noise being a factor of 5 lower than expected, which is consistent with what I found at the beginning of this post.
+This is higher than the expected magnitude of 30. This corresponds to the noise being a factor of 5 lower than expected, which is consistent with what I found above.
 
 
 
@@ -55,12 +55,12 @@ This is higher than the expected magnitude of 30. This corresponds to the noise 
 Bruno checked that the flux of an individual galaxy sums to the assigned flux, so I am fairly confident that the fluxes are being assigned appropriately! Another possible issue is that the assigned flux i gave him is not in the correct units.
 
 
-In the catalog, the galaxies each have an apparent magnitude, $m$. Galsim requires the flux in units photons/cm^2/s. I did the conversion as follows:
+In the catalog, the galaxies each have an apparent magnitude, mag. Galsim requires the flux in units photons/cm^2/s. I did the conversion as follows:
 
 
 ```
 planck = 6.626196e-27 #erg s
-f_nu = 10**((m+48.6)/(-2.5)) #erg s−1 cm−2 Hz−1
+f_nu = 10**((mag+48.6)/(-2.5)) #erg s−1 cm−2 Hz−1
 f_nu = f_nu/planck # counts/s/cm^2
 ```
 
