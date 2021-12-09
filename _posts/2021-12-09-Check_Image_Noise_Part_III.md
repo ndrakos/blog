@@ -64,6 +64,6 @@ Assuming a circular aperture of radius 0.5 arcsecs, this corresponds to $$\sqrt{
 
 Then, using
 
-$$-2.5\log_{10}(5 \sqrt{N} \sigma *1e-9/3631) $$
+$$-2.5\log_{10}(\dfrac{5 \sqrt{N} \sigma *10^{-9}}{3631 \rm{Jy}}) $$
 
 I get 5 sigma depths of 31.49 (left) and 30.2 (right).
