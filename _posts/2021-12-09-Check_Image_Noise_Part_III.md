@@ -5,7 +5,7 @@ date:   2021-12-09
 categories: mocks
 ---
 
-In <a href="https://ndrakos.github.io/blog/mocks/CheckImageNoise/">Part I/a> I argued that the noise level in the images was a factor of ~5 too low.
+In <a href="https://ndrakos.github.io/blog/mocks/CheckImageNoise/">Part I</a> I argued that the noise level in the images was a factor of ~5 too low.
 
 In <a href="https://ndrakos.github.io/blog/mocks/CheckImageNoise/">Part II</a> I proposed a solution.
 
@@ -60,10 +60,10 @@ stats.sigma_clipped_stats(flux.array, sigma=2, maxiters=5)
 
 returns the mean, median and standard deviation in the background pixels. For the left and right images, I get (9.81447, 9.800997, 0.06486408) and (61.49829, 61.49397, 0.2043947).
 
-Assuming a circular aperture of radius 0.5 arcsecs, this corresponds to $$\sqrt(\pi 0.5^2/0.11^2) =  8.06$$ pixels.
+Assuming a circular aperture of radius 0.5 arcsecs, this corresponds to $$\sqrt{\pi 0.5^2/0.11^2} =  8.06$$ pixels.
 
 Then, using
 
-$$-2.5\log_{10}(5 \sqrt(N) \sigma *1e-9/3631) $$
+$$-2.5\log_{10}(5 \sqrt{N} \sigma *1e-9/3631) $$
 
 I get 5 sigma depths of 31.49 (left) and 30.2 (right).
