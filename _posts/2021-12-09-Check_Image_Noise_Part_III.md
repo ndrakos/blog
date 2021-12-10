@@ -60,14 +60,19 @@ stats.sigma_clipped_stats(flux.array, sigma=2, maxiters=5)
 
 returns the mean, median and standard deviation in the background pixels. For the left and right images, I get (9.81447, 9.800997, 0.06486408) and (61.49829, 61.49397, 0.2043947).
 
-Assuming a circular aperture of radius 0.5 arcsecs, this corresponds to $$\sqrt{\pi 0.5^2/0.11^2} =  8.06$$ pixels.
+Assuming a circular aperture of radius 0.2 arcsecs^2, this corresponds to $$ 0.2/0.11^2} =  16.5$$ pixels.
 
 Then, using
 
 $$-2.5\log_{10}\left(\dfrac{5 \sqrt{N} \sigma *10^{-9}}{3631 \rm{Jy}}\right) $$
 
-I get 5 sigma depths of 31.49 (left) and 30.2 (right).
+I get 5 sigma depths of 31.1 (left) and 29.8 (right).
 
-## Include PSF 
+Redoing this with the PSF images, I get depths of 30.5 (left) and 29.7 (right).
 
-Redoing this with the PSF images, I get depths of 30.9 (left) and 30.1 (right).
+
+Overall, the SNR is dependant and the aperture, and how I measure the noise. But to me, the updated version looks much more reasonable, and agrees closer with the Hubble example in <a href="https://ndrakos.github.io/blog/mocks/CheckImageNoise/">Part I</a>
+
+<!---
+(9.887569, 9.856411, 0.1084179)
+(61.57623, 61.5661, 0.23153158)-->
