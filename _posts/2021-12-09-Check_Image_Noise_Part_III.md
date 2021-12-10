@@ -14,7 +14,7 @@ In the current post, I will verify that this solution works.
 
 ## The test images
 
-I am starting with a cropped (2048x2048 pixel) image of the H158 filter. I have fixed the conversion in translating the galaxy fluxes to and from photon counts, as outlined in <a href="https://ndrakos.github.io/blog/mocks/CheckImageNoise/">Part II</a>. The fluxes of individual galaxies should be the same, but the SNR should decrease, and the depth of the image should be ~30 mag.
+I am starting with a cropped (2048x2048 pixel) image of the H158 filter (no PSF). I have fixed the conversion in translating the galaxy fluxes to and from photon counts, as outlined in <a href="https://ndrakos.github.io/blog/mocks/CheckImageNoise/">Part II</a>. The fluxes of individual galaxies should be the same, but the SNR should decrease, and the depth of the image should be ~30 mag.
 
 
 Here is the image before (left) and after (right) the correction:
@@ -64,6 +64,10 @@ Assuming a circular aperture of radius 0.5 arcsecs, this corresponds to $$\sqrt{
 
 Then, using
 
-$$-2.5\log_{10}(\dfrac{5 \sqrt{N} \sigma *10^{-9}}{3631 \rm{Jy}}) $$
+$$-2.5\log_{10}\left(\dfrac{5 \sqrt{N} \sigma *10^{-9}}{3631 \rm{Jy}}\right) $$
 
 I get 5 sigma depths of 31.49 (left) and 30.2 (right).
+
+## Include PSF 
+
+Redoing this with the PSF images, I get depths of 30.9 (left) and 30.1 (right).
