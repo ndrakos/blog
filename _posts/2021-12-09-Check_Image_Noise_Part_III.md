@@ -60,7 +60,7 @@ stats.sigma_clipped_stats(flux.array, sigma=2, maxiters=5)
 
 returns the mean, median and standard deviation in the background pixels. For the left and right images, I get (9.81447, 9.800997, 0.06486408) and (61.49829, 61.49397, 0.2043947).
 
-Assuming a circular aperture of radius 0.2 arcsecs^2, this corresponds to $$ 0.2/0.11^2} =  16.5$$ pixels.
+Assuming a circular aperture of radius 0.2 arcsecs^2, this corresponds to $$ 0.2/0.11^2 =  16.5$$ pixels.
 
 Then, using
 
