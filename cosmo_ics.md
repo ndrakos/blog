@@ -1,7 +1,7 @@
 ---
 layout: page
-permalink: /cosmo_sims/
-title:  "High Time Resolution Simulations"
+permalink: /cosmo_ics/
+title:  "Cosmolgoical Initial Conditions"
 ---
 
 
