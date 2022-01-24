@@ -7,7 +7,7 @@ categories: cosmo_ics
 
 
 
-The plan for this project is to figure out how to put massive neutrinos in cosmological ICs, following <a href="https://ui.adsabs.harvard.edu/abs/2018JCAP...09..028B/abstract">Banarjee et al 2018 (B18)</a>
+The plan for this project is to figure out how to put massive neutrinos in cosmological ICs, following <a href="https://ui.adsabs.harvard.edu/abs/2018JCAP...09..028B/abstract">Banarjee et al 2018 </a> (B18).
 
 This post will review some of the motivation and background, mainly from B18.
 
@@ -49,6 +49,8 @@ B18 proposes a method to remove the shot-noise by changing the way the ICs are s
 1) Will this method also work for warm/hot dark matter simulations? The streaming length of WDM is smaller than that of neutrinos.
 
 2) When running hydro simulations do you need to do anything different to create the particle ICs?
+
+3) What are the things we want to test in simulations? What is the division for what e.g. Bruno will do versus me?
 
 ## Next Step
 
