@@ -41,11 +41,11 @@ I am going to do these calculations assuming Halo B is a point-mass (with mass $
 
 The energy of this orbit is:
 
-'''
+```
 rvir = 10; G = 1; r_s = 1; N0 = 5e5; m = 2e-6
 rho0 =  N0*m / (4.0*pi*r_s*r_s*r_s*(log(1 + rvir/r_s)-rvir/(r_s+rvir)))
 E = -2.0*pi*G*rho0*r_s*r_s*r_s*( np.log(rvir/r_s +1.0)/rvir + 1.0/(rvir+r_s)) #relative energy
-'''
+```
 
 
 For $$\eta \approx 1$$, this corresponds to an orbital (relative) energy of -0.11 in the simulation units.
@@ -53,12 +53,12 @@ For $$\eta \approx 1$$, this corresponds to an orbital (relative) energy of -0.1
 
 The (relative) angular momentum of a circular orbit at the radius with the same energy (for $$\eta=1$$ this is just the virial radius) is:
 
-'''
+```
 rc = rvir
 M = 4.0*pi*rho0*r_s**3 * (np.log(1 + rc/r_s)-rc/(r_s+rc))
 Vc = np.sqrt(G*M/rc)
 Lc = rc*Vc #relative angular momentum
-'''
+```
 
 for a circularity of 0.5, this corresponds to a (relative) angular momentum of $$L = 0.5*Lc = 1.58 $$ in the simulation units.
 
@@ -69,7 +69,7 @@ Therefore, we will set the energy of the orbit to -0.11 and the angular momentum
 #### 2) Convert (relative) orbital energy and angular momentum to radial separation and initial velocity
 
 
-'''
+```
 from scipy import optimize
 def NFW_orb_params(E,L,rho0,r_s,G):
     #########################################################
@@ -93,7 +93,7 @@ def NFW_orb_params(E,L,rho0,r_s,G):
     v0 = L/rsep
 
     return rsep, v0
-'''
+```
 
 
 This gives $v0=0.69$ and $rsep = 2.29$ in the simulation units.
@@ -117,12 +117,12 @@ I used James' "write_single_ICs" program to convert the ICs to the binary gadget
 
 I just set these parameters the same as before, with the assumption they should be reasonable:
 
-'''
+```
 TimeMax 100
 TimeBetSnapshot 1
 SofteningHalo 0.02
 ErrTolIntAccuracy 0.02
-'''
+```
 
 We can update these if needed. All the other Gadget parameters were pretty standard.
 
