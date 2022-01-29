@@ -96,7 +96,7 @@ def NFW_orb_params(E,L,rho0,r_s,G):
 ```
 
 
-This gives $v0=0.69$ and $rsep = 2.29$ in the simulation units.
+This gives $$v0=0.69$$ and $$rsep = 2.29$$ in the simulation units.
 
 
 ### Add ICs together
