@@ -22,7 +22,7 @@ I generated each halo using ICICLE. Each truncated NFW profile needs to be given
 
 Halo A has parameters $$r_{s, A}=1$$, $$r_{\rm cut, A = 10}$$, $$N_{0,A} = 5\times 10^5$$, $$m = 1/N_{0,A} = 2 \times 10^{-6}$$. After truncation, $$N_A=321676$$ and $$M_A\approx0.64$$.
 
-Halo B is intended to have 1/5th of the mass and the same "concentration" as Halo A. The mass of each particle will be kept as $m$. The "virial radius" should scale as $$r_{\rm vir, B} = \left(\frac{M_{B}}{M_{A}} \right)^{1/3}  r_{\rm vir, A}$$. Therefore, I set $$r_{\rm cut, B} = 5.85$$ and $$r_{s, B} = 0.585$$. I begin with $$N_{0,B} = N_{0,A}/5 = 10^5$$ particles, resulting in $N_B=64333$ and $$M_B\approx 0.13$$ after truncation. *(Note for the last test simulation I sent, I just kept $$r_s=1$$ the same for each halo. This would mean that they had different concentrations, though both were truncated at $$r_s=10$$. I think the way I set it up here is more physical).*
+Halo B is intended to have 1/5th of the mass and the same "concentration" as Halo A. The mass of each particle will be kept as $m$. The "virial radius" should scale as $$r_{\rm vir, B} = \left(\frac{M_{B}}{M_{A}} \right)^{1/3}  r_{\rm vir, A}$$. Therefore, I set $$r_{\rm cut, B} = 5.85$$ and $$r_{s, B} = 0.585$$. I begin with $$N_{0,B} = N_{0,A}/5 = 10^5$$ particles, resulting in $$N_B=64333$$ and $$M_B\approx 0.13$$ after truncation. *(Note for the last test simulation I sent, I just kept $$r_s=1$$ the same for each halo. This would mean that they had different concentrations, though both were truncated at $$r_s=10$$. I think the way I set it up here is more physical).*
 
 
 ### Determine orbital parameters
