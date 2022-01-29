@@ -12,8 +12,9 @@ This project is related to modeling the evolution of tidally stripped subsystems
 <h2> Publications: </h2>
 <ul>
 <li> <a href="https://ui.adsabs.harvard.edu/abs/2017MNRAS.468.2345D/abstract">Drakos, Taylor and Benson 2017</a> </li>
-<li> Drakos, Taylor and Benson 2020a (under revision for MNRAS) </li>
-<li> Drakos, Taylor and Benson 2020b (in prep) </li>
+<li> <a href="https://ui.adsabs.harvard.edu/abs/2020MNRAS.494..378D/abstract">Drakos, Taylor and Benson 2020</a> </li>
+<li> Drakos, Taylor and Benson 2022 (under revision for MNRAS) </li>
+<li> Drakos, Taylor and Benson 2022 (in prep) </li>
 </ul>
 
 
