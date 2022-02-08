@@ -10,7 +10,7 @@ In this post, I will outline the methods in <a href="https://ui.adsabs.harvard.e
 
 ## Method
 
-In this method, the neutrinos are treated as a separate $N$-body species.  In addition to a bulk velocity determined by the power spectrum, each neutrino particle is also given a random thermal velocity by sampling the Fermi-Dirac distribution.
+In this method, the neutrinos are treated as a separate $$N$$-body species.  In addition to a bulk velocity determined by the power spectrum, each neutrino particle is also given a random thermal velocity by sampling the Fermi-Dirac distribution.
 
 Specifically, for every point on the grid where the ICs are generated, the magnitude of velocity for each neutrino is calculated from dividing up the Fermi-Dirac distribution, and the directions given by dividing up the spherical velocity shell into equal area elements.
 
@@ -20,9 +20,9 @@ There are then multiple neutrinos for every grid point that sample this distribu
 
 The neutrino distribution at redshift $$z$$ is given by:
 
-$$f(p) = \dfrac{4 \pi g_\nu}{(2 \pi \hbar)^3} \dfrac{1}{\dfrac{e^{pc}{k_B T_\nu (1+z)}} + 1} $$
+$$f(p) = \dfrac{4 \pi g_\nu}{(2 \pi \hbar)^3} \dfrac{1}{\dfrac{pc}{e^{k_B T_\nu (1+z)}} + 1} $$
 
-where $$p$$ is the magnitude of the momentum, $$g_\nu$$ is the magnitude of the degeneracy, and $T_{\nu} = 1.95$K is the neutrino temperature today. The velocity distribution is $$v \propto p^2 f(p)$$.
+where $$p$$ is the magnitude of the momentum, $$g_\nu$$ is the magnitude of the degeneracy, and $$T_{\nu} = 1.95$$ K is the neutrino temperature today. The velocity distribution is $$v \propto p^2 f(p)$$.
 
 Typically, you would sample randomly from this distribution. This is NOT what they do in this paper, as that method suffers heavily from shot noise. Instead, they sample velocity in a regular manner, that is replicated at every point on the grid used to generate the ICs.
 
@@ -52,7 +52,7 @@ The number of elements per sphere are $$12 N_{\rm side}^2$$. As discussed in B18
 
 ### Final steps
 
-Therefore there are $$12 \times N_{\rm side}^2 \times N_{\rm shell}$$ neutrino particles per gridpoint, with the number neutrino IC gridpoints being defined as $$N_{\rm grid}^3$$. This results in a total number of $$\times N_{\rm side}^2 \times N_{\rm shell} \times N_{\rm coarse}^3$$ neutrino particles.
+Therefore there are $$12 \times N_{\rm side}^2 \times N_{\rm shell}$$ neutrino particles per gridpoint, with the number neutrino IC gridpoints being defined as $$N_{\rm grid}^3$$. This results in a total number of $$12 \times N_{\rm side}^2 \times N_{\rm shell} \times N_{\rm coarse}^3$$ neutrino particles.
 
 Particles are displaced off of grids using Zeldovich appriximation, and the masses are adjusted to give correct $$\Omega_\nu$$ for the simulation box.
 
@@ -79,7 +79,7 @@ They found that at high redshifts the matter spectrum was insensitive to $$N_{\r
 
 ### Zeldovich
 
-I am not sure whether the Zeldovich approximation is a typical thing done to all the particles, or if I have to implement this specifically for the neutrino particles. This will require me reviewing how MUSIC works. 
+I am not sure whether the Zeldovich approximation is a typical thing done to all the particles, or if I have to implement this specifically for the neutrino particles. This will require me reviewing how MUSIC works.
 
 ### Change to un-equal mass scheme
 
