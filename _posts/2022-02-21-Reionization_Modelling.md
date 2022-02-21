@@ -7,6 +7,7 @@ categories: reion
 
 This post will summarize my initial plans for including reionization modelling with the DREaM galaxy catalog. A lot of the background in this post is from <a href="https://ui.adsabs.harvard.edu/abs/2021arXiv211013160R/abstract">Robertson 2021</a>.
 
+<!---
 
 ## Production of ionizing photons
 
@@ -61,4 +62,6 @@ I am going to begin by calculating the above values, and making sure they are re
 
 2. The <a href="https://ui.adsabs.harvard.edu/abs/2020ApJ...892..109N/abstract">Naidu et. al 2020</a> model is not firmly established. I might look at other models (e.g. constant fesc), and calculate how well various surveys can constrain this scenario.
 
-3. The value for $$t_{\rm rec}$$ depends on things like the inhomogenity of the IGM. I will explore some of the assumptions here in more detail. 
+3. The value for $$t_{\rm rec}$$ depends on things like the inhomogenity of the IGM. I will explore some of the assumptions here in more detail.
+
+--->
