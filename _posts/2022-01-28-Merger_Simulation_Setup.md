@@ -2,7 +2,7 @@
 layout: post
 title:  "Merger Simulation Setup"
 date:   2022-01-28
-categories: iso_ics
+categories: iso_sims
 ---
 
 I will be running a suite of mergers for Justin (at Waterloo), who is looking at the time oscillations of dark matter halo properties. Here are my notes on the setup.
