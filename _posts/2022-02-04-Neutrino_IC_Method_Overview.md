@@ -31,7 +31,7 @@ Typically, you would sample randomly from this distribution. This is NOT what th
 
 They divide the distribution into $$N_{\rm shell}$$ equal-mass shells as follows:
 
-$$\dfrac{\int_{p^i_{\rm min}}^{p^i_{\rm max}} p^2 f(p) dp }{int_{0}^{p_{\rm max}} p^2 f(p) dp} = \dfrac{1}{N_{\rm shell}}$$
+$$\dfrac{\int_{p^i_{\rm min}}^{p^i_{\rm max}} p^2 f(p) dp }{\int_{0}^{p_{\rm max}} p^2 f(p) dp} = \dfrac{1}{N_{\rm shell}}$$
 
 where $$p_{\min}^i$$ and $$p_{\max}^i$$ are the minimum and maximum momentum of the shell. $$p_{\max}$$ is  a free parameter that is chosen as a "reasonable" value to truncate the distribution.
 
@@ -52,9 +52,9 @@ The number of elements per sphere are $$12 N_{\rm side}^2$$. As discussed in B18
 
 ### Final steps
 
-Therefore there are $$12 \times N_{\rm side}^2 \times N_{\rm shell}$$ neutrino particles per gridpoint, with the number neutrino IC gridpoints being defined as $$N_{\rm grid}^3$$. This results in a total number of $$12 \times N_{\rm side}^2 \times N_{\rm shell} \times N_{\rm coarse}^3$$ neutrino particles.
+Therefore there are $$12 \times N_{\rm side}^2 \times N_{\rm shell}$$ neutrino particles per gridpoint, with the number neutrino IC gridpoints being defined as $$N_{\rm grid}^3$$. This results in a total number of $$12 \times N_{\rm side}^2 \times N_{\rm shell} \times N_{\rm grid}^3$$ neutrino particles.
 
-Particles are displaced off of grids using Zeldovich appriximation, and the masses are adjusted to give correct $$\Omega_\nu$$ for the simulation box.
+Particles are displaced off of grids using Zeldovich approximation, and the masses are adjusted to give correct $$\Omega_\nu$$ for the simulation box.
 
 
 

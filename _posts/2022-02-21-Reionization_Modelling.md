@@ -43,7 +43,7 @@ The LyC escape fraction, $$f_{\rm esc}$$ is the fraction of photons that escape 
 
 Reionization can be expressed as the volume-filling fraction of ionized gas:
 
-$$ \dfrac{ {\rm d} Q_{\rm HII} }{ {\rm d} t} = \dfrac{\dot{n}_{\rm ion}}{\langle n_H \rangle} - \dfrac{Q}{\bar{t}_{\rm rec}} $$
+$$ \frac{ dQ_{\rm HII} }{ dt} = \frac{ \dot{n}_{\rm ion} } {\langle n_H \rangle} - \frac{Q}{\bar{t}_{\rm rec}} $$
 
 
 $$\dot{n}_{\rm ion}$$: can be calculated as described above
