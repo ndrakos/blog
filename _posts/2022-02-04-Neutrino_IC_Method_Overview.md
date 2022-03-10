@@ -2,7 +2,7 @@
 layout: post
 title:  "Neutrino IC Method Overview"
 date:   2022-02-08
-categories: iso_ics
+categories: cosmo_ics
 ---
 
 In this post, I will outline the methods in <a href="https://ui.adsabs.harvard.edu/abs/2018JCAP...09..028B/abstract">Banarjee et al 2018 </a> (B18) for setting up neutrino ICs.

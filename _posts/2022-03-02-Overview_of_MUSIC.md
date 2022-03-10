@@ -2,7 +2,7 @@
 layout: post
 title:  "Overview of MUSIC"
 date:   2022-03-02
-categories: iso_ics
+categories: cosmo_ics
 ---
 
 In this post, I will outline the basic algorithm in the code in MUSIC (<a href="https://ui.adsabs.harvard.edu/abs/2011MNRAS.415.2101H/abstract">Hahn and Abel 2011</a>), and think about what needs to be altered to add neutrino ICs. MUSIC uses a nested grid, which we don't really care about for our applications, so I will ignore that.
@@ -31,7 +31,7 @@ I summarized the method for adding neutrino ICs in <a href="https://ndrakos.gith
 
 The velocities can be generated as described in the neutrino post, and the positions can be generated in the same way as the dark matter particles. Since MUSIC uses second-order LPT, we will also do that for the neutrinos. This should be straightforward, since I can just use the code that already exists for the LPT.
 
-I assume we use the density field from the dark matter particles (since neutrino distribution will initially be uniform). In B18, it seems like they generated $$N_n$$ neutrino particles and one cold dark matter particle at every grid point before applying LPT. 
+I assume we use the density field from the dark matter particles (since neutrino distribution will initially be uniform). In B18, it seems like they generated $$N_n$$ neutrino particles and one cold dark matter particle at every grid point before applying LPT.
 
 
 
