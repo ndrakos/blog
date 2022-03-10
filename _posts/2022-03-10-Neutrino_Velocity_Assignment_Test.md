@@ -13,7 +13,7 @@ In this post, I am testing I have the algorithm working for assigning neutrino p
 
 Here is my python code:
 
-<object width="500" height="300" type="text/plain" data="{{site.baseurl}}/assets/files/assign_velocity.py" border="0" >
+<object width="500" height="300" type="text/plain" data="{{site.baseurl}}/assets/files/assign_velocity.txt" border="0" >
 </object>
 
 
