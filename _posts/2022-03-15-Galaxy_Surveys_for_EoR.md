@@ -5,7 +5,7 @@ date:   2022-03-15
 categories: reion
 ---
 
-In this post I'm going to outline some of the upcoming galaxy surveys that probe the EoR. My main scientific question is how to compare these different surveys. I want to be able to quantify how well different surveys can constrain the EoR.
+In this post I'm going to outline some of the upcoming galaxy surveys that probe the EoR. My main scientific question is **how** to compare these different surveys. I want to be able to quantify how well different surveys can constrain models of the EoR.
 
 ## JWST Surveys
 
@@ -16,14 +16,21 @@ There is an overview of JWST surveys that will study the EoR in <a href="https:/
 
 ## Table of surveys
 
-Here is the list of surveys that I will look at to begin with. For now, I am focusing on the NIRCam parts of the surveys (not MIRI).
+Here is the list of surveys that I will look at (at least to start). For now, I am focusing on the NIRCam parts of the JWST surveys (not MIRI).
 
 <img src="{{ site.baseurl }}/assets/plots/20220315_TableSurveys.png">
 
 
 ## Area versus depth
 
-The main difference/easiest comparison to make between these surveys is area versus depth.
+The main difference/easiest comparison to make between these surveys is area versus depth. This is summarized below:
+
+<img src="{{ site.baseurl }}/assets/plots/20220315_Surveys.png">
+
+You can see that in general, the JWST surveys go slightly deeper than their HST counterparts. The Roman surveys will increase the area covered by the surveys.
+
+One interesting point on this plot is CEERS---this survey does not go very deep for the area it will cover. However, I think this is because it is more focused on getting spectroscopy (I have to look into the differences between the surveys in more detail). 
+
 
 ## Other considerations
 
