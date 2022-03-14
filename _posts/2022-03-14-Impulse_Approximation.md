@@ -60,11 +60,12 @@ The resulting change in self-bound energy is also primarily a function of energy
 
 ## Delta E
 
-If we consider the change of energy of each particle (compared to the initial energy), we find that the average change of energy **decreases** with increased radius and decreased binding energy. Particles that are the most bound and/or have the smallest radius have the largest drop in "bindedness":
+If we consider the change of energy of each particle bound in orbit X (compared to the initial energy), we find that the average change of energy **decreases** with increased radius and decreased binding energy. Particles that are the most bound and/or have the smallest radius have the largest drop in "bindedness":
 
 <img src="{{ site.baseurl }}/assets/plots/20220314_DeltaE.png">
 
 This is because the overall system decreases in mass. If you look at the earlier plots, what is really happening is that for highly bound particles/ particles at small radii, the energy of individual particles is ONLY changing because the overall potential of the systemn is changing. The particles on the outskirts are getting a larger change in their individual velocities/radii, but the resulting change in their "binding" energy is small.
+
 
 Looking specifically at Orbit 3, we show the two components from the $$\Delta E$$ impulse approximation (red and blue), and also the change in binding energy that was shown in the previous plot (black):
 
