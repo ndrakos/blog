@@ -29,7 +29,7 @@ The main difference/easiest comparison to make between these surveys is area ver
 
 You can see that in general, the JWST surveys go slightly deeper than their HST counterparts. The Roman surveys will increase the area covered by the surveys.
 
-One interesting point on this plot is CEERS---this survey does not go very deep for the area it will cover. However, I think this is because it is more focused on getting spectroscopy (I have to look into the differences between the surveys in more detail). 
+One interesting point on this plot is CEERS---this survey does not go very deep for the area it will cover. However, I think this is because it is more focused on getting spectroscopy (I have to look into the differences between the surveys in more detail).
 
 
 ## Other considerations
@@ -41,8 +41,8 @@ But when comparing between telescopes, there are also resolution and wavelength 
 ## Key quantities
 
 Really what I want to know are the ability of the survey to constrain
-(1) UV luminosity function
-(2) xi.. from SEDs?
-(3) fesc?
+1. UV luminosity function
+2.  xi.. from SEDs?
+3.  fesc?
 and maybe:
-(4) topology
+4. topology
