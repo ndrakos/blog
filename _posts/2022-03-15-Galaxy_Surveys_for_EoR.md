@@ -42,7 +42,6 @@ But when comparing between telescopes, there are also resolution and wavelength 
 
 Really what I want to know are the ability of the survey to constrain
 1. UV luminosity function
-2.  xi.. from SEDs?
-3.  fesc?
-and maybe:
-4. topology
+2. xi.. from SEDs?
+3. fesc? Does this need spectroscopy?
+4. Maybe also look into topology
