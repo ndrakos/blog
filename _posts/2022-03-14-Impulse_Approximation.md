@@ -71,7 +71,9 @@ Looking specifically at Orbit 3, we show the two components from the $$\Delta E$
 <img src="{{ site.baseurl }}/assets/plots/20220314_DeltaE_comps.png">
 
 
-The change in energy ($$-\Delta E$$, purple) is mostly constant, except at the center/for the most bound particles (which are likely shielded from the tidal field). The purple and black do not agree because of the different definition of energy (i.e. the change in the mass used to calculate the self-bound potential). The individual components (red and blue) do not behave in a very different way. The reason the term that goes as $${\rm mag} (\Delta \mathbf{v})$$ does not scale with radius in this plot is not immediately clear to me. It **IS** a slightly different value than what was plotted in the phase plots ($$\Delta {\rm mag} (\mathbf{v})$$; this is the difference in the magnitude, not the magnitude of the difference vector).
+The change in energy ($$-\Delta E$$, purple) is mostly constant, except at the center/for the most bound particles (which are likely shielded from the tidal field). The purple and black do not agree because of the different definition of energy (i.e. the change in the mass used to calculate the self-bound potential). The individual components (red and blue) do not behave in a very different way.
+
+Both components of the $$-\Delta E$$ equation (blue and red lines) scale slightly with radius, as expected, but the difference is slight. Note it is a slightly different value than what was plotted in the phase plots ($$\Delta {\rm mag} (\mathbf{v})$$; this is the difference in the magnitude, not the magnitude of the difference vector).
 
 
 
