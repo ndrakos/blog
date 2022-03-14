@@ -26,11 +26,11 @@ This shows the division of the Fermi-Dirac distribution ($$f(p)$$) into equal-ma
 
 ## Test directions
 
-Here are the directions for each $$12*N_{\rm side}**2$$ particles for each momentum. The plot shows the x,y,z components on a unit sphere.
+Here are the directions for each $$12N_{\rm side}^2$$ particles for each momentum. The plot shows the x,y,z components on a unit sphere.
 
 <img src="{{ site.baseurl }}/assets/plots/20220310_velocitydirections.png">
 
 
 ## Conclusions
 
-This all looks good! There are then $$N_{\rm shell} \times 12*N_{\rm side}**2$$ neutrino particles for every grid point. For now I tested the code Python, but I'm going to convert it to C, since that is what MUSIC is written in. We will have to decide if we are using healpix to divide the unit sphere into equal area elements, or if we don't want to include that dependance in the code.
+This all looks good! There are then $$N_{\rm shell} \times 12N_{\rm side}^2$$ neutrino particles for every grid point. For now I tested the code Python, but I'm going to convert it to C, since that is what MUSIC is written in. We will have to decide if we are using healpix to divide the unit sphere into equal area elements, or if we don't want to include that dependance in the code.
