@@ -4,7 +4,7 @@ title:  "The intrinsic production rate"
 date:   2022-03-16
 categories: reion
 ---
-
+<!---
 The ionizing photon production efficiency, $$\xi_{\rm ion}$$, is one of the main quantities we need to calculate for the simulated galaxies (see <a href="https://ndrakos.github.io/blog/reion/Reionization_Modelling/">this post</a>).
 
 
@@ -54,3 +54,4 @@ I truncated the plot at $$\xi_{\rm ion}=23$$, to see the results a bit better. T
 1. Triple check my $$\xi_{\rm ion}$$ calculation
 2. Check the literature to see if mine or Naidu's results are more consistent with observations
 3. Look to see what SED modelling assumptions will most strongly affect $$\xi_{\rm ion}$$
+--->
