@@ -5,9 +5,9 @@ date:   2022-03-16
 categories: reion
 ---
 
-<!---
-$$\xi_{\rm ion}$$ is the ionizing photon production efficiency, and one of the main quantities we need to calculate for the simulated galaxies (see <a href="https://ndrakos.github.io/blog/reion/Reionization_Modelling/">this post</a>).
 
+$$\xi_{\rm ion}$$ is the ionizing photon production efficiency, and one of the main quantities we need to calculate for the simulated galaxies (see <a href="https://ndrakos.github.io/blog/reion/Reionization_Modelling/">this post</a>).
+<!---
 ## How to calculate $$\xi_{\rm ion}$$
 
 As outlined in <a href="https://ui.adsabs.harvard.edu/abs/2020ApJ...892..109N/abstract">Naidu et. al 2020</a>, $$\xi_{\rm ion}$$ can be calculated directly from the SED:
