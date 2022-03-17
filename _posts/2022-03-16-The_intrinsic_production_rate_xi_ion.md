@@ -7,7 +7,8 @@ categories: reion
 
 The ionizing photon production efficiency, $$\xi_{\rm ion}$$, is one of the main quantities we need to calculate for the simulated galaxies (see <a href="https://ndrakos.github.io/blog/reion/Reionization_Modelling/">this post</a>).
 
-## How to calculate $$\xi_{\rm ion}$$
+
+## The ionizing photon production efficiency
 
 As outlined in <a href="https://ui.adsabs.harvard.edu/abs/2020ApJ...892..109N/abstract">Naidu et. al 2020</a>, $$\xi_{\rm ion}$$ can be calculated directly from the SED:
 
@@ -18,7 +19,7 @@ This is done by:
 2. normalizing by the UV Luminosity/SED-flux at 1500 Angstroms [ergs/s]
 
 
-## My methods
+## My calculation
 
 Given a rest-frame SED $$f_{\nu}$$ in units of [luminosity/frequency] (FSPS by default does not include the distance; with a distance modulus this can be converted to the usual units $ergs/Hz/cm^2/s$) as a function of wavelength, $$\lambda$$, I calculated:
 
