@@ -7,7 +7,7 @@ categories: mocks
 
 In <a href="https://ndrakos.github.io/blog/mocks/CheckImageNoise/">Part I</a> I argued that the noise level in the images was a factor of ~5 too low.
 
-In <a href="https://ndrakos.github.io/blog/mocks/CheckImageNoise/">Part II</a> I proposed a solution.
+In <a href="https://ndrakos.github.io/blog/mocks/Check_Image_Noise_Part_II/">Part II</a> I proposed a solution.
 
 In the current post, I will verify that this solution works.
 

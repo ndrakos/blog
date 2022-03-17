@@ -1,0 +1,55 @@
+---
+layout: post
+title:  "The intrinsic production rate, xi_ion"
+date:   2022-03-16
+categories: reion
+---
+
+$$\xi_{\rm ion}$$ is the ionizing photon production efficiency, and one of the main quantities we need to calculate for the simulated galaxies (see <a href="https://ndrakos.github.io/blog/reion/Reionization_Modelling/">this post</a>).
+
+## How to calculate $$\xi_{\rm ion}$$
+
+As outlined in <a href="https://ui.adsabs.harvard.edu/abs/2020ApJ...892..109N/abstract">Naidu et. al 2020</a>, $$\xi_{\rm ion}$$ can be calculated directly from the SED:
+
+$$\xi_{\rm ion} = \frac{N(H^0)}{L_{1500}} [\rm s^{-1} erg^{-1} s^{-1} Hz^{-1}]$$
+
+This is done by:
+1. integrating the flux produced below the Lyman limit (912 Angstroms) to get $$N(H^0)$$ [photons/s/Hz]
+2. normalizing by the UV Luminosity/SED-flux at 1500 Angstroms [ergs/s]
+
+
+## My methods
+
+Given a rest-frame SED $$f_{\nu}$$ in units of [luminosity/frequency] (FSPS by default does not include the distance; with a distance modulus this can be converted to the usual units $ergs/Hz/cm^2/s$) as a function of wavelength, $$\lambda$$, I calculated:
+
+$$N(H^0) = \int_{\nu_{912}}^{\nu_{0}} \dfrac{f_\nu \nu}{h \nu}  {\rm d} \nu = \int_{0}{912\\A} \dfrac{f_\nu \nu}{h \lambda} {\rm d} \lambda$$
+
+and
+
+$$L_{1500} = \int_{1450 \\A}{1550\\A} f_\lambda {\rm d} \lambda$$
+
+
+
+## Results
+
+I took the DREaM catalog cut with $$M_{\rm gal}>10^{10} M_{\odot} $$ (to make it more manageable for testing), and calculated $$\xi_ion$$ from each galaxy, as outlined above.
+
+Here is the distribution I expect (from Fig 2 of Naidu et al. 2020):
+
+<img src="{{ site.baseurl }}/assets/plots/20220316_xi_ion.png">
+
+
+
+Here is the distribution of $$\xi_{\rm ion}$$ I get:
+
+<img src="{{ site.baseurl }}/assets/plots/20220316_naidufig2.png">
+
+
+I truncated the plot at $$\xi_{\rm ion}=23$$, to see the results a bit better. This means I am not showing the higher redshift data (z>6). My calculation agrees with the Naidu model, and the Bouwens data around redshift 4, but I get a lot more variation. I'm not sure whether this is because I made a mistake in the calculation or because of modelling differences.
+
+
+## Next steps
+
+1. Triple check my $$\xi_{\rm ion}$$ calculation
+2. Check the literature to see if mine or Naidu's results are more consistent with observations
+3. Look to see what SED modelling assumptions will most strongly affect $$\xi_{\rm ion}$$
