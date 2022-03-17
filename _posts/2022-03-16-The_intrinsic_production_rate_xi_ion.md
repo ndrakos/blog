@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "The intrinsic production rate, xi_ion"
+title:  "The intrinsic production rate"
 date:   2022-03-16
 categories: reion
 ---
