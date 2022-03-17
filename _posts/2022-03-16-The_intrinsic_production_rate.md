@@ -12,7 +12,7 @@ The ionizing photon production efficiency, $$\xi_{\rm ion}$$, is one of the main
 
 As outlined in <a href="https://ui.adsabs.harvard.edu/abs/2020ApJ...892..109N/abstract">Naidu et. al 2020</a>, $$\xi_{\rm ion}$$ can be calculated directly from the SED:
 
-$$\xi_{\rm ion} = \frac{N(H^0)}{L_{1500}} [\rm s^{-1} erg^{-1} s^{-1} Hz^{-1}]$$
+$$\xi_{\rm ion} = \frac{N(H^0)}{L_{1500}} [\rm Hz/erg ]$$
 
 This is done by:
 1. integrating the flux produced below the Lyman limit (912 Angstroms) to get $$N(H^0)$$ [photons/s/Hz]
@@ -21,19 +21,19 @@ This is done by:
 
 ## My calculation
 
-Given a rest-frame SED $$f_{\nu}$$ in units of [luminosity/frequency] (FSPS by default does not include the distance; with a distance modulus this can be converted to the usual units $ergs/Hz/cm^2/s$) as a function of wavelength, $$\lambda$$, I calculated:
+Given a rest-frame SED $$f_{\nu}$$ in units of [luminosity/frequency] (FSPS by default does not include the distance; with a distance modulus this can be converted to the usual units $$ergs/Hz/cm^2/s$$) as a function of wavelength, $$\lambda$$, I calculated:
 
-$$N(H^0) = \int_{\nu_{912}}^{\nu_{0}} \dfrac{f_\nu \nu}{h \nu}  {\rm d} \nu = \int_{0}{912\\A} \dfrac{f_\nu \nu}{h \lambda} {\rm d} \lambda$$
+$$N(H^0) = \int_{\nu_{912}}^{\nu_{0}} \dfrac{f_\nu \nu}{h \nu}  {\rm d} \nu = \int_{0} {912} \dfrac{f_\nu \nu}{h \lambda} {\rm d} \lambda$$
 
 and
 
-$$L_{1500} = \int_{1450 \\A}{1550\\A} f_\lambda {\rm d} \lambda$$
+$$L_{1500} = \dfrac{\int_{1450}{1550} f_\lambda {\rm d} \lambda}{100}$$
 
 
 
 ## Results
 
-I took the DREaM catalog cut with $$M_{\rm gal}>10^{10} M_{\odot} $$ (to make it more manageable for testing), and calculated $$\xi_ion$$ from each galaxy, as outlined above.
+I took the DREaM catalog cut with $$M_{\rm gal}>10^{10} M_{\odot} $$ (to make it more manageable for testing), and calculated $$\xi_{\rm ion}$$ from each galaxy, as outlined above.
 
 Here is the distribution I expect (from Fig 2 of Naidu et al. 2020):
 
