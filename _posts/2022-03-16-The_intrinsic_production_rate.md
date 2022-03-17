@@ -22,11 +22,11 @@ This is done by:
 
 Given a rest-frame SED $$f_{\nu}$$ in units of [luminosity/frequency] (FSPS by default does not include the distance; with a distance modulus this can be converted to the usual units $$ergs/Hz/cm^2/s$$) as a function of wavelength, $$\lambda$$, I calculated:
 
-$$N(H^0) = \int_{\nu_{912}}^{\nu_{0}} \dfrac{f_\nu \nu}{h \nu}  {\rm d} \nu = \int_{0} {912} \dfrac{f_\nu \nu}{h \lambda} {\rm d} \lambda$$
+$$N(H^0) = \int_{\nu_{912}}^{\nu_{0}} \dfrac{f_\nu \nu}{h \nu}  {\rm d} \nu = \int_{0}^{912} \dfrac{f_\nu \nu}{h \lambda} {\rm d} \lambda$$
 
 and
 
-$$L_{1500} = \dfrac{\int_{1450}{1550} f_\lambda {\rm d} \lambda}{100}$$
+$$L_{1500} = \dfrac{\int_{1450}^{1550} f_\lambda {\rm d} \lambda}{100}$$
 
 
 
