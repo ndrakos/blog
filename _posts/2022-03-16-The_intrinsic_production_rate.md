@@ -42,7 +42,6 @@ Here is the distribution of $$\xi_{\rm ion}$$ I get:
 
 <img src="{{ site.baseurl }}/assets/plots/20220316_xi_ion.png">
 
-
 I truncated the plot at $$\xi_{\rm ion}=23$$, to see the results a bit better. This means I am not showing the higher redshift data (z>6). My calculation agrees with the Naidu model, and the Bouwens data around redshift 4, but I get a lot more variation. I'm not sure whether this is because I made a mistake in the calculation or because of modelling differences.
 
 
