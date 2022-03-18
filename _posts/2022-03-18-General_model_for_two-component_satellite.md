@@ -32,11 +32,11 @@ Some relevant references:
 
 - <a href="https://ui.adsabs.harvard.edu/abs/2018MNRAS.480L.106O/abstract">Ogiya 2018</a> uses two component models to study dark matter deficient galaxies (DMDGs). He uses the general profile form above for the dark matter halo, varying $$\alpha$$, and he uses a Hernquist profile for the stellar component. Go finds that he is able to reproduce observations of DMDGs when  (i) the DM halo has a central density core and (ii) the satellite is on a tightly bound and quite radial orbit.
 
-- <a href=https://arxiv.org/abs/2203.02513>Errani et al. 2022</a>, use a cuspy NFWish profile and a King model to demonstrate the possible origin of a stellar stream from a dark matter dominant galaxy.
+- <a href="https://arxiv.org/abs/2203.02513">Errani et al. 2022</a>, use a cuspy NFW-ish profile and a King model to demonstrate the possible origin of a stellar stream from a dark matter dominant galaxy.
 
-For this project we will mostly be focusing on the dynamics of a two component system in energy space, but likely geared more towards DMDGs. I plan to use a two-component model where both components can be described by the general profile listed above. This will allow us to change the relative "cuspy-ness" of both the stellar and dark matter component.
+For this project we will mostly be focusing on the dynamics of a two component system in energy space, but likely geared more towards DMDGs. Discussion of dark matter dominant galaxies could also be interesting! Therefore, I plan to use a two-component model where both components can be described by the general profile listed above. This will allow us to change the relative "cuspy-ness" of both the stellar and dark matter component.
 
-One thing to note is that we will have to truncate the particle distribution in cases where the mass profile diverges (e.g. NFW profiles), as is typical when setting up ICs from distribution functions. This will introduce an extra parameter.
+One thing to note is that we will have to truncate the particle distribution in cases where the mass profile diverges (e.g. NFW profiles), as is typical when setting up ICs from distribution functions. This would introduce an extra parameter.
 
 ## Fiducial satellite parameters
 
@@ -44,7 +44,7 @@ Here is a set of fiducial parameters for the satellite, which we can vary for th
 
 
 - $$\alpha_{dm}$$ = 0.1
-- $$\beta_{dm}$$ = 4
+- $$\beta_{dm}$$ = 3
 - $$\alpha_{stars}$$ =  1
 - $$\beta_{stars}$$ = 4
 - $$r_{s,dm}/r_{s,stars} = 10
