@@ -21,11 +21,11 @@ The main function that needs to be altered is <code>scr/main.cc</code>.
 
 For now I am just going to code the *simplest* case for the neutrinos. Once I've trouble shooted, I can add more functionality if I want
 
-* <code>baryons</code> if initial conditions for baryons shall be generated
-  * set to no for now
-* <code>use_2LPT</code>: if 2nd order Lagrangian perturbation theory shall be used to compute bool particle displacements and velocities
+* <code>baryons</code>: "if initial conditions for baryons shall be generated
+  * set to no for now"
+* <code>use_2LPT</code>: "if 2nd order Lagrangian perturbation theory shall be used to compute bool particle displacements and velocities"
   * Only allow 1LPT to start
-* <code>use_LLA</code>: if baryonic density field shall be computed using a second order bool expansion of the local Lagrangian approximation (LLA)
+* <code>use_LLA</code>: "if baryonic density field shall be computed using a second order bool expansion of the local Lagrangian approximation (LLA)"
   * No (does it matter if we don't include baryons?)
 * <code> format	= gadget2</code>
   * I am only going to make this compatible with Gadget2.
@@ -45,7 +45,7 @@ Here are some important points of the code:
 * line 473: Determine run parameters.
   * **Check here that all the settings are compatible with neutrinos**
 * line 485: Determine refinement hierarchy. Makes grid structure for Poisson solver and for density convolution.
-* line 503: Initialize output plug-in. What is this???
+* line 503: Initialize output plug-in
 * line 511: Initialize random numbers (for gaussian field)
 * line 520: Initialize Poisson Solver. Look at this in more detail!
 * line 563: check if 2LPT is set. If it is go to line 874. Otherwise stay here for 1LPT
@@ -96,7 +96,7 @@ Here are some important points of the code:
 * line 1215: Write baryon density
 * line 1264: Write baryon position
 
-**Finish output an cleanup**
+**Finish output and cleanup**
 
 ## Output File
 
@@ -117,7 +117,7 @@ Will need to alter the parameter file as described below to take in the extra va
 
 <code>[setup]</code>
 * <code>neutrinos = yes/no</code>: whether or not the code should include neutrinos
-* <code>level_neutrinos = int </code>... is related to the coarse grid, used to generate neutrino particles...
+* <code>level_neutrinos = int </code>: this is related to the coarse grid, used to generate neutrino particles
 * <code> N_shell = int </code>
 * <code> N_side = int </code>
 
