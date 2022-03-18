@@ -40,12 +40,12 @@ One thing to note is that we will have to truncate the particle distribution in 
 
 ## Fiducial satellite parameters
 
-Here is a set of fiducial parameters for the satellite, which we can vary for the different simulations (inspired by <a href="https://ui.adsabs.harvard.edu/abs/2018MNRAS.480L.106O/abstract">Ogiya 2018</a>). Most notably, we will probably change $$\alpha$$ from $$0.1$$ to $$1$$ for both the inner and outer components. For now we will keep $$\beta=4$$, so to avoid the divergent masses when setting up the ICs.
+Here is a set of fiducial parameters for the satellite, which we can vary for the different simulations (roughly corresponding to parameters in <a href="https://ui.adsabs.harvard.edu/abs/2018MNRAS.480L.106O/abstract">Ogiya 2018</a>). For the suite of simulations, we will change $$\alpha$$ from $$0.1$$ to $$1$$ for both the inner and outer components. We might also try altering the other parameters depending on the results.
 
 
 - $$\alpha_{dm}$$ = 0.1
 - $$\beta_{dm}$$ = 3
 - $$\alpha_{stars}$$ =  1
 - $$\beta_{stars}$$ = 4
-- $$r_{s,dm}/r_{s,stars} = 10
-- $M_{dm}/M_{stars}$ =  200
+- $$r_{s,dm}/r_{s,stars}$$ = 10
+- $$M_{dm}/M_{stars}$$ =  200
