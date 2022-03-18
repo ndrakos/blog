@@ -50,12 +50,12 @@ layout: default
 
   {% if prev_post %}
     <div class="article__previous">
-      <a href="{{ site.baseurl }}{{ prev_post.url }}">Previous post: {{ prev_post.title }}</a>
+      <a href="{{ site.baseurl }}{{ prev_post.url }}">&laquo; {{ prev_post.title }}</a>
     </div>
   {% endif %}
-
+  text-indent: 40px;
   {% if next_post %}
     <div class="article__next">
-      <a href="{{ site.baseurl }}{{ next_post.url }}">Next post: {{ next_post.title }}</a>
+      <a href="{{ site.baseurl }}{{ next_post.url }}">Next post: {{ next_post.title }} &raquo; </a>
     </div>
   {% endif %}
