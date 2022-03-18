@@ -11,6 +11,7 @@ layout: default
 
 <hr>
 
+<!---
 <div class="PageNavigation">
 
   {% if page.previous %}
@@ -22,5 +23,24 @@ layout: default
   {% if page.next %}
     <a class="next" href="{{ site.baseurl }}{{page.next.url}}">{{page.next.title}} &raquo; </a>
   {% endif %}
+--->
+
+  {% assign cat = page.categories[0] %}
+  {% assign cat_list = site.categories[cat] %}
+  {% for post in cat_list %}
+    {% if post.url == page.url %}
+    	{% assign pOffset = forloop.index0 | minus: 1 %}
+    	{% assign nOffset = pOffset | plus: 2 %}
+    	{% if forloop.first == false %}
+    	  {% assign next_post = cat_list[pOffset] %}
+    	{% endif %}
+    	{% if forloop.last == false %}
+    	  {% assign previous_post = cat_list[nOffset] %}
+    	{% endif %}
+    	{% break %}
+    {% endif %}
+  {% endfor %}
+
+
 
 </div>
