@@ -27,21 +27,26 @@ layout: default
 </div>
 --->
 
-  {% assign cat = page.categories[0] %}
-  {% assign cat_list = site.categories[cat] %}
-  {% for post in cat_list %}
-    {% if post.url == page.url %}
-    	{% assign pOffset = forloop.index0 | minus: 1 %}
-    	{% assign nOffset = pOffset | plus: 2 %}
-    	{% if forloop.first == false %}
-    	  {% assign next_post = cat_list[pOffset] %}
-    	{% endif %}
-    	{% if forloop.last == false %}
-    	  {% assign previous_post = cat_list[nOffset] %}
-    	{% endif %}
-    	{% break %}
-    {% endif %}
-  {% endfor %}
+
+  {% if page.categories %}
+    {% assign category = page.categories[0] %}
+    {% assign posts = site.categories[category] %}
+    {% for post in posts %}
+      {% if post.url == page.url %}
+        {% assign post_index0 = forloop.index0 %}
+        {% assign post_index1 = forloop.index %}
+      {% endif %}
+    {% endfor %}
+    {% for post in posts %}
+      {% if post_index0 == forloop.index %}
+        {% assign next_post = post %}
+      {% endif %}
+      {% if post_index1 == forloop.index0 %}
+        {% assign prev_post = post %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+
 
   {% if prev_post %}
     <div class="article__previous">
