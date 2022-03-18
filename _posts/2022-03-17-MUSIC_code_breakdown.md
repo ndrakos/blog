@@ -118,14 +118,14 @@ Will need to alter the parameter file as described below to take in the extra va
 <code>[setup]</code>
 * <code>neutrinos = yes/no</code>: whether or not the code should include neutrinos
 * <code>level_neutrinos = int </code>: this is related to the coarse grid, used to generate neutrino particles
-* <code> N_shell = int </code>
-* <code> N_side = int </code>
+* <code> N_shell = int</code>
+* <code> N_side = int</code>
 
 
 <code>[cosmology]</code>
-* <code>g_nu = int </code>: neutrino degeneracy; i.e. number of species
+* <code>g_nu = int</code>: neutrino degeneracy; i.e. number of species
 * <code>T_nu = float</code>: neutrino temperature today in Kelvin
-* <code>mass_nu = float </code>: sum of the mass of neutrinos, in eV
+* <code>mass_nu = float</code>: sum of the mass of neutrinos, in eV
 
 
 Options that I am NOT considering: The non-degenerate case, other methods of discretizing the Fermi-Dirac distribution.

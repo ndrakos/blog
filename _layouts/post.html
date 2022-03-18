@@ -12,8 +12,9 @@ layout: default
 <hr>
 
 
-<div class="PageNavigation">
+
 <!---
+<div class="PageNavigation">
   {% if page.previous %}
     <a class="prev" href="{{ site.baseurl }}{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
     <br>
@@ -23,6 +24,7 @@ layout: default
   {% if page.next %}
     <a class="next" href="{{ site.baseurl }}{{page.next.url}}">{{page.next.title}} &raquo; </a>
   {% endif %}
+</div>
 --->
 
   {% assign cat = page.categories[0] %}
@@ -41,6 +43,14 @@ layout: default
     {% endif %}
   {% endfor %}
 
+  {% if prev_post %}
+    <div class="article__previous">
+      <a href="{{ prev_post.url }}">{{ prev_post.title }}</a>
+    </div>
+  {% endif %}
 
-
-</div>
+  {% if next_post %}
+    <div class="article__next">
+      <a href="{{ next_post.url }}">{{ next_post.title }}</a>
+    </div>
+  {% endif %}
