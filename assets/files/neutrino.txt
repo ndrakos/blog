@@ -1,0 +1,173 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <math.h>
+#include <string.h>
+
+/**********************************************/
+/*FUNCTIONS FOR INTEGRATION AND INTERPOLATION*/
+/*********************************************/
+
+
+double *cumtrapz(double f(double x), double a, double b, int n){
+  /*Function for cummulative Trapezoidal Rule.
+  Inputs -- f: a function to integrate
+            a: left end point
+            b: right end point
+            n: number of evenly-spaced points
+  Outputs --integral: cummulative integral evaluated at n evenly-spaced points from a to b.
+            First value will always be 0.
+  */
+  double x1,x2,h,sum=0;
+  double* integral= (double*)malloc(n* sizeof(double));
+  h=fabs(b-a)/(n-1);
+  integral[0]=0;
+  for(int i=1;i<n;i++){
+    x1 = a + (i-1)*h ; x2=a+i*h;
+    sum=sum+h/2*( f(x1) + f(x2));
+    integral[i]=sum;
+  }
+  return integral;
+}
+
+double *linearinterp(double *x, double *xp,double *yp, int np, int n){
+  /*Linearly interperolate. Use lookup table [xp,yp].
+  Inputs -- x: assumed to be in ascending order. Points at which to evaluate
+            xp: assumed to be in ascending order
+            yp: y points corresponding to xp. Should be monotonic
+            np: number of points in xp and yp
+            n: number of points in x
+  Outputs -- ans: yp evaluated at x. Size n.
+  */
+
+  double x_a, x_b;
+  double *ans = (double*)malloc(n* sizeof(double));
+  int index=0;
+
+  for(int i=0; i<np; i++){
+
+
+    x_a = xp[i]; x_b = xp[i+1];
+    //Set points to left of lookup table range
+    if (x_a>x[index]){
+      ans[index]=x_a;
+      index++;
+
+    }
+    //Interpolation
+    else if((x_a<x[index]) && (x_b>x[index])){
+      ans[index] = yp[i] + (x[index]-x_a)*(yp[i+1]-yp[i])/(x_b-x_a);
+      index++;
+    }
+    //Found them all!
+    if (index==n){break;}
+  }
+
+  //Set any points to right of lookup table range
+  while(index<n){
+    ans[index] = yp[np-1];
+    index++;
+    if (index==n){break;}
+  }
+
+
+  return ans;
+
+ }
+
+
+
+/*****************************************/
+/***FUNCTIONS FOR VELOCITY CALCULATIONS***/
+/*****************************************/
+
+double x2fd(double x){
+  /* PDF for velcoity magnitude  */
+  return x*x/(exp(x)+1); // x^2*fermi_dirac(x)
+}
+
+double x4fd(double x){
+  /* PDF for expectation value of velocity magnitude  */
+  return x*x*x*x/(exp(x)+1); // x^4*fermi_dirac(x)
+}
+
+
+double *nu_velocity_mag(int N_shell){
+  /* Calculate magnitude in each shell of Fermi-Dirac Distribution
+  Inputs -- N_shell: number of shells to divde the Fermi-Dirac distirbution into.
+  Outputs -- p_i: the (dimensionless) momentum value at each shell
+  */
+
+
+
+  // Divide the Fermi-Dirac distribution into equal volumes
+  double x_max = 12; // maximum value of x = (pc)/(k_B*T)
+  int n = 1000; // number of points to use in calculating the integral
+
+  double* p2f = cumtrapz(x2fd , 0 , x_max, n); //total volume
+  double dV = p2f[n-1]/N_shell; // volume of each shell
+
+  //Find the edges of the shells
+  double h = x_max/(n-1); // step size
+  double* xp = (double*)malloc(n* sizeof(double));
+  for (int i=0; i<n; i++){xp[i] = i*h;}
+  double* V_edges = (double*)malloc((N_shell+1)* sizeof(double));
+  for (int i=0; i<=N_shell; i++){V_edges[i] = dV*i;}
+
+  double* x_edges = linearinterp(V_edges, p2f ,xp, n,N_shell+1);
+
+
+  // Set Magnitude of each shell
+  double* p4f = cumtrapz(x4fd , 0 , x_max, n); //total volume
+  double* p4f_i= linearinterp(x_edges,xp,p4f,n, N_shell+1);
+  double* p2f_i= linearinterp(x_edges,xp,p2f,n, N_shell+1);
+
+  double* p_i = (double*)malloc(N_shell * sizeof(double));
+  for (int i=0; i <N_shell; i++){
+    p_i[i] = sqrt( (p4f_i[i+1] - p4f_i[i])  / (p2f_i[i+1] - p2f_i[i]));
+  }
+
+  //free memory and return
+  free(p2f),free(xp), free(V_edges), free(x_edges), free(p4f), free(p4f_i), free(p2f_i);
+
+  //return p_i;
+  return p_i;
+
+
+}
+
+
+
+/*****************************************/
+/**************MAIN************************/
+/*****************************************/
+
+
+int main(void) {
+    int N_shell =10;
+    int N_side=2;
+    FILE *myfile = fopen("nu_directions/nu_directions_Nside2.txt", "r");
+    if (myfile == NULL){
+        printf("Error Reading File\n");
+        exit (0);
+    }
+
+    //Calculate momentum in each shell
+    double* p_i = nu_velocity_mag(N_shell);
+    //for(int i=0; i<N_shell; i++){ printf("%f ",p_i[i]);}
+
+    //Assign angular direction
+    int Ndir = 12*N_side*N_side;
+    float* x = (float*)malloc(Ndir* sizeof(float));
+    float* y = (float*)malloc(Ndir* sizeof(float));
+    float* z = (float*)malloc(Ndir* sizeof(float));
+    for(int i=0; i<Ndir; i++){
+      fscanf(myfile, "%f %f %f", &x[i],&y[i],&z[i]);
+    }
+    fclose(myfile);
+
+    //for(int i=0; i<Ndir; i++){printf("%d %f %f %f \n",i, x[i],y[i],z[i]);}
+
+
+    return 0;
+}
