@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "General model for two-component satellite"
+title:  "General Model for Two-Component Satellite"
 date:   2022-03-18
 
 categories: tidal_stripping
