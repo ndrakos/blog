@@ -62,4 +62,4 @@ This roughly agrees with the values above. I need to check what range of galaxy 
 
 2. Now I have all the ingredients to calculate the ionization contribution of the galaxies (modulo some debugging on the $$xi_{\rm ion}$$ values). I will go ahead soon and get the calculation for $$\dot{n_{\rm ion}}$$.
 
-3. My end goal is to compare different galaxy surveys abilities to constrain reionization. I need to think about if I want to alter these models (either by considering alternate models, or by altering the values by e..g 10 percent and seeing how it affects things).
+3. My end goal is to compare different galaxy surveys abilities to constrain reionization. I need to think about if I want to alter these models. I could use e.g. different models for the escape fraction, alter the spectral modelling, change the luminosity functions, change the IGM aborption model in the spectra. An easier approach would be to alter the values by e..g 10 percent and seeing how it affects things.
