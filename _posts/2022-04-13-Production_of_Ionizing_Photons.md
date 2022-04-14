@@ -13,14 +13,14 @@ As described in <a href="https://ndrakos.github.io/blog/reion/Reionization_Model
 
 The production of ionizing photons is given by:
 
-$$\dot{n_{\rm ion}} = f_{\rm esc} \xi_{\rm ion} \rho_{\rm UV}$$
+$$\dot{n_{\rm ion}} = f_{\rm esc} \xi_{\rm ion} \rho_{\rm UV}$$.
 
 where $$\rho_{\rm UV}= \int_0^{\infty} \phi(L) {\rm d}L$$.
 
 
 Using the values from the catalog this can be rewritten as:
 
-$$\dot{n_{\rm ion} = \dfrac{\sum f_{\rm esc} xi_{\rm ion}  L_{\rm 1500}  }{V}$$,
+$$ \dot{n_{\rm ion}} = \dfrac{\sum f_{\rm esc} xi_{\rm ion}  L_{\rm 1500}  }{V}$$,
 
 where $$xi_{\rm ion}$$ is in units [Hz/ergs] and $$L_{\rm 1500}$$ is in units ergs/Hz/s (I need better notation here).  $$L_{\rm 1500}$$ can be calculated from the UV magnitude, $$M_{\rm UV}$$.
 
