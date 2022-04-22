@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "The Intrinsic Production Rate"
-date:   2022-04-121
+date:   2022-04-21
 categories: reion
 ---
 
@@ -24,7 +24,7 @@ Therefore the calculation should be
 $$N(H^0) = \int_{\nu_{912}}^{\infity} \dfrac{L_\nu}{h \nu}  {\rm d} \nu = \int_{0}^{912} \dfrac{L_\nu}}{h \lambda} {\rm d} \lambda$$
 
 
-Additionally, $$L_{1500}$$ should be in units of [ergs/s/Hz]. This means I can read this directly from $$L{\rm nu}$$, and don't need to integrate anything. However, in practice, I take the average $$L_\nu}$$ value between 1450 and 1550 Angstroms. 
+Additionally, $$L_{1500}$$ should be in units of [ergs/s/Hz]. This means I can read this directly from $$L{\rm nu}$$, and don't need to integrate anything. However, in practice, I take the average $$L_\nu}$$ value between 1450 and 1550 Angstroms.
 
 
 ## Generating the spectrum
