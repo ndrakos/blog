@@ -21,7 +21,7 @@ The rate of ionizing photons is in units [photons/s] *not* [photons/s/Hz] as I s
 
 Therefore the calculation should be
 
-$$N_{\rm ion} = \int_{\nu_{912}}^{\infty} \dfrac{L_\nu}{h \nu}  {\rm d} \nu = \int_{0}^{912} \dfrac{L_\nu}}{h \lambda} {\rm d} \lambda$$
+$$N_{\rm ion} = \int_{\nu_{912}}^{\infty} \dfrac{L_\nu}{h \nu}  {\rm d} \nu = \int_{0}^{912} \dfrac{L_\nu}{h \lambda} {\rm d} \lambda$$
 
 
 Additionally, $$L_{1500}$$ should be in units of [ergs/s/Hz]. This means I can read this directly from $$L{\rm nu}$$, and don't need to integrate anything. However, in practice, I take the average $$L_\nu$$ value between 1450 and 1550 Angstroms.
@@ -33,10 +33,10 @@ I was using the rest-frame spectra. This includes dust, IGM absorption. I should
 
 To fix this I set the following:
 
-1. <code>add_igm_absorption=False</code>: this turns off the IGM absorption
-2. <code>add_agb_dust_model=False</code>: this turns off the AGB circumstellar dust model
-3. <code>add_dust_emission=False</code>: switch to turns off the Draine & Li 2007 dust emission model.
-4. <code>dust_type=0</code>; <code>dust_index=0</code>: This sets the dust attenuation curve to a power law, with index 0
+1. <code>add_igm_absorption=False</code>: turns off the IGM absorption
+2. <code>add_agb_dust_model=False</code>: turns off the AGB circumstellar dust model
+3. <code>add_dust_emission=False</code>: turns off the Draine & Li 2007 dust emission model.
+4. <code>dust_type=0</code>; <code>dust_index=0</code>: sets the dust attenuation curve to a power law, with index 0
 
 
 ## Some plots
