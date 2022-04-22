@@ -21,10 +21,10 @@ The rate of ionizing photons is in units [photons/s] *not* [photons/s/Hz] as I s
 
 Therefore the calculation should be
 
-$$N(H^0) = \int_{\nu_{912}}^{\infity} \dfrac{L_\nu}{h \nu}  {\rm d} \nu = \int_{0}^{912} \dfrac{L_\nu}}{h \lambda} {\rm d} \lambda$$
+$$N_{\rm ion} = \int_{\nu_{912}}^{\infty} \dfrac{L_\nu}{h \nu}  {\rm d} \nu = \int_{0}^{912} \dfrac{L_\nu}}{h \lambda} {\rm d} \lambda$$
 
 
-Additionally, $$L_{1500}$$ should be in units of [ergs/s/Hz]. This means I can read this directly from $$L{\rm nu}$$, and don't need to integrate anything. However, in practice, I take the average $$L_\nu}$$ value between 1450 and 1550 Angstroms.
+Additionally, $$L_{1500}$$ should be in units of [ergs/s/Hz]. This means I can read this directly from $$L{\rm nu}$$, and don't need to integrate anything. However, in practice, I take the average $$L_\nu$$ value between 1450 and 1550 Angstroms.
 
 
 ## Generating the spectrum
@@ -49,6 +49,6 @@ The star-forming galaxies are too low, but the quiescent look okay.
 
 Here are what the spectra look like for 10 example galaxies
 
-<img src="{{ site.baseurl }}/assets/plots/20220421_xi_ion_scatter.png">
+<img src="{{ site.baseurl }}/assets/plots/20220421_Example_Spectra.png">
 
 One potential problem could be the interpolation to find the flux at 912 Angstroms?
