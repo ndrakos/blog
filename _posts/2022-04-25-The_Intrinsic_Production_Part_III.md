@@ -6,7 +6,7 @@ categories: reion
 ---
 
 Here is a new update on the intrinsic production rate calculation for the galaxies
-(continuation from <a ="https://ndrakos.github.io/blog/reion/The_intrinsic_production_rate/">Part I</a> and <a="https://ndrakos.github.io/blog/reion/The_intrinsic_production_rate/">Part II</a>).
+(continuation from <a href="https://ndrakos.github.io/blog/reion/The_intrinsic_production_rate/">Part I</a> and <a href="https://ndrakos.github.io/blog/reion/The_intrinsic_production_rate/">Part II</a>).
 
 
 ## Spectra Parameters
