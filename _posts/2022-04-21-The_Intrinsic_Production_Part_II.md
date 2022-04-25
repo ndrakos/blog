@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "The Intrinsic Production Rate"
+title:  "The Intrinsic Production Rate Part II"
 date:   2022-04-21
 categories: reion
 ---
@@ -15,16 +15,16 @@ The solution in my previous post wasn't quite right, so this post includes some 
 
 The production efficiency can be calculated as:
 
-$$\xi_{\rm ion} = \frac{N_{\rm ion}}{L_{1500}} [\rm Hz/erg ]$$
+$$\xi_{\rm ion} = \frac{\dot{N}_{\rm ion}}{L_{1500}} [\rm Hz/erg ]$$
 
 The rate of ionizing photons is in units [photons/s] *not* [photons/s/Hz] as I said in the previous post.
 
 Therefore the calculation should be
 
-$$N_{\rm ion} = \int_{\nu_{912}}^{\infty} \dfrac{L_\nu}{h \nu}  {\rm d} \nu = \int_{0}^{912} \dfrac{L_\nu}{h \lambda} {\rm d} \lambda$$
+$$\dot{N}_{\rm ion} = \int_{\nu_{912}}^{\infty} \dfrac{L_\nu}{h \nu}  {\rm d} \nu = \int_{0}^{912} \dfrac{L_\nu}{h \lambda} {\rm d} \lambda$$
 
 
-Additionally, $$L_{1500}$$ should be in units of [ergs/s/Hz]. This means I can read this directly from $$L{\rm nu}$$, and don't need to integrate anything. However, in practice, I take the average $$L_\nu$$ value between 1450 and 1550 Angstroms.
+Additionally, $$L_{1500}$$ should be in units of [ergs/s/Hz]. This means I can read this directly from $$L{\nu}$$, and don't need to integrate anything. However, in practice, I take the average $$L_\nu$$ value between 1450 and 1550 Angstroms.
 
 
 ## Generating the spectrum
