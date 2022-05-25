@@ -11,10 +11,10 @@ Here is a new update on the intrinsic production rate calculation for the galaxi
 
 ## Spectra Parameters
 
-Dust: I played around with these a bit, and verified setting <code>dust_type=0</code>; <code>dust_index=0</code> is equivalent to keeping <code>dust_type=2</code> and setting code>dust2=0</code>.
+Dust: I played around with these a bit, and verified setting <code>dust_type=0</code>; <code>dust_index=0</code> is equivalent to keeping <code>dust_type=2</code> and setting <code>dust2=0</code>.
 
 Really, to fix things I had to turn the nebular emission model off
-- <code>‘add_neb_emission’=0</code>
+- <code>add_neb_emission=0</code>
 
 What seems to be happening is that the ionizing photons were being absorbed by gas around stars.
 
