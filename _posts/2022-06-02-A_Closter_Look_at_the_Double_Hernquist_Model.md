@@ -41,7 +41,7 @@ To get the analysis to work, I had to slightly change my algorithm for finding t
 
 Here are the results:
 
-<video src="{{site.baseurl}}/assets/videos/S1.mp4" width="500" height="500" controls>
+<video src="{{site.baseurl}}/assets/videos/Sim1.mp4" width="500" height="500" controls>
 </video>
 
 This is the same result that Bradley got.
@@ -55,7 +55,7 @@ Maybe my way of defining a self-bound remnant doesn't work very well in this ext
 
 I ran this simulation, but put the ICs at an initial distance of r=1000 instead of r=100. I also decreased this initial velocity by a factor of $$\sqrt{3}$$. This should give it a much smaller tidal field. I will also give it slightly more initial velocity ($$v_0=5$$)
 
-<video src="{{site.baseurl}}/assets/videos/S2.mp4" width="500" height="500" controls>
+<video src="{{site.baseurl}}/assets/videos/Sim2.mp4" width="500" height="500" controls>
 </video>
 
 Since the orbital time is much longer than Sim 1, this will take a longer time to pass through an orbit. Its probably not worth testing further.
@@ -66,7 +66,7 @@ Since the orbital time is much longer than Sim 1, this will take a longer time t
 I ran a third simulation, with the same initial position/velocity as Sim 1, where the two components are more similar in mass/size (the second component has 2 times the mass, and is 10 times as extended as the first).
 
 
-<video src="{{site.baseurl}}/assets/videos/S3.mp4" width="500" height="500" controls>
+<video src="{{site.baseurl}}/assets/videos/Sim3.mp4" width="500" height="500" controls>
 </video>
 
 This looks a lot easier to work with. I did not pre-calculate the orbital time when setting the snapshot output times, so we will need to figure out what snapshots are approximately at apocenter to run the analysis. But these are probably easier to work with than Sim 1!
