@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Sources of Error in Catalog"
-date:   2022-05-24
+title:  "Measurement Uncertainties in the DREaM Catalogs"
+date:   2022-06-03
 categories: reion
 ---
 
