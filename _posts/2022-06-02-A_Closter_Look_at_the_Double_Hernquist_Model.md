@@ -48,7 +48,7 @@ This is the same result that Bradley got.
 
 Comparing the density profile in the frame of the satellite with all particles and with just the bound particles, it looks like the frame is correct, but a lot of the mass is not actually "bound". I played around with the algorithm, and it doesn't make any difference, so I think that this is not numerical in origin.
 
-Maybe my way of defining a self-bound remnant doesn't work very well in this extreme case, where the profile is very extended; note that more than 90 per cent of the mass is in the extended orange system! Potentially, there is a correction that could be made  by including a background potential when calculating each particles energies. This idea of deciding which particles are bound is an interesting one, and one I might look into in the future, but for now it doesn't seem worth our time, since these aren't the final simulations we will use.
+Maybe my way of defining a self-bound remnant doesn't work very well in this extreme case, where the profile is very extended; note that more than 90 per cent of the mass is in the extended orange system! Potentially, there is a correction that could be made  by including a background potential when calculating each particles energies. Also note I am assuming the satellite potential is roughly spherical, which I have found works very well in the past; but maybe it fails here. This idea of deciding which particles are bound is an interesting one, and one I might look into in the future, but for now it doesn't seem worth our time, since these aren't the final simulations we will use.
 
 
 ## Sim 2
@@ -69,13 +69,13 @@ I ran a third simulation, with the same initial position/velocity as Sim 1, wher
 <video src="{{site.baseurl}}/assets/videos/Sim3.mp4" width="500" height="500" controls>
 </video>
 
-This looks a lot easier to work with. I did not pre-calculate the orbital time when setting the snapshot output times, so we will need to figure out what snapshots are approximately at apocenter to run the analysis. But these are probably easier to work with than Sim 1!
+This looks a lot easier to work with. One thing that is a little strange is that it seems to calculate the bound mass in some snapshots better than others. I did not pre-calculate the orbital time when setting the snapshot output times, so we will need to figure out what snapshots are approximately at apocenter to run the analysis. But these are probably easier to work with than Sim 1!
 
 
 ## Conclusions
 
-The bound mass was easier to track in S3, but I am still interested in why the density profile with all particles looks like there should be more mass. I think this probably has something to do with the profiles, so I don't want to waste a lot of time looking into the problem, if it will go away with the new profile.
+The bound mass was easier to track in S3, but I am still interested in why the density profile with all particles looks like there should be more mass. I think this probably has something to do with the profiles, which makes my current algorithms not robust. I don't want to waste a lot of time looking into the problem, if it will go away with the new profile.
 
 1. Bradley can take a look at Sim 3, and see if it is easier to see what is happening in energy space.
 
-2. I need to write the IC code for the more complicated profiles (see <a href="https://ndrakos.github.io/blog/tidal_stripping/General_model_for_two-component_satellite/">this post</a> for my plan for these). I am pretty convinced my method for creating ICs is working alright, so I just need to do so for the more complicated distribution functions. Once I have a fiducial case working for this, we can check to see if we run into the same problem.
+2. I need to write the IC code for the more complicated profiles (see <a href="https://ndrakos.github.io/blog/tidal_stripping/General_model_for_two-component_satellite/">this post</a> for my plan for these). I am pretty convinced my method for creating ICs is working alright, so I just need to do so for the more complicated distribution functions. Once I have a fiducial case working for this, we can check to see if we run into the same problem. If we do, we will need to dig into it more to figure out what is happening.
