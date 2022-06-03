@@ -2,7 +2,6 @@
 layout: post
 title:  "Two Component System"
 date:   2020-06-15
-
 categories: tidal_stripping
 ---
 
