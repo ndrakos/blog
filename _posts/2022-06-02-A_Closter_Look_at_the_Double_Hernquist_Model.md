@@ -53,7 +53,7 @@ Maybe my way of defining a self-bound remnant doesn't work very well in this ext
 
 ## Sim 2
 
-I ran this simulation, but put the ICs at an initial distance of r=1000 instead of r=100. I also decreased this initial velocity by a factor of $$\sqrt(3)$$. This should give it a much smaller tidal field. I will also give it slightly more initial velocity (v0=5)
+I ran this simulation, but put the ICs at an initial distance of r=1000 instead of r=100. I also decreased this initial velocity by a factor of $$\sqrt{3}$$. This should give it a much smaller tidal field. I will also give it slightly more initial velocity ($$v_0=5$$)
 
 <video src="{{site.baseurl}}/assets/videos/S2.mp4" width="500" height="500" controls>
 </video>
@@ -63,7 +63,7 @@ Since the orbital time is much longer than Sim 1, this will take a longer time t
 
 # Sim 3
 
-I ran a third simulation, where the two components are more comparable (the second component has 2 times the mass, and is 10 times as extended).
+I ran a third simulation, with the same initial position/velocity as Sim 1, where the two components are more similar in mass/size (the second component has 2 times the mass, and is 10 times as extended as the first).
 
 
 <video src="{{site.baseurl}}/assets/videos/S3.mp4" width="500" height="500" controls>
