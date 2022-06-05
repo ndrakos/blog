@@ -50,7 +50,7 @@ $$\dot{n}_{\rm ion}$$: can be calculated as described above
 
 $$\langle n_H \rangle = X_p \Omega_b \rho_c$$ is the co-moving density of hydrogen, where $$X_p$$ is the primordial mass-fraction of hydrogen. Should just be able to calculate from $$\Lambda$$CDM parameters.
 
-$$t_{\rm rec}$$ is the recombination time of ionized hydrogen in the IGM, and is given by Eq 3 in Naidu et al. 2020. There are some assumptions they make when calculating this parameter.
+$$t_{\rm rec}$$ is the recombination time of ionized hydrogen in the IGM, and is given by Eq 5 in Naidu et al. 2020. There are some assumptions they make when calculating this parameter.
 
 ## Future considerations
 
