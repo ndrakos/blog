@@ -59,11 +59,11 @@ The clumping factor, $$C_{\rm HII} = \langle n_H^2 \rangle/ \langle n_H \rangle^
 I will start by using just a constant value (e.g. 3) to get this working, but I want to implement the Pawlik model, and see how much this changes things.
 
 
-$$\alpha_B$$ is the the temperature-dependent case B recombination coefficient for hydrogen
+$$\alpha_B$$ is the the temperature-dependent case B recombination coefficient for hydrogen. There are some variations here to what people use. There is a good description of what "case B recombiation" means in <a href="https://ui.adsabs.harvard.edu/abs/2014MNRAS.437.2816R/abstract">Raicvic et al. 2014</a>.
 
-- Naidu2020 states $$\alpha_B 2.6 \times 10^{-13} (T/10^4 {\rm K})^{0.76} {\rm cm^3 s^{-1}}$$ uses $$T=10^4$$ (They cite Shull et al. 2012; Robertson et al. 2013, 2015; Pawlik et al. 2015; Sun & Furlanetto 2016). It looks like they are taking this directly from Sun & Furlanetto 2016.
+- Naidu2020 states $$\alpha_B = 2.6 \times 10^{-13} (T/10^4 {\rm K})^{0.76} {\rm cm^3 s^{-1}}$$ uses $$T=10^4$$ (They cite Shull et al. 2012; Robertson et al. 2013, 2015; Pawlik et al. 2015; Sun & Furlanetto 2016). It looks like they are taking this directly from Sun & Furlanetto 2016.
 - Finkelstein2019 and Yung2020  cite Hui & Gnedin (1997) and use $$T=2 \times 10^4$$ (Finkelstein cites Robertson 2015).
-- Shell+2012 say $$\alpha_B 2.59 \times 10^{-13} (T/10^4 {\rm K})^{-0.845} {\rm cm^3 s^{-1}}$$ and cite  (Osterbrock
+- Shull+2012 say $$\alpha_B = 2.59 \times 10^{-13} (T/10^4 {\rm K})^{-0.845} {\rm cm^3 s^{-1}}$$ and cite  (Osterbrock
 & Ferland 2006). They state "for typical IGM ionization histories and photoelectric heating rates, numerical simulations predict that diffuse photoionized filaments of hydrogen have temperatures ranging from 5000 K to 20,000 K (Davé et al. 2001; Smith et al. 2011)"
 
-Given all this, I will probably use the Naidu model, but I need to double check why the exponent is different in the Shell paper versus the Naidu paper. 
+Given all this, I will follow Sun2016, Naidu2020 and use a temperature of $$\times 10^4$$ as the fiducial temperature, but explore the effects of this assumption.
