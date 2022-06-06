@@ -54,14 +54,16 @@ $$t_{\rm rec} = [ C_{\rm HII} \alpha_B (1 + (1-X)/4X)  \langle n_H \rangle  (1+z
 The clumping factor, $$C_{\rm HII} = \langle n_H^2 \rangle/ \langle n_H \rangle^2$$ is the redshift-dependent HII clumping factor that models the inhomgeneity of the IGM.
 
 - Naidu2020 sets this to 3
-- Finkelstein2019 and Yung2020 use numerical predictions from the radiation-hydrodynamical simulation by Pawlik et al. (2015). In this, $$C_{\rm HII}$$ evolves from 1.5 to 4.8 between z=14 and 6.
+- Finkelstein2019 and Yung2020 use numerical predictions from the radiation-hydrodynamical simulation by <a href="https://ui.adsabs.harvard.edu/abs/2015MNRAS.451.1586P/abstract">Pawlik et al. (2015)</a>. In this, $$C_{\rm HII}$$ evolves from 1.5 to 4.8 between z=14 and 6.
 
 I will start by using just a constant value (e.g. 3) to get this working, but I want to implement the Pawlik model, and see how much this changes things.
 
 
-$$\alpha_B$$ is the the temperature-dependent case B recombination coefficient for hydrogen given in Hui & Gnedin (1997).
+$$\alpha_B$$ is the the temperature-dependent case B recombination coefficient for hydrogen
 
-- Naidu2020 states $$\alpha_B2.6 \times 10^{-13} (T/10^4 {\rm K})^{0.76} {\rm cm^3 s^{-1}}$$ uses $$T=10^4$$ (They cite Shull et al. 2012; Robertson et al. 2013, 2015; Pawlik et al. 2015; Sun & Furlanetto 2016)
-- Finkelstein2019 and Yung2020 don't write out the equation, but use $$T=2 \times 10^4$$ (Finkelstein cites Robertson 2015).
+- Naidu2020 states $$\alpha_B 2.6 \times 10^{-13} (T/10^4 {\rm K})^{0.76} {\rm cm^3 s^{-1}}$$ uses $$T=10^4$$ (They cite Shull et al. 2012; Robertson et al. 2013, 2015; Pawlik et al. 2015; Sun & Furlanetto 2016). It looks like they are taking this directly from Sun & Furlanetto 2016.
+- Finkelstein2019 and Yung2020  cite Hui & Gnedin (1997) and use $$T=2 \times 10^4$$ (Finkelstein cites Robertson 2015).
+- Shell+2012 say $$\alpha_B 2.59 \times 10^{-13} (T/10^4 {\rm K})^{-0.845} {\rm cm^3 s^{-1}}$$ and cite  (Osterbrock
+& Ferland 2006). They state "for typical IGM ionization histories and photoelectric heating rates, numerical simulations predict that diffuse photoionized filaments of hydrogen have temperatures ranging from 5000 K to 20,000 K (Davé et al. 2001; Smith et al. 2011)"
 
-I'm a bit confused, because (1) Naidu cites Robertson2015, but when I checked that paper uses $$2\times 10^2$$ and (2) the form of the equation looks different in Hui & Gnedin (1997). I think I will use the model from Naidu, but with the temperature $$T=2 \times 10^4$$. I need to look through all these citations, and make sure I understand where this equation comes from though. 
+Given all this, I will probably use the Naidu model, but I need to double check why the exponent is different in the Shell paper versus the Naidu paper. 
