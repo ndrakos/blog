@@ -14,13 +14,13 @@ As outlined in the <a href="">previous post</a> the volume-filling fraction of i
 $$ \frac{ dQ_{\rm HII} }{ dt} = \frac{ \dot{n}_{\rm ion} } {\langle n_H \rangle} - \frac{Q}{\bar{t}_{\rm rec}} $$
 
 where:
-  - $$\dot{n}_{\rm ion}$$ can be calculated directly from the catalog
-  - $$\langle n_H \rangle =1.9\times 10^{-7} cm^{-3}$$
-  - $$t_{\rm rec} = [ C_{\rm HII} \alpha_B (1 + (1-X)/4X)  \langle n_H \rangle  (1+z)^3 ]^{-1}$$
-  - $$X=0.75$$
-  - $$C_{\rm HII} = 3$$ (but I will later replace this with a time dependent value)
-  - $$\alpha_B = 2.6 \times 10^{-13} (T/10^4 {\rm K})^{0.76} {\rm cm^3 s^{-1}}$$
-  - $$T=10^4$$ K (I will vary this later to see the effects)
+  - $$\dot{n}_{\rm ion}$$ can be calculated directly from the catalog.
+  - $$\langle n_H \rangle =1.9\times 10^{-7} cm^{-3}$$.
+  - $$t_{\rm rec} = [ C_{\rm HII} \alpha_B (1 + (1-X)/4X)  \langle n_H \rangle  (1+z)^3 ]^{-1}$$.
+  - $$X=0.75$$.
+  - $$C_{\rm HII} = 3$$ (but I will later replace this with a time dependent value).
+  - $$\alpha_B = 2.6 \times 10^{-13} (T/10^4 {\rm K})^{0.76} {\rm cm^3 s^{-1}}$$.
+  - $$T=10^4$$ K (I will vary this later to see the effects).
 
 
 For $$\dot{n}_{\rm ion}$$ I will use all the galaxies in the DREaM catalog. Later on, I can decide if I should make a cut in luminosity. I will interpolate this to get $$\dot{n}_{\rm ion}$$ as a function of $$z$$
