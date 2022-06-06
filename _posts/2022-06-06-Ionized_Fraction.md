@@ -64,6 +64,6 @@ $$\alpha_B$$ is the the temperature-dependent case B recombination coefficient f
 - Naidu2020 states $$\alpha_B = 2.6 \times 10^{-13} (T/10^4 {\rm K})^{0.76} {\rm cm^3 s^{-1}}$$ uses $$T=10^4$$ (They cite Shull et al. 2012; Robertson et al. 2013, 2015; Pawlik et al. 2015; Sun & Furlanetto 2016). It looks like they are taking this directly from Sun & Furlanetto 2016.
 - Finkelstein2019 and Yung2020  cite Hui & Gnedin (1997) and use $$T=2 \times 10^4$$ (Finkelstein cites Robertson 2015).
 - Shull+2012 say $$\alpha_B = 2.59 \times 10^{-13} (T/10^4 {\rm K})^{-0.845} {\rm cm^3 s^{-1}}$$ and cite  (Osterbrock
-& Ferland 2006). They state "for typical IGM ionization histories and photoelectric heating rates, numerical simulations predict that diffuse photoionized filaments of hydrogen have temperatures ranging from 5000 K to 20,000 K (Davé et al. 2001; Smith et al. 2011)"
+& Ferland 2006). I'm wondering if the exponent is a typo, becuase it doesn't seem quite right. They state "for typical IGM ionization histories and photoelectric heating rates, numerical simulations predict that diffuse photoionized filaments of hydrogen have temperatures ranging from 5000 K to 20,000 K (Davé et al. 2001; Smith et al. 2011)"
 
-Given all this, I will follow Sun2016, Naidu2020 and use a temperature of $$\times 10^4$$ as the fiducial temperature, but explore the effects of this assumption.
+Given all this, I will follow Sun2016, Naidu2020 and use $$10^4$$ K as the fiducial temperature, but explore the effects of this assumption.
