@@ -24,7 +24,7 @@ The parameters $$\alpha$$ and $$\beta$$ control the inner and outer slopes of th
 One issue that comes up with this profile is that for certain choices of parameters, the mass profile diverges (i.e. the total mass is infinite as you go out to very large radii). In these cases, to set up the ICs you need to make some sort of truncation on the density profile.
 
 
-This double power-law profil diverges if $$\beta \leq 3$$. To understand this, realize the mass goes as $$\rho r^3$$.. Therefore, $$\rho$$ needs to drop off faster than $$r^3$$. At large $$r$$, $$\rho \propto r^{-\alpha} r{-(\beta + \alpha)} \propto r^{-\beta}$$.
+This double power-law profil diverges if $$\beta \leq 3$$. To understand this, realize the mass goes as $$\rho r^3$$.. Therefore, $$\rho$$ needs to drop off faster than $$r^3$$. At large $$r$$, $$\rho \propto r^{-\alpha} r^{-(\beta + \alpha)} \propto r^{-\beta}$$.
 
 Since $$\beta$$ controls the outer slope of the satellite, it isn't important to vary this parameter. In <a href="https://ndrakos.github.io/blog/tidal_stripping/General_model_for_two-component_satellite/">this post</a>, I had planned to use $$\beta_{stars}=4$$ and $$\beta_{dm}=3$$. Instead, I'll probably use $$\beta_{stars}=\beta_{dm}=4$$, which should give a converging mass profile. I could also try $$\beta_{dm}=3.1$$, if I decide I want the dark matter component to be more extended. This really shouldn't effect the results much though.
 
@@ -36,7 +36,7 @@ I am going to set $$\beta=4$$, and call the following the "alpha" profile (for l
 $$\rho(r) = \dfrac{\rho_s}{(r/r_s)^\alpha (1 + r/r_s)^{4 - \alpha}}$$
 
 
-In the Alpha profile, $$\alpha$$ sets the inner slope, $$r_s$$ sets the scale radius, and $$\\rho_s$$ sets the total mass.
+In the Alpha profile, $$\alpha$$ sets the inner slope, $$r_s$$ sets the scale radius, and $$\rho_s$$ sets the total mass.
 
 Here is the profile, varying $$\alpha$$:
 
@@ -60,11 +60,13 @@ $$M = \dfrac{4 \pi \rho_s r_s^3 }{3-\alpha}$$
 
 $$\Delta^2 \phi = 4 \pi \rho(r)$$, with boundary conditions $$d\phi/dr(0)=0$$ and $$\phi(r-> \infty)=0$$
 
-$$ \dfrac{1}{r^2}\dfrac{d}{dr}\left( r^2 \dfrac{d\phi}{dr} \right) = 4 \pi \rho(r)$$
+$$ \dfrac{1}{r^2}\dfrac{d}{dr}\left( r^2 \dfrac{d\phi}{dr} \right) = 4 \pi G \rho(r)$$
 
-$$\phi = \dfrac{4 \pi \rho_s r_s}{(3-\alpha)(2-\alpha)} \left[ \left(\dfrac{x}{x+1}\right) -1\right]$$
+$$\phi = \dfrac{4 \pi G \rho_s r_s}{(3-\alpha)(2-\alpha)} \left[ \left(\dfrac{x}{x+1}\right) -1\right]$$
 
-And the central potential is $$\phi_0 = -\dfrac{4 \pi \rho_s r_s}{(3-\alpha)(2-\alpha)}$$.
+And the central potential is
+
+$$\phi_0 = -\dfrac{4 \pi G \rho_s r_s}{(3-\alpha)(2-\alpha)}$$.
 
 
 
@@ -91,6 +93,8 @@ I will primarily change the alpha values of both components, but maybe also expl
 As outlined <a href="https://ndrakos.github.io/blog/tidal_stripping/Two_Component_System/">here/a>, the distribution function can be calculated as:
 
 $$f_i(\mathcal{E})=\dfrac{1}{\sqrt{8}\pi^2}\left[ \int_{r_{\mathcal{E}}}^\infty \dfrac{1}{\sqrt{\mathcal{E}- \Psi}}\dfrac{d^2 \rho_i}{d \Psi^2} \dfrac{GM}{r^2} dr \right]$$
+
+$$\dfrac{d^2 \rho_i}{d \Psi^2}  = \left( \dfrac{r^4}{G^2 M^2} \right) \left[ \dfrac{d^2 \rho_i}{d r^2} = \left( \dfrac{r^2}{GM} \right)  \left[\dfrac{2GM}{r^3} -4\piG\rho\right] \dfrac{d \rho_i}{d r} \right] $$
 
 I got this working on a Double Hernquist profile <a href="https://ndrakos.github.io/blog/tidal_stripping/Two_Component_System/">previously</a>.
 
