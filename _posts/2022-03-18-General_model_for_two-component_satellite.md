@@ -40,7 +40,7 @@ One thing to note is that we will have to truncate the particle distribution in 
 
 ## Fiducial satellite parameters
 
-Here is a set of fiducial parameters for the satellite, which we can vary for the different simulations (roughly corresponding to parameters in <a href="https://ui.adsabs.harvard.edu/abs/2018MNRAS.480L.106O/abstract">Ogiya 2018</a>). For the suite of simulations, we will change $$\alpha$$ from $$0.1$$ to $$1$$ for both the inner and outer components. We might also try altering the other parameters depending on the results.
+Here is a set of fiducial parameters for the satellite, which we can vary for the different simulations (roughly corresponding to parameters in <a href="https://ui.adsabs.harvard.edu/abs/2018MNRAS.480L.106O/abstract">Ogiya 2018</a>). For the suite of simulations, we will change $$\alpha$$ from $$0.1$$ to $$1$$ for both components. We might also try altering the other parameters depending on the results.
 
 
 - $$\alpha_{dm}$$ = 0.1
