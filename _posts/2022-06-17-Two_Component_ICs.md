@@ -94,7 +94,7 @@ As outlined <a href="https://ndrakos.github.io/blog/tidal_stripping/Two_Componen
 
 $$f_i(\mathcal{E})=\dfrac{1}{\sqrt{8}\pi^2}\left[ \int_{r_{\mathcal{E}}}^\infty \dfrac{1}{\sqrt{\mathcal{E}- \Psi}}\dfrac{d^2 \rho_i}{d \Psi^2} \dfrac{GM}{r^2} dr \right]$$
 
-$$\dfrac{d^2 \rho_i}{d \Psi^2}  = \left( \dfrac{r^4}{G^2 M^2} \right) \left[ \dfrac{d^2 \rho_i}{d r^2} = \left( \dfrac{r^2}{GM} \right)  \left[\dfrac{2GM}{r^3} -4\piG\rho\right] \dfrac{d \rho_i}{d r} \right] $$
+$$\dfrac{d^2 \rho_i}{d \Psi^2}  = \left( \dfrac{r^4}{G^2 M^2} \right) \left[ \dfrac{d^2 \rho_i}{d r^2} + \left( \dfrac{r^2}{GM} \right)  \left[\dfrac{2GM}{r^3} -4\pi G\rho\right] \dfrac{d \rho_i}{d r} \right] $$
 
 I got this working on a Double Hernquist profile <a href="https://ndrakos.github.io/blog/tidal_stripping/Two_Component_System/">previously</a>.
 
