@@ -49,7 +49,7 @@ To set-up the desired ICs, need to know the relation between $$\rho_s$$ and mass
 
 $$M(<r) = \int_0^r \rho(r') 4 \pi r'^2 dr'$$
 
-$$M(<r) =  \dfrac{4 \pi \rho_s r_s^3 }{3-\alpha} \left[ \dfrac{x}{1+x}\right]^{3-\alpha}$$
+$$M(<r) =  \dfrac{4 \pi \rho_s r_s^3 }{3-\alpha} \left[ \dfrac{r}{r_s+r}\right]^{3-\alpha}$$
 
 And the total mass is:
 
@@ -62,11 +62,11 @@ $$\Delta^2 \phi = 4 \pi \rho(r)$$, with boundary conditions $$d\phi/dr(0)=0$$ an
 
 $$ \dfrac{1}{r^2}\dfrac{d}{dr}\left( r^2 \dfrac{d\phi}{dr} \right) = 4 \pi G \rho(r)$$
 
-$$\phi = - \dfrac{4 \pi G \rho_s r_s}{(3-\alpha)(2-\alpha)} \left[ 1 -  \left(\dfrac{x}{x+1}\right)^{2-\alpha} \right]$$
+$$\phi = - \dfrac{4 \pi G \rho_s r_s^2}{(3-\alpha)(2-\alpha)} \left[ 1 -  \left(\dfrac{x}{x+1}\right)^{2-\alpha} \right]$$
 
 And the central potential is
 
-$$\phi_0 = -\dfrac{4 \pi G \rho_s r_s}{(3-\alpha)(2-\alpha)}$$.
+$$\phi_0 = -\dfrac{4 \pi G \rho_s r_s^2}{(3-\alpha)(2-\alpha)}$$.
 
 
 
