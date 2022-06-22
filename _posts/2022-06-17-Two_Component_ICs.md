@@ -62,7 +62,7 @@ $$\Delta^2 \phi = 4 \pi \rho(r)$$, with boundary conditions $$d\phi/dr(0)=0$$ an
 
 $$ \dfrac{1}{r^2}\dfrac{d}{dr}\left( r^2 \dfrac{d\phi}{dr} \right) = 4 \pi G \rho(r)$$
 
-$$\phi = \dfrac{4 \pi G \rho_s r_s}{(3-\alpha)(2-\alpha)} \left[ \left(\dfrac{x}{x+1}\right) -1\right]$$
+$$\phi = - \dfrac{4 \pi G \rho_s r_s}{(3-\alpha)(2-\alpha)} \left[ 1 -  \left(\dfrac{x}{x+1}\right)^{2-\alpha} \right]$$
 
 And the central potential is
 
@@ -90,7 +90,7 @@ I will primarily change the alpha values of both components, but maybe also expl
 ## Calculating the Distribution Function
 
 
-As outlined <a href="https://ndrakos.github.io/blog/tidal_stripping/Two_Component_System/">here/a>, the distribution function can be calculated as:
+As outlined <a href="https://ndrakos.github.io/blog/tidal_stripping/Two_Component_System/">here</a>, the distribution function can be calculated as:
 
 $$f_i(\mathcal{E})=\dfrac{1}{\sqrt{8}\pi^2}\left[ \int_{r_{\mathcal{E}}}^\infty \dfrac{1}{\sqrt{\mathcal{E}- \Psi}}\dfrac{d^2 \rho_i}{d \Psi^2} \dfrac{GM}{r^2} dr \right]$$
 
