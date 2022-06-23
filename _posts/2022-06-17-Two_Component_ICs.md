@@ -103,6 +103,6 @@ For the Double-Alpha model (where $$p=\rho/\rho_s$$, $$x=r/r_s$$ ):
 
 $$\dfrac{dp}{d x} = - \dfrac{p (\alpha + 4x)}{x(1+x)}$$
 
-$$\dfrac{d^2 p}{d x^2} = - \dfrac{p }{x^2(1+x)^2}   (\alpha^2 + 20 x^2 + 10 x\alpha + \alpha)$$
+$$\dfrac{d^2 p}{d x^2} =  \dfrac{p }{x^2(1+x)^2}   (\alpha^2 + 20 x^2 + 10 x\alpha + \alpha)$$
 
 Given all this, I can add this to my IC code, ICICLE.

@@ -35,7 +35,7 @@ Looks like this part is working. If the velocities are assigned correctly, this 
 
 If the energy of the particles make sense, the particles should all initially be bound---i.e., they should all have a positive "binding" energy, $$\mathcal{E} = -\phi(r) - \dfrac{1}{2} v^2 > 0 $$. Additionally, the maximum energy should be $$|\phi_0| = \dfrac{4 \pi G \rho_{s,dm}}{(3-\alpha_{dm})(2 - \alpha_{dm})} + \dfrac{4 \pi G \rho_{s,stars}}{(3-\alpha_{stars})(2 - \alpha_{stars})}$$
 
-Here is the distribution of energies, with $$|\phi_0|$$ plotted as a vertical line.
+Here is the distribution of energies, with $$-\phi_0$$ plotted as a vertical line.
 
 <img src="{{ site.baseurl }}/assets/plots/20220622_Alpha2_ICEnergycheck.png">
 
