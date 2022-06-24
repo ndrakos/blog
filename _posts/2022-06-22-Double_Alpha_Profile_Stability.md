@@ -45,7 +45,7 @@ The distribution of energies fall in the correct range, which is reassuring that
 
 ## Run in Isolation
 
-Then I ran it in isolation, which is the real test for stability. The vertical lines are the relaxation and evaporation radii:
+Then I ran it in isolation, which is the real test for stability. The vertical line is the relaxation radius:
 
 <img src="{{ site.baseurl }}/assets/plots/20220622_IC_Stability.png">
 

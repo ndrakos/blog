@@ -99,7 +99,7 @@ $$\dfrac{d^2 \rho_i}{d \Psi^2}  = \left( \dfrac{r^4}{G^2 M^2} \right) \left[ \df
 I got this working on a Double Hernquist profile <a href="https://ndrakos.github.io/blog/tidal_stripping/Two_Component_System/">previously</a>.
 
 
-For the Double-Alpha model (where $$p=\rho/\rho_s$$, $$x=r/r_s$$ ):
+For the Alpha model (where $$p=\rho/\rho_s$$, $$x=r/r_s$$ ):
 
 $$\dfrac{dp}{d x} = - \dfrac{p (\alpha + 4x)}{x(1+x)}$$
 
