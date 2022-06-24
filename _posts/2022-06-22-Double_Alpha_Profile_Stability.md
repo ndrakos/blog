@@ -26,7 +26,7 @@ I will run this with N=1e5 for initial testing. The simulations we use will have
 
 Here are the initial positions
 
-<img src="{{ site.baseurl }}/assets/plots/20220622_Alpha2_ICcheck.png">
+<img src="{{ site.baseurl }}/assets/plots/20220622_Alpha2ICcheck.png">
 
 Looks like this part is working. If the velocities are assigned correctly, this should be stable when evolved in isolation.
 
@@ -37,7 +37,7 @@ If the energy of the particles make sense, the particles should all initially be
 
 Here is the distribution of energies, with $$-\phi_0$$ plotted as a vertical line.
 
-<img src="{{ site.baseurl }}/assets/plots/20220622_Alpha2_ICEnergycheck.png">
+<img src="{{ site.baseurl }}/assets/plots/20220622_Alpha2ICEnergycheck.png">
 
 The distribution of energies fall in the correct range, which is reassuring that the range of velocities are correct.
 
