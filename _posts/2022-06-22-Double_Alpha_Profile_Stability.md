@@ -37,7 +37,7 @@ If the energy of the particles make sense, the particles should all initially be
 
 Here is the distribution of energies, with $$-\phi_0$$ plotted as a vertical line.
 
-<img src="{{ site.baseurl }}/assets/plots/20220623_Alpha2_ICEnergycheck.png">
+<img src="{{ site.baseurl }}/assets/plots/20220622_Alpha2_ICEnergycheck.png">
 
 The distribution of energies fall in the correct range, which is reassuring that the range of velocities are correct.
 
@@ -47,7 +47,7 @@ The distribution of energies fall in the correct range, which is reassuring that
 
 Then I ran it in isolation, which is the real test for stability. The vertical line is the relaxation radius:
 
-<img src="{{ site.baseurl }}/assets/plots/20220623_IC_Stability.png">
+<img src="{{ site.baseurl }}/assets/plots/20220622_IC_Stability.png">
 
 This looks good!
 
