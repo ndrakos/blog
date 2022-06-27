@@ -12,7 +12,7 @@ In this post, I calculate the Thompson scattering optical depth for the DREaM Ca
 
 Thompson Optical Depth (from eq6 of Naidu et al.):
 
-$$\tau = c\bar{n_H}\sigma_T \int_0^z f_e Q_{H_{II}} \dfrac{(1+z')^2}{H(z}} dz'$$
+$$ \tau = c \bar{n_H} \sigma_T \int_0^z f_e Q_{H_{II}} \dfrac{(1+z')^2}{H(z)} dz'$$
 
 where
 
