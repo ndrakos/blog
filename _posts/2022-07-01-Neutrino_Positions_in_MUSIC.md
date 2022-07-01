@@ -139,7 +139,6 @@ Functions:
 ## Testing code
 
 I tested compiling this hacked version of <code>MUSIC</code>, <code>MUSICnu</code>, but with
-- using the same grid structure for the neutrinos (i.e. not a coarser grid)
 - the neutrino tf_type set to cdm, because I haven't coded the neutrino bit yet
 - write_dm_position instead of  write_neutrino_position
 
@@ -150,6 +149,6 @@ This compiled fine, which is good.
 
 1. Add the neutrino transfer function (I think this can just be done using the CAMB transfer function plug-in, already encor)
 2. Add the velocity bit into the code (this has already been coded, just needs to be pasted in the right part)
-3. Add code for outputs, as I outlined <a href="https://ndrakos.github.io/blog/cosmo_ics/MUSIC_code_breakdown/">here</a>
+3. Add code for Gadget outputs, as I outlined <a href="https://ndrakos.github.io/blog/cosmo_ics/MUSIC_code_breakdown/">here</a>
 
 Once this is running, I can look at the power spectra of the neutrinos, and verify that the ICs look correct.
