@@ -18,7 +18,7 @@ This post will review some of the motivation and background, mainly from B18.
 Neutrinos are one of the most abundant particles in the universe, and their number density is about equivalent to photons. Current constraints on the cosmic neutrino temperature imply that massive neutrinos are highly non-relativistic today, and can gravitationally cluster. Neutrino oscillation experiments constrain the mass square differences between neutrinos, but can't determine the absolute mass scale, or the total mass of the three eigenstates. There are bounds on sum of neutrino masses from astronomical sources include CMB lensing, Ly-alpha forest power spectrum, galaxy-galaxy lensing and BAO; almost all of the astronomical constraints are based on measuring the small scale damping of the power spectrum. Massive neutrinos damp power spectrum on scales before the free streaming scale, and this damping proportional to the total energy density in neutrinos.
 
 
-Both the clustering and power spectra are well understood on linear scales (i.e. large scales and early times), but we need to run simulations to understand on non-linear scales. However, there are a lot of technical problems to adding to simulations. B18 offers a possible straight-forward solution.
+Both the clustering and power spectra are well understood on linear scales (i.e. large scales and early times), but we need to run simulations to understand on non-linear scales. However, there are a lot of technical problems to adding neutrinos to simulations. B18 offers a possible straight-forward solution.
 
 
 ## Adding Neutrinos to Simulations
@@ -28,7 +28,7 @@ Unlike cold-dark-matter, neutrinos have high thermal velocities. Broadly, there 
 ### 1) Treat neutrinos as a linear fluid on a grid, coupled to the N-body evolution of CDM particles
 
 
-Pros: Good for intermediate scales, high redshifts, and captures CDM component evolution quite Well
+Pros: Good for intermediate scales, high redshifts, and captures CDM component evolution quite well
 
 Cons: Quasi-linear methods break down when over-densities in the neutrino fluid are of order 1. Neutrino component becomes inaccurate once there is significant clustering.
 

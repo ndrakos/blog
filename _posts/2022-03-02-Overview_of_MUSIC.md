@@ -22,7 +22,7 @@ $$\mu(\mathbf{r})$$ is typically sampled from a Gaussian distribution with zero 
 
 ### Compute position and velocity fields
 
-To get positions and velocities from the density field, Poisson's equations are solved. They use second order Lagrangian Perturbation Theory (LPT) to do this (Note: Zel'dovich approximation refers to the first-order Lagrangian Perturbation theorem)
+To get positions and velocities from the density field, Poisson's equations are solved. They use second order Lagrangian Perturbation Theory (LPT) to do this (Note: Zel'dovich approximation refers to the first-order LPT)
 
 
 ## How neutrinos fit in

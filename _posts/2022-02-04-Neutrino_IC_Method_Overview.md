@@ -52,7 +52,7 @@ The number of elements per sphere are $$12 N_{\rm side}^2$$. As discussed in B18
 
 ### Final steps
 
-Therefore there are $$12 \times N_{\rm side}^2 \times N_{\rm shell}$$ neutrino particles per gridpoint, with the number neutrino IC gridpoints being defined as $$N_{\rm grid}^3$$. This results in a total number of $$12 \times N_{\rm side}^2 \times N_{\rm shell} \times N_{\rm grid}^3$$ neutrino particles.
+Therefore there are $$12 \times N_{\rm side}^2 \times N_{\rm shell}$$ neutrino particles per gridpoint, with the number of neutrino IC gridpoints being defined as $$N_{\rm grid}^3$$. This results in a total number of $$12 \times N_{\rm side}^2 \times N_{\rm shell} \times N_{\rm grid}^3$$ neutrino particles.
 
 Particles are displaced off of grids using Zeldovich approximation, and the masses are adjusted to give correct $$\Omega_\nu$$ for the simulation box.
 
