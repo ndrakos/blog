@@ -16,11 +16,11 @@ Therefore, our fiducial orbit can be similar to the one used in Ogiya2018.
 In my version of Gadget, with the fixed potential, I need to set
 1. <code>NFW_Mvir</code>: The host to satellite mass ratio
 2. <code>NFW_C</code>: The concentration of the host.
-3. <code>SAT_C</code>: The concentration of the satellite (assuming the scale radius of the satellite is 1). The code sets the virial radius of the host, $$R\_vir = SAT_C * NFW\_Mvir^{1/3}$$
+3. <code>SAT_C</code>: The concentration of the satellite (assuming the scale radius of the satellite is 1). The code sets the virial radius of the host, $$R\_vir = SAT\_C * NFW\_Mvir^{1/3}$$
 
 I will use the same values in the Ogiya paper: 224, 5.8 and 11.2
 
-In simulation units, the host has mass $$M=224$$, virial radius $$R_{\rm vir} = 68.02$$,   scale radius $$R_s = 11.72$$ and characteristic density $$\\rho_0 = 0.01038$$. 
+In simulation units, the host has mass $$M=224$$, virial radius $$R_{\rm vir} = 68.02$$,   scale radius $$R_s = 11.72$$ and characteristic density $$\rho_0 = 0.01038$$.
 
 
 ## Orbital parameters
@@ -30,7 +30,7 @@ The initial frame of the satellite was set to be x,y,z,vx,vy,vz = (559 kpc, 0, 0
 
 In the simulation units, $$G=1$$, $$r_{\rm unit}=r_s$$ and $$M_{\rm unit} = M_{\rm sat}$$. Then, the velocity unit is $$v_{\rm unit} = \sqrt{ G M_{\rm sat}/r_{s}}$$.
 
-In Ogiya's paper, the virial radius of the satellite is 77.3 kpc, and it has a concentration of 11.2. Therefore,  $$r_{\rm unit}=6.9$$ kpc. The mass of the satellite is $$4.9 × 10^10$$ solar masses, which means the velocity unit is $$v_{\rm unit} = 165.12 $$.
+In Ogiya's paper, the virial radius of the satellite is 77.3 kpc, and it has a concentration of 11.2. Therefore,  $$r_{\rm unit}=6.9$$ kpc. The mass of the satellite is $$4.9 × 10^{10}$$ solar masses, which means the velocity unit is $$v_{\rm unit} = 165.12 $$.
 
 In simulation units x,y,z,vx,vy,vz = (80.9, 0, 0, 0, 0.12, 0)
 
