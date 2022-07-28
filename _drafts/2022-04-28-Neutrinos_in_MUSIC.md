@@ -36,6 +36,9 @@ This I fixed by including the flag <code>-std=c++11</code>
 Now it works, but only if I keep the '-fopenmp' option turned off.
 
 
+### Problem 3
+
+General problems with segfaults in strings... switched to g++-11
 
 ## Step 1: Read in parameters
 
@@ -56,7 +59,7 @@ I altered MUSIC to read in a "neutrino" option the configuration file.
 
 ## Step 3: Neutrino Velocities
 
-Bulk velocity from power spectrum + random thermal velocity from Fermi-Dirac power spectrum... 
+Bulk velocity from power spectrum + random thermal velocity from Fermi-Dirac power spectrum...
 
 <a href="https://ndrakos.github.io/blog/cosmo_ics/Neutrino_Implementation_in_C/">This post</a> contains my C code for implementing the neutrino ICs. I altered MUSIC to do this.
 

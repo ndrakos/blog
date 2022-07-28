@@ -1,0 +1,24 @@
+---
+layout: page
+permalink: /cosmo_web/
+title:  "COSMOS Web"
+---
+
+
+<p style="text-align:justify">
+This page contains the work I've done for COSMOS-Web
+</p>
+
+
+
+<h2 class="page-heading">Related Posts</h2>
+
+<ul class="post-list">
+  {% for post in site.categories.cosmo_web %}
+
+  <li>
+    <span>{{ post.date | date: "%b %-d, %Y" }}</span> &nbsp; <a href="{{ post.url | prepend: site.baseurl }}">{{post.title }}</a>
+  </li>
+
+  {% endfor %}
+</ul>
