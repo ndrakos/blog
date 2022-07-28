@@ -2,7 +2,7 @@
 layout: post
 title:  "Results for JWST Proposal Part I"
 date:   2020-10-29
-categories: cosmos-web
+categories: cosmos_web
 ---
 
 We want positions and magnitudes in two snapshots (redshifts 7 and 9) in the F200W Filter.

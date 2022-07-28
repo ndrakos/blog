@@ -2,10 +2,10 @@
 layout: post
 title:  "Results for JWST Proposal Part III"
 date:   2020-11-03
-categories: cosmos-web
+categories: cosmos_web
 ---
 
-This is a continuation of <a href="https://ndrakos.github.io/blog/cosmos-web/Results_for_JWST_Proposal_Part_II/">this post</a>, in which I plotted the galaxy catalog on top of the dark matter density slice.
+This is a continuation of <a href="https://ndrakos.github.io/blog/cosmos_web/Results_for_JWST_Proposal_Part_II/">this post</a>, in which I plotted the galaxy catalog on top of the dark matter density slice.
 
 I am now going to look into adding reionization bubbles.
 

@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /cosmo_ics/
-title:  "Cosmolgoical Initial Conditions"
+title:  "Cosmolgoical Initial Conditions (Massive Neutrinos)"
 ---
 
 

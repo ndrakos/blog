@@ -2,10 +2,10 @@
 layout: post
 title:  "Results for JWST Proposal Part II"
 date:   2020-11-02
-categories: cosmos-web
+categories: cosmos_web
 ---
 
-This is a continuation of <a href="https://ndrakos.github.io/blog/cosmos-web/Results_for_JWST_Proposal_Part_I/">this post</a>. I will be keeping all the relevant data <a href="https://drive.google.com/drive/folders/1TuKiKviaWwun1qLq9LSMj03pRCWhNhvI?usp=sharing">here</a>.
+This is a continuation of <a href="https://ndrakos.github.io/blog/cosmos_web/Results_for_JWST_Proposal_Part_I/">this post</a>. I will be keeping all the relevant data <a href="https://drive.google.com/drive/folders/1TuKiKviaWwun1qLq9LSMj03pRCWhNhvI?usp=sharing">here</a>.
 
 I am using the 1024 simulations. I have AHF catalogs for snapshots 121 and 159, and have run Abundance Matching and my SED code on both snapshots.
 
