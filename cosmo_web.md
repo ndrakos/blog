@@ -14,7 +14,7 @@ This page contains the work I've done for COSMOS-Web
 <h2 class="page-heading">Related Posts</h2>
 
 <ul class="post-list">
-  {% for post in site.categories.cosmo_web %}
+  {% for post in site.categories.cosmos_web %}
 
   <li>
     <span>{{ post.date | date: "%b %-d, %Y" }}</span> &nbsp; <a href="{{ post.url | prepend: site.baseurl }}">{{post.title }}</a>
