@@ -2,13 +2,13 @@
 layout: post
 title:  "Neutrinos in MUSIC"
 date:   2022-04-28
-categories: cosmo_ics
+categories: neutrinos
 ---
 
 
 Here is my first attempt to add neutrinos to MUSIC.
 
-<a href="https://ndrakos.github.io/blog/cosmo_ics/MUSIC_code_breakdown/">This post</a> outlines the MUSIC code, and the changes I need to make.
+<a href="https://ndrakos.github.io/blog/neutrinos/MUSIC_code_breakdown/">This post</a> outlines the MUSIC code, and the changes I need to make.
 
 
 ## MUSIC Installation
@@ -50,7 +50,7 @@ I altered MUSIC to read in a "neutrino" option the configuration file.
 
 2. <code>neutrino_test.conf</code>
 - I added this example conf file
-- This includes extra parameters needed (see <a href="https://ndrakos.github.io/blog/cosmo_ics/MUSIC_code_breakdown/">this post</a>).
+- This includes extra parameters needed (see <a href="https://ndrakos.github.io/blog/neutrinos/MUSIC_code_breakdown/">this post</a>).
 
 
 
@@ -61,7 +61,7 @@ I altered MUSIC to read in a "neutrino" option the configuration file.
 
 Bulk velocity from power spectrum + random thermal velocity from Fermi-Dirac power spectrum...
 
-<a href="https://ndrakos.github.io/blog/cosmo_ics/Neutrino_Implementation_in_C/">This post</a> contains my C code for implementing the neutrino ICs. I altered MUSIC to do this.
+<a href="https://ndrakos.github.io/blog/neutrinos/Neutrino_Implementation_in_C/">This post</a> contains my C code for implementing the neutrino ICs. I altered MUSIC to do this.
 
 1. <code>src/nu_directions</code>
 - Added this new folder with a lookup table...

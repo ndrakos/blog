@@ -2,7 +2,7 @@
 layout: post
 title:  "Neutrino Transfer Function"
 date:   2022-07-25
-categories: cosmo_ics
+categories: neutrinos
 ---
 
 
@@ -69,7 +69,7 @@ As mentioned above, MUSIC already as a CAMB plugin. <code>transfer_camb.cc</code
 
 I also needed to add neutrinos to the tf_type types in <code>transfer_function.hh</code>.
 
-This compiled fine. 
+This compiled fine.
 
 
 ## Next steps

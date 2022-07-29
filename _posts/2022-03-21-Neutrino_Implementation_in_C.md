@@ -2,11 +2,11 @@
 layout: post
 title:  "Neutrino Implementation in C"
 date:   2022-03-21
-categories: cosmo_ics
+categories: neutrinos
 ---
 
 
-This post contains code to  assign velocity to the particles in C. I did this in a <a href="https://ndrakos.github.io/blog/cosmo_ics/Neutrino_Velocity_Assignment_Test/">previous post</a> in python, but we need it in a form that will be incorporated into MUSIC, and eventually Cholla.
+This post contains code to  assign velocity to the particles in C. I did this in a <a href="https://ndrakos.github.io/blog/neutrinos/Neutrino_Velocity_Assignment_Test/">previous post</a> in python, but we need it in a form that will be incorporated into MUSIC, and eventually Cholla.
 
 Note that I am embarrassingly rusty at C, and I am not sure how efficiently I coded this! It does give the same answer as the python code though.
 

@@ -2,7 +2,7 @@
 layout: post
 title:  "Overview of MUSIC"
 date:   2022-03-02
-categories: cosmo_ics
+categories: neutrinos
 ---
 
 In this post, I will outline the basic algorithm in the code in MUSIC (<a href="https://ui.adsabs.harvard.edu/abs/2011MNRAS.415.2101H/abstract">Hahn and Abel 2011</a>), and think about what needs to be altered to add neutrino ICs. MUSIC uses a nested grid, which we don't really care about for our applications, so I will ignore that.

@@ -2,10 +2,10 @@
 layout: post
 title:  "Neutrino Transfer Functions"
 date:   2022-07-01
-categories: cosmo_ics
+categories: neutrinos
 ---
 
-<a href="https://ndrakos.github.io/blog/cosmo_ics/MUSIC_code_breakdown/">This post</a> outlines the MUSIC code, and the changes I need to make to put in neutrinos. I also looked into detail on how to assign velocities.
+<a href="https://ndrakos.github.io/blog/neutrinos/MUSIC_code_breakdown/">This post</a> outlines the MUSIC code, and the changes I need to make to put in neutrinos. I also looked into detail on how to assign velocities.
 
 In this post I'm going into more detail on position assignments.
 

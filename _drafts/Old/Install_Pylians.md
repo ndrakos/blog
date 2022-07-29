@@ -2,7 +2,7 @@
 layout: post
 title:  "Install Pylians"
 date:   2021-12-03
-categories: cosmo_ics
+categories: neutrinos
 ---
 
 Used Pylians to calculate power spectrum and stuff... https://pylians3.readthedocs.io/en/master/
@@ -28,4 +28,4 @@ Tested it was working
 python Tests/import_libraries.py
 
 
-at first this said pyfftw wasn't installed, but after I pip installed it was fine 
+at first this said pyfftw wasn't installed, but after I pip installed it was fine

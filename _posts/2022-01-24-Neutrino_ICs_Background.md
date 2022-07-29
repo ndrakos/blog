@@ -2,7 +2,7 @@
 layout: post
 title:  "Neutrino ICs Background"
 date:   2022-01-24
-categories: cosmo_ics
+categories: neutrinos
 ---
 
 

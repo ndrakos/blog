@@ -2,10 +2,10 @@
 layout: post
 title:  "Neutrino Positions in MUSIC"
 date:   2022-07-01
-categories: cosmo_ics
+categories: neutrinos
 ---
 
-<a href="https://ndrakos.github.io/blog/cosmo_ics/MUSIC_code_breakdown/">This post</a> outlines the MUSIC code, and the changes I need to make to put in neutrinos. I also looked into detail on how to assign velocities.
+<a href="https://ndrakos.github.io/blog/neutrinos/MUSIC_code_breakdown/">This post</a> outlines the MUSIC code, and the changes I need to make to put in neutrinos. I also looked into detail on how to assign velocities.
 
 In this post I'm going into more detail on position assignments.
 
@@ -149,6 +149,6 @@ This compiled fine, which is good.
 
 1. Add the neutrino transfer function (I think this can just be done using the CAMB transfer function plug-in, already encor)
 2. Add the velocity bit into the code (this has already been coded, just needs to be pasted in the right part)
-3. Add code for Gadget outputs, as I outlined <a href="https://ndrakos.github.io/blog/cosmo_ics/MUSIC_code_breakdown/">here</a>
+3. Add code for Gadget outputs, as I outlined <a href="https://ndrakos.github.io/blog/neutrinos/MUSIC_code_breakdown/">here</a>
 
 Once this is running, I can look at the power spectra of the neutrinos, and verify that the ICs look correct.
