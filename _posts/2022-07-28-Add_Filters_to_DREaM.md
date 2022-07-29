@@ -30,7 +30,7 @@ The current version of FSPS has the JWST wide filters, but no others. Therefore,
 
 MIRI has <a href="https://jwst-docs.stsci.edu/jwst-mid-infrared-instrument/miri-instrumentation/miri-filters-and-dispersers">9 imaging filters</a> (actually 10, but one is redundant):
 
-<img src="{{ site.baseurl }}/assets/plots/20220728_MIRI.png">
+<img src="{{ site.baseurl }}/assets/plots/20220728_MIRI_filters.png">
 
 I will add all 9 MIRI filters. These are not currently in FSPS, so I will add them manually.
 
@@ -51,7 +51,7 @@ I had detailed the instructions for adding FSPS filters in an <a href="https://n
 
 The NIRCAM throughputs were all available on the <a href="https://jwst-docs.stsci.edu/jwst-near-infrared-camera/nircam-instrumentation/nircam-filters">summary site</a>.
 
-The MIRI throughputs , but I found them with the <a href="https://outerspace.stsci.edu/display/PEN/Pandeia+Engine+Installation">Pandeia Engine "required data"</a>.
+The MIRI throughputs were not available on the MIRI page, but I found them with the <a href="https://outerspace.stsci.edu/display/PEN/Pandeia+Engine+Installation">Pandeia Engine "required data"</a>.
 
 This went mostly smoothly. For some reason, the python fsps code does not read in the nbands from the Fortran properly, so I used the manual install of the python code (i.e. not the pip version), and changed the number of bands manually in <code>src/fsps/libfsps/src/sps_vars.f90</code>. Note that you can double check where your python-fsps is installed using "<code>import fsps; fsps.__file__</code>". I got this working on both my computer and lux.
 
