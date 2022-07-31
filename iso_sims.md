@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /iso_sims/
-title:  "Isolated Simulations"
+title:  "Isolated Merger Simulations"
 ---
 
 
