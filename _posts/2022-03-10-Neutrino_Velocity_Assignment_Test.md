@@ -5,7 +5,7 @@ date:   2022-03-10
 categories: neutrinos
 ---
 
-In this post, I am testing I have the algorithm working for assigning neutrino particles velocities (see <a href="https://ndrakos.github.io/blog/iso_ics/Neutrino_IC_Method_Overview/">this post</a>).
+In this post, I am testing I have the algorithm working for assigning neutrino particles velocities (see <a href="https://ndrakos.github.io/blog/neutrinos/Neutrino_IC_Method_Overview/">this post</a>).
 
 
 

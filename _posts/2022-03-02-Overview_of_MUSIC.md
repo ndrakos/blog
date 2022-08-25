@@ -27,7 +27,7 @@ To get positions and velocities from the density field, Poisson's equations are 
 
 ## How neutrinos fit in
 
-I summarized the method for adding neutrino ICs in <a href="https://ndrakos.github.io/blog/iso_ics/Neutrino_IC_Method_Overview/">this post</a> (B18): the neutrinos are initially placed on a coarse grid, with $$N_n$$ particles per grid point. They are assigned velocities from the Fermi-Dirac distribution. The particles are displaced off the grid using a Zel-dovich approximation.
+I summarized the method for adding neutrino ICs in <a href="https://ndrakos.github.io/blog/neutrinos/Neutrino_IC_Method_Overview/">this post</a> (B18): the neutrinos are initially placed on a coarse grid, with $$N_n$$ particles per grid point. They are assigned velocities from the Fermi-Dirac distribution. The particles are displaced off the grid using a Zel-dovich approximation.
 
 The velocities can be generated as described in the neutrino post, and the positions can be generated in the same way as the dark matter particles. Since MUSIC uses second-order LPT, we will also do that for the neutrinos. This should be straightforward, since I can just use the code that already exists for the LPT.
 

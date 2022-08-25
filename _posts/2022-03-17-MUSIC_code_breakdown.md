@@ -5,7 +5,7 @@ date:   2022-03-17
 categories: neutrinos
 ---
 
-As outlined in <a href="https://ndrakos.github.io/blog/iso_ics/Neutrino_IC_Method_Overview/">this post</a>, I am planning to modify MUSIC to contain neutrinos using the method from <a href="https://ui.adsabs.harvard.edu/abs/2018JCAP...09..028B/abstract">Banjeree et al. 2018</a>.
+As outlined in <a href="https://ndrakos.github.io/blog/neutrinos/Neutrino_IC_Method_Overview/">this post</a>, I am planning to modify MUSIC to contain neutrinos using the method from <a href="https://ui.adsabs.harvard.edu/abs/2018JCAP...09..028B/abstract">Banjeree et al. 2018</a>.
 
 In this post I'm going to breakdown the code structure of MUSIC and think about what I need to alter.
 
