@@ -10,7 +10,7 @@ Altering the MUSIC code was honestly way more annoying than just writing things 
 For this post, I'll just focus on the dark matter component, and note where I need to add in neutrinos.
 
 
-##Overall Structure
+## Overall Structure
 
 
 1. Define Cosmology
@@ -41,7 +41,7 @@ I need to:
 That will output a density field (in Fourier space)
 
 
-For this need power spectrum... I'll use CAMB... see previous post https://ndrakos.github.io/blog/neutrinos/Neutrino_Transfer_Function/.
+For this need power spectrum. I'll use CAMB (see previous <a href="https://ndrakos.github.io/blog/neutrinos/Neutrino_Transfer_Function/">post</a>).
 
 ```
 import camb
@@ -57,6 +57,8 @@ The power spectrum will be different for neutrinos, but camb includes this as we
 
 **Question**: will I want to use delta_tot, delta_cdm or delta_nonu for the CDM particles?
 
+
+Here is the code to make the density field (in Fourier space):
 
 ```
 
@@ -78,7 +80,7 @@ density = np.sqrt(P)*density
 
 ### 3. Calculate Displacement Field
 
-The displacement field can be calculated from the density field (in fourier space)
+The displacement field can be calculated from the density field (in Fourier space)
 
 $$s = -i \dfrac{1}{D_+} \dfrac{k_{lmn}}{k^2{lmn}} \delta_{lmn}$$,
 
@@ -125,7 +127,7 @@ This exact same procedure can be used to get neutrino points except (1) I will u
 
 ### Assign velocities
 
-Bulk velocity is straightforward from the displacement field... I will need to calculate $$dD_+/da$$ first
+Bulk velocity is straightforward to calculate from the displacement field. I will need to calculate $$dD_+/da$$ first
 
 ```
 Dp_dot = -3*Omega_m*(1+z_start)**4/2/H2*Dp + 5/2*Omega_m*(1+z_start)**3/H2
