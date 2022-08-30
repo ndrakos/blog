@@ -87,7 +87,13 @@ Source catalogs created using Astropy Photoutils package. "The goal of this step
 
 I tried altering some of the defaults for the "SkyMatch" step, but nothing really made much of a difference. Here is what the output for F115W, F150W, F277W and F444W look like:
 
+<img src="{{ site.baseurl }}/assets/plots/20220830_cw-F115W.png">
+
 <img src="{{ site.baseurl }}/assets/plots/20220830_cw-F150W.png">
+
+<img src="{{ site.baseurl }}/assets/plots/20220830_cw-F277W.png">
+
+<img src="{{ site.baseurl }}/assets/plots/20220830_cw-F444W.png">
 
 I'm not sure if the background subtraction is good enough. I'm also not sure about the black lines in the image, and if I should be able to get rid of those (this seems to be because of black borders around each pointing... does this happen in the pipeline somewhere?).
 
