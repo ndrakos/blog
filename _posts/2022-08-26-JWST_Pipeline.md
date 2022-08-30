@@ -59,7 +59,7 @@ Stage 2: Apply physical corrections (e.g., slit loss) and calibrations (e.g., ab
 Stage 3: Combine the fully calibrated data from multiple exposures
 
 
-I'm going to go through these steps using <a href "https://jwst-docs.stsci.edu/jwst-science-calibration-pipeline-overview/example-jupyter-notebooks-running-the-pipeline">these notes</a>
+I'm going to go through these steps using <a href="https://jwst-docs.stsci.edu/jwst-science-calibration-pipeline-overview/example-jupyter-notebooks-running-the-pipeline">these notes</a>
 
 ### Stage 1
 
@@ -169,7 +169,7 @@ My Questions:
 
 ### Stage 2
 
-"The Stage 2 pipeline applies instrumental corrections and calibrations to the slope images output from Stage 1. This includes background subtraction, the creation of a full World Coordinate System (WCS) for the data, application of the flat field, and flux calibration. In most cases the final output is an image in units of surface brightness. Whereas the input files had suffixes of *_rate.fits*, the output files have suffixes of *_cal.fits*... The Stage 2 pipeline can be called on a single fits file, or a collection of fits files. When calling on multiple files, the input is a json-formatted file called an "association" file that lists each of the fits files to be processed."
+"The Stage 2 pipeline applies instrumental corrections and calibrations to the slope images output from Stage 1. This includes background subtraction, the creation of a full World Coordinate System (WCS) for the data, application of the flat field, and flux calibration. In most cases the final output is an image in units of surface brightness. Whereas the input files had suffixes of *_rate.fits*, the output files have suffixes of *_cal.fits*. The Stage 2 pipeline can be called on a single fits file, or a collection of fits files. When calling on multiple files, the input is a json-formatted file called an "association" file that lists each of the fits files to be processed."
 
 I ran this on the one *_rate.fits* file from Stage 1. This didn't throw any errors.
 
@@ -182,7 +182,7 @@ My Questions:
 ### Stage 3
 
 
-"The Stage 3 pipeline takes one or more calibrated slope images (*_cal.fits* files) and combines them into a final mosaic image. It then creates a source catalog from this mosaic. Several steps are performed in order to prepare the data for the mosaic creation... There are three final outputs. The first is updated copies of the input files (*_i2d.fits*). These updated files contain a consistent WCS, such that they overlap correctly. The second output is a final mosaic image (*_segm.fits*) created by drizzling the input images onto a distortion-free grid. And the final output is a source catalog (*_cat.ecsv*) wth basic photometry, created from the final mosaic image."
+"The Stage 3 pipeline takes one or more calibrated slope images (*_cal.fits* files) and combines them into a final mosaic image. It then creates a source catalog from this mosaic. Several steps are performed in order to prepare the data for the mosaic creation. There are three final outputs. The first is updated copies of the input files (*_i2d.fits*). These updated files contain a consistent WCS, such that they overlap correctly. The second output is a final mosaic image (*_segm.fits*) created by drizzling the input images onto a distortion-free grid. And the final output is a source catalog (*_cat.ecsv*) wth basic photometry, created from the final mosaic image."
 
 Again, I just ran this on the one pointing, and it seemed to work fine.
 
