@@ -180,7 +180,6 @@ elif MAS=='CIC':
     p=2
 else:
     p=0
-#correct = (np.sinc(kx * boxlength/(2*N))*np.sinc(ky * boxlength/(2*N))*np.sinc(kz * boxlength/(2*N)))**(-2*p)
 correct_x = (np.sin(kx * boxlength/(2*N)) / (kx * boxlength/(2*N))  )**(-p)
 correct_y = (np.sin(kx * boxlength/(2*N)) / (kx * boxlength/(2*N))  )**(-p)
 correct_z = (np.sin(kx * boxlength/(2*N)) / (kx * boxlength/(2*N))  )**(-p)
@@ -198,4 +197,4 @@ I get:
 <img src="{{ site.baseurl }}/assets/plots/20220831_initialPk_part_3.png">
 
 
-This looks good! So I'm going to say that the particle position assignment is probably correct.
+This looks good! So I'm going to conclude that the particle position assignment is probably correct.
