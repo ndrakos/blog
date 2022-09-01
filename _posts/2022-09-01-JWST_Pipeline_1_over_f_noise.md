@@ -14,3 +14,5 @@ This is something that will be implemented in future versions of the pipeline. F
 ## Results
 
 This seemed to fix things! Here are the four filters:
+
+<img src="{{ site.baseurl }}/assets/plots/20220901_Mosaics.png">
