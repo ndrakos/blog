@@ -46,7 +46,7 @@ I want to compare the input spectrum to the particle matter spectrum, and make s
 I decided to use <a href="https://pylians3.readthedocs.io/en/master/">Pylians</a> to calculate the particle power spectrum.
 
 
-I cloned <a " https://github.com/franciscovillaescusa/Pylians3">github repository</a>, and then
+I cloned <a href="https://github.com/franciscovillaescusa/Pylians3">github repository</a>, and then used
 
 ```
 cd library
@@ -195,7 +195,7 @@ plt.loglog(kvals, Abins/N**3)
 ```
 
 I get:
-<img src="{{ site.baseurl }}/assets/plots/20220831_initialPk_part_2.png">
+<img src="{{ site.baseurl }}/assets/plots/20220831_initialPk_part_3.png">
 
 
 This looks good! So I'm going to say that the particle position assignment is probably correct.
