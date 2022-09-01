@@ -166,6 +166,7 @@ plt.loglog(kvals, Abins/N**3)
 ```
 
 I find:
+
 <img src="{{ site.baseurl }}/assets/plots/20220831_initialPk_part_2.png">
 
 
@@ -194,6 +195,7 @@ plt.loglog(kvals, Abins/N**3)
 ```
 
 I get:
+
 <img src="{{ site.baseurl }}/assets/plots/20220831_initialPk_part_3.png">
 
 
