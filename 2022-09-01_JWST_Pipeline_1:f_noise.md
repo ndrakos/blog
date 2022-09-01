@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "JWST Pipeline Stage 3"
-date:   2022-08-30
+title:  "JWST Pipeline 1/f noise"
+date:   2022-09-01
 categories: cosmos_web
 ---
 
-In the <a href="https://ndrakos.github.io/blog/cosmos_web/JWST_Pipeline/">previous post</a> I generated a mosaic of the DREaM simulated catalog. There are a few things to fix in Stage 3 of the pipeline (this stage combines the calibrated images into a mosiaic), which I will document here.  
+In the <a href="">previous post</a> I generated a mosaic of the DREaM simulated catalog. There are a few things to fix in Stage 3 of the pipeline (this stage combines the calibrated images into a mosiaic), which I will document here.  
 
 
 ## Separating the Association Files
