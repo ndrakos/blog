@@ -11,4 +11,6 @@ In the <a href="https://ndrakos.github.io/blog/cosmos_web/JWST_Pipeline_Stage_3/
 
 This is something that will be implemented in future versions of the pipeline. For now, the easiest fix is to use Michaela's script and apply it to the rate files at the end of Step 1 of the pipeline (to the rate.fits files).
 
-## Results 
+## Results
+
+This seemed to fix things! Here are the four filters:
