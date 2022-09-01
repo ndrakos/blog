@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "JWST Pipeline Stage 3"
+title:  "JWST Pipeline - Stage 3"
 date:   2022-08-30
 categories: cosmos_web
 ---
