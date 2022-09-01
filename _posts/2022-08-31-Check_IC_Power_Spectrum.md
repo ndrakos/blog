@@ -33,7 +33,7 @@ PK = camb.get_matter_power_interpolator(params,var1='delta_tot',var2='delta_tot'
 
 Here is the input spectrum:
 
-<img src="{{ site.baseurl }}/assets/plots/20220831_initialPK.png">
+<img src="{{ site.baseurl }}/assets/plots/20220831_initialPk.png">
 
 
 
@@ -79,7 +79,7 @@ plt.loglog(k_p, P_p)
 
 This is what I find:
 
-<img src="{{ site.baseurl }}/assets/plots/20220831_initialPK_part.png">
+<img src="{{ site.baseurl }}/assets/plots/20220831_initialPk_part.png">
 
 
 Clearly these don't match.
@@ -124,7 +124,7 @@ P_p = PK_p.Pk1D
 plt.loglog(k_p, P_p)
 ```
 
-<img src="{{ site.baseurl }}/assets/plots/20220831_initialPK_dens.png">
+<img src="{{ site.baseurl }}/assets/plots/20220831_initialPk_dens.png">
 
 This looks very close to the power spectrum I was getting for the particles so maybe something is going wrong here at this stage, OR I am plotting the power spectrum wrong.
 
@@ -141,7 +141,7 @@ plt.loglog(kvals, P)
 ```
 which gives:
 
-<img src="{{ site.baseurl }}/assets/plots/20220831_initialPK_dens_2.png">
+<img src="{{ site.baseurl }}/assets/plots/20220831_initialPk_dens_2.png">
 
 This looks right, so I guess I am misusing the PKL power spectrum library.  I'm going to assume the density assignment is correct.
 
@@ -166,7 +166,7 @@ plt.loglog(kvals, Abins/N**3)
 ```
 
 I find:
-<img src="{{ site.baseurl }}/assets/plots/20220831_initialPK_part_2.png">
+<img src="{{ site.baseurl }}/assets/plots/20220831_initialPk_part_2.png">
 
 
 This looks much better, but doesn't match on small scales. This could simply be that I didn't correct for the cloud-in-cell (CIC) algorithm used to get the density field. I'm going to leave this for now, and move on. The positions look roughly right
@@ -195,7 +195,7 @@ plt.loglog(kvals, Abins/N**3)
 ```
 
 I get:
-<img src="{{ site.baseurl }}/assets/plots/20220831_initialPK_part_2.png">
+<img src="{{ site.baseurl }}/assets/plots/20220831_initialPk_part_2.png">
 
 
 This looks good! So I'm going to say that the particle position assignment is probably correct.
