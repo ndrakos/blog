@@ -24,7 +24,7 @@ Clearly environmental measures will depend on how many/which galaxies I include.
 
 Below, I list the density measurements I will consider to start with. While these methods aren't the best representation of observational methods, they should give an idea if there *is* an environmental dependance, and whether this dependancy depends on how the environment is measured. I may in the future modify/add to these measurements.
 
-1) 3rd nearest neighbour in 3D
+### 1) 3rd nearest neighbour in 3D
 
 The "density" can be approximated by finding the distance to the $$n$$th nearest neighbour, $$r_n$$, and then calculating:
 
@@ -32,7 +32,7 @@ $$\Sigma = \dfrac{n}{4/3 \pi r_n^3}$$
 
 I will use $$n=3$$, and the comoving distance.
 
-2) 3rd projected nearest neighbour
+### 2) 3rd projected nearest neighbour
 
 This is similar to above, but with
 
@@ -40,11 +40,11 @@ $$\sigma = \dfrac{n}{\pi r_n^2}$$
 
 I will again use $$n=3$$. Now I'm going to take the position in RA and Dec though.
 
-3) 3rd projected nearest neighbour (in redshift bin)
+### 3) 3rd projected nearest neighbour (in redshift bin)
 
 Same as (2) but only considering galaxies in the same redshift bin.
 
-4) In a fixed aperture
+### 4) In a fixed aperture
 
 In this method, the aperture is held fixed, and the density inside the aperture is calculated as
 
@@ -54,7 +54,7 @@ where $$N_g$$ is the number of galaxies inside the aperature, and $$\bar{N_g}$$ 
 
 This clearly could have some weird effects since if the galaxies are randomly distributed in the volume of the survey, they will not be evenly distributed in the projected area. This should be mostly mitigated in the next method.
 
-5) In a fixed aperture (in redshift bin)
+### 5) In a fixed aperture (in redshift bin)
 
 Same as (4), but only considering galaxies in the same redshift bin
 
@@ -71,7 +71,7 @@ Here are some results, where I have split the galaxies in 5 quintiles and plotte
 
 Comments on plot:
 - Brighter galaxies tend to be in denser regions.
-- Env 1 and Env 3 are probably the best measurements.
+- Env 1 and Env 3 are probably the best measurements, but all the measurements qualitatively agree.
 - Note Env 4  measurement has a lot of objects with an Env measurement of -1, so the sorting is not the clearest (this could probably be improved by increasing the aperture size)
 - Once I look at determining the difference between different models,  I also want to plot the luminosity function in different JWST bands.
 
