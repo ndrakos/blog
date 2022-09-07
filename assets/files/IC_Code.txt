@@ -1,0 +1,121 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import healpy as hp
+import camb
+
+from scipy import integrate, stats
+from numpy import random
+
+############################################################
+# User defined variables
+############################################################
+#Cosmology
+Omega_m = 0.276
+Omega_L = 0.724
+Omega_b = 0.045
+H0 = 70.3 #km/s/Mpc
+sigma_8 = 0.811
+nspec = 0.961
+
+#Simulation Details
+z_start = 20 #which redshift to create ICs for
+N = 256 #number of particles in dark matter grid
+N_coarse = 128 #number of particles in coarse, neutrino grid
+boxlength = 500 #Mpc/h
+
+#Neutrino Parameters
+N_shell = 10 #number of shells in velocity distribution
+Nside = 2 #The number of directions in each shell will be 12*Nside**2
+z = 20 #redshift
+g_nu = 6 #magnitude of the neutrino degeneracy. 3 neutrino species + 3 anti-neutrino species
+T_nu = 1.95 # [K] neutrino temperature today
+
+#Random numbers
+seed1 = 1234
+
+############################################################
+# Constants
+############################################################
+G = 4.301e-9 #[km^2 Mpc MSun-1 s^{-2}]
+c = 299792458 #[m/s] speed of light
+k_b = 1.38064852e-23 #[m^2 kg s^{-2} K^{-1}] boltzman constant
+h_p =  6.62607004e-34#[m^2 kg s^{-1}] plancks constant
+
+
+############################################################
+# Some cosmology calculations
+############################################################
+Omz = Omega_m*(1+z_start)**3
+Dp = 5/2*Omz / (Omz**(4/7) - Omega_L + (1+Omz/2)*(1+Omega_L/70) )
+
+H = np.sqrt(Omega_m*(1+z_start)**3 + Omega_L) #(H/H0)^2
+Dp_dot =  (-3*Omega_m*(1+z_start)**4/2/H*Dp + 5/2*Omega_m*(1+z_start)**3/H) * H0/(1+z_start)
+
+h = H0/100
+rho_crit = 3*H0**2/(8*np.pi*G) # Msun/Mpc^3
+
+
+############################################################
+# Define power spectra
+############################################################
+params = camb.CAMBparams()
+params.set_cosmology(H0=H0, ombh2=Omega_b/h**2, omch2=(Omega_m-Omega_b)/h**2)
+params.InitPower.set_params(ns=nspec)
+params.set_matter_power(redshifts=[z_start,0])
+params.InitPower.As *= sigma_8**2/camb.get_results(params).get_sigma8_0()**2 #set normalization of power spectrum
+
+#Calculate power spectrum
+PK = camb.get_matter_power_interpolator(params,var1='delta_tot',var2='delta_tot') #or use nonu or cdm?
+
+############################################################
+# Calculate Density Field
+############################################################
+
+#Make gaussian field
+np.random.seed(seed1)
+density = random.randn(N,N,N) #gaussian field
+
+#Fourier Transform
+density = np.fft.fftn(density) #fourier space
+ka = 2*np.pi*np.fft.fftfreq(N, d=boxlength/N)
+kx,ky,kz =np.meshgrid(ka,ka,ka)
+k = np.sqrt(kx**2 + ky**2 + kz**2)
+k[k==0]=np.inf #This mode can be ignored, corresponds to a change of a reference frame (note, divide by k later).
+
+#scale with powerspectrum in fourier space
+P = PK.P(z_start,k)
+density = np.sqrt(P)*density
+
+############################################################
+# Calculate Displacements
+############################################################
+d_x = -1j /Dp * kx/k**2 * density
+d_y = -1j /Dp * ky/k**2 * density
+d_z = -1j /Dp * kz/k**2 * density
+
+d_x = np.real(np.fft.ifftn(d_x))
+d_y = np.real(np.fft.ifftn(d_y))
+d_z = np.real(np.fft.ifftn(d_z))
+
+############################################################
+# Calculate Positions (Zeldovich Approx.)
+############################################################
+a = np.linspace(0,boxlength,N)
+x,y,z =np.meshgrid(a,a,a)
+x += Dp*d_x; y += Dp*d_y; z+=Dp*d_z
+
+x = x.flatten(); y =y.flatten(); z = z.flatten()
+x = x%boxlength; y = y%boxlength; z =z%boxlength
+
+############################################################
+# Calculate Velocities (Zeldovich Approx.)
+############################################################
+vx = Dp_dot*d_x/(1+z_start)/h;
+vy = Dp_dot*d_y/(1+z_start)/h;
+vz = Dp_dot*d_z/(1+z_start)/h; #km/s
+vx = vx.flatten(); vy =vy.flatten(); vz = vz.flatten()
+
+############################################################
+# Calculate Mass (Assume equal mass particles)
+############################################################
+m = Omega_m*rho_crit*boxlength**3/N**3 /h**3 #Msun
