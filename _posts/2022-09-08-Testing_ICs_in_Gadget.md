@@ -118,7 +118,7 @@ This looks pretty reasonable. Obviously the resolution is not very good, so it i
 ### Power Spectrum
 
 
-<img src="{{ site.baseurl }}/assets/plots/20220908_20220908_PowerSpectrum_DM.png">
+<img src="{{ site.baseurl }}/assets/plots/20220908_PowerSpectrum_DM.png">
 
 This starts to deviate from theory a bit around redshift 2. I suspect this is mostly resolution related though.
 
