@@ -6,9 +6,14 @@ import camb
 from scipy import integrate, stats
 from numpy import random
 
+import GadgetIO as gdgt
+
 ############################################################
 # User defined variables
 ############################################################
+#Output
+filename = "../Simulations/testDM.gdgt"
+
 #Cosmology
 Omega_m = 0.276
 Omega_L = 0.724
@@ -19,9 +24,9 @@ nspec = 0.961
 
 #Simulation Details
 z_start = 20 #which redshift to create ICs for
-N = 256 #number of particles in dark matter grid
+N = 128 #number of particles in dark matter grid
 N_coarse = 128 #number of particles in coarse, neutrino grid
-boxlength = 500 #Mpc/h
+boxsize = 100 #Mpc/h
 
 #Neutrino Parameters
 N_shell = 10 #number of shells in velocity distribution
@@ -51,8 +56,8 @@ Dp = 5/2*Omz / (Omz**(4/7) - Omega_L + (1+Omz/2)*(1+Omega_L/70) )
 H = np.sqrt(Omega_m*(1+z_start)**3 + Omega_L) #(H/H0)^2
 Dp_dot =  (-3*Omega_m*(1+z_start)**4/2/H*Dp + 5/2*Omega_m*(1+z_start)**3/H) * H0/(1+z_start)
 
+rho_crit = 3*100**2/(8*np.pi*G) # Msun/Mpc^3 * h**2
 h = H0/100
-rho_crit = 3*H0**2/(8*np.pi*G) # Msun/Mpc^3
 
 
 ############################################################
@@ -77,7 +82,7 @@ density = random.randn(N,N,N) #gaussian field
 
 #Fourier Transform
 density = np.fft.fftn(density) #fourier space
-ka = 2*np.pi*np.fft.fftfreq(N, d=boxlength/N)
+ka = 2*np.pi*np.fft.fftfreq(N, d=boxsize/N)
 kx,ky,kz =np.meshgrid(ka,ka,ka)
 k = np.sqrt(kx**2 + ky**2 + kz**2)
 k[k==0]=np.inf #This mode can be ignored, corresponds to a change of a reference frame (note, divide by k later).
@@ -100,12 +105,12 @@ d_z = np.real(np.fft.ifftn(d_z))
 ############################################################
 # Calculate Positions (Zeldovich Approx.)
 ############################################################
-a = np.linspace(0,boxlength,N)
+a = np.linspace(0,boxsize,N)
 x,y,z =np.meshgrid(a,a,a)
 x += Dp*d_x; y += Dp*d_y; z+=Dp*d_z
 
 x = x.flatten(); y =y.flatten(); z = z.flatten()
-x = x%boxlength; y = y%boxlength; z =z%boxlength
+x = x%boxsize; y = y%boxsize; z =z%boxsize
 
 ############################################################
 # Calculate Velocities (Zeldovich Approx.)
@@ -118,4 +123,4 @@ vx = vx.flatten(); vy =vy.flatten(); vz = vz.flatten()
 ############################################################
 # Calculate Mass (Assume equal mass particles)
 ############################################################
-m = Omega_m*rho_crit*boxlength**3/N**3 /h**3 #Msun
+m = Omega_m*rho_crit*boxsize**3/N**3  #Msun/h
