@@ -11,7 +11,7 @@ To assign neutrino positions, neutrinos are placed on a coarse grid, then displa
 
 ## CAMB
 
-I will use the Code for Anisotropies in the Microwave Background (CAMB). MUSIC has a plugin to read CAMB outputs. The different transfer variables are listed <a href="https://camb.readthedocs.io/en/latest/transfer_variables.html">here<>.
+I will use the Code for Anisotropies in the Microwave Background (CAMB). MUSIC has a plugin to read CAMB outputs. The different transfer variables are listed <a href="https://camb.readthedocs.io/en/latest/transfer_variables.html">here</a>.
 
 
 ## Python Version
