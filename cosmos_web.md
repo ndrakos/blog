@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /cosmo_web/
+permalink: /cosmos_web/
 title:  "COSMOS Web"
 ---
 
