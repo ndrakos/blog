@@ -9,7 +9,7 @@ I went through how to <a href="https://ndrakos.github.io/blog/cosmos_web/Mirage/
 
 ## The catalog
 
-Rather than work with the full catalog, I'm going to get this working with a truncated test catalog. I'll take all galaxies that are brighter than 20 AB mag in at lease one COSMOS-Web band. This cuts the catalog down from 3e7 to 1e4 objects.
+Rather than work with the full catalog, I'm going to get this working with a truncated test catalog. I'll take all galaxies that are brighter than 20 AB mag in at least one COSMOS-Web band. This cuts the catalog down from 3e7 to 1e4 objects.
 
 ### Position
 
