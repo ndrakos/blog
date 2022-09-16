@@ -113,9 +113,8 @@ These are my notes on getting Mirage running on <a href="https://candideusers.ca
 
 I have a directory in home in which I'll put my scripts, and I will create a directory in "n23data1" where I will store all the data
 
-I will use the path Henry gave for the CRDS files, so I don't have to redownload them.
+I will use the path Henry gave for the CRDS files and Mirage reference files, so I don't have to redownload them.
 
-I am waiting to hear if I should download the Mirage reference files, or if someone already has them on CANDIDE.
 
 ### Conda environment
 
@@ -131,7 +130,7 @@ Then, whenever I want to use this, I need to type <code>source ~/miniconda3/etc/
 
 To create an environment named jwst: <code>conda create -n jwst</code>
 To use this environment: <code>source activate jwst</code>
-To download packages: <code>conda install -n jwst [package]</code>
+To download packages: <code>conda install -n jwst [package]</code> or, if they only have pip installs <code>~/miniconda3/envs/jwst/bin/pip install package_name</code>
 
 
 
@@ -145,7 +144,7 @@ Here is my job script:
 #PBS -l nodes=1:ppn=24,walltime=8:00:00
 
 # Set variables
-export MIRAGE_DATA=/n23data1/ndrakos/Mirage/
+export MIRAGE_DATA=/n23data1/hgmcc/jwst/mirage
 export CRDS_PATH=/n23data1/hjmcc/jwst/mirage/crds_cache
 export CRDS_SERVER_URL=https://jwst-crds.stsci.edu
 
@@ -163,4 +162,16 @@ cd /home/ndrakos/COSMOS-Web/MIRAGE
 mpirun -np 24 python MirageB-RunMirage.py
 ```
 
-This seems to be running, except I need the Mirage reference files downloaded. Once I have those, I'll return to this.
+
+### Error in yam.create_inputs()
+
+
+This is throwing an error:
+
+```
+...mirage/apt/apt_inputs.py", line 1079, in get_entry
+    for key, observation in dict.items():
+AttributeError: 'NoneType' object has no attribute 'items'"
+```
+
+I will address this another day. I might just make the yaml files on my laptop (this should be quick), and then upload them. This will require me editing all the files to have the correct paths though. 
