@@ -98,11 +98,11 @@ I reran my code to make Mirage images and the JWST pipeline (also checking my pa
 
 Here are the images (1 visit)
 
-<img src="{{ site.baseurl }}/assets/plots/20220914_Mosaic_nosources.png">
+<img src="{{ site.baseurl }}/assets/plots/20220914_Mosaics_nosources.png">
 
 Here are the objects that should be in it:
 
-<img src="{{ site.baseurl }}/assets/plots/20220914_Mosaic.png">
+<img src="{{ site.baseurl }}/assets/plots/20220914_Mosaics.png">
 
 Looks good!
 
