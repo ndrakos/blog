@@ -104,7 +104,7 @@ Here are the objects that should be in it:
 
 <img src="{{ site.baseurl }}/assets/plots/20220914_Mosaics.png">
 
-Looks good!
+Looks good, but there might be some very slight offsets.
 
 
 ## Using CANDIDE
@@ -113,7 +113,7 @@ These are my notes on getting Mirage running on <a href="https://candideusers.ca
 
 I have a directory in home in which I'll put my scripts, and I will create a directory in "n23data1" where I will store all the data
 
-I will use the path Henry gave for the CRDS files and Mirage reference files, so I don't have to redownload them.
+I will use the path Henry gave for the CRDS files and the path Max gave me to his Mirage reference files, so I don't have to redownload them.
 
 
 ### Conda environment
@@ -144,7 +144,7 @@ Here is my job script:
 #PBS -l nodes=1:ppn=24,walltime=8:00:00
 
 # Set variables
-export MIRAGE_DATA=/n23data1/hgmcc/jwst/mirage
+export MIRAGE_DATA=/n23data1/mfranco/mirage_data
 export CRDS_PATH=/n23data1/hjmcc/jwst/mirage/crds_cache
 export CRDS_SERVER_URL=https://jwst-crds.stsci.edu
 
@@ -161,17 +161,3 @@ conda activate jwst
 cd /home/ndrakos/COSMOS-Web/MIRAGE
 mpirun -np 24 python MirageB-RunMirage.py
 ```
-
-
-### Error in yam.create_inputs()
-
-
-This is throwing an error:
-
-```
-...mirage/apt/apt_inputs.py", line 1079, in get_entry
-    for key, observation in dict.items():
-AttributeError: 'NoneType' object has no attribute 'items'"
-```
-
-I will address this another day. I might just make the yaml files on my laptop (this should be quick), and then upload them. This will require me editing all the files to have the correct paths though. 

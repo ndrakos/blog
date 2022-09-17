@@ -1,0 +1,294 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import healpy as hp
+import camb
+
+from scipy import integrate, stats
+from numpy import random
+
+import GadgetIO as gdgt
+
+############################################################
+# User defined variables
+############################################################
+#Output
+filename = "../Simulations//Test2-nu/testnu.gdgt"
+
+#Cosmology
+Omega_m = 0.276
+Omega_L = 0.724
+Omega_b = 0.045
+H0 = 70.3 #km/s/Mpc
+sigma_8 = 0.811
+nspec = 0.961
+
+#Simulation Details
+z_start = 20 #which redshift to create ICs for
+N = 128 #number of particles in dark matter grid
+N_coarse = 32 #number of particles in coarse, neutrino grid
+boxsize = 1000 #Mpc/h [=1 Gpc/h]
+
+#Neutrino Parameters
+N_shell = 5 #number of shells in velocity distribution
+N_side = 2 #The number of directions in each shell will be 12*Nside**2
+z = 20 #redshift
+g_nu = 6 #magnitude of the neutrino degeneracy. 3 neutrino species + 3 anti-neutrino species
+mtot = 0.15 #[ev] The sum of the neutrino masses
+T_nu = 1.95 # [K] neutrino temperature today
+
+#Random numbers
+seed1 = 1234 #for DM component
+seed2 = 2345 #for neutrino component
+
+############################################################
+# Constants
+############################################################
+G = 4.301e-9 #[km^2 Mpc MSun-1 s^{-2}]
+c = 299792458 #[m/s] speed of light
+k_b = 1.38064852e-23 #[m^2 kg s^{-2} K^{-1}] boltzman constant
+h_p =  6.62607004e-34#[m^2 kg s^{-1}] plancks constant
+Msol_to_eV= 1.1219176708765e+66 # eV
+cm_to_Mpc = 3.24078e-25 #Mpc
+kg_to_Msol = 5.02785e-31 #Msol
+
+############################################################
+# Some cosmology calculations
+############################################################
+h = H0/100
+rho_crit = 3*100**2/(8*np.pi*G) # Msun/Mpc^3 * h**2
+Omz = Omega_m*(1+z_start)**3
+H = np.sqrt(Omega_m*(1+z_start)**3 + Omega_L) #(H/H0)
+
+#Dp = 5/2*Omz / (Omz**(4/7) - Omega_L + (1+Omz/2)*(1+Omega_L/70) )
+#Dp_dot =  (-3*Omega_m*(1+z_start)**4/2/H*Dp + 5/2*Omega_m*(1+z_start)**3/H) * H0/(1+z_start)
+
+rho_nu = mtot * (3/11) * (3.045/3)**(3/4)*410.7 ## eV/cm^{-3}
+rho_nu = rho_nu / Msol_to_eV  / cm_to_Mpc**3 # Msun/Mpc^3
+Omega_nu = rho_nu/rho_crit /h**2
+
+#meanv2 = (810 * (1+z_start) * (0.1/mtot))**(-2) # [(km/s)^-2]
+#k_fs = np.sqrt(3/2 * Omz * meanv2) * H0*H/(1+z_start) # 1/Mpc
+
+
+############################################################
+# Define power spectra
+############################################################
+params = camb.CAMBparams()
+params.set_cosmology(H0=H0,
+    ombh2=Omega_b* h**2,
+    omch2=(Omega_m-Omega_b) * h**2,
+    omk =1 - (Omega_L +Omega_m),
+    neutrino_hierarchy = 'degenerate',
+    num_massive_neutrinos = 6,
+    mnu = mtot)
+params.accurate_massive_neutrinos = True
+params.InitPower.set_params(ns=nspec)
+params.set_matter_power(redshifts=[z_start,0])
+results = camb.get_results(params)
+params.InitPower.As *= sigma_8**2/results.get_sigma8_0()**2 #set normalization of power spectrum
+params.num_nu_massless = 0
+#params.nu_mass_eigenstates=6
+#params.num_nu_massive = 6
+
+#Calculate power spectrum
+PK_dm = camb.get_matter_power_interpolator(params,var1='delta_nonu',var2='delta_nonu')
+PK_nu = camb.get_matter_power_interpolator(params,var1='delta_nu',var2='delta_nu')
+
+############################################################
+# Get Growth Rates
+############################################################
+#Dp = 5/2*Omz / (Omz**(4/7) - Omega_L + (1+Omz/2)*(1+Omega_L/70) )
+#Dp_dot =  (-3*Omega_m*(1+z_start)**4/2/H*Dp + 5/2*Omega_m*(1+z_start)**3/H) * H0/(1+z_start)
+results = camb.get_results(params)
+trans = results.get_matter_transfer_data()
+k_arr = trans.transfer_data[0,:,0]/h
+D_dm_arr = trans.transfer_data[camb.model.Transfer_nonu-1,:,0]/trans.transfer_data[camb.model.Transfer_nonu-1,:,1]
+D_nu_arr = trans.transfer_data[camb.model.Transfer_nu-1,:,0]/trans.transfer_data[camb.model.Transfer_nu-1,:,1]
+D_tot_arr = trans.transfer_data[camb.model.Transfer_tot-1,:,0]/trans.transfer_data[camb.model.Transfer_tot-1,:,1]
+
+R = 2*np.pi/k_arr
+params.set_matter_power(redshifts=[z_start+0.01*z_start,z_start])
+results = camb.get_results(params)
+SR_dm = results.get_sigmaR(R ,var1='delta_nonu', var2='delta_nonu')
+Ddot_dm_arr = (SR_dm[0] - SR_dm[1])/(0.01*z_start) # dD/dz
+f = - Ddot_dm_arr * (1+z_start)/SR_dm[1]
+Ddot_dm_arr = f  * H * H0 #normalized by D_dm
+
+SR_nu = results.get_sigmaR(R, var1='delta_nu', var2='delta_nu')
+Ddot_nu_arr = (SR_nu[0] - SR_nu[1])/(0.01*z_start) # dD/dz
+f = - Ddot_nu_arr * (1+z_start)/SR_nu[1]
+Ddot_nu_arr = f  * H * H0 #normalized by D_nu
+
+
+############################################################
+# Calculate Density Field
+############################################################
+def density_field(PK,N,boxsize):
+    #Make gaussian field
+    density = random.randn(N,N,N) #gaussian field
+    #Fourier Transform
+    density = np.fft.fftn(density) #fourier space
+    ka = 2*np.pi*np.fft.fftfreq(N, d=boxsize/N) #h/Mpc
+    kx,ky,kz =np.meshgrid(ka,ka,ka)
+    k = np.sqrt(kx**2 + ky**2 + kz**2)
+    k[k==0]=np.inf #This mode can be ignored, corresponds to a change of a reference frame (note, divide by k later).
+    #scale with powerspectrum in fourier space
+    P = PK.P(z_start,k)
+    density = np.sqrt(P)*density
+
+    return [kx,ky,kz,k], density
+
+np.random.seed(seed1)
+k_dm, density_dm = density_field(PK_dm,N,boxsize) # in fourier space
+np.random.seed(seed2)
+k_nu, density_nu = density_field(PK_nu,N_coarse,boxsize)
+
+
+
+############################################################
+# Calculate Displacements
+############################################################
+
+def displacement_field(k_arr, density):
+    kx,ky,kz,k = k_arr
+
+    d_x = -1j * kx/k**2 * density
+    d_y = -1j * ky/k**2 * density
+    d_z = -1j * kz/k**2 * density
+
+    return [d_x, d_y, d_z]
+
+dis_dm = displacement_field(k_dm, density_dm)
+dis_nu = displacement_field(k_nu, density_nu)
+
+
+
+############################################################
+# Calculate Positions  (Zeldovich Approx.)
+############################################################
+
+def positions(dis_field,boxsize,N):
+    d_x, d_y, d_z = dis_field
+
+    d_x = np.real(np.fft.ifftn(d_x))
+    d_y = np.real(np.fft.ifftn(d_y))
+    d_z = np.real(np.fft.ifftn(d_z))
+
+    a = np.linspace(0,boxsize,N)
+    x,y,z =np.meshgrid(a,a,a)
+
+    x += d_x; y += d_y; z+=d_z
+
+    x = x.flatten(); y =y.flatten(); z = z.flatten()
+    x = x%boxsize; y = y%boxsize; z =z%boxsize
+    return [x,y,z]
+
+pos_dm = positions(dis_dm, boxsize, N)
+pos_nu = positions(dis_nu, boxsize, N_coarse)
+
+
+
+############################################################
+# Calculate Bulk Velocities (Zeldovich Approx.)
+############################################################
+Ddot_dm = np.interp(k_dm[2],k_arr,Ddot_dm_arr)
+Ddot_nu = np.interp(k_nu[2],k_arr,Ddot_nu_arr)
+
+def bulk_velocities(dis_field,Dp_dot,z_start, h):
+    d_x, d_y, d_z = dis_field
+
+    vx = Dp_dot*d_x/(1+z_start)/h;
+    vy = Dp_dot*d_y/(1+z_start)/h;
+    vz = Dp_dot*d_z/(1+z_start)/h;
+
+
+    vx = np.real(np.fft.ifftn(vx))
+    vy = np.real(np.fft.ifftn(vy))
+    vz = np.real(np.fft.ifftn(vz))
+
+    #km/s
+    vx = vx.flatten(); vy =vy.flatten(); vz = vz.flatten()
+    return [vx,vy,vz]
+
+vel_dm = bulk_velocities(dis_dm,Ddot_dm,z_start, h)
+vel_nu = bulk_velocities(dis_nu,Ddot_nu,z_start, h)
+
+
+
+
+############################################################
+# Calculate Extra Velocity Component for Neutrinos
+############################################################
+Nnpg = N_shell * 12 * N_side**2  # Number of Neutrinos per grid point
+
+#Step 1a: divide Fermi-Dirac distribution into shells
+#Note x = (pc)/(k_B*T) and T = T_nu*(1+z)
+x_max = 12 # maximum value... see Fig 1 in Banjeree et al. 2018
+x = np.linspace(0,x_max,1000)
+fermi_dirac = (4*np.pi*g_nu)/h_p**3 * 1/(np.exp(x) + 1)
+fermi_dirac = 1/(np.exp(x) + 1)
+p2f = integrate.cumtrapz(x*x*fermi_dirac, x, initial=0) # integral x^2*f(x) from 0 to x
+dV = p2f[-1]/N_shell #volume of each shell
+x_edges = np.interp(dV*np.arange(0,N_shell+1),p2f,x) #find the edges of the shells
+
+#Step 1b: set magnitude for each shell
+p4f = integrate.cumtrapz(x**4*fermi_dirac, x, initial=0) # integral x^4*f(x) from 0 to x
+p4f_i = np.interp(x_edges,x,p4f)
+p2f_i = np.interp(x_edges,x,p2f)
+p_i = np.sqrt((p4f_i[1:]-p4f_i[:-1]) /(p2f_i[1:]-p2f_i[:-1])) # dimensionless, units pc/kT
+v_i = p_i*  (k_b * T_nu*(1+z_start))/(c* mtot/Msol_to_eV/kg_to_Msol) *1e-3  # km/s
+
+#Step 2: Assign angular direction
+x_d,y_d,z_d = hp.pix2vec(N_side,np.arange(12*N_side**2))
+
+#Combine together, to get Nshell*12*N_side**2 velocities in each direction
+x_d = np.tile(x_d, [N_shell, 1]).T; y_d = np.tile(y_d, [N_shell, 1]).T; z_d = np.tile(z_d, [N_shell, 1]).T
+vx_fs = (np.tile(v_i, [12*N_side**2,1])*x_d).flatten()
+vy_fs = (np.tile(v_i, [12*N_side**2,1])*y_d).flatten()
+vz_fs = (np.tile(v_i, [12*N_side**2,1])*z_d).flatten()
+
+############################################################
+# Get Multiple Neutrinos at each grid point
+############################################################
+pos_nu[0] = np.tile(pos_nu[0], (Nnpg,1)).flatten()
+pos_nu[1] = np.tile(pos_nu[1], (Nnpg,1)).flatten()
+pos_nu[2] = np.tile(pos_nu[2], (Nnpg,1)).flatten()
+
+vel_nu[0] = (np.tile(vel_nu[0], (Nnpg,1)) + np.tile(vx_fs,(N_coarse**3,1)).T).flatten()
+vel_nu[1] = (np.tile(vel_nu[1], (Nnpg,1)) + np.tile(vx_fs,(N_coarse**3,1)).T).flatten()
+vel_nu[2] = (np.tile(vel_nu[2], (Nnpg,1)) + np.tile(vx_fs,(N_coarse**3,1)).T).flatten()
+
+############################################################
+# Calculate Mass (Assume equal mass particles)
+############################################################
+Nnpg = N_shell*12*N_side**2 #Number of Neutrinos per grid point
+
+m_dm = (Omega_m-Omega_nu)*rho_crit*boxsize**3/N**3  #Msun/h
+m_nu = Omega_nu*rho_crit*boxsize**3/(N_coarse**3*Nnpg)  #Msun/h
+
+
+
+############################################################
+# Output
+############################################################
+N_dm = N**3; N_nu = (N_coarse)**3*Nnpg
+data = np.zeros([N_dm+N_nu,7])
+data[:,0] = np.arange(N_dm+N_nu)
+data[:,1] = np.append(pos_dm[0],pos_nu[0]);
+data[:,2] = np.append(pos_dm[1],pos_nu[1]);
+data[:,3] = np.append(pos_dm[2],pos_nu[2]);
+data[:,4] = np.append(vel_dm[0],vel_nu[0]);
+data[:,5] = np.append(vel_dm[1],vel_nu[1]);
+data[:,6 ]= np.append(vel_dm[2],vel_nu[2]);
+N_arr = [0, N_dm, N_nu,0,0,0]
+m_arr = [0, m_dm,m_nu,0,0,0]
+time = 1/(1+z_start)
+
+boxsize_kpc = boxsize*1000
+data[:,1:4]=data[:,1:4]*1000 #kpc/h
+m_arr = np.array(m_arr)*1e-10 #1.0e10 Msol/h
+print(N_arr)
+print(m_arr)
+print(Omega_m, Omega_L,h)
+
+gdgt.writegadget(filename, data, N_arr, m_arr, time, z_start, boxsize_kpc, Omega_m, Omega_L, H0/100)

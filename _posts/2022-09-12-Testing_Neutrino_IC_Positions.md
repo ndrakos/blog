@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Testing Neutrinos IC Positions"
+title:  "Testing Neutrino IC Positions"
 date:   2022-09-12
 categories: neutrinos
 ---
