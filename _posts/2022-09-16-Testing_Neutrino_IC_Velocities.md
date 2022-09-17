@@ -36,9 +36,9 @@ Here is the code that now includes velocity assignments
 
 If I compare the distribution of particle momenta to what's expected from the Fermi-Dirac Distribution, I find this:
 
-<img src="{{ site.baseurl }}/assets/plots/20220915_veldist.png">
+<img src="{{ site.baseurl }}/assets/plots/20220915_test_veldist.png">
 
-It's not resolved very well, since this is only with $$N_{\rm shell$$ particles, but it looks reasonable.
+It's not resolved very well, since this is only with $$N_{\rm shell}$$ particles, but it looks reasonable.
 
 
 ## Next Step
