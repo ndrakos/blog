@@ -40,7 +40,7 @@ Here is the number density as a function of redshift (similar to Fig. 7 in Merli
 
 <img src="{{ site.baseurl }}/assets/plots/20220926_QGs.png">
 
-The dashed lines show n(>z)=1 for different survey volumes. 100 arcmin^2  should be similar to CEERS, and 300 arcmin^2 should be similar to JADES.
+The dashed lines show 1/V(>z) (truncating at a redshift of 12) for different survey volumes. 100 arcmin^2  should be similar to CEERS, and 300 arcmin^2 should be similar to JADES.
 
 
 If I overlay this on top of the Merlin plot I find the following:
