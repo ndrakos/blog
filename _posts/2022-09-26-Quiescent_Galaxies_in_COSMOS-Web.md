@@ -17,7 +17,7 @@ Here are the stellar mass functions of *detectable* quiescent galaxies, with the
 
 Here are the number counts:
 
-| Redshift    | Number of Quiescent Galaxies (above mass $5\times 10^9$) | Detectable Quiescent Galaxies  (above mass $5\times 10^9$)|
+| Redshift    | Number of Quiescent Galaxies (above mass $$5\times 10^9$$) | Detectable Quiescent Galaxies  (above mass $$5\times 10^9$$)|
 | ----------- | ----------- |----------- |
 | 1  | 287195 (5350)|   16678 (5350)|
 | 2  | 3844   (3164)|   3791  (3164)|
@@ -30,17 +30,17 @@ Here are the number counts:
 | 9  | 1         (1)|   1        (1)|
 | 10 | 1         (1)|   1        (1)|
 
-There are a couple of things I didn't expect here! The first is that at a depth of 28 mag, all of the quiecent galaxies above $5\times 10^9$ solar masses will be detected. The other thing I didn't expect is that since all the quiescent galaxies are expected to be very massive at high redshift galaxies, we should detect **all** the quiescent galaxies in the field at high redshift. Note that quiescent galaxies very well might not actually exist at redshifts ~10. However, it seems likely that COSMOS-Web will contain the highest-redshift quiescent galaxy detected.
+There are a couple of things I didn't expect here! The first is that at a depth of 28 mag, all of the quiecent galaxies above $$5\times 10^9$$ solar masses will be detected. The other thing I didn't expect is that since all the quiescent galaxies are expected to be very massive at high redshift galaxies, we could detect **all** the quiescent galaxies in the field at high redshift. Note that quiescent galaxies very well might not actually exist at redshifts ~10. However, it seems likely that COSMOS-Web will contain the highest-redshift quiescent galaxy detected.
 
 
 
 ## Number Densities
 
-Here is the number density as a function of redshift (similar to Fig. 7 in Merlin et. al 2019)
+Here is the number density as a function of redshift (similar to Fig. 7 in Merlin et. al 2019). Error bars are just the Poisson noise.
 
 <img src="{{ site.baseurl }}/assets/plots/20220926_QGs.png">
 
-The dashed lines show n(>z)=1 for different survey volumes. I believe 100 arcmin2  should be similar to CEERS, and 300 arcmin^2 should be similar to JADES.
+The dashed lines show n(>z)=1 for different survey volumes. 100 arcmin^2  should be similar to CEERS, and 300 arcmin^2 should be similar to JADES.
 
 
 If I overlay this on top of the Merlin plot I find the following:
