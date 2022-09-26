@@ -11,7 +11,7 @@ In this post, I'm going to look at how many quiescent galaxies COSMOS-Web will b
 
 ## Completeness and Number Counts
 
-Here are the stellar mass functions of quiescent galaxies, with the underlying model (from Williams et al. 2018) shown with dotted lines. Note that the DREaM catalog extends down to $10^5$ solar masses.
+Here are the stellar mass functions of *detectable* quiescent galaxies, with the underlying model (from Williams et al. 2018) shown with dotted lines. Note that the DREaM catalog extends down to $$10^5$$ solar masses, and that COSMOS-Web will be complete above $$10^9$$ or so.
 
 <img src="{{ site.baseurl }}/assets/plots/20220926_QG_LF.png">
 
