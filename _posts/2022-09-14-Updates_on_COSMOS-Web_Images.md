@@ -80,7 +80,7 @@ if __name__ == "__main__":
     pool.close()
 ```
 
-##Pipeline Steps 1 and 2
+### Pipeline Steps 1 and 2
 
 Steps 1 and 2 of the pipeline are run separately on each file. Therefore, I will parallelize these in the same way as above.
 
