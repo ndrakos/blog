@@ -11,7 +11,7 @@ One thing I am interested in is how the environment effects luminosity of galaxi
 
 Here is what an example DREaM spectra looks like, and the COSMOS-Web bands.
 
-<img src="{{ site.baseurl }}/assets/plots/20220914_SEDs.png">
+<img src="{{ site.baseurl }}/assets/plots/20221024_SEDs.png">
 
 
 ## IGM Absorption (FSPS)
@@ -20,7 +20,7 @@ FSPS includes a IGM absorption model from Madau (1995), and this is what I used 
 
 I generated a spectra with FSPS at redshifts 6,7,8,9 and 10 and looked to see how it changed with (solid lines) and without (dashed lines) the IGM absorption model.
 
-<img src="{{ site.baseurl }}/assets/plots/20220914_AttenuationModel.png">
+<img src="{{ site.baseurl }}/assets/plots/20221024_AttenuationModel.png">
 
 
 Here are the magnitudes with/without IGM Attenuation.
