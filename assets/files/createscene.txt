@@ -1,0 +1,173 @@
+import sys,os
+sys.path.insert(0,'../Analysis')
+from MyInfo import *
+
+from astropy import units as u
+from astropy.wcs import WCS
+from astropy.coordinates import SkyCoord
+from astropy.wcs.utils import fit_wcs_from_points
+from astropy.modeling import models
+from astropy.nddata import Cutout2D
+
+import scipy
+from photutils.datasets import make_model_sources_image
+from reproject import mosaicking, reproject_interp
+
+######################
+# Parameters
+######################
+
+
+ra_offset = 150.11916667
+dec_offset=2.20583333
+bounds = [149.67, 150.55,1.73, 2.67] #degrees
+pixscale = 0.11 #Arcsec/pixel
+oversample=10
+
+######################
+# Function
+######################
+
+def create_hdul(bounds, pixscale, rota=0):
+    # Creates an hdul with RA and Dec between the specified bounds. Data is all zeros.
+    # bounds: [RAmin, RAmax, Decmin, Decmax], degrees
+    # pixscale: degrees/pixel
+    # mydata: array to store
+
+    ra_length = int( (bounds[1]-bounds[0])/pixscale) #In pixels
+    dec_length = int((bounds[3]-bounds[2])/pixscale) #In pixels
+    crval = [bounds[1]-(bounds[1]-bounds[0])/2,bounds[3]-(bounds[3]-bounds[2])/2] #centre
+    crpix = np.array([ [0,ra_length/2,ra_length-1] , [0,dec_length/2,dec_length-1] ])
+    world_coord = SkyCoord(ra=[bounds[1],crval[0],bounds[0]],dec=[bounds[2],crval[1],bounds[3]],frame='fk5', unit='deg')
+    w = fit_wcs_from_points(xy = crpix, world_coords = world_coord,projection="TAN")
+
+    #Make hdul
+    myhdul = fits.HDUList()
+    myhdul.append(fits.ImageHDU())
+
+    #Add header
+    myhdul[0].header.update(w.to_header())
+    myhdul[0].header['PC1_1']=-np.cos(rota)
+    myhdul[0].header['PC1_2']=np.sin(rota)
+    myhdul[0].header['PC2_1']=np.sin(rota)
+    myhdul[0].header['PC2_2']=np.cos(rota)#(bounds[3]-bounds[2])/dec_length #.11/3600
+    myhdul[0].header['CDELT1'] = (bounds[1]-bounds[0])/ra_length
+    myhdul[0].header['CDELT2'] = (bounds[3]-bounds[2])/dec_length
+
+    #Add data
+    myhdul[0].data = np.zeros((ra_length,dec_length)).T
+
+    return myhdul
+
+
+
+##########################################
+# Create Empty Image
+#########################################
+print('Set-up')
+sources_hdul = create_hdul(bounds, pixscale/3600)
+#sources_hdul.writeto('testblank.fits', overwrite=True)
+
+###############
+# Load Galaxy Catalog
+######################
+print('Load Catalog')
+
+#Load Catalog
+galaxycat = Table.read(DREaM_main, format='fits').to_pandas()
+ra_list = galaxycat.RA.to_numpy() + ra_offset #degrees
+dec_list = galaxycat.Dec.to_numpy()+ dec_offset #degrees
+mask =  (ra_list>=bounds[0]) & (ra_list<=bounds[1]) & (dec_list>bounds[2]) & (dec_list<=bounds[3])
+galaxycat = galaxycat[mask]
+galaxycat = galaxycat
+
+ra_list = galaxycat.RA.to_numpy() + ra_offset #degrees
+dec_list = galaxycat.Dec.to_numpy()+ dec_offset #degrees
+redshift = galaxycat.redshift.to_numpy()
+Reff =  galaxycat.R_eff.to_numpy() #half-light radius in the semimajor axis [kpc, physial]
+ellipticity = galaxycat.q.to_numpy() #semiminor to semimajor half-light size
+sersic_index = galaxycat.n_s.to_numpy()
+position_angle = galaxycat.PA.to_numpy() # radians
+del galaxycat
+
+#Convert physical radius to angular
+rad_per_arcsec = 4.84814e-6
+D_A = mycosmo.angularDiameterDistance(redshift) #Mpc/h
+D_A = D_A*1000/h #kpc
+Reff = Reff/D_A/rad_per_arcsec #arcsec
+radius = np.sqrt(ellipticity)*Reff# circularized half-light radius in arcsec
+#radius[radius<rmin]= rmin
+
+#Load MIRI data
+galaxycat = Table.read(DREaM_photo, format='fits').to_pandas()[mask]
+f770 = galaxycat.JWST_miri_F770W.to_numpy() #mag
+f770 =3631e6*10**(-f770/2.5) #microJy
+refw = 7.7 #microns
+del galaxycat
+
+##########################################
+# Add galaxies to Image
+#https://photutils.readthedocs.io/en/stable/api/photutils.datasets.make_model_sources_image.html
+#https://docs.astropy.org/en/stable/api/astropy.modeling.functional_models.Sersic2D.html
+#########################################
+print('Add Galaxies')
+
+positions = SkyCoord(ra_list,dec_list,unit='deg')
+
+ell = np.sqrt(1-ellipticity**2)
+bn = 2*sersic_index - 1/3 + 4/405/sersic_index + 46/25515/sersic_index**2 + 131/1148175/sersic_index**3 - 2194697/30690717750/sersic_index**4
+bn[bn<0] = np.min(abs(bn))
+A = radius**2*2*np.pi*sersic_index*np.exp(bn)/bn**(2*sersic_index) *  scipy.special.gamma(2*sersic_index)
+
+table = Table()
+model = models.Sersic2D()
+
+for i,flux in enumerate(f770):
+    pos = positions[i]
+
+    #print(i, pos.to_string('hmsdms'))
+    stamp_size = int(np.ceil(radius[i]*3)*oversample) #pixels
+    stamp_size = max(stamp_size,5)
+
+    #Make Stamp
+    table['r_eff'] = np.array([radius[i]]) * u.arcsec#effective half-light radius
+    table['n'] = np.array([sersic_index[i]])
+    table['x_0'] = np.array([stamp_size/2.0]) * u.arcsec
+    table['y_0'] = np.array([stamp_size/2.0])* u.arcsec
+    table['ellip'] = np.array([ell[i]])
+    table['theta'] = np.array([position_angle[i]])
+    table['amplitude'] = np.array(flux)*u.mJy/A[i]# Surface brightness at r_eff
+    sersic_stamp = make_model_sources_image((stamp_size,stamp_size), model, table,oversample=oversample)
+
+
+    #Make hdul
+    myra = ra_list[i]; mydec = dec_list[i]
+    size_arcsec = stamp_size/oversample # size of stamp in arcsec
+    mybounds = [myra - size_arcsec/3600/2, myra+ size_arcsec/3600/2, mydec-size_arcsec/3600/2, mydec+size_arcsec/3600/2]
+    stamp_hdul = create_hdul(mybounds, size_arcsec/stamp_size/3600 )
+    stamp_hdul[0].data = sersic_stamp.T
+    #stamp_hdul.writeto('teststamp.fits', overwrite=True)
+
+
+    #Get cut-out
+    cut_im = Cutout2D(sources_hdul[0].data,wcs=WCS((sources_hdul[0].header)),position=pos,size=(1.1*size_arcsec/3600*u.deg),mode="trim",copy=False)
+    cut_hdul = create_hdul(bounds, pixscale)
+    cut_hdul[0].header.update(cut_im.wcs.to_header())
+    cut_hdul[0].data = cut_im.data
+
+    #Add stamp to cutout
+    cut_data, footprint = mosaicking.reproject_and_coadd([cut_hdul[0],stamp_hdul[0]],cut_hdul[0].header,reproject_function=reproject_interp,combine_function='sum')
+    #cut_hdul[0].data = cut_data; cut_hdul.writeto('testcut.fits', overwrite=True)
+
+    #Replace in big mosaic
+    xmin = cut_im.ymin_original; xmax = cut_im.ymax_original+1
+    ymin = cut_im.xmin_original; ymax = cut_im.xmax_original+1
+    sources_hdul[0].data[xmin:xmax,ymin:ymax]=cut_data
+
+
+
+######################
+# Save
+######################
+print('Saving Fits File')
+sources_hdul.writeto('testsources.fits', overwrite=True)
