@@ -7,7 +7,7 @@ categories: cosmos_web
 
 To make simulated images of the Miri observations, I am using MIRISim, as outlined <a href="https://ndrakos.github.io/blog/cosmos_web/MIRISim/">here</a>.
 
-One component needed to make these observations is a "scene", which you can either create in MIRISim from a list of objects, or can input as a FITS file. As detailed in this <a href="https://ndrakos.github.io/blog/cosmos_web/MIRISim_Scene/">previous post<a>, I was having trouble creating a scene using the first method (there seemed to be memory issues). Therefore I decided to create a FITS file with all the sources, and input this. Vasily kindly shared his code with me, and I have altered it to create a scene, which I'll detail in this post.
+One component needed to make these observations is a "scene", which you can either create in MIRISim from a list of objects, or can input as a FITS file. As detailed in this <a href="https://ndrakos.github.io/blog/cosmos_web/MIRISim_Scene/">previous post</a>, I was having trouble creating a scene using the first method (there seemed to be memory issues). Therefore I decided to create a FITS file with all the sources, and input this. Vasily kindly shared his code with me, and I have altered it to create a scene, which I'll detail in this post.
 
 
 ## Creating an empty FITS File
@@ -15,31 +15,6 @@ One component needed to make these observations is a "scene", which you can eith
 Here is my code to create the scene. Right now it has no sources, and is just all zeros
 
 ```
-import sys,os
-sys.path.insert(0,'../Analysis')
-from MyInfo import *
-
-from astropy import units as u
-from astropy.wcs import WCS
-from astropy.coordinates import SkyCoord
-from astropy.wcs.utils import fit_wcs_from_points
-from astropy.modeling import models
-from astropy.nddata import Cutout2D
-
-import scipy
-from photutils.datasets import make_model_sources_image
-from reproject import mosaicking, reproject_interp
-
-######################
-# Parameters
-######################
-
-
-ra_offset = 150.11916667
-dec_offset=2.20583333
-bounds = [149.67, 150.55,1.73, 2.67] #degrees
-pixscale = 0.11 #Arcsec/pixel
-oversample=10
 
 ######################
 # Function
@@ -89,7 +64,7 @@ def create_hdul(bounds, pixscale, rota=0):
 
 I can generate a stamp of each galaxy using <code>make_model_sources_image</code> from <code>photutils</code> and inputting a Sersic model (<code>models.Sersic2D()</code> from <code>astropy</code>).
 
-I also need to specify a stmp size. I did a stampsize of:
+I also need to specify a stamp size. I did a stampsize of:
 
 ```
 stamp_size = int(np.ceil(radius[i]*5)*oversample) #pixels
@@ -108,9 +83,9 @@ To calculate this, I use the fact that the total luminosity in a sersic profile 
 
 $$L = I_e R_e^2 2 \pi n \dfrac{e^{b_n}}{b_n^{2n}} \Gamma (2n)$$
 
-where $I_2$ is the intensity at the effective radius $R_e$ that enclses half the total light from the model (see these <a href="https://ned.ipac.caltech.edu/level5/March05/Graham/Graham2.html">notes</a>).
+where $$I_e$$ is the intensity at the effective radius $R_e$ that enclses half the total light from the model (see these <a href="https://ned.ipac.caltech.edu/level5/March05/Graham/Graham2.html">notes</a>).
 
-and then solve for the surface brightness at $$R_e$$ by dividing the total flux by $$R_e^2 2 \pi n \dfrac{e^{b_n}}{b_n^{2n}} \Gamma (2n)$$
+and then solve for the surface brightness at $$R_e$$ by dividing the total flux by $$R_e^2 2 \pi n \dfrac{e^{b_n}}{b_n^{2n}} \Gamma (2n)$$.
 
 
 ## Adding Stamp to Full Image
@@ -197,24 +172,24 @@ The galaxies look distributed right, but they appear very small. This is possibl
 
 ## Next Steps
 
-### Check Galaxies Okay
+### 1. Check Galaxies Okay
 
 I need to double check the positions are correct (at first glance this is okay).
 
 I also want to visually inspect the sizes, fluxes, ect. and see why it looks a little strange
 
-### Add Full Catalog
+### 2. Add Full Catalog
 
 Right now I just have my test catalog in this scene. I need to add the fainter galaxies too. If this is too slow to do on my laptop, it should be quite easy to parallelize: I can just run this code for a subset of galaxies, and then add all the data together.
 
-### Background and Stars
+### 3. Background and Stars
 
 The current plan is to include the Background and Stars using MIRISim's functionality. But I may decide to add them directly to this image later. Note that including stars will require a bit of work to determine their brightness in the F770W band.
 
-### Run in MiriSim
+### 4. Run in MiriSim
 
 I already tested I have MiriSim working for FITS images (using Jed's example). I need to run this on my scene (at a fixed pointing), and then pass it along to e.g. Santosh, Daizhong, and make sure we have things working for the pipeline (and iterate over any problems in my simulation!)
 
-### Specify Pointing/Dither Properly
+### 5. Specify Pointing/Dither Properly
 
 As detailed in the previous post, inputting a pointing and dither pattern might not be the most straight-forward in MIRISim. Daizhong has done a bit of work looking into this, so I can hopefully see what he's done and adjust the code accordingly.
