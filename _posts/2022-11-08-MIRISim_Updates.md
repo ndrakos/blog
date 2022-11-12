@@ -93,7 +93,7 @@ I timed the code, and it takes about 1 minute for every 1000 sources. Therefore 
 I'm having trouble with mpi4py on lux. When I put <code>from mpi4py import MPI</code>
 
 
-<cpde>The application appears to have been direct launched using "srun",
+<code>The application appears to have been direct launched using "srun",
 but OMPI was not built with SLURM's PMI support and therefore cannot
 execute. There are several options for building PMI support under
 SLURM, depending upon the SLURM version you are using:
