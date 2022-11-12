@@ -90,10 +90,10 @@ I timed the code, and it takes about 1 minute for every 1000 sources. Therefore 
 
 ### Parallelizing Attempt 1 -- Lux
 
-I'm having trouble with mpi4py on lux. When I put <code>from mpi4py import MPI</code>
+I'm having trouble with mpi4py on lux. When I put <code>from mpi4py import MPI</code>:
 
-
-<code>The application appears to have been direct launched using "srun",
+'''
+The application appears to have been direct launched using "srun",
 but OMPI was not built with SLURM's PMI support and therefore cannot
 execute. There are several options for building PMI support under
 SLURM, depending upon the SLURM version you are using:
@@ -104,7 +104,8 @@ requires that you configure and build SLURM --with-pmix.
 Versions earlier than 16.05: you must use either SLURM's PMI-1 or
 PMI-2 support. SLURM builds PMI-1 by default, or you can manually
 install PMI-2. You must then build Open MPI using --with-pmi pointing
-to the SLURM PMI library location. </code>
+to the SLURM PMI library location.
+'''
 
 I tried reinstalling mpi4py (making sure I was careful about what modules were imported), and also installing it in a conda environment. None of this seemed to really work. For now, I'll run on Candide instead.
 
@@ -119,11 +120,11 @@ I then parallelized the scene code. Ran into a couple small issues, and really w
 ### Parallelizing Attempt 3 -- Lux again
 
 I realized that if I went into a compute node and typed
+
 ```
 import mpi4py
 mpi4py?
 ```
-
 The path to mpi4py was not what it should be in the conda environment. So I pip uninstalled mpi4py, and then everything worked!
 
 Therefore, I am ready to run this code on lux :)
@@ -140,6 +141,7 @@ Therefore, I am ready to run this code on lux :)
 4. Generate test images for the full catalog, for one December pointing.
 
 5. Include Stars (decide how to do this... maybe Jed is already putting in a star catalog, and I can use his.)
+
 
 ## Things to check
 
