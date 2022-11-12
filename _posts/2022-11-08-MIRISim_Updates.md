@@ -92,7 +92,7 @@ I timed the code, and it takes about 1 minute for every 1000 sources. Therefore 
 
 I'm having trouble with mpi4py on lux. When I put <code>from mpi4py import MPI</code>:
 
-'''
+```
 The application appears to have been direct launched using "srun",
 but OMPI was not built with SLURM's PMI support and therefore cannot
 execute. There are several options for building PMI support under
@@ -105,7 +105,7 @@ Versions earlier than 16.05: you must use either SLURM's PMI-1 or
 PMI-2 support. SLURM builds PMI-1 by default, or you can manually
 install PMI-2. You must then build Open MPI using --with-pmi pointing
 to the SLURM PMI library location.
-'''
+```
 
 I tried reinstalling mpi4py (making sure I was careful about what modules were imported), and also installing it in a conda environment. None of this seemed to really work. For now, I'll run on Candide instead.
 
