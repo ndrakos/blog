@@ -15,12 +15,16 @@ There are a couple small updates I made to the MiriB script described in the pre
 
 ### Save pointing information
 
-Now, for each visit, I save all the information needed to fix the wcs, i.e. <code>np.savetxt(mypath + '/pointing.dat',np.array([telescope_v1_ra,telescope_v1_dec,local_roll]))</code>.
+Now, for each visit, I save all the information needed to fix the wcs, i.e.
+
+<code>np.savetxt(mypath + '/pointing.dat',np.array([telescope_v1_ra,telescope_v1_dec,local_roll]))</code>.
 
 
 ### Dithering pattern
 
-MIRISim was not able to read in the dither pattern properly. I made sure to have the proper format/delimiter, <code>np.savetxt(mypath + '/dither.dat', np.array([X,Y]).T, fmt='%+.4f',delimiter=',')</code>
+MIRISim was not able to read in the dither pattern properly. I made sure to have the proper format/delimiter,
+
+<code>np.savetxt(mypath + '/dither.dat', np.array([X,Y]).T, fmt='%+.4f',delimiter=',')</code>
 
 
 ## MiriD
