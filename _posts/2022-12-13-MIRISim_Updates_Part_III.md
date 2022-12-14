@@ -6,7 +6,7 @@ categories: cosmos_web
 ---
 
 
-In this post I'm going to get my MIRISim pipeline working (see previous post <a href="https://ndrakos.github.io/blog/cosmos_web/MIRISim_Updates_Part_II/"<here>)
+In this post I'm going to get my MIRISim pipeline working (see previous post <a href="https://ndrakos.github.io/blog/cosmos_web/MIRISim_Updates_Part_II/">here</a>)
 
 
 ## Updates to MiriB
