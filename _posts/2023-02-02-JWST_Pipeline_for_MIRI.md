@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "JWST Pipeline for Miri"
-date:   2023-01-30
+date:   2023-02-02
 categories: cosmos_web
 ---
 
@@ -36,7 +36,7 @@ It's not really clear whether I ran the pipeline ran right. Maybe the sources ne
 
 MIRISim could not take in the FULL scene without crashing, so for each observation I cut out the relevant part of the scene. Here is the scene cut-out for Obs43:
 
-<img src="{{ site.baseurl }}/assets/plots/20230203_cutout.png">
+<img src="{{ site.baseurl }}/assets/plots/20230202_cutout.png">
 
 
 Note this looks a little funny, which I decided has to do with the fact I didn't use a background so it scales a little weird (see <a href="https://ndrakos.github.io/blog/cosmos_web/MIRISim_Scene_Part_II/">previous post</a>).
@@ -45,7 +45,7 @@ One thing I noticed is that the WCS doesn't display in DS9. It IS in the header 
 
 When I save the cutout as a regular fits file (not a data cube) I can see the wcs, and compare to the MIRISim output
 
-<img src="{{ site.baseurl }}/assets/plots/20230203_cutout_check.png">
+<img src="{{ site.baseurl }}/assets/plots/20230202_cutout_check.png">
 
 
 Clearly the cutout is (1) not big enough and (2) the observation WCS is not centred where it should be (which we knew already)
@@ -58,7 +58,7 @@ I fixed the source cutout sizes; I was saving 0.01degx0.01deg, which is smaller 
 Given the bigger scene, I reran MIRISim and the pipeline, and got the following:
 
 
-<img src="{{ site.baseurl }}/assets/plots/20230203_pipeline2.png">
+<img src="{{ site.baseurl }}/assets/plots/20230202_pipeline2.png">
 
 Either the objects are not placed in the image correctly, or I am running the pipeline wrong -> this will be the next thing I check.
 
