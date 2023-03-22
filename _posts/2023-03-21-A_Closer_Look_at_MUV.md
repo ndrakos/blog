@@ -18,11 +18,9 @@ $$\dot{N}_{\rm ion} = \int_{\nu_{912}}^{\infty} \dfrac{L_\nu}{h \nu}  {\rm d} \n
 Calculating $$\dot{N}_{\rm ion}$$ was outlined in Posts <a href="https://ndrakos.github.io/blog/reion/The_intrinsic_production_rate/">I</a>, <a href="https://ndrakos.github.io/blog/reion/The_Intrinsic_Production_Part_II/">II</a> and <a href="https://ndrakos.github.io/blog/reion/The_Intrinsic_Production_Part_III/">III</a>
 
 
-In practice, $\dot{N}_{\rm ion}$ is not directly observable due to (1) absorption of ionizing photons by the IGM and (2) attenuation by dust. Therefore, it is typically calculated as:
+In practice, $$\dot{N}_{\rm ion}$$ is not directly observable due to (1) absorption of ionizing photons by the IGM and (2) attenuation by dust. Therefore, it is typically calculated as:
 
-\begin{equation} \label{eq:xi_ion}
-\dot{N}_{\rm ion} = \xi_{\rm ion} L_{1500}
-\end{equation}
+$$\dot{N}_{\rm ion} = \xi_{\rm ion} L_{1500}$$
 
 ## Comparison between intrinsic and observed UV Luminosity
 
