@@ -216,8 +216,8 @@ Here is the first image from each the 6 visits:
 
 ### Notes:
 
-- The dither patterns look right. As posted previously, the "centre" of the images is at (688.5,511.5) pixels. The dither pattern specified is (in pixels)
-- The observations are all centred the same, which is how it should be since I gave them all the same scene. For the actual mock observations, I centre the cutout of the scene based on the pointing.
+- The dither patterns look right. As posted previously, the "centre" of the images is at (688.5,511.5) pixels, and the dither pattern was written in the previous section.
+- The observations are all centred the same, which is how it should be since I gave them all the same scene. For the actual mock observations, I will centre the cutout of the scene based on the pointing.
 - There is a bright spot on the raw images, that isn't the 1 source put in. I'm not too worried about this though, since the image IS unrealistically bright. I believe we saw something similar in the NIRCam images, when we had a star that was too bright in them.
 - I do need to check to make sure I am interpreting the pointing of the COSMOS APT files correctly, but at least now I am sure of how the input-> output is treated!
 
