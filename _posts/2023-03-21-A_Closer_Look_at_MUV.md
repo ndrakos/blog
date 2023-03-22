@@ -13,11 +13,9 @@ DREaM gives the observed value, while I use the intrinsic to calculate the numbe
 
 The intrinsic production rate of ionizing photons of an individual galaxy, $$\dot{N}_{\rm ion}$$, can be obtained from integrating over the intrinsic SED
 
-\begin{equation} \label{eq:Ndot}
-\dot{N}_{\rm ion} = \int_{\nu_{912}}^{\infty} \dfrac{L_\nu}{h \nu}  {\rm d} \nu = \int_{0}^{912} \dfrac{L_\nu}{h \lambda} {\rm d} \lambda
-\end{equation}
+$$\dot{N}_{\rm ion} = \int_{\nu_{912}}^{\infty} \dfrac{L_\nu}{h \nu}  {\rm d} \nu = \int_{0}^{912} \dfrac{L_\nu}{h \lambda} {\rm d} \lambda$$
 
-Calculating $$\dot{N}_{\rm ion}$$ was outlined in Posts <a href="https://ndrakos.github.io/blog/reion/The_intrinsic_production_rate/"">I</a>, <a href="https://ndrakos.github.io/blog/reion/The_Intrinsic_Production_Part_II/">II</a> and <a href="https://ndrakos.github.io/blog/reion/The_Intrinsic_Production_Part_III/">III</a>
+Calculating $$\dot{N}_{\rm ion}$$ was outlined in Posts <a href="https://ndrakos.github.io/blog/reion/The_intrinsic_production_rate/">I</a>, <a href="https://ndrakos.github.io/blog/reion/The_Intrinsic_Production_Part_II/">II</a> and <a href="https://ndrakos.github.io/blog/reion/The_Intrinsic_Production_Part_III/">III</a>
 
 
 In practice, $\dot{N}_{\rm ion}$ is not directly observable due to (1) absorption of ionizing photons by the IGM and (2) attenuation by dust. Therefore, it is typically calculated as:
