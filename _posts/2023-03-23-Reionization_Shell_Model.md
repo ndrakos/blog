@@ -29,7 +29,9 @@ For calculating the ionizing fraction, I just took the instantaneous ionizing ph
 Note that we can rewrite the ODE above as:
 
 $$\dot{V} + [ n C \alpha] V = \dfrac{\dot{N}_{\rm ion}}{n}$$
-$$\dot{e^{n C \alpha t}} V = e^{n C \alpha t} \dfrac{\dot{N}_{\rm ion}}{n}$$
+
+$$d/dt ({e^{n C \alpha t}} V) = e^{n C \alpha t} \dfrac{\dot{N}_{\rm ion}}{n}$$
+
 $$ V(t) = \dfrac{e^{- n C \alpha t}}{n} \int e^{ n C \alpha t} \dot{N}_{\rm ion} dt $$
 
 Therefore, we need to know  $$\dot{N}_{\rm ion}$$ as a function of time for each galaxy.
