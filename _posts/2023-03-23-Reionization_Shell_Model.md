@@ -46,7 +46,7 @@ Here is the intrinsic spectrum as a function of age, expressed in age of the Uni
 <img src="{{ site.baseurl }}/assets/plots/20230323_fnu_vs_t.png">
 
 
-Here is $$\dot{N}_{ion}$$ as a function of time for this galaxy
+Here is $$\dot{N}_{\rm ion}$$ as a function of time for this galaxy
 
 <img src="{{ site.baseurl }}/assets/plots/20230323_Ndot_vs_t_1.png">
 
@@ -60,7 +60,7 @@ We are  more interested in the high-z galaxies, so here are 20 galaxies that are
 It seems like it would be feasible to calculate this for every galaxy. I will need to parallelize as before, but I don't see it taking much longer than calculating $$\dot{N}_{\rm ion}$$ as I had before. The slow part is running FSPS, but I won't need to make any extra calls to this.
 
 Next steps:
-1. double check that these numbers make sense.
+1. Double check that these numbers make sense.
 2. Calculate the volume, using the integral above for 1 galaxy, check it looks reasonable
-3. write code to do this for all galaxies
-4. plot the reionized regions, see if they agree with radiative transfer simulation findings. (i.e., is the percentage of ionized regions reasonable?)
+3. Write code to do this for all galaxies
+4. Plot the reionized regions, see if they agree with radiative transfer simulation findings. (i.e., is the percentage of ionized regions reasonable?)
