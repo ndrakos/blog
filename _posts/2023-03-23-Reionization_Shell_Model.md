@@ -37,3 +37,28 @@ $$ V(t) = \dfrac{e^{- n C \alpha t}}{n} \int e^{ n C \alpha t} \dot{N}_{\rm ion}
 Therefore, we need to know  $$\dot{N}_{\rm ion}$$ as a function of time for each galaxy.
 
 ## How does Ndot evolve in time?
+
+HereI consider one example galaxy in the catalog. Note that FSPS will return the spectrum as a function of galaxy age age.
+
+Here is the intrinsic spectrum as a function of age, expressed in age of the Universe [Gyr]. This galaxy started forming at ~3.7 Gyr (z~1.8), and is currently at a redshift of ~0.01
+
+PLOT
+
+Here is $$N_dot$$ as a function of time for this galaxy
+
+PLOT
+
+We are  more interested in the high-z galaxies, so here are 20 galaxies that are located at redshifts ~6
+
+PLOT
+
+
+## How to proceed?
+
+It seems like it would be feasible to calculate this for every galaxy. I will need to parallelize as before, but I don't see it taking much longer than calculating $$\dot{N}_{\rm ion}$$ as I had before. The slow part is running FSPS, but I won't need to make any extra calls to this.
+
+Next steps:
+1) double check that these numbers make sense.
+2) Calculate the volume, using the integral above for 1 galaxy, check it looks reasonable
+3) write code to do this for all galaxies
+4) plot the reionized regions, see if they agree with radiative transfer simulation findings. (i.e., is the percentage of ionized regions reasonable?)
