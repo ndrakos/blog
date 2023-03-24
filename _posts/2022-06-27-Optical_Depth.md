@@ -17,9 +17,9 @@ $$ \tau = c \bar{n_H} \sigma_T \int_0^z f_e Q_{H_{II}} \dfrac{(1+z')^2}{H(z)} dz
 where
 
 - $$c$$: speed of light
-- $$\bar{n_H}$$: comoving hydrogen density ($$1.9 \times 10^{-7} \rm{cm}^3$$)
-- $$\sigma_T$$: electron Thomson scattering cross-section (6.6524587158 \times 10^{-29 \rm{m}^2})
-- f_e = number of free electrons for every hydrogen nucleus in the ionized IGM, $$f_e = (1+(1−X)/4X)$$
+- $$\bar{n}_H$$: comoving hydrogen density ($$1.9 \times 10^{-7} \rm{cm}^3$$)
+- $$\sigma_T$$: electron Thomson scattering cross-section ($$6.6524587158 \times 10^{-29 \rm{m}^2}$$)
+- $$f_e$$ = number of free electrons for every hydrogen nucleus in the ionized IGM, $$f_e = (1+(1−X)/4X)$$
 - $$Q_{H_{II}}$$: Ionized fraction (calculated as <a href="https://ndrakos.github.io/blog/reion/IGM_Neutral_Fraction/">here</a>)
 - $$H(z)$$: Hubble parameter
 
