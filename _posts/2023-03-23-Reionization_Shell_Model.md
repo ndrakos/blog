@@ -42,15 +42,17 @@ HereI consider one example galaxy in the catalog. Note that FSPS will return the
 
 Here is the intrinsic spectrum as a function of age, expressed in age of the Universe [Gyr]. This galaxy started forming at ~3.7 Gyr (z~1.8), and is currently at a redshift of ~0.01
 
-PLOT
+
+<img src="{{ site.baseurl }}/assets/plots/20230323_fnu_vs_t.png">
+
 
 Here is $$N_dot$$ as a function of time for this galaxy
 
-PLOT
+<img src="{{ site.baseurl }}/assets/plots/20230323_Ndot_vs_t_1.png">
 
 We are  more interested in the high-z galaxies, so here are 20 galaxies that are located at redshifts ~6
 
-PLOT
+<img src="{{ site.baseurl }}/assets/plots/20230323_Ndot_vs_t.png">
 
 
 ## How to proceed?
