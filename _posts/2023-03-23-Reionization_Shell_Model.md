@@ -10,7 +10,7 @@ I am planning to calculate the reionized region around each galaxy in the DREaM 
 In the post, I will outline the method for this.
 
 
-## Overview of equation from Magg et al. 2018
+## Overview of Calculation (from Magg et al. 2018)
 
 $$ \dot{N}_{\rm ion} = V n^2 C \alpha + \dot{V} n$$
 
@@ -29,7 +29,9 @@ For calculating the ionizing fraction, I just took the instantaneous ionizing ph
 Note that we can rewrite the ODE above as:
 
 $$\dot{V} + [ n C \alpha] V = \dfrac{\dot{N}_{\rm ion}}{n}$$
-$$\dot{e^{n C \alpha t} V) = e^{n C \alpha t} \dfrac{\dot{N}_{\rm ion}}{n}$$
-$$ V(t) = \dfrac{e^{- n C \alpha t}{n} \int e^{ n C \alpha t} \dot{N}_{\rm ion} dt $$
+$$\dot{e^{n C \alpha t}} V = e^{n C \alpha t} \dfrac{\dot{N}_{\rm ion}}{n}$$
+$$ V(t) = \dfrac{e^{- n C \alpha t}}{n} \int e^{ n C \alpha t} \dot{N}_{\rm ion} dt $$
 
 Therefore, we need to know  $$\dot{N}_{\rm ion}$$ as a function of time for each galaxy.
+
+## How does Ndot evolve in time?
