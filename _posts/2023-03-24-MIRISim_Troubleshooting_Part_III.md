@@ -140,7 +140,7 @@ Checking without stars, and only galaxies:
 
 ### Notes:
 
-- Still doesn't seem like the galaxies are working
+- Still doesn't seem like the galaxies are working. Maybe they are just too small/faint?
 - Running the pipeline changes the WCS of the raw image. Why is this?
 
 
@@ -148,7 +148,7 @@ Checking without stars, and only galaxies:
 
 Here is the current plan for the next tests:
 
-- Test 4: Dig into the source creation a little more
+- Test 4: Dig into the source creation a little more. Make a fits file with ONE objects, make sure it is in the right location. 
 - Test 5: Look into the "Run" step, make sure I am setting the WCS information correctly. Does the WCS of the images match the dither pattern? Is the angle, ect, correct?
 - Test 6: Are the sources and stars in the right places?
 - Test 7: Do the sources and stars have the right fluxes?
