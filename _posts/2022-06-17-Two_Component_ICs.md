@@ -58,7 +58,7 @@ $$M = \dfrac{4 \pi \rho_s r_s^3 }{3-\alpha}$$
 
 ### Gravitational Potential
 
-$$\Delta^2 \phi = 4 \pi \rho(r)$$, with boundary conditions $$d\phi/dr(0)=0$$ and $$\phi(r-> \infty)=0$$
+$$\Delta \phi = 4 \pi G \rho(r)$$, with boundary conditions $$d\phi/dr(0)=0$$ and $$\phi(r \rightarrow \infty)=0$$
 
 $$ \dfrac{1}{r^2}\dfrac{d}{dr}\left( r^2 \dfrac{d\phi}{dr} \right) = 4 \pi G \rho(r)$$
 
