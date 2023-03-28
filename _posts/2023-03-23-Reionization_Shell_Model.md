@@ -20,8 +20,7 @@ Here are the values they used:
 - $$\dot{N}_{\rm ion}$$ is the rate of ionizing photons; I have already calculate the instantaneous value for each galaxy
 - $$n=0.75 \rho_b/m_p$$ is the current average hydrogen number density; I think this is the same as the comoving $$\langle n_H \rangle$$ value I used in other calculations
 - $$C=3$$ is the clumping value. They note that the solution is not sensitive to this choice. I used $$C=3$$ for the $$n_{\rm ion}$$ calculations as well, but noted I might update it to be time-dependent later.
-- $$\alpha = 2.6e{-13} {\rm cm}^3 {\rm s}^{−1}$$; This is similar to the value I used for calculating $$n_{\rm ion}$$, though I modelled it with a dependence on temperature.
-
+- $$\alpha = 2.6e^{-13} {\rm cm}^3 {\rm s}^{−1}$$; This is the value I used for calculating the IGM neutral fraction
 
 For calculating the ionizing fraction, I just took the instantaneous ionizing photon rates for galaxies, and solved the ODE as a function of redshift. It is more complicated here, because I want to solve the ODE for each galaxy.
 
