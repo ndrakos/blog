@@ -22,7 +22,7 @@ which gave values that I suspect are too large, as shown here:
 ## Expected bubble size
 
 
-Some relevant (this was from a quick search, not an in-depth literature review):
+Some relevant papers (this was from a quick search, not an in-depth literature review):
 
 <a href = "https://ui.adsabs.harvard.edu/abs/2004Natur.432..194W/abstract">Wyithe & Loeb 2004</a>
 <a href = "https://ui.adsabs.harvard.edu/abs/2005MNRAS.363.1031F/abstract">Furlanetto & Oh 2005</a>
