@@ -5,9 +5,9 @@ date:   2023-03-29
 categories: reion
 ---
 
-I am planning to calculate the reionized region around each galaxy in the DREaM catalog using a simple shell model, following <a href="https://ui.adsabs.harvard.edu/abs/2018MNRAS.473.5308M/abstract">Magg et al. 2018.</a>.
+I am planning to calculate the reionized region around each galaxy in the DREaM catalog using a simple shell model.
 
-This is a continuation from a previous post, <a href="">Part I</a>.
+This is a continuation from previous posts, <a href="https://ndrakos.github.io/blog/reion/Reionization_Shell_Model/">Part I</a> and <a href="https://ndrakos.github.io/blog/reion/Reionization_Shell_Model_Part_II/">Part II</a>.
 
 ## Expected bubble size
 
@@ -55,6 +55,6 @@ I cant solve this as pretty as I did before, but I can use on ODE solver (either
 
 ## Next steps
 
-1. Write code to do this for the one galaxy, check the answer makes sense and the speed is okay 
+1. Write code to do this for the one galaxy, check the answer makes sense and the speed is okay
 2. Once I think this makes sense, write code to do this for all galaxies
 3. Plot the reionized regions, see if they agree with radiative transfer simulation findings. (i.e., is the percentage of ionized regions reasonable?)
