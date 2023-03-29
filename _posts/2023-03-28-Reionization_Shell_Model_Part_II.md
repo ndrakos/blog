@@ -7,7 +7,7 @@ categories: reion
 
 I am planning to calculate the reionized region around each galaxy in the DREaM catalog using a simple shell model, following <a href="https://ui.adsabs.harvard.edu/abs/2018MNRAS.473.5308M/abstract">Magg et al. 2018.</a>.
 
-This is a continuation from a previous post, <a href="">Part I</a>.
+This is a continuation from a previous post, <a href="https://ndrakos.github.io/blog/reion/Reionization_Shell_Model/">Part I</a>.
 
 ## Thinking more about star formation histories
 
