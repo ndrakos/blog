@@ -9,20 +9,27 @@ I am planning to calculate the reionized region around each galaxy in the DREaM 
 
 This is a continuation from previous posts, <a href="https://ndrakos.github.io/blog/reion/Reionization_Shell_Model/">Part I</a> and <a href="https://ndrakos.github.io/blog/reion/Reionization_Shell_Model_Part_II/">Part II</a>.
 
-## Expected bubble size
+## Summary of previous post
 
-As outlined in the previous post, we calculated the volume around each galaxy to be:
+As outlined in the previous post, I calculated the volume around each galaxy to be:
 
-$$ V(t) = f_{\rm esc}\dfrac{e^{- n_H C \alpha t}}{n} \int e^{ n C \alpha t} \dot{N}_{\rm ion} dt $$, which gave values that I suspect are too large,
+$$ V(t) = f_{\rm esc}\dfrac{e^{- n_H C \alpha t}}{n} \int e^{ n C \alpha t} \dot{N}_{\rm ion} dt $$,
+
+which gave values that I suspect are too large, as shown here:
 
 <img src="{{ site.baseurl }}/assets/plots/20230328_Volume.png">
+
+## Expected bubble size
 
 
 Some relevant (this was from a quick search, not an in-depth literature review):
 
 <a href = "https://ui.adsabs.harvard.edu/abs/2004Natur.432..194W/abstract">Wyithe & Loeb 2004</a>
-<a href = "https://ui.adsabs.harvard.edu/abs/2005MNRAS.363.1031F/abstract>Furlanetto & Oh 2005</a>
-<a href = "https://ui.adsabs.harvard.edu/abs/2018MNRAS.477.5406Y/abstract>Yajima et al 2018</a>
+
+<a href = "https://ui.adsabs.harvard.edu/abs/2005MNRAS.363.1031F/abstract">Furlanetto & Oh 2005</a>
+
+<a href = "https://ui.adsabs.harvard.edu/abs/2018MNRAS.477.5406Y/abstract">Yajima et al 2018</a>
+
 <a href = "https://ui.adsabs.harvard.edu/abs/2020ApJ...891L..10T/abstract"> Tilvi et al. 2020 </a>
 
 
@@ -46,11 +53,11 @@ Further, looking at Yajima et al., I think I should include the cosmic expansion
 
 Therefore, our equation becomes (where I have used primes to denote $$d/dz$$)
 
-$$\dot{V} =  \dfrac{f_{\rm esc}\dot{N}_{\rm ion} (t)}{n_H(z)} + (3H(z) - n_H(z) C \alpha) V $$
-$$ - H(z) (1+z) V' =  \dfrac{f_{\rm esc}\dot{N}_{\rm ion} (t)}{n_H(z)} + (3H(z) - n_H(z) C \alpha) V $$
-$$ - H(z) (1+z) V' =  \dfrac{f_{\rm esc}\dot{N}_{\rm ion} (t)}{n_H^0 (1+z)^3} + (3H(z) - n_H^0 (1+z)^3 C \alpha) V $$
+$$\dot{V} =  \dfrac{f_{\rm esc}\dot{N}_{\rm ion} (t)}{n_H(z)} + (3H(z) - n_H(z) C \alpha) V(t) $$
+$$ - H(z) (1+z) V' =  \dfrac{f_{\rm esc}\dot{N}_{\rm ion} (z)}{n_H(z)} + [3H(z) - n_H(z) C \alpha] V(z) $$
+$$ - H(z) (1+z) V' =  \dfrac{f_{\rm esc}\dot{N}_{\rm ion} (z)}{n_H^0 (1+z)^3} + [3H(z) - n_H^0 (1+z)^3 C \alpha] V(z) $$
 
-I cant solve this as pretty as I did before, but I can use on ODE solver (either in python or write my own). This equation will also require calculating $$\dot{N}_{\rm ion}$$ and $$3H(z)$$ at each time step in the ODE calculation. This may be significantly slower, so we might want to come up with approximations, if the speed becomes prohibitive.
+I cant solve this as pretty as I did before, but I can use on ODE solver (either in python or write my own). This equation will also require calculating $$\dot{N}_{\rm ion}$$ and $$H(z)$$ at each time step in the ODE calculation. This may be significantly slower, so we might want to come up with approximations if the speed becomes prohibitive.
 
 
 ## Next steps
