@@ -25,8 +25,11 @@ which gave values that I suspect are too large, as shown here:
 Some relevant papers (this was from a quick search, not an in-depth literature review):
 
 <a href = "https://ui.adsabs.harvard.edu/abs/2004Natur.432..194W/abstract">Wyithe & Loeb 2004</a>
+
 <a href = "https://ui.adsabs.harvard.edu/abs/2005MNRAS.363.1031F/abstract">Furlanetto & Oh 2005</a>
+
 <a href = "https://ui.adsabs.harvard.edu/abs/2018MNRAS.477.5406Y/abstract">Yajima et al 2018</a>
+
 <a href = "https://ui.adsabs.harvard.edu/abs/2020ApJ...891L..10T/abstract"> Tilvi et al. 2020 </a>
 
 
