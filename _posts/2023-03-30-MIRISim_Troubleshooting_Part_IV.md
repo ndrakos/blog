@@ -7,13 +7,7 @@ categories: cosmos_web
 
 In this post I'm going to troubleshoot why my MIRI simulations don't have any visible sources.
 
-This is a continuation of:
-
-<a href="https://ndrakos.github.io/blog/cosmos_web/MIRISim_Troubleshooting_Part_I/">Part I</a>
-
-<a href="https://ndrakos.github.io/blog/cosmos_web/MIRISim_Troubleshooting_Part_II/">Part II</a>.
-
-<a href="https://ndrakos.github.io/blog/cosmos_web/MIRISim_Troubleshooting_Part_III/">Part III</a>.
+This is a continuation of <a href="https://ndrakos.github.io/blog/cosmos_web/MIRISim_Troubleshooting_Part_I/">Part I</a>, <a href="https://ndrakos.github.io/blog/cosmos_web/MIRISim_Troubleshooting_Part_II/">Part II</a>, and <a href="https://ndrakos.github.io/blog/cosmos_web/MIRISim_Troubleshooting_Part_III/">Part III</a>.
 
 
 
@@ -57,8 +51,8 @@ Here is what the source looks like:
 <img src="{{ site.baseurl }}/assets/plots/20230330_Source.png">
 
 Notes:
-- the image is centred in the middle of the image, as expected
-- for some reason the image is tilted. I'm not sure why it isn't a square in -57 to 57? This doesn't seem to effect how it is read into MiriSim though, so I'm not too worried
+- The image is centred in the middle of the image, as expected
+- The image is tilted. I'm not sure why it isn't a square in -57 to 57? This doesn't seem to effect how it is read into MIRISim though, so I'm not worried.
 
 Here is the header:
 
@@ -76,7 +70,7 @@ Here is the first dither/observation:
 
 
 Notes:
-- This is located in the same place as in <a href-"https://ndrakos.github.io/blog/cosmos_web/MIRISim_Troubleshooting_Part_II/">Test 2</a>, as expected. However, the galaxy is rotated. I'm not worried about this for now, since the orientation in the source FITS file and the simulated data match
+- This is located in the same place as in <a href="https://ndrakos.github.io/blog/cosmos_web/MIRISim_Troubleshooting_Part_II/">Test 2</a>, as expected. However, the galaxy is rotated. I'm not worried about this for now, since the orientation in the source FITS file and the simulated data match
 - Overall, this looks about what I would expect, and gives a good baseline to compare what I've been working on!
 
 
@@ -86,16 +80,16 @@ Here is the header for the DREaM file:
 
 <img src="{{ site.baseurl }}/assets/plots/20230330_DREaMHeader.png">
 
-One obvious thing to do is check that I am specifying the UNITS for the DREaM header. Other than that, nothing obvious pops out at me.
+One thing to do is check that I am specifying the UNITS for the DREaM header. Other than that, nothing obvious pops out at me.
 
 
 ## Next Steps
 
-There are two different things to pursue to fix this...
+There are two things I want to pursue next: 
 
 1. Fix the DREaM fits files
 - Specify units properly
 - Check visually a cutout from the fits file versus some of the cutouts from the Mirage simulations
 
 2. Use the test galaxy to really understand the pointings/whether I'm setting the WCS right
-- Run this example through the full MIRISim code, check the WCS of the final images. 
+- Run this example through the full MIRISim code, check the WCS of the final images.
