@@ -9,7 +9,7 @@ title:  "Isolated Merger Simulations"
 This project involves running simulations of controlled, isolated mergers between dark matter haloes.
 </p>
 
-<h2> Publications: </h2>
+<h2> Related Publications: </h2>
 <ul>
 <li> <a href="https://ui.adsabs.harvard.edu/abs/2019MNRAS.487..993D/abstract">Drakos, Taylor, Berroueut, Robotham and Power 2019</a> </li>
 <li> <a href="https://ui.adsabs.harvard.edu/abs/2019MNRAS.487.1008D/abstract">Drakos, Taylor, Berroueut, Robotham and Power 2019</a> </li>

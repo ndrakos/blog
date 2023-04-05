@@ -10,7 +10,7 @@ Mock galaxy catalogs are used to test analysis and processing tools for surveys,
 </p>
 
 
-<h2> Publications: </h2>
+<h2> Related Publications: </h2>
 <ul>
 <li> <a href="https://ui.adsabs.harvard.edu/abs/2022ApJ...926..194D/abstract">Drakos et al 2022</a> </li>
 </ul>

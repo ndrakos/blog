@@ -19,21 +19,25 @@ where $$V$$ is the physical volume of the bubble
 
 Or, equivalently,
 
-$$ A(z) =  - \dfrac{f_{\rm esc}\dot{N}_{\rm ion} (z)}{n_H^0 H(z)(1+z)^4}  
-$$ B(z) =  \dfrac{C \alpha n_H^0 (1+z)^2}{H(z)} - \dfrac{3}{1+z}
+$$ A(z) =  - \dfrac{f_{\rm esc}\dot{N}_{\rm ion} (z)}{n_H^0 H(z)(1+z)^4} $$
+
+$$ B(z) =  \dfrac{C \alpha n_H^0 (1+z)^2}{H(z)} - \dfrac{3}{1+z}$$
+
 $$ V'(z) = A(z) + B(z) V(z) $$
 
 I will solve this using an implicit Euler method (as in Magg+2018)
 
 $$A_i = - \dfrac{f_{\rm esc}\dot{N}_{\rm ion,i} }{n_H^0 H(z_i)(1+z_i)^4}  $$
-$$B_i =  \dfrac{C \alpha n_H^0 (1+z_i)^2}{H(z_i)} - \dfrac{3}{1+z_i}
+
+$$B_i =  \dfrac{C \alpha n_H^0 (1+z_i)^2}{H(z_i)} - \dfrac{3}{1+z_i}$$
+
 $$V_{i+1} = V_i + \Delta z V'_{i+1}$$
 
 Which can be rearranged to:
 
 $$V_{i+1} = [V_i + A_{i+1}\Delta z] (1-B_{i+1}\Delta z)^{-1} $$
 
-This can be integrated from $$z_0 = z (t_{\rm start})$$, with an initial condition of $V_0 = 0$. for now I'll loop through to solve for the volume, since I need to loop through these time points anyway to get $$\dot{N}_{\rm ion}$$ from fsps. I will need to do some timing tests, and see if I need to speed this up for the full catalog.
+This can be integrated from $$z_0 = z (t_{\rm start})$$, with an initial condition of $$V_0 = 0$$. for now I'll loop through to solve for the volume, since I need to loop through these time points anyway to get $$\dot{N}_{\rm ion}$$ from fsps. I will need to do some timing tests, and see if I need to speed this up for the full catalog.
 
 ## Results
 
