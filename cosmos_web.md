@@ -11,6 +11,13 @@ This page contains the work I've done for COSMOS-Web
 
 
 
+<h2> Publications: </h2>
+<ul>
+<li> <a href="https://ui.adsabs.harvard.edu/abs/2022arXiv221107865C/abstract">Casey, Kartaltepe, Drakos, et al. 2022</a> </li>
+</ul>
+
+
+
 <h2 class="page-heading">Related Posts</h2>
 
 <ul class="post-list">
