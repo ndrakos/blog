@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "A Closer Look at SFHs"
+title:  "A Closer Look at SFHs in DREaM"
 date:   2023-04-04
 categories: reion
 ---
