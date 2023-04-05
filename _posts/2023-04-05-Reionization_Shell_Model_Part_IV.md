@@ -11,7 +11,7 @@ This is a continuation from previous posts, <a href="https://ndrakos.github.io/b
 
 ## ODE Scheme
 
-The ODE we want to solve is:
+The ODE I want to solve is:
 
 $$ - H(z) (1+z) V'(z) =  \dfrac{f_{\rm esc}\dot{N}_{\rm ion} (z)}{n_H^0 (1+z)^3} + [3H(z) -  C \alpha n_H^0 (1+z)^3] V(z) $$,
 
@@ -33,7 +33,7 @@ Which can be rearranged to:
 
 $$V_{i+1} = [V_i + A_{i+1}\Delta z] (1-B_{i+1}\Delta z)^{-1} $$
 
-This can be integrated from $$z_0 = z (t_{\rm start})$$, with an initial condition of $V_0 = 0$. for now I'll loop through to solve for the volume, since I need to loop through fsps to get $$\dot{N}_{{\rm ion}}$$ I will need to do some timing tests, and see if I need to speed up how I'm doing things.
+This can be integrated from $$z_0 = z (t_{\rm start})$$, with an initial condition of $V_0 = 0$. for now I'll loop through to solve for the volume, since I need to loop through these time points anyway to get $$\dot{N}_{{\rm ion}}$$ from fsps. I will need to do some timing tests, and see if I need to speed this up for the full catalog. 
 
 ## Results
 
@@ -47,4 +47,4 @@ This actually looks quite reasonable!
 ## Next Steps
 
 1. Write code to do this for all the galaxies, make sure it is fast enough.
-2. Plot the ionized regions, see if this agrees with what is expected 
+2. Plot the ionized regions, see if this agrees with what is expected
