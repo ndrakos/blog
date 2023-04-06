@@ -30,6 +30,4 @@ In the next post, I'm going to examine the scene in more detail, and figure out 
 ## Next Steps
 
 1. Go through the scene code again, really figure out if I am drawing on the galaxies correctly!
-
-2. Use the test galaxy (<a href="https://ndrakos.github.io/blog/cosmos_web/MIRISim_Troubleshooting_Part_IV/">Part IV</a>) to really understand the pointings/whether I'm setting the WCS right
-- Run this example through the full MIRISim code, check the WCS of the final images.
+2. Use the test galaxy (<a href="https://ndrakos.github.io/blog/cosmos_web/MIRISim_Troubleshooting_Part_IV/">Part IV</a>) to really understand the pointings/whether I'm setting the WCS right. Run this example through the full MIRISim code, check the WCS of the final images.
