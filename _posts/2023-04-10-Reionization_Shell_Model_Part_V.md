@@ -9,7 +9,7 @@ In this post, I want to double check that I am normalizing the mass of the galax
 
 ## FSPS
 
-FSPS returns spectrum normalized so that $1\,M_{\odot}$ of mass is formed over the star formation history.
+FSPS returns spectrum normalized so that 1  $$M_{\odot}$$ of mass is formed over the star formation history.
 
 To scale it properly, you have to multiply the spectrum by the current mass, and then divide by the fraction of mass surviving at that point in the galaxies history (given by the FSPS parameter <code>stellar_mass</code>, which I will call $$x$$).
 
