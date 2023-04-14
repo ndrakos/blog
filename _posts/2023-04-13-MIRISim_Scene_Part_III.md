@@ -1,13 +1,13 @@
 ---
 layout: post
 title:  "MIRISim Scene Part III"
-date:   2023-04-10
+date:   2023-04-13
 categories: cosmos_web
 ---
 
-When troubleshooting why my MIRI simulations aren't working, I decided the problem is with how I am creating the scene (<a href="https://ndrakos.github.io/blog/cosmos_web/MIRISim_Troubleshooting_Part_V/">see here</a>)
+When troubleshooting why my MIRI simulations aren't working, I decided the problem is with how I am creating the scene (see <a href="https://ndrakos.github.io/blog/cosmos_web/MIRISim_Troubleshooting_Part_V/">"MIRISim Troubleshooting Part V"</a>).
 
-When creating the scene, I noted at the time the sources looked strange, but thought it might just have had to do with the way the data was displayed (<a href="https://ndrakos.github.io/blog/cosmos_web/MIRISim_Scene_Part_II/">see Part II</a>)
+When creating the scene, I noted at the time the sources looked strange, but thought it might just have had to do with the way the data was displayed (see <a href="https://ndrakos.github.io/blog/cosmos_web/MIRISim_Scene_Part_II/">MIRISim Scene Part II</a>)
 
 In this post, I am going to revisit this issue.
 
@@ -98,3 +98,9 @@ And looking at the test galaxy, and how big I expect the stamp to be I find:
 <img src="{{ site.baseurl }}/assets/plots/20230413_sources_stamp.png">
 
 Now I am fairly positive the locations and sizes of the galaxies are set correctly!
+
+
+## Next Steps
+
+1. Test if this fixes my whole issue
+2. Rerun this for the full catalog
