@@ -15,9 +15,9 @@ This is a continuation of <a href="https://ndrakos.github.io/blog/cosmos_web/MIR
 
 For Test 5, I will fix the units in the DREaM Scene.
 
-In <a href="https://ndrakos.github.io/blog/cosmos_web/MIRISim_Troubleshooting_Part_III/">Part IV</a>, I found that the biggest difference was in the keyword "UNITS". For my test, the units were  uJy/arcsec^2, which is also what MIRISim assumes by default.
+In <a href="https://ndrakos.github.io/blog/cosmos_web/MIRISim_Troubleshooting_Part_IV/">Part IV</a>, I found that the biggest difference was in the keyword "UNITS". For my test, the units were  uJy/arcsec^2, which is also what MIRISim assumes by default.
 
-I had **not** properly set this in the DREaM sims. Looking at my code, it should actually be mJy/arcsec**2. This would mean the objects were 1000x fainter than they should be. I fixed the units, but things still look weird. Here is the only source I can easily pick out from the reduced data:
+I had **not** properly set this in the DREaM sims. Looking at my code, it should actually be mJy/arcsec**2. This would mean the objects were 1000x fainter than they should be. I fixed the units, but things still look weird. Here is the only possible source I can easily pick out from the reduced data:
 
 <img src="{{ site.baseurl }}/assets/plots/20230406_Test5.png">
 

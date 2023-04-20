@@ -22,7 +22,7 @@ That means I expect it to take approximately 3000 CPU hours to run the bubble ca
 Here are the galaxies between redshift~6  (between z=5.5 and 6.5)
 
 
-<img src="{{ site.baseurl }}/assets/plots/20230417_Topology6.png">
+<img src="{{ site.baseurl }}/assets/plots/20230417_20230417_Topology6.png">
 
 and at redshift~7
 
@@ -47,4 +47,4 @@ Since the Naidu model assumes that the escape fraction is a function of the SFR 
 1. Run this on lux on the full catalog
 2. Figure out better ways to plot this
 3. Write some code to calculate the ionized volume given the bubble sizes
-4. Calculate bubble sizes given the time-varying $$f_{esc}$$ values from Naidu et al. 
+4. Calculate bubble sizes given the time-varying $$f_{esc}$$ values from Naidu et al.
