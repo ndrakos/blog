@@ -23,7 +23,7 @@ and Scene B:
 
 Note that this is what the MIRISim documentation says:
 
-<img src="{{ site.baseurl }}/assets/plots/20230421_documentation.png">
+<img src="{{ site.baseurl }}/assets/plots/20230421_Documentation.png">
 
 
 ## Tests
@@ -32,7 +32,7 @@ Note that this is what the MIRISim documentation says:
 
 2) I multiplied the flux by 1000000 (in case units are wrong). There are possibly some sources, but it is hard to tell:
 
-<img src="{{ site.baseurl }}/assets/plots/20230421_test.png">
+<img src="{{ site.baseurl }}/assets/plots/20230421_Test2.png">
 
 3) I tried changing the units to say "arcsec" instead of degrees, and it made no difference
 
