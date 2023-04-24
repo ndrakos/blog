@@ -22,7 +22,7 @@ That means I expect it to take approximately 3000 CPU hours to run the bubble ca
 Here are the galaxies between redshift~6  (between z=5.5 and 6.5)
 
 
-<img src="{{ site.baseurl }}/assets/plots/20230417_20230417_Topology6.png">
+<img src="{{ site.baseurl }}/assets/plots/20230417_Topology6.png">
 
 and at redshift~7
 
