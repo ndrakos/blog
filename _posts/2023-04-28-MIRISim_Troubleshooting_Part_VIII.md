@@ -5,7 +5,7 @@ date:   2023-04-28
 categories: cosmos_web
 ---
 
-This is a continuation of <a href="https://ndrakos.github.io/blog/cosmos_web/MIRISim_Troubleshooting_Part_VII/">Part VII</a>/
+This is a continuation of <a href="https://ndrakos.github.io/blog/cosmos_web/MIRISim_Troubleshooting_Part_VII/">Part VII</a>
 
 
 ## Delete rotation keywords
@@ -37,12 +37,10 @@ It looks identical! Which makes me suspect that MIRISim is not converting units.
 
 The sources are now appearing, some of the next steps are
 
-1) Change the scene to be in uJy and arcsec
+1. Change the scene to be in uJy and arcsec
+2. Figure out how to match the final output to the input sources, to make sure the positions are correct. This will involve properly running the final step of the MIRISim simulation to update the WCS.
+3. Run the full DREaM source catalog (right now I am using the Test Catalog)
 
-2) Figure out how to match the final output to the input sources, to make sure the positions are correct. This will involve properly running the final step of the MIRISim simulation to update the WCS.
+4. Check the rotation/offset of the pointing is correct (I might need to talk to some of the observers for this!)
 
-3) Run the full DREaM source catalog (right now I am using the Test Catalog)
-
-4) Check the rotation/offset of the pointing is correct (I might need to talk to some of the observers for this!)
-
-5) Check the flux/noise level of sources is correct.
+5. Check the flux/noise level of sources is correct.
