@@ -29,7 +29,7 @@ I am pretty sure that the units should be <code>mJy/arcsec**2</code>, but I chan
 
 Here is the raw data when I change that key word:
 
-<img src="{{ site.baseurl }}/assets/plots/20230428_Test8b.png">
+<img src="{{ site.baseurl }}/assets/plots/20230428_Test8B.png">
 
 It looks identical! Which makes me suspect that MIRISim is not converting units. I will change everything to be in uJy, and arcsec, which I suspect MIRISim assumes.
 
