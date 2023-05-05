@@ -37,7 +37,7 @@ I need a boundary condition. In this case, I will use $$Q_{\rm HII}=0$$ at $$z=1
 
 I integrating the equation to $$z=4$$ using <code>odeint</code> and set a maximum $$dQ_{\rm HII}$$ value of 1.
 
-The neutral fraction is simply $$1-dQ_{\rm HII}$$.
+The neutral fraction is simply $$1-Q_{\rm HII}$$.
 
 ## Results
 
