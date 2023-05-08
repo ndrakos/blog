@@ -27,7 +27,7 @@ The direct calculation was outlines <a href="https://ndrakos.github.io/blog/reio
 
 To summarize, I used:
 
-$$ -(1+z)H(z) \frac{ dQ_{\rm HII} }{ dz} =  \frac{ \dot{n}_{\rm ion} } {n_H^0} - \frac{Q}{\bar{t}_{\rm rec}}$$ (Eq 1)
+$$ -(1+z)H(z) \dfrac{ dQ_{\rm HII} }{ dz} =  \dfrac{ \dot{n}_{\rm ion} } {n_H^0} - \dfrac{Q}{\bar{t}_{\rm rec}}$$ (Eq 1)
 
 where
 - $$\dot{n}_{\rm ion}$$ is calculated from adding up the ionizing photon contribution from all galaxies
@@ -45,9 +45,9 @@ The first term on the RHS is the source term. It is the number of ionized photon
 The evolution of the volume (this is the physical not the comoving volume), was outlined in <a href="https://ndrakos.github.io/blog/reion/Reionization_Shell_Model_Part_III/">this post</a> and <a href="https://ndrakos.github.io/blog/reion/Reionization_Shell_Model_Part_IV/">this post</a>:
 
 
-$$ -  (1+z) H(z) V'(z) =  \dfrac{f_{\rm esc}\dot{N}_{\rm ion} (z)}{n_H (z)} + 3H(z)V -  C \alpha n_H (z) V(z) $$ (Eq. 2)
+$$ -  (1+z) H(z) \dfrac{V}{dz} =  \dfrac{f_{\rm esc}\dot{N}_{\rm ion} (z)}{n_H (z)} + 3H(z)V -  C \alpha n_H (z) V(z) $$ (Eq. 2)
 
-In this equation, $$n_(H)$$ is the mean hydrogen density within the ionized bubble. I have been using $$n_H^0 (1+z)^3$$. This does assume no environmental differences between galaxies.
+In this equation, $$n_H$$ is the mean hydrogen density within the ionized bubble. I have been using $$n_H^0 (1+z)^3$$. This does assume no environmental differences between galaxies.
 
 The first term on the RHS is the source of photons. The second term on the RHS reflects the expansion of the universe. The third term represents the recombination of hydrogen atoms.
 
@@ -56,17 +56,11 @@ The first term on the RHS is the source of photons. The second term on the RHS r
 These two equations are very similar with a couple of noticeable differences
 
 
-1. The source term is divided by the present-day number density in  Eq.1, but is time-dependent in Eq. 2
+1. The source term is divided by the present-day number density in  Eq.1, but is time-dependent in Eq 2. This is because Eq 1 is in co-moving coordinates, and Eq 2 is in physical coordinates. If you convert Eq. 2 to the comoving volume, the factors of $$(1+z)$$ agree.
 
-This is because Eq 1 is in co-moving coordinates, and Eq 2 is in physical coordinates. If you convert Eq. 2 to the comoving volume, the factors of $$(1+z)$$ agree.
+2. Eq 1 does not include a term for the expansion of the universe. This is fine, since we can assume that the volume of ionized and un-ionized regions expand at the same rate.
 
-2. Eq. 1 does not include a term for the expansion of the universe
-
-This is fine, since we can assume that the volume of ionized and un-ionized regions expand at the same rate.
-
-3. The recombination rate does not have the $$(1 + (1-X)/4X)$$ term in Eq. 2
-
-This term is $$1.08$$, so it should make  very little difference, but I will include it in Eq 2. from now on.
+3. The recombination rate does not have the $$(1 + (1-X)/4X)$$ term in Eq 2. This term is $$1.08$$, so it should make  very little difference, but I will include it in Eq 2 from now on.
 
 So far this all looks fine!!
 
@@ -85,4 +79,4 @@ Double checking my code, I found I forgot the Hubble expansion term. This makes 
 
 ## What's next?
 
-I still need to do a careful comparison of my bubble distributions, to see if the sizes look right. This will help guide me to solve the problem! It might be due to one of the simplifications/modelling assumptions. 
+I still need to do a careful comparison of my bubble distributions, to see if the sizes look right. This will help guide me to solve the problem! It might be due to one of the simplifications/modelling assumptions.
