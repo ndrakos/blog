@@ -43,7 +43,7 @@ If we consider a mean free path $$l$$ in which we will hit a bubble of size $$R$
 
 $$\dfrac{R^3}{l^3} = \dfrac{Q}{1-Q}$$ and $$n= \dfrac{1}{l \sigma} = \dfrac{1}{3V}\left(\dfrac{Q}{ (1-Q)}\right)$$.
 
-Therefore, at every timestep, when a bubble increases by volume $$dV$$, I multiple the volume by $1 + \dfrac{dV}{3V_i)}\left(\dfrac{Q(z)}{ (1-Q(z))}\right)$$. In reality, the growth of the bubbles should be stochastic, with discrete jumps every time bubbles overlap. However, since I am only concerned with the final bubble size, I'm not too worried about getting an averaged growth history.
+Therefore, at every timestep, when a bubble increases by volume $$dV$$, I multiple the volume by $$1 + \dfrac{dV}{3V_i)}\left(\dfrac{Q(z)}{ (1-Q(z))}\right)$$. In reality, the growth of the bubbles should be stochastic, with discrete jumps every time bubbles overlap. However, since I am only concerned with the final bubble size, I'm not too worried about getting an averaged growth history.
 
 Here is the resulting bubble sizes (physical Mpc):
 
