@@ -80,13 +80,13 @@ If I instead frame the problem as:
 
 $$\dot{N}_{background} = $$ [rate of photons produced in 1 bubble] $$\times$$ [probability of overlapping 1 bubble] +[rate of photons produced in 2 bubble] $$\times$$ [probability of overlapping 2 bubble] $$+$$ ...
 
-If I assume the probability of overlapping with one bubble is $$Q$$ (I don't think this is quite right though; I think Q is the probability it overlaps with AT least 1 bubble), then the rate of photons produced in each bubble is approximately $$\dot{n}_{\rm ion} V$$, and the probability of overlapping with $$m$$ bubbles is $$Q**m$$.
+If I assume the probability of overlapping with one bubble is $$Q$$ (I don't think this is quite right though; I think Q is the probability it overlaps with AT least 1 bubble), then the rate of photons produced in each bubble is approximately $$\dot{n}_{\rm ion} V$$, and the probability of overlapping with $$m$$ bubbles is $$Q^m$$.
 
 Then,
 
-$$\dot{N}_{background} = \dot{n}_{\rm ion} V \sum (m Q**m)$$.
+$$\dot{N}_{background} = \dot{n}_{\rm ion} V \sum (m Q^m)$$.
 
-As long as $$Q<1$$, $$\sum (m Q**m)$$ converges. At $$Q=1$$ the bubble sizes are effectively infinite anyway, so that value doesn't matter. Therefore, I'll just pick some large number to sum over.
+As long as $$Q<1$$, $$\sum (m Q^m)$$ converges. At $$Q=1$$ the bubble sizes are effectively infinite anyway, so that value doesn't matter. Therefore, I'll just pick some large number to sum over.
 
 <img src="{{ site.baseurl }}/assets/plots/20230714_BubbleFraction_3.png">
 
