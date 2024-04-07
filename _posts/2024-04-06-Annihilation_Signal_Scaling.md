@@ -13,7 +13,7 @@ Therefore
 
 $$\dfrac {M_{\rm unit}^2} {r_{\rm unit}^3} = \dfrac {M (10 r_s)^2 } {r_s^3} = \dfrac {M (10 r_s)^2 c^3 } {r_{\rm vir}^3} $$
 
-And then, using $$200 \rho_c = M_{\rm vir} / (4/3 \pi r_{\rm vir}^3),
+And then, using $$200 \rho_c = M_{\rm vir} / (4/3 \pi r_{\rm vir}^3)$$,
 
 
 $$\dfrac {M_{\rm unit}^2} {r_{\rm unit}^3} = \dfrac {4\pi \times 200 \rho_c M (10 r_s)^2 c^3 } {3 M_{\rm vir}} $$
@@ -24,4 +24,4 @@ $$M (10 r_s) = M_{\rm vir} c (c+1)/ (10 \times 11^2)$$ (for an NFW profile)
 
 $$\dfrac {M_{\rm unit}^2} {r_{\rm unit}^3} = \dfrac {4\pi \times 200 \rho_c M_{\rm vir} c^3 c^2 (c+1)^4 } {3 (10 \times 11^2)^2 } $$
 
-$$\dfrac {M_{\rm unit}^2} {r_{\rm unit}^3} = 5.722 \times 10^{-4} \rho_c M_{\rm vir} c^5 (c+1)^4} $$
+$$\dfrac {M_{\rm unit}^2} {r_{\rm unit}^3} = 5.722 \times 10^{-4} \rho_c M_{\rm vir} c^5 (c+1)^4 $$
