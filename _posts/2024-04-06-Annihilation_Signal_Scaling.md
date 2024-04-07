@@ -18,8 +18,7 @@ $$\dfrac {M_{\rm unit}^2} {r_{\rm unit}^3} = \dfrac {M (10 r_s)^2 } {r_s^3} = \d
 And then, using $$200 \rho_c = M_{\rm vir} / (4/3 \pi r_{\rm vir}^3)$$,
 
 
-$$\dfrac {M_{\rm unit}^2} {r_{\rm unit}^3} = \dfrac {4\pi \times 200 \rho_c M (10 r_s)^2 c^3 } {3 M_{\rm vir}} = \dfrac {4\pi \times 200 \rho_c M_{\rm vir} c^3 } {3 M_{\rm vir}} \left(  \dfrac {M(10 r_s)} {3 M_{\rm vir}}  \right)^2$$
-
+$$\dfrac {M_{\rm unit}^2} {r_{\rm unit}^3} = \dfrac {4\pi \times 200 \rho_c M (10 r_s)^2 c^3 } {3 M_{\rm vir}} = \dfrac {4}{3}\pi \times 200 \rho_c M_{\rm vir} c^3 }  \left(  \dfrac {M(10 r_s)} {3 M_{\rm vir}}  \right)^2$$
 
 ## Concentration--mass relation
 
