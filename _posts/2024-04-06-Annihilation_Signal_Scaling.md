@@ -30,4 +30,4 @@ $$\dfrac {M_{\rm unit}^2} {r_{\rm unit}^3} = 5.722 \times 10^{-4} \rho_c M_{\rm 
 
 ## Concentration--mass relation
 
-Now I need a way to choose a concentration for a halo of a given mass. I'm going to just assume it lies on the concentration--mass relation. I'll use one of the Colossus functions \href{https://bdiemer.bitbucket.io/colossus/halo_concentration.html}{here}. I chose the Ishiyama 2021 model, with the $$200\rho_c$$ definition.
+Now I need a way to choose a concentration for a halo of a given mass. I'm going to just assume it lies on the concentration--mass relation. I'll use one of the Colossus functions. <a href="https://bdiemer.bitbucket.io/colossus/halo_concentration.html">here</a>. I chose the Ishiyama 2021 model, with the $$200\rho_c$$ definition.
