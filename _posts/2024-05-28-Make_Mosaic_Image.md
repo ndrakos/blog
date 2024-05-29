@@ -68,10 +68,10 @@ I need to dig into this, but I suspect that some of the visits weren't updated w
 
 ## Playing with Parameters
 
-satpercent - "Percentage of pixels which will be saturated."
-noiselum - "Noise luminosity for single channel (between 0 - 1)". Too small, you don't see the faint galaxies. Too big, you see a lot of the noise. 0.1 seems to work well. 
+- satpercent - "Percentage of pixels which will be saturated."
+- noiselum - "Noise luminosity for single channel (between 0 - 1)". Too small, you don't see the faint galaxies. Too big, you see a lot of the noise. 0.1 seems to work well. 
 When you increase this the the galaxies "pop" more, but you lose some of the detailed structure. I changed this to 0.005
-colorsatfac - "> 1 to boost color saturation.". When you decrease this the image looks more white, when you increase it it looks more red. I left it at 1. 
+- colorsatfac - ">1 to boost color saturation.". When you decrease this the image looks more white, when you increase it it looks more red. I left it at 1. 
 
 Here's how the tile changes with the new parameters (still very low resolution)
 
