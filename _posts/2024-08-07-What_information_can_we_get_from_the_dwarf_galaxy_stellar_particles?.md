@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "What information can we get from the dwarf galaxy stellar population?"
+title:  "What information can we get from the dwarf galaxy stellar particles?"
 date:   2024-08-07
 categories: tidal_stripping
 ---
@@ -66,7 +66,7 @@ Using the (known) density profile of the host halo, and $$\eta= 2 - d\ln M / d\l
 
 $$ \dfrac{M_{sat}}{r_{sat}^3} = 2\dfrac{M_{host}(<r_p)}{r_p^3} - \rho_{host}(r_p)$$
 
-I solved this numerically (with Msat=0.2, r_sat=5), and got $r_p=66$, which is very close to the real value of 64!
+I solved this numerically (with Msat=0.2, r_sat=5), and got $$r_p=66$$, which is very close to the real value of 64!
 
 
 ## Pitfalls, assumptions, ect
