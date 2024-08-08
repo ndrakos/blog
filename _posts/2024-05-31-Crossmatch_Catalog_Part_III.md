@@ -6,9 +6,7 @@ categories: cosmos_web
 ---
 
 
-In  <a href="https://ndrakos.github.io/blog/cosmos_web/Crossmatch_Catalog/">Part I</a> and   
-<a href="https://ndrakos.github.io/blog/cosmos_web/Crossmatch_Catalog_Part_II/">Part II</a> 
-I was looking at how well the SE++ catalog recovered the input galaxy properties.
+In  <a href="https://ndrakos.github.io/blog/cosmos_web/Crossmatch_Catalog/">Part I</a> and <a href="https://ndrakos.github.io/blog/cosmos_web/Crossmatch_Catalog_Part_II/">Part II</a>  I was looking at how well the SE++ catalog recovered the input galaxy properties.
 
 Here I'm looking more closely at the images, and trying to verify the galaxies have the right RA and dec assigned. 
 
