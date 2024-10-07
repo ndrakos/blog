@@ -28,7 +28,7 @@ The bottom edge of this distribution should correspond to the gravitational pote
 
 My idea was that if we can determine the edge of this distribution, and fit a profile to it, we can get the full potential of the system.
 
-However, if we compare the top right to the real potential, this doesn't seem to work well. 
+However, if we compare the edge to the real potential (calculated to the real particles), this doesn't seem to work well. 
 
 Here is the potential corresponding to the system in the top left phase-space plot:
 
@@ -68,6 +68,7 @@ $$ \dfrac{M_{sat}}{r_{sat}^3} = 2\dfrac{M_{host}(<r_p)}{r_p^3} - \rho_{host}(r_p
 
 I solved this numerically (with Msat=0.2, r_sat=5), and got $$r_p=66$$, which is very close to the real value of 64!
 
+<span style="color:red"> *10/7/2024: Note that I am missing a factor of $$4\pi$$ in front of $$\rho_{host}(r_p)$$* </span>
 
 ## Pitfalls, assumptions, ect
 
