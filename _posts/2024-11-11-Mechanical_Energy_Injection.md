@@ -14,7 +14,7 @@ In this post I'm summarizing my thoughts on how much mechanical energy would be 
 ## Mechanical Energy
 
 References:
-<a href=https://ui.adsabs.harvard.edu/abs/2024arXiv240912118F/abstract">Flury et. al 2004</a>
+<a href="https://ui.adsabs.harvard.edu/abs/2024arXiv240912118F/abstract">Flury et. al 2004</a>
 
 In the Flury+2024 paper, they calculate the mechanical energy as 
 
