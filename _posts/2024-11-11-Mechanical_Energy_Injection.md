@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Mechanical Energy Injection"
-date:   2024-08-07
+date:   2024-11-11
 categories: SNe
 ---
 
