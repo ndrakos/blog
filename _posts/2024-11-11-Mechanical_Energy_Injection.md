@@ -2,7 +2,7 @@
 layout: post
 title:  "Mechanical Energy Injection"
 date:   2024-11-11
-categories: SNe
+categories: sne
 ---
 
 
@@ -14,17 +14,17 @@ In this post I'm summarizing my thoughts on how much mechanical energy would be 
 ## Mechanical Energy
 
 References:
-<a href=https://ui.adsabs.harvard.edu/abs/2024arXiv240912118F/abstract>Flury et. al 2004</a>
+<a href=https://ui.adsabs.harvard.edu/abs/2024arXiv240912118F/abstract">Flury et. al 2004</a>
 
 In the Flury+2024 paper, they calculate the mechanical energy as 
 
 $$E_{\rm mech}(t) = \int_0^t L_{\rm wind}(t') + L_{\rm SNe}(t') dt'$$
 
-where $t$ is the age of the stellar population,
-and they use model mechanical luminosities $L_{\rm mech}$ (stellar and SNe mass loss rates scaled by wind terminal velocities vinf)
+where $$t$$ is the age of the stellar population,
+and they use model mechanical luminosities $$L_{\rm mech}$$ (stellar and SNe mass loss rates scaled by wind terminal velocities vinf)
 from the Starburst99 SED fits
 
-We could possibly do domething similar, but it might be easier to just assume supernova inject an energy of $\approx 10^{51}$ ergs or something, and then just multiply the number of SNe. We might want to introduce some sort of "efficiency factor" here for how much SNe energy is converted into mechanical energy.
+We could possibly do domething similar, but it might be easier to just assume supernova inject an energy of $$\approx 10^{51}$$ ergs or something, and then just multiply the number of SNe. We might want to introduce some sort of "efficiency factor" here for how much SNe energy is converted into mechanical energy.
 
 ## Escape Fraction and Optical Depth
 
