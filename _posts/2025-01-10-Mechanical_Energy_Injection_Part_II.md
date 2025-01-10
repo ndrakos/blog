@@ -17,11 +17,11 @@ Things we need to consider are how we will cut the data. For example, is this wi
 
 ## Step 2
 
+The covering fraction is an effective fraction describing how much of the galaxy is covered by optically thick neutral hydrogen. See <a href="https://www.aanda.org/articles/aa/full_html/2018/08/aa32759-18/aa32759-18.html">Gazagnes et al.</a>, where they measured this fraction to understand the connection between the covering fraction and the escape fraction.
+
 A simplified model for how escape fraction is related to the "covering fraction", $$f_{\rm cov}$$ as follows:
 
 $$f_{\rm esc} = 1 - f_{\rm cov}$$
-
-The covering fraction is an effective fraction describing how much of the galaxy is covered by optically thick neutral hydrogen. See <a href="https://www.aanda.org/articles/aa/full_html/2018/08/aa32759-18/aa32759-18.html">Gazagnes</a>, where they measured this fraction to understand the connection between the covering fraction and the escape fraction.
 
 This model is probably much too simplified, and likely doesn't work in cases where there is complex geometry, but I'm going to use it as a starting point.
 
