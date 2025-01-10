@@ -10,14 +10,14 @@ In this post I'm continuing my thoughts on how the  mechanical energy injected i
 
 ## Step 1
 
-Let $$\xi$$ by the rate of SN in our blueberry sample compared to the field. This is something that we will directly measure with our sample.
+Let $$\xi$$ by the fraction of SN in our blueberry sample compared to the field. This is something that we will directly measure with our sample.
 
 Things we need to consider are how we will cut the data. For example, is this within a certain mass range?
 
 
 ## Step 2
 
-A simplified model for how escape fraction is related to the "covering fraction", $$f_cov$$ as follows:
+A simplified model for how escape fraction is related to the "covering fraction", $$f_{\rm cov}$$ as follows:
 
 $$f_{\rm esc} = 1 - f_{\rm cov}$$
 
@@ -49,7 +49,7 @@ Here is my plot:
 
 
 
-I don't trust this though. For example, when $$f_{\rm esc,field}=0$$, how could doubling the supernova cause the escape fraction to clear out by fifty percent? This seems like a flaw with step 3 in my calculations.
+I don't trust this though. For example, when $$f_{\rm esc,field}=0$$, how could doubling the supernova clear out fifty percent of the gas? This seems like a logic flaw with Step 3 in my calculations.
 
 
 ## Next steps:
